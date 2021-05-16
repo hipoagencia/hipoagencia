@@ -40,7 +40,7 @@ class User extends FormRequest
             'name' => 'required|min:3|max:191',
             'last_name' => 'required|min:3|max:191',
             'genre' => 'in:masculino,feminino,binario',
-            'document' => (!empty($this->request->all()['id']) ? 'required|min:11|max:14|unique:Users,document,'. $this->request->all()['id'] : 'required|min:11|max:14|unique:Users,document'),
+            'document' => (!empty($this->request->all()['id']) ? 'required|min:11|max:14|unique:users,document,'. $this->request->all()['id'] : 'required|min:11|max:14|unique:users,document'),
             'date_of_birth' => 'required',
             'cover' => (empty($this->request->all()['id']) ? 'required|image' : 'image'),
 
