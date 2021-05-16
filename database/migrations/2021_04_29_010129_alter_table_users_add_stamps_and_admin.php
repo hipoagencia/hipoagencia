@@ -13,7 +13,7 @@ class AlterTableUsersAddStampsAndAdmin extends Migration
      */
     public function up()
     {
-        Schema::table('Users', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             $table->boolean('is_admin')->nullable()->default('0');
             $table->dateTime('last_login_at')->nullable();
             $table->string('last_login_ip')->nullable();
@@ -27,7 +27,7 @@ class AlterTableUsersAddStampsAndAdmin extends Migration
      */
     public function down()
     {
-        Schema::table('Users', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('is_admin');
             $table->dropColumn('last_login_at');
             $table->dropColumn('last_login_ip');
