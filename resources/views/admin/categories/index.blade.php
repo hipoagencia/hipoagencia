@@ -45,7 +45,7 @@
                         <table id="datatable" class="table table-bordered dt-responsive nowrap w-100">
                             <thead>
                             <tr>
-                                <th width="5%">#</th>
+                                <th width="3%">#</th>
                                 <th>Nome</th>
                                 <th width="8%">Ações</th>
                             </tr>

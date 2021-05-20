@@ -44,7 +44,7 @@
                         <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                             <thead>
                             <tr>
-                                <th>#</th>
+                                <th width="3%">#</th>
                                 <th>Nome</th>
                                 <th>E-mail</th>
                                 <th>Cadadastrado em</th>
