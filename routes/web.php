@@ -19,6 +19,9 @@ use App\Http\Controllers\Admin\ContentController;
 |
 */
 
+route::get('/', function (){
+   return view('web.home');
+});
 
 //Rota Geral de Login
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
