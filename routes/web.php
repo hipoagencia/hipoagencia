@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ContentController;
+use App\Http\Controllers\Admin\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ use App\Http\Controllers\Admin\ContentController;
 |
 */
 
-route::get('/', function (){
+Route::get('/', function (){
    return view('web.home');
 });
 
@@ -58,6 +59,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
         //Rotas de Conteúdos
         Route::resource('content', ContentController::class);
+
+        //Rotas de Galerias
+        Route::resource('gallery', GalleryController::class);
     });
 });
 

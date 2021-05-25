@@ -262,7 +262,7 @@
                     </li>
 
 
-                    <li class="menu-title" key="t-pages">Pages</li>
+                    <li class="menu-title" key="t-pages">Sessões</li>
 
 
                     <li>
@@ -290,8 +290,11 @@
                         <ul class="sub-menu mm-collapse">
                             <li><a href="{{ route('admin.posts.index') }}" key="t-blog">Blog</a></li>
                             <li><a href="{{ route('admin.content.index') }}" key="t-read-email" key="t-pages">Páginas</a></li>
+                            <li><a href="{{ route('admin.gallery.index') }}" key="t-read-email" key="t-pages">Galeria</a></li>
                         </ul>
                     </li>
+
+                    <li class="menu-title" key="t-pages">Sessões</li>
 
                     <li>
                         <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
