@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\PagSeguro\PagSeguroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,7 +62,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::resource('content', ContentController::class);
 
         //Rotas de Galerias
+        Route::post('gallery/image-order', [GalleryController::class, 'imageOrder'])->name('gallery.imageOrder');
+        Route::post('gallery/image-set-cover', [GalleryController::class, 'imageSetCover'])->name('gallery.imageSetCover');
+        Route::delete('gallery/remove-cover', [GalleryController::class, 'imageRemove'])->name('gallery.imageRemove');
         Route::resource('gallery', GalleryController::class);
+
     });
 });
 
@@ -83,3 +88,8 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'is_adm
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
+//Rotas Pagseguro
+Route::group(['namespace' => 'Artistas\PagSeguro'], function () {
+    Route::get('/pagseguro/session', 'PagSeguroController@session');
+    Route::get('/pagseguro/javascript', 'PagSeguroController@javascript');
+});

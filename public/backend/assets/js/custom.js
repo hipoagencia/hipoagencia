@@ -39,7 +39,7 @@ $('.zip_code_search').blur(function () {
 //NÃO ESQUECER DE ATUALIZAR O PATH_ABSOLUTE ABAIXO
 
 var editor_config = {
-    path_absolute : '/hipoPainel/public/',
+    path_absolute : '/',
     selector: 'textarea.my-editor',
     relative_urls: false,
     min_height: 500,

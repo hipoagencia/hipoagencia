@@ -19,4 +19,10 @@ class Gallery extends Model
         'slug',
         'headline',
     ];
+
+    public function images()
+    {
+        return $this->hasMany(GalleryImages::class, 'gallery', 'id')
+            ->orderBy('order', 'ASC');
+    }
 }

@@ -4,12 +4,12 @@
 <head>
 
     <meta charset="utf-8"/>
-    <title></title>
+    <title>{{ env('APP_NAME') }} - Painel de Controle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="" name="description"/>
     <meta content="" name="author"/>
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ url('backend/assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url(asset(env('info_favicon'))) }}">
 
     <!-- Lightbox css -->
     <link href="{{ url(asset('backend/assets/libs/magnific-popup/magnific-popup.css')) }}" rel="stylesheet"
@@ -66,19 +66,19 @@
                 <div class="navbar-brand-box">
                     <a href="{{ route('admin.dashboard') }}" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{ url(asset('backend/assets/images/logo.svg')) }}" alt="" height="22">
+                                    <img src="{{ url(asset(env('INFO_FAVICON'))) }}" alt="" height="22">
                                 </span>
                         <span class="logo-lg">
-                                    <img src="{{ url('backend/assets/images/logo-dark.png') }}" alt="" height="17">
+                                    <img src="{{ url(asset(env('INFO_LOGO'))) }}" alt="" height="55">
                                 </span>
                     </a>
 
                     <a href="{{ route('admin.dashboard') }}" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{ url('backend/assets/images/logo-light.svg') }}" alt="" height="22">
+                                    <img src="{{ url(asset(env('INFO_FAVICON'))) }}" alt="" height="22">
                                 </span>
                         <span class="logo-lg">
-                                    <img src="{{ url('backend/assets/images/logo-light.png') }}" alt="" height="19">
+                                    <img src="{{ url(asset(env('INFO_LOGO_WHITE'))) }}" alt="" height="55" class="mt-4">
                                 </span>
                     </a>
                 </div>
