@@ -8,7 +8,7 @@ use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\GalleryController;
-use App\Http\Controllers\PagSeguro\PagSeguroController;
+use App\Http\Controllers\Web\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ Route::get('/', function (){
 //Rota Geral de Login
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login-do', [AuthController::class, 'login'])->name('login.do');
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/sair', [AuthController::class, 'logout'])->name('logout');
 
 
 Route::group(['namespace' => 'Web', 'as' => 'web.'], function () {
@@ -72,12 +72,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
 
 //Rotas de Usuário Logado
-Route::group(['prefix' => 'user', 'namespace' => 'User', 'as' => 'user.'], function () {
+Route::group(['prefix' => 'usuario', 'namespace' => 'User', 'as' => 'user.'], function () {
 
     //Rotas protegidas Admin
     route::group(['middleware' => ['is_user']], function () {
 
-        Route::get('dashboard', [AuthController::class, 'dashboardUser'])->name('dashboard');
+        Route::get('inicio', [AuthController::class, 'dashboardUser'])->name('dashboard');
+
+        Route::get('perfil', [AuthController::class, 'profileUser'])->name('profile');
+
+        /** Checkout */
+        Route::get('checkout/{product}', [PaymentController::class, 'checkout'])->name('checkout');
 
     });
 
@@ -88,8 +93,3 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'is_adm
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-//Rotas Pagseguro
-Route::group(['namespace' => 'Artistas\PagSeguro'], function () {
-    Route::get('/pagseguro/session', 'PagSeguroController@session');
-    Route::get('/pagseguro/javascript', 'PagSeguroController@javascript');
-});

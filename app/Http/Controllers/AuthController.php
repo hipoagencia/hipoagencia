@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Login as LoginRequest;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Product;
 
 class AuthController extends Controller
 {
@@ -50,12 +52,23 @@ class AuthController extends Controller
 
     public function dashboardUser()
     {
-        return view('user.dashboard');
+        $products = Product::orderBy('price')->get();
+        return view('user.dashboard',[
+            'products' => $products
+        ]);
+    }
+
+    public function profileUser()
+    {
+        $user = User::users()->find(auth()->user()->id);
+        return view('user.profile',[
+            'user' => $user
+        ]);
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('login');
+        return redirect()->route('login')->withErrors('Você saiu da sua conta.. volte logo!');
     }
 }

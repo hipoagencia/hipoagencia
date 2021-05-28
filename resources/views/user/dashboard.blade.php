@@ -1,16 +1,26 @@
-<!doctype html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('user.master.master')
 
-Você é um usuário comum e está logado<br>
-<a href="{{ route('logout') }}">logout</a>
+@section('content')
 
-</body>
-</html>
+
+
+    <div class="container">
+        <div class="row">
+
+            @if(!empty($products))
+                @foreach($products as $product)
+
+                    <div class="col-sm-4">
+                        <h3>{{ $product->name }}</h3>
+                        <h5>R${{ $product->price }}</h5>
+                        <a href="{{ route('user.checkout', ['product' => $product->id]) }}" class="btn btn-success mt-3">Comprar</a>
+                    </div>
+
+                @endforeach
+            @else
+                <h3>Nenhum Produto Cadastrado</h3>
+            @endif
+        </div>
+    </div>
+
+@endsection
