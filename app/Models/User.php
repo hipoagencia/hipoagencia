@@ -80,12 +80,12 @@ class User extends Authenticatable
         return $query->where('is_admin', false);
     }
 
-    public function setPasswordAttribute($value)
-    {
-        if (!empty($value)) {
-            $this->attributes['password'] = bcrypt($value);
-        }
-    }
+//    public function setPasswordAttribute($value)
+//    {
+//        if (!empty($value)) {
+//            $this->attributes['password'] = bcrypt($value);
+//        }
+//    }
 
     public function setDocumentAttribute($value)
     {

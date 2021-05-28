@@ -29,6 +29,9 @@ Route::get('/', function (){
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login-do', [AuthController::class, 'login'])->name('login.do');
 Route::get('/sair', [AuthController::class, 'logout'])->name('logout');
+Route::get('/recurar-senha', [AuthController::class, 'recoverPassword'])->name('recoverPassword');
+
+Route::post('/recuperar-senha-sendmail', [AuthController::class, 'recoverPasswordSendMail'])->name('recover-Password-SendMail');
 
 
 Route::group(['namespace' => 'Web', 'as' => 'web.'], function () {
