@@ -25,6 +25,10 @@ Route::get('/', function (){
    return view('web.home');
 });
 
+Route::get('/teste', function (){
+    return view('web.teste');
+})->name('web.teste');
+
 //Rota Geral de Login
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login-do', [AuthController::class, 'login'])->name('login.do');
@@ -63,6 +67,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
         //Rotas de Conteúdos
         Route::resource('content', ContentController::class);
+
+        //SiteMap
+        Route::get('site-map', function(){
+             \Spatie\Sitemap\SitemapGenerator::create(env('app_url'))->writeToFile(public_path('sitemap.xml'));
+
+             //Retorna para a Dashboard com mensagem de confirmação
+        });
 
         //Rotas de Galerias
         Route::post('gallery/image-order', [GalleryController::class, 'imageOrder'])->name('gallery.imageOrder');

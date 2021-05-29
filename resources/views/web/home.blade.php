@@ -1,1 +1,3 @@
-<h3>Home 3</h3>
+<h3>Ïnício</h3>
+
+<a href="{{ route('web.teste') }}">Teste</a>
