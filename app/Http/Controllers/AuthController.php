@@ -6,10 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Login as LoginRequest;
 use App\Mail\Auth\RecoverPassword;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Product;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
@@ -87,17 +90,49 @@ class AuthController extends Controller
     {
         //consultar e pegar os dados do cliente e preencher abaixo
 
+        $request->validate([
+            'email' => 'required|email|exists:users',
+        ]);
+
+        $token = Str::random(64);
+
+        DB::table('password_resets')->insert(
+            ['email' => $request->email, 'token' => $token, 'created_at' => Carbon::now()]
+        );
+
+        $user = User::where('email', $request->email);
+
+        $url = env('app_url') . '/nova-senha?token=' . $token;
+
         $data = [
             'reply_name' => env('app_name'),
             'reply_email' => env('mail_from_address'),
-            'to' => 'daniel_martins_4@live.com',
-            'to_name' => 'Daniel',
+            'to' => $request->email,
+            'to_name' => $request->name,
             'subject' => 'Recuperação de Senha no ' . env('app_name'),
-            'message' => 'Ds23jsdb'
+            'message' => $token
         ];
 
-       //Envio com Jobs
+        //Envio com Jobs
         \App\Jobs\Auth\RecoverPassword::dispatch($data)->delay(now()->addSeconds(5));
+
+        return redirect()->back()->with(['type' => 'success', 'message' => 'Enviamos um link válido por 30 minutos para seu e-mail! Verifique também, sua caixa de SPAM.']);
+    }
+
+    public function newPassword(Request $request)
+    {
+        $token = DB::table('password_resets')->where('token', $request->token)->first();
+
+        if (!empty($token)) {
+            if(strtotime($token->created_at) < strtotime("-30 minutes")){
+                echo "EXPIROU";
+                return redirect()->route('recoverPassword')->with(['type' => 'danger', 'message' => 'O seu token expirou, solicite novamente.']);
+            }
+        }
+
+        return view('admin.changePassword', [
+            'token' => $request->token
+        ]);
     }
 
     public function logout()
