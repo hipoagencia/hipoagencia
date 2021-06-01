@@ -21,6 +21,15 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+//        \RenatoMarinho\LaravelPageSpeed\Middleware\InlineCss::class,
+//        \RenatoMarinho\LaravelPageSpeed\Middleware\ElideAttributes::class,
+//        \RenatoMarinho\LaravelPageSpeed\Middleware\InsertDNSPrefetch::class,
+//        \RenatoMarinho\LaravelPageSpeed\Middleware\RemoveComments::class,
+//        // \RenatoMarinho\LaravelPageSpeed\Middleware\TrimUrls::class,
+//        \RenatoMarinho\LaravelPageSpeed\Middleware\RemoveQuotes::class,
+//        \RenatoMarinho\LaravelPageSpeed\Middleware\CollapseWhitespace::class, // Note: This middleware invokes "RemoveComments::class" before it runs.
+//        \RenatoMarinho\LaravelPageSpeed\Middleware\DeferJavascript::class,
+        \Spatie\CookieConsent\CookieConsentMiddleware::class,
     ];
 
     /**
@@ -64,5 +73,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'is_admin' => \App\Http\Middleware\IsAdmin::class,
         'is_user' => \App\Http\Middleware\IsUser::class,
+        'cookie' => \Spatie\CookieConsent\CookieConsentMiddleware::class,
     ];
 }

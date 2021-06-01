@@ -13,6 +13,7 @@ use App\Models\Product;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
+use Lunaweb\RecaptchaV3\RecaptchaV3;
 
 class AuthController extends Controller
 {

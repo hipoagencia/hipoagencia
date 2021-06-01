@@ -35,15 +35,26 @@
             </label>
         </div>
 
+        <div class="mb-3">
+            {!! RecaptchaV3::initJs() !!}
+            {!! RecaptchaV3::field('login') !!}
+        </div>
+
         <div class="mt-3 d-grid">
             <button class="btn btn-primary waves-effect waves-light" type="submit">Entrar</button>
         </div>
-
 
         <div class="mt-4 text-center">
             <a href="{{ route('recoverPassword') }}" class="text-muted"><i class="mdi mdi-lock me-1"></i> Esqueceu a
                 senha?</a>
         </div>
+
+
     </form>
 
+
+
+
+
 @endsection
+
