@@ -2,4 +2,4 @@
 
 <a href="{{ route('web.teste') }}">Teste</a>
 
-@include('cookieConsent::index')
+{{--@include('cookieConsent::index')--}}
