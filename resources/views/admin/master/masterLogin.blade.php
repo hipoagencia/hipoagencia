@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="HipoAgência" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ url(asset(env('info_favicon'))) }}">
+    <link rel="shortcut icon" href="{{ url(asset(env('INFO_FAVICON'))) }}">
 
     <!-- Bootstrap Css -->
     <link href="{{ url(asset('backend/assets/css/bootstrap.min.css')) }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -51,10 +51,6 @@
     </div>
 </div>
 <!-- end account-pages -->
-
-{{ var_dump(env('INFO_LOGO'), env('INFO_FAVICON'), env('INFO_LOGO_WHITE')) }}
-
-{{ var_dump(env('info_logo'), env('info_favicon'), env('info_logo_white')) }}
 
 <!-- JAVASCRIPT -->
 <script src="{{ url(asset('backend/assets/libs/jquery/jquery.min.js')) }}"></script>

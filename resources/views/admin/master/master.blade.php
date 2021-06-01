@@ -9,7 +9,7 @@
     <meta content="" name="description"/>
     <meta content="" name="author"/>
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ url(asset(env('info_favicon'))) }}">
+    <link rel="shortcut icon" href="{{ url(asset(env('INFO_FAVICON'))) }}">
 
     <!-- Lightbox css -->
     <link href="{{ url(asset('backend/assets/libs/magnific-popup/magnific-popup.css')) }}" rel="stylesheet"
