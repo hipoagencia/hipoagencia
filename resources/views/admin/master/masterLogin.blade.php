@@ -32,6 +32,8 @@
 
                             <div class="text-center"><img src="{{ url(asset(env('INFO_LOGO'))) }}" alt="{{ env('APP_NAME') }}" class="src"></div>
 
+                            {{ dd(env('info_logo'), env('info_favicon'), env('info_logo_white')) }}
+
                             @yield('content')
 
                         </div>
