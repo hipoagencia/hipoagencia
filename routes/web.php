@@ -24,11 +24,11 @@ use App\Http\Controllers\Web\PaymentController;
 
 Route::get('/', function () {
     return view('web.home');
-})->middleware('cookie');
+});
 
 Route::get('/teste', function () {
     return view('web.teste');
-})->middleware('cookie')->name('web.teste');
+})->name('web.teste');
 
 //Rota Geral de Login
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
