@@ -21,6 +21,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        //\Spatie\CookieConsent\CookieConsentMiddleware::class,
 //        \RenatoMarinho\LaravelPageSpeed\Middleware\InlineCss::class,
 //        \RenatoMarinho\LaravelPageSpeed\Middleware\ElideAttributes::class,
 //        \RenatoMarinho\LaravelPageSpeed\Middleware\InsertDNSPrefetch::class,
@@ -29,7 +30,6 @@ class Kernel extends HttpKernel
 //        \RenatoMarinho\LaravelPageSpeed\Middleware\RemoveQuotes::class,
 //        \RenatoMarinho\LaravelPageSpeed\Middleware\CollapseWhitespace::class, // Note: This middleware invokes "RemoveComments::class" before it runs.
 //        \RenatoMarinho\LaravelPageSpeed\Middleware\DeferJavascript::class,
-        \Spatie\CookieConsent\CookieConsentMiddleware::class,
     ];
 
     /**
