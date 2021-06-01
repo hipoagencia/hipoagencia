@@ -2,7 +2,7 @@
 
 @section('content')
 
-    {!! RecaptchaV3::initJs() !!}
+{{--    {!! RecaptchaV3::initJs() !!}--}}
 
     <form class="form-horizontal" action="{{ route('login.do') }}" method="POST" autocomplete="false">
         @csrf
@@ -37,10 +37,10 @@
             </label>
         </div>
 
-        <div class="mb-3">
+{{--        <div class="mb-3">--}}
 
-            {!! RecaptchaV3::field('login') !!}
-        </div>
+{{--            {!! RecaptchaV3::field('login') !!}--}}
+{{--        </div>--}}
 
         <div class="mt-3 d-grid">
             <button class="btn btn-primary waves-effect waves-light" type="submit">Entrar</button>
