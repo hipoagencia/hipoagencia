@@ -131,7 +131,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/image" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nicmart/tree" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/browsershot" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/renatomarinho/laravel-page-speed" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-cookie-consent" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/josiasmontag/laravel-recaptchav3" />
     </content>

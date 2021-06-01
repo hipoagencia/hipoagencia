@@ -25,6 +25,9 @@ class AuthController extends Controller
             return redirect()->route('user.dashboard');
         }
 
+        dd(env('info_logo'), env('info_favicon'), env('info_logo_white'));
+
+
         return view('admin.login');
     }
 
