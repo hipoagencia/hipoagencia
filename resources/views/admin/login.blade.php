@@ -2,6 +2,8 @@
 
 @section('content')
 
+    {!! RecaptchaV3::initJs() !!}
+
     <form class="form-horizontal" action="{{ route('login.do') }}" method="POST" autocomplete="false">
         @csrf
 
@@ -36,8 +38,8 @@
         </div>
 
         <div class="mb-3">
-            {!! \Lunaweb\RecaptchaV3\RecaptchaV3::initJs() !!}
-            {!! \Lunaweb\RecaptchaV3\RecaptchaV3::field('login') !!}
+
+            {!! RecaptchaV3::field('login') !!}
         </div>
 
         <div class="mt-3 d-grid">
@@ -51,7 +53,6 @@
 
 
     </form>
-
 
 
 
