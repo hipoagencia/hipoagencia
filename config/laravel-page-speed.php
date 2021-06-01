@@ -23,6 +23,8 @@ return [
     |
     */
     'skip' => [
+        'file-manager',
+        'laravel-filemanager',
         '*.xml',
         '*.less',
         '*.pdf',
