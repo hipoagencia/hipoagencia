@@ -22,23 +22,23 @@ use App\Http\Controllers\Web\PaymentController;
 */
 
 
-    Route::get('/', function () {
-        return view('web.home');
-    })->middleware('cookie');
+Route::get('/', function () {
+    return view('web.home');
+})->middleware('cookie');
 
-    Route::get('/teste', function () {
-        return view('web.teste');
-    })->middleware('cookie')->name('web.teste');
+Route::get('/teste', function () {
+    return view('web.teste');
+})->middleware('cookie')->name('web.teste');
 
-    //Rota Geral de Login
-    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-    Route::post('/login-do', [AuthController::class, 'login'])->name('login.do');
-    Route::get('/sair', [AuthController::class, 'logout'])->name('logout');
+//Rota Geral de Login
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login-do', [AuthController::class, 'login'])->name('login.do');
+Route::get('/sair', [AuthController::class, 'logout'])->name('logout');
 
-    Route::get('/recurar-senha', [AuthController::class, 'recoverPassword'])->name('recoverPassword');
-    Route::post('/recuperar-senha-sendmail', [AuthController::class, 'recoverPasswordSendMail'])->name('recover-Password-SendMail');
+Route::get('/recurar-senha', [AuthController::class, 'recoverPassword'])->name('recoverPassword');
+Route::post('/recuperar-senha-sendmail', [AuthController::class, 'recoverPasswordSendMail'])->name('recover-Password-SendMail');
 
-    Route::get('/nova-senha', [AuthController::class, 'newPassword'])->name('newPassword');
+Route::get('/nova-senha', [AuthController::class, 'newPassword'])->name('newPassword');
 
 
 Route::group(['namespace' => 'Web', 'as' => 'web.'], function () {
