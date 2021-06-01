@@ -21,7 +21,7 @@ use App\Http\Controllers\Web\PaymentController;
 |
 */
 
-route::group(['middleware' => ['web']], function () {
+route::group(['middleware' => ['cookieCons']], function () {
     Route::get('/', function () {
         return view('web.home');
     });
@@ -39,7 +39,6 @@ route::group(['middleware' => ['web']], function () {
     Route::post('/recuperar-senha-sendmail', [AuthController::class, 'recoverPasswordSendMail'])->name('recover-Password-SendMail');
 
     Route::get('/nova-senha', [AuthController::class, 'newPassword'])->name('newPassword');
-
 });
 
 Route::group(['namespace' => 'Web', 'as' => 'web.'], function () {
