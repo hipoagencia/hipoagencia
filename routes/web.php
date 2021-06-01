@@ -21,8 +21,6 @@ use App\Http\Controllers\Web\PaymentController;
 |
 */
 
-route::group(['middleware' => ['cookieCons']], function () {
-
     Route::get('/', function () {
         return view('web.home');
     });
@@ -31,28 +29,26 @@ route::group(['middleware' => ['cookieCons']], function () {
         return view('web.teste');
     })->name('web.teste');
 
-});
 
-
-
-//Rota Geral de Login
+/*
+|--------------------------------------------------------------------------
+| Rotas de Login
+|--------------------------------------------------------------------------
+*/
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login-do', [AuthController::class, 'login'])->name('login.do');
 Route::get('/sair', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/recurar-senha', [AuthController::class, 'recoverPassword'])->name('recoverPassword');
 Route::post('/recuperar-senha-sendmail', [AuthController::class, 'recoverPasswordSendMail'])->name('recover-Password-SendMail');
-
 Route::get('/nova-senha', [AuthController::class, 'newPassword'])->name('newPassword');
 
-Route::group(['namespace' => 'Web', 'as' => 'web.'], function () {
-
-
-});
-
+/*
+|--------------------------------------------------------------------------
+| Rotas Administrativas
+|--------------------------------------------------------------------------
+*/
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
-
-    //Rotas protegidas Admin
     route::group(['middleware' => ['is_admin']], function () {
 
         Route::get('dashboard', [AuthController::class, 'dashboardAdmin'])->name('dashboard');
@@ -92,10 +88,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 });
 
 
-//Rotas de Usuário Logado
+/*
+|--------------------------------------------------------------------------
+| Rotas de Usuários Logados
+|--------------------------------------------------------------------------
+*/
 Route::group(['prefix' => 'usuario', 'namespace' => 'User', 'as' => 'user.'], function () {
-
-    //Rotas protegidas Admin
+    //Rotas protegidas usuário
     route::group(['middleware' => ['is_user']], function () {
 
         Route::get('inicio', [AuthController::class, 'dashboardUser'])->name('dashboard');
@@ -106,10 +105,13 @@ Route::group(['prefix' => 'usuario', 'namespace' => 'User', 'as' => 'user.'], fu
         Route::get('checkout/{product}', [PaymentController::class, 'checkout'])->name('checkout');
 
     });
-
 });
 
-//Rota Tiny Filemanager
+/*
+|--------------------------------------------------------------------------
+| Rota de Sistema (não modificar)
+|--------------------------------------------------------------------------
+*/
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'is_admin']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
