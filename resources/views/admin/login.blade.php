@@ -36,8 +36,8 @@
         </div>
 
         <div class="mb-3">
-            {!! RecaptchaV3::initJs() !!}
-            {!! RecaptchaV3::field('login') !!}
+            {!! \Lunaweb\RecaptchaV3\RecaptchaV3::initJs() !!}
+            {!! \Lunaweb\RecaptchaV3\RecaptchaV3::field('login') !!}
         </div>
 
         <div class="mt-3 d-grid">
