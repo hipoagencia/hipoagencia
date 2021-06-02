@@ -106,7 +106,7 @@
 
                                             @foreach($categories->get() as $category)
                                                 <option
-                                                    value="{{ $category->id }}" {{ (old('categories.0') == $category->id ? 'selected' : (old('categories.1') == $category->id ? 'selected' : '')) }}>{{ $category->name }}</option>
+                                                    value="{{ $category->id }}" {{ (in_array($category->id, old("categories") ?: []) ? "selected" : "") }}>{{ $category->name }}</option>
                                             @endforeach
                                         </select>
 

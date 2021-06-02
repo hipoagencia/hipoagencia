@@ -105,7 +105,7 @@
 
                                             @foreach($categories->get() as $category)
                                                 <option
-                                                    value="{{ $category->id }}" {{ ($post->categories()->find($category->id) == true ? 'selected' : '') }}>{{ $category->name }}</option>
+                                                    value="{{ $category->id }}" {{ $category->id }}" {{ ($post->categories->find($category->id) == true ? 'selected' : (in_array($category->id, old("categories") ?: []) ? "selected" : "")) }}>{{ $category->name }}</option>
                                             @endforeach
                                         </select>
 

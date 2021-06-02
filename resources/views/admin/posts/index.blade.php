@@ -60,10 +60,10 @@
                                     <td>
                                         <a href="{{ route('admin.posts.edit', ['post' => $post->id]) }}">{{ $post->name }}</a>
                                     </td>
-                                    <td><a href="{{ route('admin.users.edit', ['user' => $post->author()->first()->id]) }}" class="href">{{ $post->author()->first()->name }} {{ $post->author()->first()->last_name }}</a></td>
+                                    <td><a href="{{ route('admin.users.edit', ['user' => $post->user->id]) }}" class="href">{{ $post->user->name }} {{ $post->user->last_name }}</a></td>
                                     <td>
-                                        @if($post->categories()->get())
-                                            @foreach($post->categories()->get() as $category)
+                                        @if($post->categories)
+                                            @foreach($post->categories as $category)
                                                 @if($loop->iteration === $loop->count)
                                                     {{ $category->name }}
                                                 @else

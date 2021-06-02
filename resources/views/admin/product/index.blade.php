@@ -63,8 +63,8 @@
                                     </td>
                                     <td>R$ {{ $product->price }}</td>
                                     <td>
-                                        @if($product->categories()->get())
-                                            @foreach($product->categories()->get() as $category)
+                                        @if($product->categories)
+                                            @foreach($product->categories as $category)
                                                 @if($loop->iteration === $loop->count)
                                                     {{ $category->name }}
                                                 @else

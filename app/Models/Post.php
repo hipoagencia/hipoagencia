@@ -13,6 +13,8 @@ class Post extends Model
 
     protected $table = 'posts';
 
+    protected $with = ['user', 'categories'];
+
     protected $fillable = [
         'name',
         'cover',
@@ -23,7 +25,7 @@ class Post extends Model
         'headline'
     ];
 
-    public function author()
+    public function user()
     {
         return $this->belongsTo(User::class, 'author', 'id');
     }

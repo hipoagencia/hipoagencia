@@ -91,6 +91,10 @@ class AuthController extends Controller
         //consultar e pegar os dados do cliente e preencher abaixo
 
         $request->validate([
+            'g-recaptcha-response' => 'required|captcha',
+        ]);
+
+        $request->validate([
             'email' => 'required|email|exists:users',
         ]);
 

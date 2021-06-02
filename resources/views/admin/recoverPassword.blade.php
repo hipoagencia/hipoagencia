@@ -21,9 +21,12 @@
 
         <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
-            <input type="text" class="form-control" id="email" name="email" type="email" placeholder="" required>
+            <input type="text" class="form-control" id="email" name="email" type="email" placeholder="" value="{{ old('email') }}" required>
         </div>
 
+        <div class="mb-3 mt-3">
+            {!! NoCaptcha::renderJs() !!} {!! NoCaptcha::display() !!}
+        </div>
 
         <div class="mt-3 d-grid">
             <button class="btn btn-primary waves-effect waves-light" type="submit">Resgatar a Senha</button>

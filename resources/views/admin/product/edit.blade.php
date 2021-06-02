@@ -113,7 +113,7 @@
 
                                             @foreach($categories->get() as $category)
                                                 <option
-                                                    value="{{ $category->id }}" {{ ($product->categories()->find($category->id) == true ? 'selected' : '') }}>{{ $category->name }}</option>
+                                                    value="{{ $category->id }}" {{ ($product->categories->find($category->id) == true ? 'selected' : (in_array($category->id, old("categories") ?: []) ? "selected" : "")) }}>{{ $category->name }}</option>
                                             @endforeach
                                         </select>
 
@@ -184,20 +184,6 @@
 
                                     </div>
                                     <div class="property_image row mt-3">
-                                        {{--                                        @foreach($product->images()->get() as $image)--}}
-                                        {{--                                            <div class="col-3 mb-3 property_image_item p-3" style="border:1px solid #CDCDCD;">--}}
-                                        {{--                                                <img src="{{ url($image->path) }}" class="img-fluid">--}}
-                                        {{--                                                <div class="property_image_actions text-center mt-3">--}}
-                                        {{--                                                    <a href="javascript:void(0)"--}}
-                                        {{--                                                       class="btn btn-primary btn-sm waves-effect waves-light {{ ($image->cover == true ? 'btn-success' : '') }} image-set-cover"--}}
-                                        {{--                                                       data-action="{{ route('admin.products.imageSetCover', ['image'=> $image->id]) }}"> Capa</a>--}}
-                                        {{--                                                    <a href="javascript:void(0)"--}}
-                                        {{--                                                       class="btn btn-danger btn-sm waves-effect waves-light image-remove"--}}
-                                        {{--                                                       data-action="{{ route('admin.products.imageRemove', ['image'=> $image->id]) }}"> Apagar</a>--}}
-                                        {{--                                                </div>--}}
-                                        {{--                                            </div>--}}
-                                        {{--                                        @endforeach--}}
-
                                         <table id="table" class="table table-bordered">
                                             <thead>
                                             <tr>
