@@ -30,6 +30,7 @@
             </div>
         </div>
 
+
         <div class="form-check">
             <input class="form-check-input" type="checkbox" name="remember">
             <label class="form-check-label" for="remember-check">
@@ -37,10 +38,10 @@
             </label>
         </div>
 
-{{--        <div class="mb-3">--}}
 
-{{--            {!! RecaptchaV3::field('login') !!}--}}
-{{--        </div>--}}
+        <div class="mb-3 mt-3">
+            {!! NoCaptcha::renderJs() !!} {!! NoCaptcha::display() !!}
+        </div>
 
         <div class="mt-3 d-grid">
             <button class="btn btn-primary waves-effect waves-light" type="submit">Entrar</button>
@@ -59,3 +60,6 @@
 
 @endsection
 
+@section('js')
+    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+@endsection

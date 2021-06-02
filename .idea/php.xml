@@ -126,6 +126,7 @@
       <path value="$PROJECT_DIR$/vendor/spatie/browsershot" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-cookie-consent" />
       <path value="$PROJECT_DIR$/vendor/josiasmontag/laravel-recaptchav3" />
+      <path value="$PROJECT_DIR$/vendor/anhskohbo/no-captcha" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3">
