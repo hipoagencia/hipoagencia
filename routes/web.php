@@ -21,13 +21,13 @@ use App\Http\Controllers\Web\PaymentController;
 |
 */
 
-    Route::get('/', function () {
-        return view('web.home');
-    });
+Route::get('/', function () {
+    return view('web.home');
+});
 
-    Route::get('/teste', function () {
-        return view('web.teste');
-    })->name('web.teste');
+Route::get('/teste', function () {
+    return view('web.teste');
+})->name('web.teste');
 
 
 /*
@@ -76,6 +76,21 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
             \Spatie\Sitemap\SitemapGenerator::create(env('app_url'))->writeToFile(public_path('sitemap.xml'));
 
             //Retorna para a Dashboard com mensagem de confirmação
+        });
+
+        //Retorna todos os logs do usuário
+        Route::get('log', function () {
+            activity()->log('Look mum, I logged something');
+            dd(\Spatie\Activitylog\Models\Activity::where('causer_id', \Illuminate\Support\Facades\Auth::user()->id)->get());
+        });
+
+        //BackupsList
+        Route::get('backup-list', function () {
+            $path = storage_path('app\bkp');
+            $files = scandir($path);
+            foreach ($files as $file){
+               echo $file;
+            }
         });
 
         //Rotas de Galerias

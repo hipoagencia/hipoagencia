@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class Product extends Model
 {
-    use HasFactory;
+    use HasFactory, LogsActivity;
 
     protected $table = 'products';
 
@@ -24,6 +25,19 @@ class Product extends Model
 
     protected $hidden = [
 
+    ];
+
+    //NECESSÁRIO PARA OS LOGS
+    protected static $logName = 'Produtos';
+    protected static $logAttributes = [
+        'name',
+        'description',
+        'price',
+        'category',
+        'status',
+        'title',
+        'slug',
+        'headline',
     ];
 
     public function images()

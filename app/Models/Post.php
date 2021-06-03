@@ -6,16 +6,30 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class Post extends Model
 {
-    use HasFactory;
+    use HasFactory, LogsActivity;
 
     protected $table = 'posts';
 
     protected $with = ['user', 'categories'];
 
     protected $fillable = [
+        'name',
+        'cover',
+        'author',
+        'description',
+        'title',
+        'slug',
+        'headline'
+    ];
+
+    //NECESSÁRIO PARA OS LOGS
+    protected static $logName = 'Posts';
+    //protected static $ignoreChangedAttributes = ['text'];
+    protected static $logAttributes = [
         'name',
         'cover',
         'author',

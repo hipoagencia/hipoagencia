@@ -5,14 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class Content extends Model
 {
-    use HasFactory;
+    use HasFactory, LogsActivity;
 
     protected $table = 'contents';
 
     protected $fillable = [
+        'name',
+        'description',
+        'title',
+        'slug',
+        'headline',
+        'status'
+    ];
+
+    //NECESSÁRIO PARA OS LOGS
+    protected static $logName = 'Conteúdos';
+    protected static $logAttributes = [
         'name',
         'description',
         'title',

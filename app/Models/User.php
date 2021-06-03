@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, LogsActivity;
 
-//    protected $table= 'users';
 
     /**
      * The attributes that are mass assignable.
@@ -59,6 +59,29 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+    ];
+
+    //NECESSÁRIO PARA OS LOGS
+    protected static $logName = 'Usuários';
+    protected static $ignoreChangedAttributes = ['password', 'remember_token'];
+    protected static $logAttributes = [
+        'name',
+        'last_name',
+        'email',
+        'password',
+        'genre',
+        'document',
+        'date_of_birth',
+        'cover',
+        'zipcode',
+        'street',
+        'number',
+        'complement',
+        'neighborhood',
+        'state',
+        'city',
+        'telephone',
+        'cell'
     ];
 
     public function getCoverAttribute($value)
