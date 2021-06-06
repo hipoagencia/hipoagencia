@@ -50,6 +50,7 @@
                                 <th>Cadadastrado em</th>
                                 <th>Data de Nascimento</th>
                                 <th>CPF</th>
+                                <th>Logs</th>
                                 <th width="8%">Ações</th>
                             </tr>
                             </thead>
@@ -63,6 +64,7 @@
                                     <td>{{ $user->created_at }}</td>
                                     <td>{{ $user->date_of_birth }}</td>
                                     <td>{{ $user->document }}</td>
+                                    <td><a href="{{ route('admin.users.log', ['id' => $user->id]) }}">Registros</a></td>
                                     <td>
                                         <div class="dropdown">
                                             <a href="#" class="dropdown-toggle card-drop" data-bs-toggle="dropdown" aria-expanded="false">

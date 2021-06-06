@@ -168,7 +168,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="password" class="form-label">Senha</label>
-                                            <input name="password" type="text" class="form-control" value="">
+                                            <input name="password" type="text" class="form-control">
                                         </div>
                                     </div>
 

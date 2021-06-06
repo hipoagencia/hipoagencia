@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Web\PaymentController;
+use Spatie\Newsletter\NewsletterFacade;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,9 @@ Route::get('/', function () {
 Route::get('/teste', function () {
     return view('web.teste');
 })->name('web.teste');
+
+//Rota Newsletter
+Route::post('newsletter-store', [\App\Http\Controllers\Web\NewsletterController::class, 'store'])->name('newsletter.store');
 
 
 /*
@@ -55,6 +59,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
         //Rotas de Usuários
         Route::resource('users', UserController::class);
+        Route::get('user/logs', [UserController::class, 'log'])->name('users.log');
 
         //Rotas de Produtos
         Route::post('products/image-order', [ProductController::class, 'imageOrder'])->name('products.imageOrder');
@@ -79,10 +84,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         });
 
         //Retorna todos os logs do usuário
-        Route::get('log', function () {
-            activity()->log('Look mum, I logged something');
-            dd(\Spatie\Activitylog\Models\Activity::where('causer_id', \Illuminate\Support\Facades\Auth::user()->id)->get());
-        });
+//        Route::get('log', function () {
+//            //activity()->log('Look mum, I logged something');
+//            dd(\Spatie\Activitylog\Models\Activity::where('causer_id', \Illuminate\Support\Facades\Auth::user()->id)->get());
+//        });
 
         //BackupsList
         Route::get('backup-list', function () {

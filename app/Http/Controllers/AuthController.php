@@ -19,6 +19,8 @@ class AuthController extends Controller
 
     public function showLoginForm()
     {
+        //dd(bcrypt('teste'));
+
         if (Auth::check() === true && Auth::user()->is_admin == 1) {
             return redirect()->route('admin.dashboard');
         } else if (Auth::check() === true && Auth::user()->is_admin == 0) {
@@ -33,12 +35,17 @@ class AuthController extends Controller
         $input = $request->all();
         $remember_me = (!empty($request->remember));
 
-
         if (auth()->attempt(array('email' => $input['email'], 'password' => $input['password']), $remember_me)) {
             $this->authenticated($request->getClientIp());
 
             //Desloga de todas as outras sessões do mesmo usuário
             Auth::logoutOtherDevices($input['password']);
+
+            //Registra Log
+            activity()
+                ->useLog('Login')
+                ->causedBy(auth()->id())
+                ->log('O usuário logou');
 
             if (auth()->user()->is_admin == 1) {
                 return redirect()->route('admin.dashboard');
@@ -56,7 +63,7 @@ class AuthController extends Controller
         $user = User::where('id', Auth::user()->id);
         $user->update([
             'last_login_at' => date('Y-m-d H:i:s'),
-            'last_login_ip' => $ip
+            'last_login_ip' => $ip,
         ]);
     }
 

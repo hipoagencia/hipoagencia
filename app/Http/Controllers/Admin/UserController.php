@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\User as UserRequest;
 use Illuminate\Support\Facades\Storage;
+use function PHPUnit\Framework\isNull;
 
 class UserController extends Controller
 {
@@ -21,6 +22,15 @@ class UserController extends Controller
 
         return view('admin.users.index',[
             'users' => $users
+        ]);
+    }
+
+    public function log(Request $request)
+    {
+        $logs = \Spatie\Activitylog\Models\Activity::where('causer_id', $request->id)->orderBy('id', 'DESC')->get();
+
+        return view('admin.users.log',[
+            'logs' => $logs
         ]);
     }
 
@@ -100,7 +110,12 @@ class UserController extends Controller
             $user->cover= '';
         }
 
-        $user->fill($request->all());
+        //Verifica se houve troca de senha
+        if($request->password != null){
+            $user->fill($request->all());
+            $user->password = bcrypt($request->password);
+        }else
+            $user->fill($request->except(['password']));
 
         if (!empty($request->file('cover'))) {
             $user->cover = $request->file('cover')->store('public/user');
