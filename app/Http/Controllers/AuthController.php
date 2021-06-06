@@ -39,20 +39,18 @@ class AuthController extends Controller
             $this->authenticated($request->getClientIp());
 
             //Desloga de todas as outras sessões do mesmo usuário
-            Auth::logoutOtherDevices($input['password']);
+            //Auth::logoutOtherDevices($input['password']);
 
             //Registra Log
-            activity()
-                ->useLog('Login')
-                ->causedBy(auth()->id())
-                ->log('O usuário logou');
+            activity()->useLog('Login')->causedBy(auth()->id())->log('O usuário logou');
 
             if (auth()->user()->is_admin == 1) {
                 return redirect()->route('admin.dashboard');
             } else {
                 return redirect()->route('user.dashboard');
             }
-        } else {
+        }
+        else {
             return redirect()->route('login')
                 ->withErrors('Login ou senha incorretos');
         }
