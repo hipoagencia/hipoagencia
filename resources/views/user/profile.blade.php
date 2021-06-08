@@ -5,9 +5,28 @@
     @if(!empty($user))
 
         <div class="container">
-            <div class="row">
 
-                <div class="offset-4 col-4">
+            @if($errors->all())
+                @foreach($errors->all() as $error)
+                    @component('admin.components.message',['type' => 'danger'])
+                        {{ $error }}
+                    @endcomponent
+                @endforeach
+            @endif
+
+            @if(session()->exists('message'))
+                @component('admin.components.message',['type' => session()->get('type')])
+                    {{ session()->get('message') }}
+                @endcomponent
+            @endif
+
+            <div class="row">
+                <form action="{{ route('user.profile.update') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                <div class="offset-2 col-8">
+
+                    <img src="{{ url(asset($user->cover)) }}" width="150"/>
 
                     <h4 class="mb-4">Informações</h4>
 
@@ -27,13 +46,13 @@
 
                     <div class="row mb-3">
                         <input type="text" class="form-control" placeholder="E-mail" name="email"
-                               value="{{ old('email') ?? $user->email }}">
+                               value="{{ old('email') ?? $user->email }}" disabled>
                     </div>
 
                     <div class="row mb-3">
                         <div class="col-6">
                             <div class="row"><input type="text" class="form-control" placeholder="CPF" name="document"
-                                                    value="{{ old('document') ?? $user->document }}">
+                                                    value="{{ old('document') ?? $user->document }}" disabled>
                             </div>
                         </div>
                         <div class="col-6">
@@ -97,10 +116,21 @@
                         </div>
                     </div>
 
+                    <h4 class="mb-4">Foto</h4>
+
+                    <div class="mb-3">
+                        <div class="mb-3">
+                            <label for="cover" class="form-label">Imagem Principal</label>
+                            <input name="cover" class="form-control" type="file" id="formFile">
+                        </div>
+                    </div>
+
                     <div class="row">
-                        <a href="#" class="btn btn-success w-100">Alterar</a>
+                        <button class="btn btn-success w-100" type="submit">Alterar</button>
                     </div>
                 </div>
+
+                </form>
             </div>
         </div>
 

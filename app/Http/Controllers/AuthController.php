@@ -78,13 +78,6 @@ class AuthController extends Controller
         ]);
     }
 
-    public function profileUser()
-    {
-        $user = User::users()->find(auth()->user()->id);
-        return view('user.profile', [
-            'user' => $user
-        ]);
-    }
 
     public function recoverPassword()
     {

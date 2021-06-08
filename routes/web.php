@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Web\PaymentController;
 use Spatie\Newsletter\NewsletterFacade;
+use App\Http\Controllers\Web\UserController as UserControllerWeb;
 
 /*
 |--------------------------------------------------------------------------
@@ -119,7 +120,8 @@ Route::group(['prefix' => 'usuario', 'namespace' => 'User', 'as' => 'user.'], fu
 
         Route::get('inicio', [AuthController::class, 'dashboardUser'])->name('dashboard');
 
-        Route::get('perfil', [AuthController::class, 'profileUser'])->name('profile');
+        Route::get('perfil', [UserControllerWeb::class, 'edit'])->name('profile');
+        Route::put('perfil-update', [UserControllerWeb::class, 'update'])->name('profile.update');
 
         /** Checkout */
         Route::get('checkout/{product}', [PaymentController::class, 'checkout'])->name('checkout');
