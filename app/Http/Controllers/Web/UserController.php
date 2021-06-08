@@ -77,7 +77,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|min:3|max:191',
             'last_name' => 'required|min:3|max:191',
-            'cover' => 'image|size:10000',
+            'cover' => 'max:1024|image',
             'zipcode' => 'required|min:8|max:9',
             'street' => 'required',
             'number' => 'required',
