@@ -56,7 +56,7 @@ class User extends FormRequest
             'cell' => 'required',
 
             //Access - Acesso
-            'email' => (!empty($this->request->all()['id']) ? 'required|email|unique:Users,email,' . $this->request->all()['id'] : 'required|email|unique:Users,email'),
+            'email' => (!empty($this->request->all()['id']) ? 'required|email|unique:users,email,' . $this->request->all()['id'] : 'required|email|unique:users,email'),
         ];
     }
 }
