@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
+
 class AuthController extends Controller
 {
 
@@ -135,6 +136,56 @@ class AuthController extends Controller
         return view('admin.changePassword', [
             'token' => $request->token
         ]);
+    }
+
+    public function newPasswordDo(Request $request)
+    {
+        $request->validate([
+            'password' => 'required|min:5',
+            'password_confirm' => 'required|same:password'
+        ]);
+
+        $token = DB::table('password_resets')->where('token', $request->token)->first();
+
+        $user = User::where('email', $token->email)->first();
+        $user->password = bcrypt($request->password);
+
+        if($user->save()){
+            return redirect()->route('recoverPassword')->with(['type' => 'success', 'message' => 'Sua senha foi trocada com sucesso!']);
+        }
+        else
+        {
+            return redirect()->route('recoverPassword')->with(['type' => 'danger', 'message' => 'Ocorreu um erro. Tente novamente mais tarde.']);
+        }
+    }
+
+    public function register()
+    {
+        return view('admin.register');
+    }
+
+    public function registerDo(Request $request)
+    {
+//        $request->validate([
+//            'g-recaptcha-response' => 'required|captcha',
+//        ]);
+
+        $request->validate([
+            'name' => 'required|min:3|max:191',
+            'last_name' => 'required|min:3|max:191',
+            'email' => 'required|email|unique:users,email',
+            'cell' => 'required',
+            'genre' => 'in:masculino,feminino,binario',
+            'date_of_birth' => 'required|before:2010-01-01',
+            'password' => 'required|min:5',
+            'password_confirm' => 'required|same:password'
+        ]);
+
+        $user = $request->all();
+        $user['password'] = bcrypt($request->password);
+        $userCreate = User::create($user);
+
+        return redirect()->route('login')->with(['type' => 'success', 'message' => 'Usuário criado com sucesso! Agora entre em sua conta.']);
     }
 
     public function logout()

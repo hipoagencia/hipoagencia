@@ -46,7 +46,12 @@ Route::get('/sair', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/recurar-senha', [AuthController::class, 'recoverPassword'])->name('recoverPassword');
 Route::post('/recuperar-senha-sendmail', [AuthController::class, 'recoverPasswordSendMail'])->name('recover-Password-SendMail');
+
 Route::get('/nova-senha', [AuthController::class, 'newPassword'])->name('newPassword');
+Route::post('/nova-senha-do', [AuthController::class, 'newPasswordDo'])->name('newPassword-do');
+
+Route::get('/cadastro', [AuthController::class, 'register'])->name('register');
+Route::post('/cadastro-do', [AuthController::class, 'registerDo'])->name('register-do');
 
 /*
 |--------------------------------------------------------------------------
@@ -83,12 +88,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
             //Retorna para a Dashboard com mensagem de confirmação
         });
-
-        //Retorna todos os logs do usuário
-//        Route::get('log', function () {
-//            //activity()->log('Look mum, I logged something');
-//            dd(\Spatie\Activitylog\Models\Activity::where('causer_id', \Illuminate\Support\Facades\Auth::user()->id)->get());
-//        });
 
         //BackupsList
         Route::get('backup-list', function () {

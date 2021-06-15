@@ -127,7 +127,7 @@
                                         <div class="mb-3">
                                             <label for="date_of_birth" class="form-label">Data de Nascimento</label>
                                             <input name="date_of_birth" class="form-control" type="date"
-                                                   value="{{ date('Y-m-d', strtotime(old('date_of_birth') ))??  date('Y-m-d', strtotime($user->date_of_birth)) }}"
+                                                   value="{{ date('Y-m-d', strtotime(old('date_of_birth') )) ??  date('Y-m-d', strtotime($user->date_of_birth)) }}"
                                                    id="example-date-input">
 
                                         </div>

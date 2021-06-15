@@ -59,6 +59,9 @@
 <script src="{{ url(asset('backend/assets/libs/simplebar/simplebar.min.js')) }}"></script>
 <script src="{{ url(asset('backend/assets/libs/node-waves/waves.min.js')) }}"></script>
 
+<script src="{{ url(asset('backend/assets/libs/inputmask/min/jquery.inputmask.bundle.min.js')) }}"></script>
+<script src="{{ url(asset('backend/assets/js/pages/form-mask.init.js')) }}"></script>
+
 <script src="{{ url(asset('backend/assets/js/app.js')) }}"></script>
 
 </body>

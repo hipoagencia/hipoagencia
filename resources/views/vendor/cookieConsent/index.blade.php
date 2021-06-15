@@ -19,7 +19,7 @@
             }
 
             function hideCookieDialog() {
-                const dialogs = document.getElementsByClassName('js-cookie-consent');
+                const dialogs = document.getElementsByClassName('card-cookie');
 
                 for (let i = 0; i < dialogs.length; ++i) {
                     dialogs[i].style.display = 'none';

@@ -15,6 +15,12 @@
             @endforeach
         @endif
 
+        @if(session()->exists('message'))
+            @component('admin.components.message',['type' => session()->get('type')])
+                {{ session()->get('message') }}
+            @endcomponent
+        @endif
+
         <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
             <input type="text" class="form-control" id="email" name="email" type="email" placeholder="" required>
