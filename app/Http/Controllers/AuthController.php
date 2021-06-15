@@ -166,9 +166,9 @@ class AuthController extends Controller
 
     public function registerDo(Request $request)
     {
-//        $request->validate([
-//            'g-recaptcha-response' => 'required|captcha',
-//        ]);
+        $request->validate([
+            'g-recaptcha-response' => 'required|captcha',
+        ]);
 
         $request->validate([
             'name' => 'required|min:3|max:191',
