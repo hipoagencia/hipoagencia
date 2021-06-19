@@ -38,7 +38,8 @@ class User extends Authenticatable
         'state',
         'city',
         'telephone',
-        'cell'
+        'cell',
+        'email_verified_token'
     ];
 
     /**

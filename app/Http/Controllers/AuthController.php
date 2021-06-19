@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Login as LoginRequest;
+use App\Mail\Auth\ConfirmAccount;
 use App\Mail\Auth\RecoverPassword;
 use App\Models\User;
 use Carbon\Carbon;
@@ -13,15 +14,22 @@ use App\Models\Product;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
+use function PHPUnit\Framework\isNull;
 
 
 class AuthController extends Controller
 {
 
-    public function showLoginForm()
+    public function showLoginForm(Request $request)
     {
         //dd(bcrypt('teste'));
 
+        //Confirma o usuário
+        if($request->confirm != null) {
+            $this->userConfirm($request->confirm);
+        }
+
+        //Verifica se já está logado
         if (Auth::check() === true && Auth::user()->is_admin == 1) {
             return redirect()->route('admin.dashboard');
         } else if (Auth::check() === true && Auth::user()->is_admin == 0) {
@@ -45,6 +53,13 @@ class AuthController extends Controller
             //Registra Log
             activity()->useLog('Login')->causedBy(auth()->id())->log('O usuário logou');
 
+            //Verifica se o e-mail foi confirmado
+            if (auth()->user()->email_verified_at == null) {
+                Auth::logout();
+                return redirect()->route('login')
+                    ->withErrors('É preciso confirmar sua conta em seu e-mail para continuar.');
+            }
+
             if (auth()->user()->is_admin == 1) {
                 return redirect()->route('admin.dashboard');
             } else {
@@ -66,6 +81,14 @@ class AuthController extends Controller
         ]);
     }
 
+    public function userConfirm($confirm)
+    {
+        $user = User::where('email_verified_token', $confirm);
+        $user->update([
+            'email_verified_at' => date('Y-m-d H:i:s'),
+        ]);
+    }
+
     public function dashboardAdmin()
     {
         return view('admin.dashboard');
@@ -78,7 +101,6 @@ class AuthController extends Controller
             'products' => $products
         ]);
     }
-
 
     public function recoverPassword()
     {
@@ -181,11 +203,27 @@ class AuthController extends Controller
             'password_confirm' => 'required|same:password'
         ]);
 
+        //Gera o token de confirmação de email
+        $token = Str::random(64);
+
         $user = $request->all();
         $user['password'] = bcrypt($request->password);
-        $userCreate = User::create($user);
+        $user['email_verified_token'] = $token;
+        User::create($user);
 
-        return redirect()->route('login')->with(['type' => 'success', 'message' => 'Usuário criado com sucesso! Agora entre em sua conta.']);
+        $data = [
+            'reply_name' => env('app_name'),
+            'reply_email' => env('mail_from_address'),
+            'to' => $request->email,
+            'to_name' => $request->name,
+            'subject' => 'Confirme sua conta - ' . env('app_name'),
+            'message' => $token
+        ];
+
+        //Envio com Jobs
+        \App\Jobs\Auth\ConfirmAccount::dispatch($data)->delay(now()->addSeconds(5));
+
+        return redirect()->route('login')->with(['type' => 'success', 'message' => 'Acesse o seu e-mail e clique no link para verificar a conta e seja bem vindo!']);
     }
 
     public function logout()
