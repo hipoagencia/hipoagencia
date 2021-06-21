@@ -132,7 +132,7 @@ class AuthController extends Controller
             'reply_name' => env('app_name'),
             'reply_email' => env('mail_from_address'),
             'to' => $request->email,
-            'to_name' => '',
+            'to_name' => ' ',
             'subject' => 'Recuperação de Senha no ' . env('app_name'),
             'message' => $token
         ];
