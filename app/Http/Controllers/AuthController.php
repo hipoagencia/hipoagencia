@@ -138,7 +138,9 @@ class AuthController extends Controller
         ];
 
         //Envio com Jobs
-        \App\Jobs\Auth\RecoverPassword::dispatch($data)->delay(now()->addSeconds(5));
+        //\App\Jobs\Auth\RecoverPassword::dispatch($data)->delay(now()->addSeconds(5));
+
+        Mail::send(new RecoverPassword($data));
 
         return redirect()->back()->with(['type' => 'success', 'message' => 'Enviamos um link válido por 30 minutos para seu e-mail! Verifique também, sua caixa de SPAM.']);
     }
