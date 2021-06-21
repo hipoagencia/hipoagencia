@@ -122,8 +122,12 @@ Route::group(['prefix' => 'usuario', 'namespace' => 'User', 'as' => 'user.'], fu
         Route::get('perfil', [UserControllerWeb::class, 'edit'])->name('profile');
         Route::put('perfil-update', [UserControllerWeb::class, 'update'])->name('profile.update');
 
+        /** Add to cart */
+        Route::post('cartAdd', [PaymentController::class, 'cartAdd'])->name('cartAdd');
+
         /** Checkout */
-        Route::get('checkout/{product}', [PaymentController::class, 'checkout'])->name('checkout');
+        Route::get('checkout', [PaymentController::class, 'checkout'])->name('checkout');
+
 
     });
 });

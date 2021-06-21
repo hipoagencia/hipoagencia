@@ -143,6 +143,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-activitylog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/drewm/mailchimp-api" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-newsletter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bumbummen99/shoppingcart" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

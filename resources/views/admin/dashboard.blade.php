@@ -13,6 +13,23 @@
                     </ol>
                 </div>
 
+
+{{--                @can('user_create')--}}
+{{--                    CRIAR USUÁRIO--}}
+{{--                @endcan--}}
+
+{{--                @can('user_delete')--}}
+{{--                    DELETAR USUÁRIO--}}
+{{--                @endcan
+
+                    NO
+                    AuthServiceProvider
+                    EU DEFINO O USER_CREATE
+
+                    PARA PROTEGER O CONTROLE, UTILIZAR:
+                    $this->authorize('user_view');
+--}}
+
             </div>
         </div>
     </div>

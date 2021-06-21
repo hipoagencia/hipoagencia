@@ -136,6 +136,7 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-activitylog" />
       <path value="$PROJECT_DIR$/vendor/drewm/mailchimp-api" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-newsletter" />
+      <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3">

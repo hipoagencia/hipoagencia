@@ -5,6 +5,15 @@
 
 
     <div class="container">
+        <div class="row mb-5">
+
+            @if(\Gloudemans\Shoppingcart\Facades\Cart::count())
+                Seu carrinho ({{ \Gloudemans\Shoppingcart\Facades\Cart::count() }})
+            @else
+                Nenhum item no carrinho
+            @endif
+
+        </div>
         <div class="row">
 
             @if(!empty($products))
@@ -13,7 +22,11 @@
                     <div class="col-sm-4">
                         <h3>{{ $product->name }}</h3>
                         <h5>R${{ $product->price }}</h5>
-                        <a href="{{ route('user.checkout', ['product' => $product->id]) }}" class="btn btn-success mt-3">Comprar</a>
+
+                        <form action="{{ route('user.cartAdd', ['product' => $product->id]) }}" method="POST">
+                            @csrf
+                            <button class="btn btn-success mt-3">Comprar</button>
+                        </form>
                     </div>
 
                 @endforeach
@@ -21,6 +34,7 @@
                 <h3>Nenhum Produto Cadastrado</h3>
             @endif
         </div>
+
     </div>
 
 @endsection

@@ -14,7 +14,7 @@ class User extends FormRequest
      */
     public function authorize()
     {
-        return Auth::check() && Auth::user()->is_admin == 1;
+        return Auth::check() && Auth::user()->is_admin >= 1;
     }
 
     public function all($keys = null)

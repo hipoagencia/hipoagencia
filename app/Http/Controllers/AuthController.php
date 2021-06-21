@@ -60,7 +60,7 @@ class AuthController extends Controller
                     ->withErrors('É preciso confirmar sua conta em seu e-mail para continuar.');
             }
 
-            if (auth()->user()->is_admin == 1) {
+            if (auth()->user()->is_admin >= 1) {
                 return redirect()->route('admin.dashboard');
             } else {
                 return redirect()->route('user.dashboard');
