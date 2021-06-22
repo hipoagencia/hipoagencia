@@ -36,7 +36,10 @@
         <div class="mt-4 text-center">
             <a href="{{ route('register') }}" class="text-muted"><i class="mdi mdi-new-box me-1"></i> Criar conta</a>
 
+            <a href="{{ route('recoverPassword') }}" class="text-muted"><i class="mdi mdi-lock me-1"></i> Esqueceu a
+                senha?</a>
         </div>
+
     </form>
 
 @endsection
