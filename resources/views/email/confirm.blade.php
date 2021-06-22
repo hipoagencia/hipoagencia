@@ -4,7 +4,7 @@ Olá {{ $to_name }}, para confirmar o seu cadastro, clique no link abaixo ou cop
 
 <br><br>
 @component('mail::panel')
-<a href="{{ env('app_url') }}/login?confirm={{ $message }}" class="btn btn-success">{{ env('app_url') }}/login?confirm={{ $message }}</a>
+<a href="{{ env('APP_URL') }}/login?confirm={{ $message }}" class="btn btn-success">{{ env('APP_URL') }}/login?confirm={{ $message }}</a>
 <br>
 @endcomponent
 <br>

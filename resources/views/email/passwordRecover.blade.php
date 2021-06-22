@@ -4,7 +4,7 @@
 
 <br><br>
 @component('mail::panel')
-<a href="{{ env('app_url') }}/nova-senha?token={{ $message }}" class="btn btn-success">{{ env('app_url') }}/nova-senha?id={{ $message }}</a>
+<a href="{{ env('APP_URL') }}/nova-senha?token={{ $message }}" class="btn btn-success">{{ env('APP_URL') }}/nova-senha?id={{ $message }}</a>
     <br>
 @endcomponent
 <br>
