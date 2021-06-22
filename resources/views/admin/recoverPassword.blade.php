@@ -34,7 +34,8 @@
 
 
         <div class="mt-4 text-center">
-            <a href="#" class="text-muted">Cria conta</a> ou <a href="{{ route('login') }}" class="text-muted"> Entrar</a>
+            <a href="{{ route('register') }}" class="text-muted"><i class="mdi mdi-new-box me-1"></i> Criar conta</a>
+
         </div>
     </form>
 

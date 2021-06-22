@@ -129,8 +129,8 @@ class AuthController extends Controller
         $url = env('app_url') . '/nova-senha?token=' . $token;
 
         $data = [
-            'reply_name' => env('app_name'),
-            'reply_email' => env('mail_from_address'),
+            'reply_name' => env('APP_NAME'),
+            'reply_email' => env('MAIL_FROM_ADDRESS'),
             'to' => $request->email,
             'to_name' => ' ',
             'subject' => 'Recuperação de Senha no ' . env('app_name'),
@@ -138,9 +138,8 @@ class AuthController extends Controller
         ];
 
         //Envio com Jobs
-        //\App\Jobs\Auth\RecoverPassword::dispatch($data)->delay(now()->addSeconds(5));
-
-        Mail::send(new RecoverPassword($data));
+        \App\Jobs\Auth\RecoverPassword::dispatch($data)->delay(now()->addSeconds(5));
+        //Mail::send(new RecoverPassword($data));
 
         return redirect()->back()->with(['type' => 'success', 'message' => 'Enviamos um link válido por 30 minutos para seu e-mail! Verifique também, sua caixa de SPAM.']);
     }
@@ -213,8 +212,8 @@ class AuthController extends Controller
         User::create($user);
 
         $data = [
-            'reply_name' => env('app_name'),
-            'reply_email' => env('mail_from_address'),
+            'reply_name' => env('APP_NAME'),
+            'reply_email' => env('MAIL_FROM_ADDRESS'),
             'to' => $request->email,
             'to_name' => $request->name,
             'subject' => 'Confirme sua conta - ' . env('app_name'),
