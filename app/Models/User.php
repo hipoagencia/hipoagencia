@@ -85,6 +85,12 @@ class User extends Authenticatable
         'cell'
     ];
 
+    public function orders()
+    {
+        return $this->hasOne(Order::class, 'user', 'id')
+            ->orderBy('id', 'DESC');
+    }
+
     public function getCoverAttribute($value)
     {
         return Storage::url($value);

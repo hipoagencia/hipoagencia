@@ -63,17 +63,34 @@
             </div>
         </div>
 
-        <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="text" class="form-control" id="email" name="email" type="email" placeholder="" required>
+
+
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="mb-3">
+
+                    <label for="date_of_birth" class="form-label">Data de Nascimento</label>
+                    <input name="date_of_birth" class="form-control" type="date"
+                           value="{{ date('Y-m-d', strtotime(old('date_of_birth') )) ?? date('Y-m-d', strtotime('1991-01-01')) }}"
+                           id="example-date-input">
+
+                </div>
+            </div>
+
+            <div class="col-xl-6">
+                <div class="mb-3">
+                    <label for="document" class="form-label">CPF <span class="small">(somente números)</span></label>
+                    <input type="text" class="form-control" id="document" name="document" placeholder="" value="{{ old('document') }}" required>
+                </div>
+            </div>
         </div>
 
         <div class="mb-3">
-            <label for="email" class="form-label">Data de Nascimento</label>
-            <input name="date_of_birth" class="form-control" type="date"
-                   value="{{ date('Y-m-d', strtotime(old('date_of_birth') )) ?? date('Y-m-d', strtotime('1991-01-01')) }}"
-                   id="example-date-input">
+
+            <label for="email" class="form-label">E-mail</label>
+            <input type="text" class="form-control" id="email" name="email" type="email" placeholder="" value="{{ old('email') }}" required>
         </div>
+
 
 
 

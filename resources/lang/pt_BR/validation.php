@@ -186,7 +186,9 @@ return [
         'description' => 'descrição',
         'password_confirmation' => 'confirmação da senha',
         'password_confirm' => 'confirmação de senha',
-        'date_of_birth' => 'data de aniversário'
+        'date_of_birth' => 'data de aniversário',
+        'genre' => 'sexo',
+        'document' => 'cpf',
     ],
 
 ];

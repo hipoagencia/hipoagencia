@@ -21,6 +21,7 @@ class Product extends Model
         'title',
         'slug',
         'headline',
+        'days',
     ];
 
     protected $hidden = [
@@ -38,6 +39,7 @@ class Product extends Model
         'title',
         'slug',
         'headline',
+        'days',
     ];
 
     public function images()

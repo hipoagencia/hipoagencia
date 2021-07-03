@@ -15,8 +15,8 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
 
-    @hasSection('cs')
-        @yield('cs')
+    @hasSection('css')
+        @yield('css')
     @endif
 
 </head>

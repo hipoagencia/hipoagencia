@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Post extends Model
+class Post extends Model implements Searchable
 {
     use HasFactory, LogsActivity;
 
@@ -62,4 +64,15 @@ class Post extends Model
             $this->attributes['slug'] = $value;
         }
     }
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('user.dashboard', $this->slug);
+        return new \Spatie\Searchable\SearchResult(
+            $this,
+            $this->name,
+            $url
+        );
+    }
+    public $searchableType = 'Artigos';
 }

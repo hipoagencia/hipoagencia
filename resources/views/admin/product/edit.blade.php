@@ -71,7 +71,7 @@
                                 <h3 class="mb-3">Informações</h3>
                                 <div class="row">
 
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nome</label>
                                             <input name="name" class="form-control"
@@ -79,7 +79,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="mb-3">
                                             <label for="price" class="form-label">Preço R$</label>
                                             <input name="price" class="form-control"
@@ -87,7 +87,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="mb-3">
                                             <label for="status" class="form-label">Status</label>
                                             <select class="form-select" name="status">
@@ -101,6 +101,14 @@
                                                     Inativo
                                                 </option>
                                             </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <label for="days" class="form-label">Tempo de Plano (em dias)</label>
+                                            <input name="days" class="form-control"
+                                                   value="{{ old('days') ?? $product->days   }}">
                                         </div>
                                     </div>
 

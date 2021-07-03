@@ -144,6 +144,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/drewm/mailchimp-api" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-newsletter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bumbummen99/shoppingcart" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-searchable" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/geekcom/validator-docs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/thiagocfn/inscricaoestadual" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pagseguro/pagseguro-php-sdk" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -97,8 +97,14 @@ class AuthController extends Controller
     public function dashboardUser()
     {
         $products = Product::orderBy('price')->get();
+        $user = User::where('id', Auth::id())->first();
+
+        $userPlans = $user->orders();
+
         return view('user.dashboard', [
-            'products' => $products
+            'products' => $products,
+            'user' => $user,
+            'userPlans' => $userPlans
         ]);
     }
 
@@ -118,7 +124,7 @@ class AuthController extends Controller
             'email' => 'required|email|exists:users',
         ]);
 
-        $token = Str::random(64);
+        $token = Str::random(12);
 
         DB::table('password_resets')->insert(
             ['email' => $request->email, 'token' => $token, 'created_at' => Carbon::now()]
@@ -126,13 +132,13 @@ class AuthController extends Controller
 
         $user = User::where('email', $request->email);
 
-        $url = env('app_url') . '/nova-senha?token=' . $token;
+        $url = env('APP_NAME') . '/nova-senha?token=' . $token;
 
         $data = [
             'reply_name' => env('APP_NAME'),
             'reply_email' => env('MAIL_FROM_ADDRESS'),
             'to' => $request->email,
-            'to_name' => ' ',
+            'to_name' => '',
             'subject' => 'Recuperação de Senha no ' . env('APP_NAME'),
             'message' => $token
         ];
@@ -198,13 +204,14 @@ class AuthController extends Controller
             'email' => 'required|email|unique:users,email',
             'cell' => 'required',
             'genre' => 'in:masculino,feminino,binario',
+            'document' => 'required|cpf|max:11|unique:users,document',
             'date_of_birth' => 'required|before:2010-01-01',
             'password' => 'required|min:5',
             'password_confirm' => 'required|same:password'
         ]);
 
         //Gera o token de confirmação de email
-        $token = Str::random(64);
+        $token = Str::random(12);
 
         $user = $request->all();
         $user['password'] = bcrypt($request->password);
@@ -230,5 +237,11 @@ class AuthController extends Controller
     {
         Auth::logout();
         return redirect()->route('login')->withErrors('Você saiu da sua conta.. volte logo!');
+    }
+
+    public function validateFields(array $inputs)
+    {
+        $inputs['document'] = str_replace(['.','-'], '', $this->request->all()['document']);
+        return $inputs;
     }
 }

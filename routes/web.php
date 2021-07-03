@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Web\PaymentController;
 use Spatie\Newsletter\NewsletterFacade;
 use App\Http\Controllers\Web\UserController as UserControllerWeb;
+use App\Http\Controllers\Web\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -115,22 +116,31 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 */
 Route::group(['prefix' => 'usuario', 'namespace' => 'User', 'as' => 'user.'], function () {
     //Rotas protegidas usuário
-    route::group(['middleware' => ['is_user']], function () {
+    Route::group(['middleware' => ['is_user']], function () {
 
         Route::get('inicio', [AuthController::class, 'dashboardUser'])->name('dashboard');
 
         Route::get('perfil', [UserControllerWeb::class, 'edit'])->name('profile');
         Route::put('perfil-update', [UserControllerWeb::class, 'update'])->name('profile.update');
 
+        /** Pesquisa */
+        Route::get('pesquisa', [SearchController::class, 'index'])->name('pesquisa');
+
         /** Add to cart */
         Route::post('cartAdd', [PaymentController::class, 'cartAdd'])->name('cartAdd');
 
         /** Checkout */
-        Route::get('checkout', [PaymentController::class, 'checkout'])->name('checkout');
+        Route::get('checkout', [PaymentController::class, 'index'])->name('checkout.cardDetails');
+        Route::get('thanks', [PaymentController::class, 'thanks'])->name('checkout.thanks');
 
+        /** Checkout Rota PagSeguro */
+        Route::post('proccess', [PaymentController::class, 'proccess'])->name('checkout.proccess');
 
     });
 });
+
+/** Notificação Rota PagSeguro */
+Route::post('notification', [PaymentController::class, 'notification'])->name('checkout.notification');
 
 /*
 |--------------------------------------------------------------------------

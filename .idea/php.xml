@@ -137,6 +137,10 @@
       <path value="$PROJECT_DIR$/vendor/drewm/mailchimp-api" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-newsletter" />
       <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-searchable" />
+      <path value="$PROJECT_DIR$/vendor/geekcom/validator-docs" />
+      <path value="$PROJECT_DIR$/vendor/thiagocfn/inscricaoestadual" />
+      <path value="$PROJECT_DIR$/vendor/pagseguro/pagseguro-php-sdk" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3">

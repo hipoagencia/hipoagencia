@@ -78,7 +78,7 @@ class ProductController extends Controller
 
         return redirect()->route('admin.products.edit', [
             'product' => $productCreate->id
-        ])->with(['type' => 'success', 'message' => 'Produto atualizado com sucesso!']);
+        ])->with(['type' => 'success', 'message' => 'Produto criado com sucesso!']);
 
     }
 

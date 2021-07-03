@@ -17,6 +17,10 @@ mix
     //Asset Admin
     .copyDirectory('resources/views/admin/assets','public/backend/assets')
 
+
+    //Asset User
+    .copyDirectory('resources/views/user/assets','public/user/assets')
+
     .options({
         processCssUrls:false
     })
