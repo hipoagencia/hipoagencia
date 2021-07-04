@@ -12,6 +12,7 @@ use App\Http\Controllers\Web\PaymentController;
 use Spatie\Newsletter\NewsletterFacade;
 use App\Http\Controllers\Web\UserController as UserControllerWeb;
 use App\Http\Controllers\Web\SearchController;
+use App\Http\Controllers\Admin\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,6 +83,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
         //Rotas de Conteúdos
         Route::resource('content', ContentController::class);
+
+        //Rotas de Pedidos
+        Route::resource('orders', OrderController::class);
 
         //SiteMap
         Route::get('site-map', function () {

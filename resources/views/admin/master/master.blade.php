@@ -262,8 +262,6 @@
                     </li>
 
 
-                    <li class="menu-title" key="t-pages">Sessões</li>
-
 
                     <li>
                         <a href="{{ route('admin.users.index') }}" class="waves-effect">
@@ -273,12 +271,7 @@
                     </li>
 
 
-                    <li>
-                        <a href="{{ route('admin.products.index') }}" class="waves-effect">
-                            <i class="bx bx-user-circle"></i>
-                            <span key="t-starter-page">Produtos</span>
-                        </a>
-                    </li>
+
 
 
 
@@ -293,6 +286,23 @@
                             <li><a href="{{ route('admin.gallery.index') }}" key="t-read-email" key="t-pages">Galeria</a></li>
                         </ul>
                     </li>
+
+
+
+
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
+                            <i class="bx bx-envelope"></i>
+                            <span key="t-email">Compras</span>
+                        </a>
+                        <ul class="sub-menu mm-collapse">
+                            <li><a href="{{ route('admin.products.index') }}" key="t-blog">Produtos</a></li>
+                            <li><a href="{{ route('admin.orders.index') }}" key="t-read-email" key="t-pages">Pedidos</a></li>
+                        </ul>
+                    </li>
+
+
+
 
                     <li class="menu-title" key="t-pages">Sessões</li>
 

@@ -25,6 +25,12 @@ class PaymentController extends Controller
             if (!Cart::content()->count())
                 return redirect()->route('user.dashboard');
 
+            //Verifica se o usuário preencheu o zipcode, se não, envia para completar
+            if(auth()->user()->zipcode == null) {
+                session(['goCheckout' => true]);
+                return redirect()->route('user.profile')->withErrors('Você precisa preencher todos seus dados para continuar');
+            }
+
             $product = Product::find($request->product);
 
             $this->makePagSeguroSection();
@@ -156,7 +162,8 @@ class PaymentController extends Controller
 
         } catch (\Exception $ex){
 
-            $message = env('APP_DEBUG') ? simplexml_load_string($ex->getMessage()) : 'Erro ao processar o pedido';
+            //$message = env('APP_DEBUG') ? simplexml_load_string($ex->getMessage()) : 'Erro ao processar o pedido';
+            $message = $ex->getMessage();
 
             return response()->json([
                 'data' => [
@@ -190,7 +197,7 @@ class PaymentController extends Controller
             if($notification->getStatus() == 3){
                 //Status de Pedido pago
 
-                echo "Pedido pago caiaio";
+                echo "Pedido pago";
             }
 
             return response()->json([], 203);

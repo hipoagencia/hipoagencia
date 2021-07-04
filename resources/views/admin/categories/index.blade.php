@@ -63,7 +63,7 @@
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
 {{--                                                <li><a href="{{ route('admin.categories.edit', ['category' => $category->id]) }}"  class="dropdown-item"><i class="mdi mdi-pencil font-size-16 text-success me-1"></i> Editar</a></li>--}}
-
+                                                <li><a href="{{ route('admin.categories.edit', ['category' => $category->id]) }}" class="dropdown-item"><i class="mdi mdi-pen font-size-16 text-success me-1"></i> Editar</a></li>
                                                 <form action="{{ route('admin.categories.destroy', ['category' => $category->id]) }}" method="post" onsubmit="if(!confirm('Deseja remover esse registro? Essa ação não pode ser desfeita.')){return false;}">
                                                     @csrf
                                                     @method('DELETE')

@@ -15,6 +15,29 @@ class OrderProducts extends Model
         'order',
         'product',
         'product_amount',
+        'price',
+        'price_total',
     ];
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class, 'order', 'id');
+    }
+
+    public function produc()
+    {
+        return $this->belongsTo(Product::class, 'product', 'id');
+    }
+
+    public function getPriceAttribute($value)
+    {
+        return number_format($value, 2, ',', '.');
+    }
+
+
+    public function getPriceTotalAttribute($value)
+    {
+        return number_format($value, 2, ',', '.');
+    }
 
 }

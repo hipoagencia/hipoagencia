@@ -80,6 +80,7 @@
                                                 <i class="mdi mdi-dots-horizontal font-size-18"></i>
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
+                                                <li><a href="{{ route('admin.products.edit', ['product' => $product->id]) }}" class="dropdown-item"><i class="mdi mdi-pen font-size-16 text-success me-1"></i> Editar</a></li>
                                                 <form action="{{ route('admin.products.destroy', ['product' => $product->id]) }}" method="post" onsubmit="if(!confirm('Deseja remover esse registro? Essa ação não pode ser desfeita.')){return false;}">
                                                     @csrf
                                                     @method('DELETE')

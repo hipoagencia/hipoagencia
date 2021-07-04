@@ -104,6 +104,10 @@ class UserController extends Controller
             return redirect()->back()->withInput()->withErrors();
         }
 
+        //Volta para o checkout após completar o cadastro
+        if(session('goCheckout'))
+            return redirect()->route('user.checkout.cardDetails');
+
         return redirect()->route('user.profile')
             ->with(['type' => 'success', 'message' => 'Dados atualizados com sucesso!']);
     }
