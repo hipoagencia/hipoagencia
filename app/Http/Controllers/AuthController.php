@@ -216,6 +216,7 @@ class AuthController extends Controller
         $user = $request->all();
         $user['password'] = bcrypt($request->password);
         $user['email_verified_token'] = $token;
+        //$user['cell'] = $request->telephone;
         User::create($user);
 
         $data = [
