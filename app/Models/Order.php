@@ -48,6 +48,14 @@ class Order extends Model
         return number_format($value, 2, ',', '.');
     }
 
+    public function getTypeAttribute($value)
+    {
+        if($value === 'CREDITCARD')
+            return 'CARTÃO';
+        else
+            return $value;
+    }
+
 
     public function getStatusAttribute($value)
     {

@@ -21,15 +21,20 @@
     <div class="container">
         <div class="row">
 
-            <div class="row">
-                <div class="col-md-12 msg">
 
-                </div>
-            </div>
 
-            <form class="col-md-12" method="POST">
-                @csrf
-                <div class="col-lg-4 offset-lg-4">
+
+           <div class="col-lg-6">
+
+               <div class="row">
+                   <div class="col-md-12 msg">
+
+                   </div>
+               </div>
+
+                <form class="col-md-12 px-5" method="POST">
+                    @csrf
+
                     <div class="row mb-3">
                         <input type="text" class="form-control" placeholder="Nome igual no cartão" name="card_name">
                     </div>
@@ -57,11 +62,19 @@
                     <div class="row mb-3 installments"></div>
 
                     <div class="row">
-                        <button class="btn btn-success w-100 processCheckout">Finalizar Compra</button>
+                        <button class="btn btn-success w-100 processCheckout" data-payment-type="CREDITCARD">Finalizar Compra</button>
                     </div>
-                </div>
 
-            </form>
+                </form>
+            </div>
+
+            <div class="col-lg-6 px-5" style="border-left:1px solid #000">
+
+                <h3>Pagamento via boleto</h3>
+
+                <button class="btn btn-primary w-100 mt-5 processCheckout" data-payment-type="BOLETO">Gerar Boleto</button>
+
+            </div>
 
         </div>
     </div>

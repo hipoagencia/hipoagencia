@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\OrderProducts;
 use App\Models\Product;
+use App\Payment\PagSeguro\Boleto;
 use App\Payment\PagSeguro\CreditCard;
 use App\Payment\PagSeguro\Notification;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -19,14 +20,14 @@ class PaymentController extends Controller
 {
     public function index(Request $request)
     {
-        try{
+        try {
             //var_dump(session()->get('pagseguro_session_code'));
 
             if (!Cart::content()->count())
                 return redirect()->route('user.dashboard');
 
             //Verifica se o usuário preencheu o zipcode, se não, envia para completar
-            if(auth()->user()->zipcode == null) {
+            if (auth()->user()->zipcode == null) {
                 session(['goCheckout' => true]);
                 return redirect()->route('user.profile')->withErrors('Você precisa preencher todos seus dados para continuar');
             }
@@ -104,6 +105,8 @@ class PaymentController extends Controller
     {
         try {
 
+            //TO-DO validar se o tipo de pagament enviado é válido e aceito internamente
+
             //Gera o novo pedido
             $order = new Order();
             $order->user = Auth::id();
@@ -116,21 +119,19 @@ class PaymentController extends Controller
             $reference = $order->id;
             //$reference = Uuid::uuid4();
 
-            $creditCardPayment = new CreditCard($cartItems, $user, $dataPost, $reference);
-            $result = $creditCardPayment->doPayment();
+            $payment = $dataPost['paymentType'] == 'BOLETO'
+                ? new Boleto($cartItems, $user, $reference, $dataPost['hash'])
+                : new CreditCard($cartItems, $user, $dataPost, $reference);
 
-            $userOrder = [
-                'reference' => $reference,
-                'pagseguro_code' => $result->getCode(),
-                'pagseguro_status' => $result->getStatus(),
-                'items' => serialize($cartItems),
-            ];
+            $result = $payment->doPayment();
 
             //Gera o novo pedido
             $order->user = Auth::id();
             $order->total = Cart::subtotal();
             $order->status = $result->getStatus();
             $order->code = $result->getCode();
+            $order->type = $dataPost['paymentType'];
+            $order->link_boleto = ($dataPost['paymentType'] == 'BOLETO' ? $result->getPaymentLink() : '');
             $order->save();
 
             //Adiciona os produtos no pedido
@@ -151,16 +152,21 @@ class PaymentController extends Controller
             session()->forget('pagseguro_session_code');
 
             if ($order && $orderProducts) {
+
+                $dataJson = [
+                    'status' => true,
+                    'message' => 'Pedido criado com sucesso',
+                    'order' => $reference
+                ];
+
+                if($dataPost['paymentType'] == 'BOLETO') $dataJson['link_boleto'] = $result->getPaymentLink();
+
                 return response()->json([
-                    'data' => [
-                        'status' => true,
-                        'message' => 'Pedido criado com sucesso',
-                        'order' => $reference
-                    ]
+                    'data' => $dataJson
                 ]);
             }
 
-        } catch (\Exception $ex){
+        } catch (\Exception $ex) {
 
             //$message = env('APP_DEBUG') ? simplexml_load_string($ex->getMessage()) : 'Erro ao processar o pedido';
             $message = $ex->getMessage();
@@ -182,7 +188,7 @@ class PaymentController extends Controller
 
     public function notification()
     {
-        try{
+        try {
 
             $notification = new Notification();
             $notification = $notification->getTransaction();
@@ -194,11 +200,15 @@ class PaymentController extends Controller
             ]);
 
             //Realiza demais ações com base no status
-            if($notification->getStatus() == 3){
+            if ($notification->getStatus() == 3) {
                 //Status de Pedido pago
 
                 echo "Pedido pago";
+
+
             }
+
+            //dd($notification);
 
             return response()->json([], 203);
 

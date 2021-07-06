@@ -47,6 +47,7 @@
                             <tr>
                                 <th width="3%">#</th>
                                 <th>Total</th>
+                                <th>Tipo</th>
                                 <th>Status</th>
                                 <th>Código PagSeguro</th>
                                 <th>Usuário</th>
@@ -60,19 +61,15 @@
                                     <td>
                                         <a href="{{ route('admin.orders.edit', ['order' => $order->id]) }}">{{ $order->id }}</a>
                                     </td>
-
                                     <td>R$ {{ $order->total }}</td>
-
+                                    <td><i class="{{ ($order->type == 'BOLETO' ? ' fas fa-money-bill-alt me-1 badge-soft-success' : 'fab fa-cc-visa me-1 badge-soft-warning') }}"></i> {{ $order->type }}</td>
                                     <td><span class="badge bg-{{ ( $order->status == 'Paga' || $order->status == 'Disponível' ? 'success' : 'danger' ) }}">{{ $order->status }}</span></td>
-
                                     <td>
                                        {{ $order->code }}
                                     </td>
-
                                     <td>
                                         <a href="{{ route('admin.users.edit', ['user' => $order->userr->id]) }}">{{ $order->userr->name }}</a>
                                     </td>
-
                                     <td>
                                         <div class="dropdown">
                                             <a href="#" class="dropdown-toggle card-drop" data-bs-toggle="dropdown" aria-expanded="false">

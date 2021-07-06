@@ -67,11 +67,19 @@
                                 <h3 class="mb-3">Informações</h3>
                                 <div class="row">
 
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="price" class="form-label">Código PagSeguro</label>
                                             <input name="price" class="form-control"
                                                    value="{{ old('code') ?? $order->code   }}" disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="price" class="form-label">Forma de Pagamento</label>
+                                            <input name="price" class="form-control"
+                                                   value="{{ old('type') ?? $order->type   }}" disabled>
                                         </div>
                                     </div>
 

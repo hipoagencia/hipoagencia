@@ -296,8 +296,8 @@
                             <span key="t-email">Compras</span>
                         </a>
                         <ul class="sub-menu mm-collapse">
-                            <li><a href="{{ route('admin.products.index') }}" key="t-blog">Produtos</a></li>
                             <li><a href="{{ route('admin.orders.index') }}" key="t-read-email" key="t-pages">Pedidos</a></li>
+                            <li><a href="{{ route('admin.products.index') }}" key="t-blog">Produtos</a></li>
                         </ul>
                     </li>
 
