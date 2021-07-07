@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\payment\Confirm;
+use App\Jobs\Payment\newOrder;
 use App\Models\Order;
 use App\Models\OrderProducts;
 use App\Models\Product;
@@ -145,6 +147,19 @@ class PaymentController extends Controller
                 $orderProducts->save();
             }
 
+            //Envia os emails
+            $data = [
+                'reply_name' => env('APP_NAME'),
+                'reply_email' => env('MAIL_FROM_ADDRESS'),
+                'to' => env('MAIL_FROM_ADDRESS'),
+                'to_name' => env('APP_NAME'),
+                'subject' => 'Novo pedido número ' . $order->id,
+                'message' => $order->id
+            ];
+
+            //Envia email de novo pedido para o cliente
+            newOrder::dispatch($data)->delay(now()->addSeconds(5));
+
             //Limpa o carrinho
             Cart::destroy();
 
@@ -194,17 +209,39 @@ class PaymentController extends Controller
             $notification = $notification->getTransaction();
 
             //Atualiza o Pedido
-            $order = Order::where('id', $notification->getReference());
+            $order = Order::where('id', $notification->getReference())->first();
+
             $order->update([
                 'status' => $notification->getStatus()
             ]);
 
             //Realiza demais ações com base no status
             if ($notification->getStatus() == 3) {
+
                 //Status de Pedido pago
+                $data = [
+                    'reply_name' => env('APP_NAME'),
+                    'reply_email' => env('MAIL_FROM_ADDRESS'),
+                    'to' => $order->userr->email,
+                    'to_name' => $order->userr->name,
+                    'subject' => 'Confirmação de pagamento - ' . env('APP_NAME'),
+                    'message' => $order->id
+                ];
 
-                echo "Pedido pago";
+                //Envia email de novo pedido para o cliente
+                Confirm::dispatch($data)->delay(now()->addSeconds(5));
 
+                $data = [
+                    'reply_name' => env('APP_NAME'),
+                    'reply_email' => env('MAIL_FROM_ADDRESS'),
+                    'to' => env('MAIL_FROM_ADDRESS'),
+                    'to_name' => env('APP_NAME'),
+                    'subject' => 'Pagamento confirmado do pedido ' . $order->id,
+                    'message' => $order->id
+                ];
+
+                //Envia email de novo pedido para o cliente
+                Confirm::dispatch($data)->delay(now()->addSeconds(5));
 
             }
 

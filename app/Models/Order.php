@@ -68,10 +68,10 @@ class Order extends Model
                 return $value = 'Em análise';
                 break;
             case 3;
-                return $value = 'Paga';
+                return $value = 'Pago';
                 break;
             case 4;
-                return $value = 'Disponível';
+                return $value = 'Pago';
                 break;
             case 5;
                 return $value = 'Em disputa';

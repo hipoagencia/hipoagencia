@@ -207,7 +207,7 @@ class AuthController extends Controller
             'document' => 'required|cpf|max:11|unique:users,document',
             'date_of_birth' => 'required|before:2010-01-01',
             'password' => 'required|min:5',
-            'password_confirm' => 'required|same:password'
+            'password_confirm' => 'required|same:password',
         ]);
 
         //Gera o token de confirmação de email
@@ -216,7 +216,7 @@ class AuthController extends Controller
         $user = $request->all();
         $user['password'] = bcrypt($request->password);
         $user['email_verified_token'] = $token;
-        //$user['cell'] = $request->telephone;
+        $user['telephone'] = $request->cell;
         User::create($user);
 
         $data = [
