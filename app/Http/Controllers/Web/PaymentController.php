@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
-use App\Jobs\payment\Confirm;
+use App\Jobs\Payment\Confirm;
 use App\Jobs\Payment\newOrder;
 use App\Models\Order;
 use App\Models\OrderProducts;
