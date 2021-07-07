@@ -103,8 +103,8 @@
                                                     Feminino
                                                 </option>
                                                 <option
-                                                    value="binario" {{ (old('genre') == 'binario' ? 'selected' : ($user->genre == 'binario' ? 'selected' : '')) }}>
-                                                    Binário
+                                                    value="nbinario" {{ (old('genre') == 'nbinario' ? 'selected' : ($user->genre == 'nbinario' ? 'selected' : '')) }}>
+                                                    Não Binário
                                                 </option>
                                             </select>
                                         </div>

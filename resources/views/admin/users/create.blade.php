@@ -85,7 +85,7 @@
                                                 <option selected>Escolha...</option>
                                                 <option value="masculino" {{ (old('genre') == 'masculino' ? 'selected' : '') }}>Masculino</option>
                                                 <option value="feminino" {{ (old('genre') == 'feminino' ? 'selected' : '') }}>Feminino</option>
-                                                <option value="binario" {{ (old('genre') == 'binario' ? 'selected' : '') }}>Binário</option>
+                                                <option value="nbinario" {{ (old('genre') == 'nbinario' ? 'selected' : '') }}>Não Binário</option>
                                             </select>
                                         </div>
                                     </div>
