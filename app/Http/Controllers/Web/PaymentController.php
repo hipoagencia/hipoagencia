@@ -27,7 +27,7 @@ class PaymentController extends Controller
             //Verifica se o usuário preencheu o zipcode, se não, envia para completar
             if (auth()->user()->zipcode == null) {
                 session(['goCheckout' => true]);
-                return redirect()->route('user.profile')->withErrors('Você precisa preencher todos seus dados para continuar');
+                return redirect()->route('user.profile')->withErrors('Você precisa preencher todos seus dados para continuar. Logo após, você será direcionado para a tela de pagamento.');
             }
 
             $product = Product::find($request->product);
@@ -76,7 +76,6 @@ class PaymentController extends Controller
             $user = auth()->user();
             $cartItems = Cart::content();
             $reference = $order->id;
-            //$reference = Uuid::uuid4();
 
             $payment = $dataPost['paymentType'] == 'BOLETO'
                 ? new Boleto($cartItems, $user, $reference, $dataPost['hash'])
@@ -126,7 +125,6 @@ class PaymentController extends Controller
             session()->forget('pagseguro_session_code');
 
             if ($order && $orderProducts) {
-
                 $dataJson = [
                     'status' => true,
                     'message' => 'Pedido criado com sucesso',

@@ -48,8 +48,8 @@ class Boleto
         $boleto->setSender()->setEmail($email);
 
         $boleto->setSender()->setPhone()->withParameters(
-            substr($user->telephone,0, 2),
-            substr($user->telephone,2, 8)
+            substr($user->cell,0, 2),
+            substr($user->cell,2, 8)
         );
 
         $boleto->setSender()->setDocument()->withParameters(

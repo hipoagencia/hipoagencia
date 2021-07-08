@@ -48,8 +48,8 @@ class CreditCard
         $creditCard->setSender()->setEmail($email);
 
         $creditCard->setSender()->setPhone()->withParameters(
-            substr($user->telephone,0, 2),
-            substr($user->telephone,2, 8)
+            substr($user->cell,0, 2),
+            substr($user->cell,2, 8)
         );
 
         $creditCard->setSender()->setDocument()->withParameters(
@@ -92,8 +92,8 @@ class CreditCard
         $creditCard->setHolder()->setName($this->cardInfo['card_name']);
 
         $creditCard->setHolder()->setPhone()->withParameters(
-            substr($user->telephone,0, 2),
-            substr($user->telephone,2, 8)
+            substr($user->cell,0, 2),
+            substr($user->cell,2, 8)
         );
 
         $creditCard->setHolder()->setDocument()->withParameters(
