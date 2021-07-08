@@ -170,12 +170,17 @@ class PaymentController extends Controller
             //Atualiza o Pedido
             $order = Order::where('id', $notification->getReference())->first();
 
+            //Evita envio da notificação se o status já for PAGO
+            $avoidDouble = false;
+            if($order->status = 3)
+                $avoidDouble = true;
+
             $order->update([
                 'status' => $notification->getStatus()
             ]);
 
             //Realiza demais ações com base no status
-            if ($notification->getStatus() == 3) {
+            if ($notification->getStatus() == 3 && $avoidDouble == false) {
 
                 //Status de Pedido pago
                 $data = [
