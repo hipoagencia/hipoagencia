@@ -172,7 +172,7 @@ class PaymentController extends Controller
 
             //Evita envio da notificação se o status já for PAGO
             $avoidDouble = false;
-            if($order->status = 3)
+            if($order->status == 3)
                 $avoidDouble = true;
 
             $order->update([
