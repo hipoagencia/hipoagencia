@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
-use App\Jobs\Payment\Confirm;
-use App\Jobs\Payment\newOrder;
+use App\Mail\Payment\Confirm;
 use App\Models\Order;
 use App\Models\OrderProducts;
 use App\Models\Product;
@@ -14,7 +13,6 @@ use App\Payment\PagSeguro\Notification;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class PaymentController extends Controller
 {
@@ -49,45 +47,6 @@ class PaymentController extends Controller
         }
     }
 
-    public function checkoutDo(Request $request)
-    {
-
-        //checkout sem pagamento
-        DB::beginTransaction();
-        try {
-
-            //Gera o novo pedido
-            $order = new Order();
-            $order->user = Auth::id();
-            $order->total = Cart::priceTotal();
-            $order->status = 'Aguardando Pagamento';
-            $order->code = '';
-            $order->save();
-
-            //Adiciona os produtos no pedido
-            foreach (Cart::content() as $item) {
-                $orderProducts = new OrderProducts();
-                $orderProducts->order = $order->id;
-                $orderProducts->product = $item->id;
-                $orderProducts->product_amount = $item->qty;
-                $orderProducts->save();
-            }
-
-            //Limpa o carrinho
-            Cart::destroy();
-
-            if ($order && $orderProducts) {
-
-                DB::commit();
-                //return redirect()->route('user.dashboard');
-
-            } else {
-                DB::rollBack();
-            }
-        } catch (\Exception $e) {
-            DB::rollBack();
-        }
-    }
 
     public function cartAdd(Request $request)
     {
@@ -145,18 +104,20 @@ class PaymentController extends Controller
                 $orderProducts->save();
             }
 
-            //Envia os emails
+            //Dados para a notificação
             $data = [
                 'reply_name' => env('APP_NAME'),
                 'reply_email' => env('MAIL_FROM_ADDRESS'),
-                'to' => env('MAIL_FROM_ADDRESS'),
-                'to_name' => env('APP_NAME'),
-                'subject' => 'Novo pedido número ' . $order->id,
-                'message' => $order->id
+                'to' => $user->email,
+                'to_name' => $user->name,
+                'subject' => '',
+                'message' => '',
+                'id_order' => $order->id
             ];
 
-            //Envia email de novo pedido para o cliente
-            newOrder::dispatch($data)->delay(now()->addSeconds(5));
+            //Envia a notificação
+            $notify = new \App\Notify\Order($data);
+            $notify->newOrder();
 
             //Limpa o carrinho
             Cart::destroy();
@@ -222,28 +183,16 @@ class PaymentController extends Controller
                     'reply_email' => env('MAIL_FROM_ADDRESS'),
                     'to' => $order->userr->email,
                     'to_name' => $order->userr->name,
-                    'subject' => 'Confirmação de pagamento - ' . env('APP_NAME'),
-                    'message' => $order->id
+                    'subject' => '',
+                    'message' => '',
+                    'id_order' => $order->id
                 ];
 
-                //Envia email de novo pedido para o cliente
-                Confirm::dispatch($data)->delay(now()->addSeconds(5));
-
-                $data = [
-                    'reply_name' => env('APP_NAME'),
-                    'reply_email' => env('MAIL_FROM_ADDRESS'),
-                    'to' => env('MAIL_FROM_ADDRESS'),
-                    'to_name' => env('APP_NAME'),
-                    'subject' => 'Pagamento confirmado do pedido ' . $order->id,
-                    'message' => $order->id
-                ];
-
-                //Envia email de novo pedido para o cliente
-                Confirm::dispatch($data)->delay(now()->addSeconds(5));
+                //return new Confirm($data);
+                $notify = new \App\Notify\Order($data);
+                $notify->confirmPayment();
 
             }
-
-            //dd($notification);
 
             return response()->json([], 203);
 

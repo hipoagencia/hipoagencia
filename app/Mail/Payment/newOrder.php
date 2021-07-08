@@ -2,14 +2,12 @@
 
 namespace App\Mail\Payment;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class newOrder extends Mailable implements ShouldQueue
+class newOrder extends Mailable
 {
-    use Queueable, SerializesModels;
+    use SerializesModels;
 
     private $data;
 
@@ -40,7 +38,8 @@ class newOrder extends Mailable implements ShouldQueue
                 'to' => $this->data['to'],
                 'to_name' => $this->data['to_name'],
                 'subject' => $this->data['subject'],
-                'message' => $this->data['message']
+                'message' => $this->data['message'],
+                'id_order' => $this->data['id_order']
             ]);
     }
 }
