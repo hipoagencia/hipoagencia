@@ -16,7 +16,7 @@
 
 
     {{--    <form action="{{ route('user.profile.update') }}" method="POST" enctype="multipart/form-data">--}}
-    <form wire:submit.prevent="editProfile" enctype="multipart/form-data">
+    <form  enctype="multipart/form-data">
         {{--        @csrf--}}
         {{--        @method('PUT')--}}
         <div class="offset-2 col-8">
@@ -135,7 +135,7 @@
 
             </div>
 
-            <div wire:loading>
+            <div wire:loading wire:target="editProfile">
                 <div class="row">
                     @include('user.components.loader')
                 </div>
@@ -143,7 +143,7 @@
 
             <div wire:loading.remove>
                 <div class="row">
-                    <button class="btn btn-success w-100" type="submit">Alterar</button>
+                    <button class="btn btn-success w-100" type="submit" wire:click.prevent="editProfile">Alterar</button>
                 </div>
             </div>
 
