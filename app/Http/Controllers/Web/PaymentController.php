@@ -124,6 +124,9 @@ class PaymentController extends Controller
             //Limpa sessão pagseguro
             session()->forget('pagseguro_session_code');
 
+            //Limpa sessão do perfil
+            session()->forget('goCheckout');
+
             if ($order && $orderProducts) {
                 $dataJson = [
                     'status' => true,

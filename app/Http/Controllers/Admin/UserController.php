@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\User as UserRequest;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use function PHPUnit\Framework\isNull;
 
@@ -32,6 +33,13 @@ class UserController extends Controller
         return view('admin.users.log',[
             'logs' => $logs
         ]);
+    }
+
+    public function loginAsUser(Request $request)
+    {
+        $login = User::where('id', $request->user)->first();
+        Auth::loginUsingId($login->id);
+        return redirect()->route('user.dashboard');
     }
 
     /**

@@ -71,6 +71,10 @@
                                                 <i class="mdi mdi-dots-horizontal font-size-18"></i>
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
+                                                <form action="{{ route('admin.users.loginAsUser', ['user' => $user->id]) }}" method="post" onsubmit="if(!confirm('Deseja efetuar o login com esse usuário?')){return false;}">
+                                                    @csrf
+                                                    <li><button class="dropdown-item"><i class="mdi mdi-lock-open font-size-16 text-primary me-1"></i> Logar</button></li>
+                                                </form>
                                                 <li><a href="{{ route('admin.users.edit', ['user' => $user->id]) }}" class="dropdown-item"><i class="mdi mdi-pen font-size-16 text-success me-1"></i> Editar</a></li>
                                                 <form action="{{ route('admin.users.destroy', ['user' => $user->id]) }}" method="post" onsubmit="if(!confirm('Deseja remover esse registro? Essa ação não pode ser desfeita.')){return false;}">
                                                     @csrf

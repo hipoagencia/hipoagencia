@@ -42,6 +42,7 @@ Route::post('newsletter-store', [\App\Http\Controllers\Web\NewsletterController:
 | Rotas de Login
 |--------------------------------------------------------------------------
 */
+
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login-do', [AuthController::class, 'login'])->name('login.do');
 Route::get('/sair', [AuthController::class, 'logout'])->name('logout');
@@ -68,6 +69,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         //Rotas de Usuários
         Route::resource('users', UserController::class);
         Route::get('user/logs', [UserController::class, 'log'])->name('users.log');
+        Route::post('user/login-as-user/{user}', [UserController::class, 'loginAsUser'])->name('users.loginAsUser');
 
         //Rotas de Produtos
         Route::post('products/image-order', [ProductController::class, 'imageOrder'])->name('products.imageOrder');
