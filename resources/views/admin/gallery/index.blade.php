@@ -80,7 +80,6 @@
                         </table>
 
                             {!! $galleries->links() !!}
-
                     @else
                         <h3>Nenhum registro encontrado</h3>
                     @endif

@@ -40,6 +40,7 @@
                         @endcomponent
                     @endif
 
+
                     @if($orders)
 
                         <table class="table table-bordered dt-responsive nowrap w-100">

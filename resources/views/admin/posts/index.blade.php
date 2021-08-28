@@ -40,6 +40,7 @@
                         @endcomponent
                     @endif
 
+
                     @if($posts)
 
                         <table class="table table-bordered dt-responsive nowrap w-100">

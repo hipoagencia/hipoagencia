@@ -40,7 +40,6 @@
                     @endif
 
                     @if($users)
-
                         <table class="table table-bordered dt-responsive nowrap w-100">
                             <thead>
                             <tr>
