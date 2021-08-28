@@ -40,7 +40,7 @@
                         @endcomponent
                     @endif
 
-                    @if(!$products)
+                    @if($products)
 
                         <table class="table table-bordered dt-responsive nowrap w-100">
                             <thead>

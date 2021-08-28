@@ -44,7 +44,7 @@ class ContentController extends Controller
 
         return redirect()->route('admin.content.edit', [
             'content' => $contentCreate->id
-        ])->with(['type' => 'success', 'message' => 'Post cadastrado com sucesso!']);
+        ])->with(['type' => 'success', 'message' => 'Conteúdo cadastrado com sucesso!']);
     }
 
     /**

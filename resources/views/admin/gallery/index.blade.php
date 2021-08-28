@@ -40,7 +40,7 @@
                         @endcomponent
                     @endif
 
-                    @if(!$galleries)
+                    @if($galleries)
 
                         <table class="table table-bordered dt-responsive nowrap w-100">
                             <thead>
