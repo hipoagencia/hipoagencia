@@ -87,10 +87,10 @@
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="formrow-inputState" class="form-label">Autor</label>
-                                            <select id="formrow-inputState" class="form-select" name="author">
+                                            <select id="formrow-inputState" class="form-select" name="user_id">
                                                 <option>Selecione o Autor..</option>
-                                                @foreach($authors as $author)
-                                                    <option value="{{ $author->id }}" {{ ( $post->author == $author->id ? 'selected' : ( old('author') == $author->id ? 'selected' : '' ) ) }}>{{ $author->name }} {{ $author->last_name }}</option>
+                                                @foreach($users as $user)
+                                                    <option value="{{ $user->id }}" {{ ( $post->user_id == $user->id ? 'selected' : ( old('user_id') == $user->id ? 'selected' : '' ) ) }}>{{ $user->name }} {{ $user->last_name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>

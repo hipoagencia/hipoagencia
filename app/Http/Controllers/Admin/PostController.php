@@ -19,7 +19,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::get();
+        $posts = Post::orderBy('id', 'DESC')->paginate(20);
+
         return view('admin.posts.index',[
             'posts' => $posts
         ]);
@@ -33,11 +34,11 @@ class PostController extends Controller
     public function create()
     {
         $categories = Categories::orderBy('name');
-        $authors = User::orderBy('name')->get();
+        $users = User::orderBy('name')->get();
 
         return view('admin.posts.create', [
             'categories' => $categories,
-            'authors' => $authors
+            'users' => $users
         ]);
     }
 
@@ -54,12 +55,16 @@ class PostController extends Controller
 //        var_dump($post->getAttributes());
 //        die;
 
+        //dd($request->all());
+
         $postCreate = Post::create($request->all());
 
         if (!empty($request->file('cover'))) {
             $postCreate->cover = $request->file('cover')->store('public/post');
             $postCreate->save();
         }
+
+        $postCreate->categories()->sync($request->all()['categories']);
 
         return redirect()->route('admin.posts.edit', [
             'post' => $postCreate->id
@@ -87,12 +92,12 @@ class PostController extends Controller
     {
         $post = Post::where('id', $id)->first();
         $categories = Categories::orderBy('name');
-        $authors = User::orderBy('name')->get();
+        $users = User::orderBy('name')->get();
 
         return view('admin.posts.edit', [
             'post' => $post,
             'categories' => $categories,
-            'authors' => $authors
+            'users' => $users
         ]);
     }
 

@@ -21,7 +21,7 @@ class Post extends Model implements Searchable
     protected $fillable = [
         'name',
         'cover',
-        'author',
+        'user_id',
         'description',
         'title',
         'slug',
@@ -34,7 +34,7 @@ class Post extends Model implements Searchable
     protected static $logAttributes = [
         'name',
         'cover',
-        'author',
+        'user_id',
         'description',
         'title',
         'slug',
@@ -43,7 +43,9 @@ class Post extends Model implements Searchable
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'author', 'id');
+        //return $this->belongsTo(User::class, 'author', 'id');
+
+        return $this->belongsTo(User::class);
     }
 
     public function categories()

@@ -263,15 +263,22 @@
 
 
 
+
+                    @role('superAdmin|admin')
                     <li>
-                        <a href="{{ route('admin.users.index') }}" class="waves-effect">
-                            <i class="bx bx-user-circle"></i>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
+                            <i class="bx bx-envelope"></i>
                             <span key="t-starter-page">Usuários</span>
                         </a>
+                        <ul class="sub-menu mm-collapse">
+                            <li><a href="{{ route('admin.users.index') }}" key="admin.users.index">Listagem</a></li>
+
+                            @role('superAdmin')
+                                 <li><a href="{{ route('admin.roles.index')}}" key="admin.roles.index">Tipo</a></li>
+                            @endrole
+                        </ul>
                     </li>
-
-
-
+                    @endrole
 
 
 

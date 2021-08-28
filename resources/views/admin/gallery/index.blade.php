@@ -40,9 +40,10 @@
                         @endcomponent
                     @endif
 
-                    @if(!empty($galleries))
+                    @if(!$galleries)
 
-                        <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+
+                        <table class="table table-bordered dt-responsive nowrap w-100">
                             <thead>
                             <tr>
                                 <th width="3%">#</th>
@@ -78,6 +79,8 @@
 
                             </tbody>
                         </table>
+
+                            {!! $galleries->links() !!}
 
                     @else
                         <h3>Nenhum registro encontrado</h3>

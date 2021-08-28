@@ -13,7 +13,7 @@ class Order extends Model
     protected $table = 'orders';
 
     protected $fillable = [
-        'user',
+        'user_id',
         'status',
         'total',
         'code',
@@ -24,7 +24,7 @@ class Order extends Model
     //NECESSÁRIO PARA OS LOGS
     protected static $logName = 'Pedidos';
     protected static $logAttributes = [
-        'user',
+        'user_id',
         'status',
         'total',
         'code',
@@ -32,9 +32,9 @@ class Order extends Model
         'observation',
     ];
 
-    public function userr()
+    public function user()
     {
-        return $this->belongsTo(User::class, 'user', 'id');
+        return $this->belongsTo(User::class);
 
     }
 

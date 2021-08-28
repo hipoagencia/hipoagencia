@@ -16,7 +16,7 @@ class ContentController extends Controller
      */
     public function index()
     {
-        $contents = Content::all();
+        $contents = Content::orderBy('id', 'DESC')->paginate(20);
         return view('admin.content.index', [
            'contents' => $contents
         ]);

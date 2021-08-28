@@ -13,6 +13,7 @@ use Spatie\Newsletter\NewsletterFacade;
 use App\Http\Controllers\Web\UserController as UserControllerWeb;
 use App\Http\Controllers\Web\SearchController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\UserRoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,6 +80,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
         //Rotas de Categorias
         Route::resource('categories', CategoriesController::class);
+
+        //Rotas de Categorias
+        Route::resource('roles', UserRoleController::class)->middleware('role:superAdmin');
 
         //Rotas de Posts
         Route::resource('posts', PostController::class);

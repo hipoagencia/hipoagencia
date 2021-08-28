@@ -15,10 +15,8 @@ class CreateProductCategories extends Migration
     {
         Schema::create('product_categories', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product');
-            $table->unsignedBigInteger('category');
-            $table->foreign('product')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('category')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreignId('product_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
         });
     }
 

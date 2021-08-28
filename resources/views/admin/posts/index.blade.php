@@ -40,9 +40,9 @@
                         @endcomponent
                     @endif
 
-                    @if(!empty($posts))
+                    @if(!$posts)
 
-                        <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                        <table class="table table-bordered dt-responsive nowrap w-100">
                             <thead>
                             <tr>
                                 <th width="3%">#</th>
@@ -60,7 +60,7 @@
                                     <td>
                                         <a href="{{ route('admin.posts.edit', ['post' => $post->id]) }}">{{ $post->name }}</a>
                                     </td>
-                                    <td><a href="{{ route('admin.users.edit', ['user' => $post->user->id]) }}" class="href">{{ $post->user->name }} {{ $post->user->last_name }}</a></td>
+                                    <td><a href="{{ route('admin.users.edit', ['user' => $post->user]) }}" class="href">{{ $post->user->name }} {{ $post->user->last_name }}</a></td>
                                     <td>
                                         @if($post->categories)
                                             @foreach($post->categories as $category)
@@ -92,6 +92,8 @@
 
                             </tbody>
                         </table>
+
+                            {!! $posts->links() !!}
 
                     @else
                         <h3>Nenhum registro encontrado</h3>

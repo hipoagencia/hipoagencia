@@ -40,9 +40,9 @@
                         @endcomponent
                     @endif
 
-                    @if(!empty($contents))
+                    @if(!$contents)
 
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap w-100">
+                        <table class="table table-bordered dt-responsive nowrap w-100">
                             <thead>
                             <tr>
                                 <th width="3%">#</th>
@@ -80,6 +80,8 @@
 
                             </tbody>
                         </table>
+
+                            {!! $contents->links() !!}
 
                     @else
                         <h3>Nenhum registro encontrado</h3>

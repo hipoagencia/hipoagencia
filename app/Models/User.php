@@ -6,13 +6,14 @@ use App\Support\Cropper;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Activitylog\Traits\LogsActivity;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, LogsActivity;
+    use HasFactory, Notifiable, LogsActivity,HasRoles;
 
 
     /**
@@ -87,7 +88,7 @@ class User extends Authenticatable
 
     public function orders()
     {
-        return $this->hasOne(Order::class, 'user', 'id')
+        return $this->hasOne(Order::class)
             ->orderBy('id', 'DESC');
     }
 
@@ -163,14 +164,13 @@ class User extends Authenticatable
 
     private function converStringToDate(?string $param)
     {
-//        if(empty($param)){
-//            return null;
-//        }
-//
-//        list($day, $month, $year) = explode('/', $param);
-//        return (new \DateTime($year . '-' . $month . '-' . $day))->format('Y-m-d');
+        if(empty($param)){
+            return null;
+        }
 
-        return $param;
+        list($day, $month, $year) = explode('/', $param);
+        return (new \DateTime($year . '-' . $month . '-' . $day))->format('Y-m-d');
+
     }
 
     private function clearFields(?string $param)

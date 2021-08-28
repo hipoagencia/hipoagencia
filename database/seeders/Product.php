@@ -22,7 +22,8 @@ class Product extends Seeder
                 'status' => '1',
                 'slug' => Str::slug('Produto Teste'),
                 'headline' => 'Produto Teste - Melhor Impossível',
-                'title' => 'Produto Teste - Melhor Impossível'
+                'title' => 'Produto Teste - Melhor Impossível',
+                'days' => '30'
             ],
             [
                 'name' => 'Produto Genérico',
@@ -31,7 +32,8 @@ class Product extends Seeder
                 'status' => '1',
                 'slug' => Str::slug('Produto Genérico'),
                 'headline' => 'Produto Genérico - Melhor Impossível',
-                'title' => 'Produto Genérico - Melhor Impossível'
+                'title' => 'Produto Genérico - Melhor Impossível',
+                'days' => '30'
             ]
         ];
 

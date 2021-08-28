@@ -149,6 +149,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/thiagocfn/inscricaoestadual" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/pagseguro/pagseguro-php-sdk" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/livewire/livewire" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/array-to-xml" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-permission" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

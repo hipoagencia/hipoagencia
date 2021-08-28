@@ -50,7 +50,7 @@ class Product extends Model
 
     public function categories()
     {
-        return $this->belongsToMany(Categories::class, 'product_categories', 'product', 'category');
+        return $this->belongsToMany(Categories::class, 'product_categories', 'product_id', 'category_id');
     }
 
     public function getPriceAttribute($value)

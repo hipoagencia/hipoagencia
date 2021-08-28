@@ -23,7 +23,7 @@ class ProductController extends Controller
     public function index()
     {
 
-        $products = Product::withOnly('categories')->get();
+        $products = Product::withOnly('categories')->orderBy('id', 'DESC')->paginate(20);
         return view('admin.product.index', [
             'products' => $products
         ]);

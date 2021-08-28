@@ -40,9 +40,9 @@
                         @endcomponent
                     @endif
 
-                    @if(!empty($products))
+                    @if(!$products)
 
-                        <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                        <table class="table table-bordered dt-responsive nowrap w-100">
                             <thead>
                             <tr>
                                 <th width="3%">#</th>
@@ -94,6 +94,8 @@
 
                             </tbody>
                         </table>
+
+                            {!! $products->links() !!}
 
                     @else
                         <h3>Nenhum registro encontrado</h3>

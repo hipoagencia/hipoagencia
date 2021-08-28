@@ -5,12 +5,12 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0 font-size-18">Pedidos</h4>
+                <h4 class="mb-sm-0 font-size-18">Permissões</h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Início</a></li>
-                        <li class="breadcrumb-item active">Pedidos Cadastrados</li>
+                        <li class="breadcrumb-item active">Permissões Cadastradas</li>
                     </ol>
                 </div>
 
@@ -25,7 +25,7 @@
             </div>
             <div class="col-sm-8">
                 <div class="text-sm-end">
-{{--                    <a href="{{ route('admin.orders.create') }}" class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i class="mdi mdi-plus me-1"></i> Novo</a>--}}
+                    <a href="{{ route('admin.categories.create') }}" class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i class="mdi mdi-plus me-1"></i> Novo</a>
                 </div>
             </div>
         </div>
@@ -40,44 +40,31 @@
                         @endcomponent
                     @endif
 
-                    @if(!$orders)
+                    @if(!$roles)
 
                         <table class="table table-bordered dt-responsive nowrap w-100">
                             <thead>
                             <tr>
                                 <th width="3%">#</th>
-                                <th>Total</th>
-                                <th>Tipo</th>
-                                <th>Status</th>
-                                <th>Código PagSeguro</th>
-                                <th>Usuário</th>
+                                <th>Nome</th>
                                 <th width="8%">Ações</th>
                             </tr>
                             </thead>
 
                             <tbody>
-                            @foreach($orders as $order)
+                            @foreach($roles as $role)
                                 <tr>
-                                    <td>
-                                        <a href="{{ route('admin.orders.edit', ['order' => $order->id]) }}">{{ $order->id }}</a>
-                                    </td>
-                                    <td>R$ {{ $order->total }}</td>
-                                    <td><i class="{{ ($order->type == 'BOLETO' ? ' fas fa-money-bill-alt me-1 badge-soft-success' : 'fab fa-cc-visa me-1 badge-soft-warning') }}"></i> {{ $order->type }}</td>
-                                    <td><span class="badge bg-{{ ( $order->status == 'Paga' || $order->status == 'Disponível' ? 'success' : 'danger' ) }}">{{ $order->status }}</span></td>
-                                    <td>
-                                       {{ $order->code }}
-                                    </td>
-                                    <td>
-                                        <a href="{{ route('admin.users.edit', ['user' => $order->user->id]) }}">{{ $order->user->name }}</a>
-                                    </td>
+                                    <td>{{ $role->id }}</td>
+                                    <td><a href="{{ route('admin.categories.edit', ['category' => $role->id]) }}">{{ $role->name }}</a></td>
                                     <td>
                                         <div class="dropdown">
                                             <a href="#" class="dropdown-toggle card-drop" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="mdi mdi-dots-horizontal font-size-18"></i>
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
-                                                <li><a href="{{ route('admin.orders.edit', ['order' => $order->id]) }}" class="dropdown-item"><i class="mdi mdi-pen font-size-16 text-success me-1"></i> Editar</a></li>
-                                                <form action="{{ route('admin.orders.destroy', ['order' => $order->id]) }}" method="post" onsubmit="if(!confirm('Deseja remover esse registro? Essa ação não pode ser desfeita.')){return false;}">
+{{--                                                <li><a href="{{ route('admin.categories.edit', ['category' => $category->id]) }}"  class="dropdown-item"><i class="mdi mdi-pencil font-size-16 text-success me-1"></i> Editar</a></li>--}}
+                                                <li><a href="{{ route('admin.categories.edit', ['category' => $role->id]) }}" class="dropdown-item"><i class="mdi mdi-pen font-size-16 text-success me-1"></i> Editar</a></li>
+                                                <form action="{{ route('admin.categories.destroy', ['category' => $role->id]) }}" method="post" onsubmit="if(!confirm('Deseja remover esse registro? Essa ação não pode ser desfeita.')){return false;}">
                                                     @csrf
                                                     @method('DELETE')
                                                     <li><button type="submit" class="dropdown-item"><i class="mdi mdi-trash-can font-size-16 text-danger me-1"></i> Deletar</button></li>
@@ -91,8 +78,7 @@
                             </tbody>
                         </table>
 
-                            {!! $orders->links() !!}
-
+                            {!! $roles->links() !!}
                     @else
                         <h3>Nenhum registro encontrado</h3>
                     @endif

@@ -36,10 +36,15 @@ class PaymentController extends Controller
 
             $total = Cart::subtotal();
 
-            return view('user.checkout', [
+            return view('user.checkoutLiveWire', [
                 'product' => $product,
                 'total' => $total
             ]);
+
+//            return view('user.checkout', [
+//                'product' => $product,
+//                'total' => $total
+//            ]);
 
         } catch (\Exception $e) {
             session()->forget('pagseguro_session_code');
@@ -68,7 +73,7 @@ class PaymentController extends Controller
 
             //Gera o novo pedido
             $order = new Order();
-            $order->user = Auth::id();
+            $order->user_id = Auth::id();
             $order->total = "0";
             $order->save();
 
@@ -84,7 +89,7 @@ class PaymentController extends Controller
             $result = $payment->doPayment();
 
             //Gera o novo pedido
-            $order->user = Auth::id();
+            $order->user_id = Auth::id();
             $order->total = Cart::subtotal();
             $order->status = $result->getStatus();
             $order->code = $result->getCode();

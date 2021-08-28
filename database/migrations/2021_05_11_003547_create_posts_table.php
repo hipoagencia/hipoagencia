@@ -17,13 +17,12 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('cover');
-            $table->unsignedBigInteger('author');
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->text('description');
-            $table->string('title')->nullable();
-            $table->string('slug')->nullable();
-            $table->string('headline')->nullable();
+            $table->string('title');
+            $table->string('slug');
+            $table->string('headline');
             $table->timestamps();
-            $table->foreign('author')->references('id')->on('users');
         });
     }
 

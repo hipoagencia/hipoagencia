@@ -118,7 +118,8 @@
                                     <div class="col-lg-3">
                                         <div class="mb-3">
                                             <label for="document" class="form-label">CPF</label>
-                                            <input name="document" type="text" class="form-control"
+                                            <input name="document" type="text" class="form-control input-mask"
+                                                   data-inputmask="'mask': '999.999.999-99'" im-insert="true"
                                                    value="{{ old('document') ?? $user->document }}">
                                         </div>
                                     </div>

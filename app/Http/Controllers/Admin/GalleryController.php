@@ -21,7 +21,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $galleries = Gallery::all();
+        $galleries = Gallery::orderBy('id', 'DESC')->paginate(20);
         return view('admin.gallery.index', [
             'galleries' => $galleries
         ]);

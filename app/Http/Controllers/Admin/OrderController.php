@@ -17,7 +17,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::withOnly('userr')->orderBy('id', 'desc')->get();
+        $orders = Order::withOnly('user')->orderBy('id', 'DESC')->paginate(20);
         return view('admin.orders.index',[
             'orders' => $orders
         ]);
