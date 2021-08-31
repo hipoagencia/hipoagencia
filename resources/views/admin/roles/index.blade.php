@@ -25,7 +25,7 @@
             </div>
             <div class="col-sm-8">
                 <div class="text-sm-end">
-                    <a href="{{ route('admin.categories.create') }}" class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i class="mdi mdi-plus me-1"></i> Novo</a>
+                    <a href="{{ route('admin.roles.create') }}" class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i class="mdi mdi-plus me-1"></i> Novo</a>
                 </div>
             </div>
         </div>
@@ -56,16 +56,16 @@
                             @foreach($roles as $role)
                                 <tr>
                                     <td>{{ $role->id }}</td>
-                                    <td><a href="{{ route('admin.categories.edit', ['category' => $role->id]) }}">{{ $role->name }}</a></td>
+                                    <td><a href="{{ route('admin.roles.edit', ['role' => $role->id]) }}">{{ $role->name }}</a></td>
                                     <td>
                                         <div class="dropdown">
                                             <a href="#" class="dropdown-toggle card-drop" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="mdi mdi-dots-horizontal font-size-18"></i>
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
-{{--                                                <li><a href="{{ route('admin.categories.edit', ['category' => $category->id]) }}"  class="dropdown-item"><i class="mdi mdi-pencil font-size-16 text-success me-1"></i> Editar</a></li>--}}
-                                                <li><a href="{{ route('admin.categories.edit', ['category' => $role->id]) }}" class="dropdown-item"><i class="mdi mdi-pen font-size-16 text-success me-1"></i> Editar</a></li>
-                                                <form action="{{ route('admin.categories.destroy', ['category' => $role->id]) }}" method="post" onsubmit="if(!confirm('Deseja remover esse registro? Essa ação não pode ser desfeita.')){return false;}">
+
+                                                <li><a href="{{ route('admin.roles.edit', ['role' => $role->id]) }}" class="dropdown-item"><i class="mdi mdi-pen font-size-16 text-success me-1"></i> Editar</a></li>
+                                                <form action="{{ route('admin.roles.destroy', ['role' => $role->id]) }}" method="post" onsubmit="if(!confirm('Deseja remover esse registro? Essa ação não pode ser desfeita.')){return false;}">
                                                     @csrf
                                                     @method('DELETE')
                                                     <li><button type="submit" class="dropdown-item"><i class="mdi mdi-trash-can font-size-16 text-danger me-1"></i> Deletar</button></li>

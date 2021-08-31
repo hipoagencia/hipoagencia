@@ -106,13 +106,30 @@
 
                                     <div class="col-md-3">
                                         <div class="mb-3">
+                                            <label for="status" class="form-label">Forma de Pagamento</label>
+                                            <select class="form-select" name="typePayment">
+                                                <option disabled>Selecione</option>
+                                                <option
+                                                    value="Cartão de Crédito" {{ ( old('typePayment') == 'Cartão de Crédito' ? 'selected' : ($product->typePayment == 'Cartão de Crédito' ? 'selected' : '' )) }}>
+                                                    Cartão de Crédito
+                                                </option>
+                                                <option
+                                                    value="Boleto" {{ ( old('typePayment') == 'Boleto' ? 'selected' : ($product->typePayment == 'Boleto' ? 'selected' : '' )) }}>
+                                                    Boleto
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
                                             <label for="days" class="form-label">Tempo de Plano (em dias)</label>
                                             <input name="days" class="form-control"
                                                    value="{{ old('days') ?? $product->days   }}">
                                         </div>
                                     </div>
 
-                                    <div class="mb-3">
+                                    <div class="col-md-6">
                                         <label class="form-label">Categorias</label>
 
                                         <select class="select2 form-control select2-multiple"

@@ -32,11 +32,11 @@ class Payment extends Component
 
     public function proccessSubscription($data)
     {
-        //Criar um plano para teste
-        //dd($planPagSeguro = (new CreditCard())->planCreate());
+//        Criar um plano para teste
+        dd($planPagSeguro = (new CreditCard())->planCreate());
 
-//        $data['plan_reference'] = '1048E039C7C75B3EE4326F9FC91B388E';
-//        dd($makeSubscription = (new Subscription($data))->makeSubscription());
+        $data['plan_reference'] = '1048E039C7C75B3EE4326F9FC91B388E';
+        dd($makeSubscription = (new Subscription($data))->makeSubscription());
 
         dd($creditCardPay = (new CreditCard($data))->makePayment());
     }

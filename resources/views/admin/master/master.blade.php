@@ -271,10 +271,10 @@
                             <span key="t-starter-page">Usuários</span>
                         </a>
                         <ul class="sub-menu mm-collapse">
-                            <li><a href="{{ route('admin.users.index') }}" key="admin.users.index">Listagem</a></li>
+                            <li><a href="{{ route('admin.users.index') }}" key="admin.users.index">Usuário</a></li>
 
                             @role('superAdmin')
-                                 <li><a href="{{ route('admin.roles.index')}}" key="admin.roles.index">Tipo</a></li>
+                                 <li><a href="{{ route('admin.roles.index')}}" key="admin.roles.index">Perfil</a></li>
                             @endrole
                         </ul>
                     </li>

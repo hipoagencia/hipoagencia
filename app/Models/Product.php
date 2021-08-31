@@ -22,6 +22,7 @@ class Product extends Model
         'slug',
         'headline',
         'days',
+        'typePayment',
     ];
 
     protected $hidden = [
