@@ -300,10 +300,11 @@
                     <li>
                         <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
                             <i class="bx bx-envelope"></i>
-                            <span key="t-email">Compras</span>
+                            <span key="t-email">Vendas</span>
                         </a>
                         <ul class="sub-menu mm-collapse">
                             <li><a href="{{ route('admin.orders.index') }}" key="t-read-email" key="t-pages">Pedidos</a></li>
+                            <li><a href="{{ route('admin.products.plans') }}" key="t-blog">Assinaturas</a></li>
                             <li><a href="{{ route('admin.products.index') }}" key="t-blog">Produtos</a></li>
                         </ul>
                     </li>

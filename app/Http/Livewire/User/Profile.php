@@ -13,42 +13,31 @@ class Profile extends Component
     use WithFileUploads;
 
     public User $user;
-    public array $data = [];
 
     public $photo;
 
     public $errorMsg;
 
     protected $rules = [
-        'data.name' => 'required|min:3|max:191',
-        'data.last_name' => 'required|min:3|max:191',
-        'data.zipcode' => 'required|min:8|max:9',
-        'data.street' => 'required',
-        'data.number' => 'required',
-        'data.neighborhood' => 'required',
-        'data.state' => 'required',
-        'data.city' => 'required',
-        'data.cell' => 'required',
+        'user.name' => 'required|min:3|max:191',
+        'user.email' => 'required',
+        'user.document' => 'required',
+        'user.date_of_birth' => 'required',
+        'user.last_name' => 'required|min:3|max:191',
+        'user.zipcode' => 'required|min:8|max:9',
+        'user.street' => 'required',
+        'user.number' => 'required',
+        'user.neighborhood' => 'required',
+        'user.state' => 'required',
+        'user.city' => 'required',
+        'user.cell' => 'required',
+        'user.telephone' => 'required',
         //'data.cover' => 'nullable|sometimes|image|mimes:jpeg,bmp,png,jpg|max:2000'
     ];
 
     public function mount()
     {
-        $this->data['cover'] = $this->photo;
-        $this->data['name'] = $this->user->name;
-        $this->data['last_name'] = $this->user->last_name;
-        $this->data['email'] = $this->user->email;
-        $this->data['document'] = $this->user->document;
-        $this->data['date_of_birth'] = $this->user->date_of_birth;
-        $this->data['telephone'] = $this->user->telephone;
-        $this->data['cell'] = $this->user->cell;
-        $this->data['zipcode'] = $this->user->zipcode;
-        $this->data['street'] = $this->user->street;
-        $this->data['number'] = $this->user->number;
-        $this->data['complement'] = $this->user->complement;
-        $this->data['neighborhood'] = $this->user->neighborhood;
-        $this->data['state'] = $this->user->state;
-        $this->data['city'] = $this->user->city;
+        $this->user = User::users()->find(auth()->user()->id);
     }
 
     public function editProfile()
@@ -97,7 +86,7 @@ class Profile extends Component
 
     public function render()
     {
-        return view('livewire.user.profile');
+        return view('livewire.user.profile')->layout('user.master.master');
     }
 
 }

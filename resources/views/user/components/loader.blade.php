@@ -4,5 +4,5 @@
 
 <div class="bg-loader">
     <div class="spinner"></div>
-    <br><span class="spinner-text">Carregando</span>
+    <br><span class="spinner-text">Aguarde o processamento...</span>
 </div>

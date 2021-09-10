@@ -40,8 +40,9 @@
     </div>
 </div>
 
-@yield('content')
 
+
+{{ $slot }}
 
 
 <script src="{{ url(asset('backend/assets/libs/jquery/jquery.min.js')) }}"></script>

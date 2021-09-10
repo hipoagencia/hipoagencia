@@ -23,6 +23,8 @@ class Product extends Model
         'headline',
         'days',
         'typePayment',
+        'recurrent',
+        'pagseguroPlanCode'
     ];
 
     protected $hidden = [
@@ -41,6 +43,9 @@ class Product extends Model
         'slug',
         'headline',
         'days',
+        'typePayment',
+        'recurrent',
+        'pagseguroPlanCode'
     ];
 
     public function images()

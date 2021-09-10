@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Categories;
 use App\Models\Product;
 use App\Models\ProductImages;
+use App\Payment\PagSeguroV3\Subscription;
 use App\Support\Cropper;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -22,12 +23,20 @@ class ProductController extends Controller
      */
     public function index()
     {
-
-        $products = Product::withOnly('categories')->orderBy('id', 'DESC')->paginate(20);
+        $products = Product::withOnly('categories')->where('recurrent', 'Produto')->orderBy('id', 'DESC')->paginate(20);
         return view('admin.product.index', [
             'products' => $products
         ]);
 
+    }
+
+    public function plans()
+    {
+        $products = Product::withOnly('categories')->where('recurrent', 'Assinatura')->orderBy('id', 'DESC')->paginate(20);
+
+        return view('admin.product.index', [
+            'products' => $products
+        ]);
     }
 
     /**
@@ -39,7 +48,7 @@ class ProductController extends Controller
     {
 
         $categories = Categories::orderBy('name');
-        return view('admin.product.create',[
+        return view('admin.product.create', [
             'categories' => $categories
         ]);
     }
@@ -47,7 +56,7 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(ProductRequest $request)
@@ -57,7 +66,17 @@ class ProductController extends Controller
 //        var_dump($product->getAttributes());
 //        die;
 
+//        dd($planPagSeguro = (new Subscription())->planCreate());
+
         $productCreate = Product::create($request->all());
+
+        //Cria o plano no pagseguro e salva no banco de dados
+        if ($request->recurrent == "Assinatura" && $request->typePayment = "Mensal") {
+
+            $planPagSeguro = (new Subscription())->planCreate();
+            $product = Product::where('id', $productCreate->id)->update(array('pagseguroPlanCode' => $planPagSeguro));
+
+        }
 
         $validator = Validator::make($request->only('files'), ['files.*' => 'image']);
 
@@ -85,7 +104,7 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -96,15 +115,15 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $product  = Product::where('id', $id)->first();
+        $product = Product::where('id', $id)->first();
         $categories = Categories::orderBy('name');
 
-        return view('admin.product.edit',[
+        return view('admin.product.edit', [
             'product' => $product,
             'categories' => $categories
         ]);
@@ -113,14 +132,18 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(ProductRequest $request, $id)
     {
 
         $product = Product::where('id', $id)->first();
+        if ($product->recurrent == "Assinatura" && $product->typePayment = "Mensal") {
+            $planPagSeguro = (new Subscription())->planCreate();
+            $product->pagseguroPlanCode = $planPagSeguro;
+        }
         $product->fill($request->all());
         $product->save();
 
@@ -149,7 +172,7 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
@@ -183,7 +206,7 @@ class ProductController extends Controller
         $imageDelete = ProductImages::where('id', $request->image)->first();
 
         Storage::delete($imageDelete->path);
-       Cropper::flush($imageDelete->path);
+        Cropper::flush($imageDelete->path);
 
         $imageDelete->delete();
 

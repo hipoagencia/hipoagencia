@@ -15,6 +15,8 @@ class AlterTableProductsAddTypePayment extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table->string('typePayment')->nullable();
+            $table->string('recurrent')->nullable();
+            $table->string('pagseguroPlanCode')->nullable();
         });
     }
 
@@ -27,6 +29,8 @@ class AlterTableProductsAddTypePayment extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table->dropColumn('typePayment');
+            $table->dropColumn('recurrent');
+            $table->dropColumn('pagseguroPlanCode');
         });
     }
 }

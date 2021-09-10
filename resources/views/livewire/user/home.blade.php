@@ -1,8 +1,4 @@
-@extends('user.master.master')
-
-@section('content')
-
-
+<div>
 
     <div class="container">
         <div class="row mb-5">
@@ -25,12 +21,14 @@
                         <h5>R${{ $product->price }}</h5>
 
                         @if($product->recurrent == 'Assinatura' && $product->typePayment == 'Mensal')
-                            <form action="{{ route('user.cartAdd', ['product' => $product->id, 'tipo' => 'mensal']) }}" method="POST">
+                            <form action="{{ route('user.cartAdd', ['product' => $product->id, 'tipo' => 'mensal']) }}"
+                                  method="POST">
                                 @csrf
                                 <button class="btn btn-success mt-3">Assinar</button>
                             </form>
                         @elseif ($product->recurrent == 'Assinatura'  && $product->typePayment == 'Pacote Meses')
-                            <form action="{{ route('user.cartAdd', ['product' => $product->id, 'tipo' => 'pacote']) }}" method="POST">
+                            <form action="{{ route('user.cartAdd', ['product' => $product->id, 'tipo' => 'pacote']) }}"
+                                  method="POST">
                                 @csrf
                                 <button class="btn btn-success mt-3">Comprar Período</button>
                             </form>
@@ -47,4 +45,4 @@
 
     </div>
 
-@endsection
+</div>

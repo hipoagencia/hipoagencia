@@ -64,7 +64,7 @@
                                 <h3 class="mb-3">Informações</h3>
                                 <div class="row">
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nome</label>
                                             <input name="name" class="form-control"
@@ -76,7 +76,7 @@
                                         <div class="mb-3">
                                             <label for="price" class="form-label">Preço R$</label>
                                             <input name="price" class="form-control"
-                                                   value="{{ old('price') }}">
+                                                   value="{{ old('price')  }}">
                                         </div>
                                     </div>
 
@@ -86,11 +86,11 @@
                                             <select class="form-select" name="status">
                                                 <option disabled>Selecione</option>
                                                 <option
-                                                    value="1" {{ ( old('status') == '1' ? 'selected' : '') }}>
+                                                    value="1" {{ ( old('status') == '1' ? 'selected' : '' ) }}>
                                                     Ativo
                                                 </option>
                                                 <option
-                                                    value="0" {{ ( old('status') == '0' ? 'selected' : '') }}>
+                                                    value="0" {{ ( old('status') == '0' ? 'selected' : '' ) }}>
                                                     Inativo
                                                 </option>
                                             </select>
@@ -98,14 +98,6 @@
                                     </div>
 
                                     <div class="col-md-3">
-                                        <div class="mb-3">
-                                            <label for="days" class="form-label">Tempo de Plano (em dias)</label>
-                                            <input name="days" class="form-control"
-                                                   value="{{ old('days') }}">
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-3">
                                         <label class="form-label">Categorias</label>
 
                                         <select class="select2 form-control select2-multiple"
@@ -119,6 +111,55 @@
                                         </select>
 
                                     </div>
+
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <label for="status" class="form-label">Tipo</label>
+                                            <select class="form-select" name="recurrent">
+                                                <option disabled>Selecione</option>
+                                                <option
+                                                    value="Assinatura" {{ ( old('recurrent') == 'Assinatura' ? 'selected' : '') }}>
+                                                    Assinatura
+                                                </option>
+                                                <option
+                                                    value="Produto" {{ ( old('recurrent') == 'Produto' ? 'selected' : '') }}>
+                                                    Produto
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <label for="status" class="form-label">Modelo</label>
+                                            <select class="form-select"
+                                                    name="typePayment">
+                                                <option disabled>Selecione</option>
+                                                <option
+                                                    value="----" {{ ( old('typePayment') == '----' ? 'selected' : '' ) }}>
+                                                    ----
+                                                </option>
+                                                <option
+                                                    value="Mensal" {{ ( old('typePayment') == 'Mensal' ? 'selected' : '' ) }}>
+                                                    Mensal (recorrente)
+                                                </option>
+                                                <option
+                                                    value="Pacote Meses" {{ ( old('typePayment') == 'Pacote Meses' ? 'selected' : '' ) }}>
+                                                    Pacote Meses (avulso)
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <label for="days" class="form-label">Tempo de Plano (em dias)</label>
+                                            <input name="days" class="form-control"
+                                                   value="{{ old('days') ?? '0'  }}">
+                                        </div>
+                                    </div>
+
+
 
 
                                     <h5 class="mb-3 mt-4">SEO</h5>

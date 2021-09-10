@@ -71,7 +71,7 @@
                                 <h3 class="mb-3">Informações</h3>
                                 <div class="row">
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nome</label>
                                             <input name="name" class="form-control"
@@ -105,31 +105,6 @@
                                     </div>
 
                                     <div class="col-md-3">
-                                        <div class="mb-3">
-                                            <label for="status" class="form-label">Forma de Pagamento</label>
-                                            <select class="form-select" name="typePayment">
-                                                <option disabled>Selecione</option>
-                                                <option
-                                                    value="Cartão de Crédito" {{ ( old('typePayment') == 'Cartão de Crédito' ? 'selected' : ($product->typePayment == 'Cartão de Crédito' ? 'selected' : '' )) }}>
-                                                    Cartão de Crédito
-                                                </option>
-                                                <option
-                                                    value="Boleto" {{ ( old('typePayment') == 'Boleto' ? 'selected' : ($product->typePayment == 'Boleto' ? 'selected' : '' )) }}>
-                                                    Boleto
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <label for="days" class="form-label">Tempo de Plano (em dias)</label>
-                                            <input name="days" class="form-control"
-                                                   value="{{ old('days') ?? $product->days   }}">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
                                         <label class="form-label">Categorias</label>
 
                                         <select class="select2 form-control select2-multiple"
@@ -142,6 +117,53 @@
                                             @endforeach
                                         </select>
 
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <label for="status" class="form-label">Tipo</label>
+                                            <select class="form-select" name="recurrent" disabled>
+                                                <option disabled>Selecione</option>
+                                                <option
+                                                    value="Assinatura" {{ ( old('recurrent') == 'Assinatura' ? 'selected' : ($product->recurrent == 'Assinatura' ? 'selected' : '' )) }}>
+                                                    Assinatura
+                                                </option>
+                                                <option
+                                                    value="Produto" {{ ( old('recurrent') == 'Produto' ? 'selected' : ($product->recurrent == 'Produto' ? 'selected' : '' )) }}>
+                                                    Produto
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <label for="status" class="form-label">Modelo</label>
+                                            <select class="form-select"
+                                                    name="typePayment" {{ ($product->recurrent == 'Produto' || $product->typePayment  == 'Mensal') ? 'disabled' : '' }} disabled>
+                                                <option disabled>Selecione</option>
+                                                <option
+                                                    value="----" {{ ( old('typePayment') == '----' ? 'selected' : ($product->typePayment == '----' ? 'selected' : '' )) }}>
+                                                    ----
+                                                </option>
+                                                <option
+                                                    value="Mensal" {{ ( old('typePayment') == 'Mensal' ? 'selected' : ($product->typePayment == 'Mensal' ? 'selected' : '' )) }}>
+                                                    Mensal (recorrente)
+                                                </option>
+                                                <option
+                                                    value="Pacote Meses" {{ ( old('typePayment') == 'Pacote Meses' ? 'selected' : ($product->typePayment == 'Pacote Meses' ? 'selected' : '' )) }}>
+                                                    Pacote Meses (avulso)
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <label for="days" class="form-label">Tempo de Plano (em dias)</label>
+                                            <input name="days" class="form-control"
+                                                   value="{{ old('days') ?? $product->days }}" {{ ($product->recurrent == 'Produto' || $product->typePayment == 'Mensal') ? 'disabled' : '' }}>
+                                        </div>
                                     </div>
 
 
@@ -220,11 +242,15 @@
                                             </thead>
                                             <tbody id="tablecontents">
                                             @foreach($product->images()->get() as $image)
-                                                <tr class="row1" data-id="{{ $image->id }}" data-action="{{$product->id}}">
+                                                <tr class="row1" data-id="{{ $image->id }}"
+                                                    data-action="{{$product->id}}">
                                                     <td class="pl-3"><i class="fa fa-sort"></i></td>
                                                     <td>
-                                                        <a class="image-popup-vertical-fit" href="{{ url($image->path) }}" title="{{ $image->created_at }}">
-                                                            <img src="{{ url($image->path) }}" width="130" class="img-fluid">
+                                                        <a class="image-popup-vertical-fit"
+                                                           href="{{ url($image->path) }}"
+                                                           title="{{ $image->created_at }}">
+                                                            <img src="{{ url($image->path) }}" width="130"
+                                                                 class="img-fluid">
                                                         </a>
                                                     </td>
                                                     <td>{{ $image->created_at }}</td>
@@ -347,7 +373,7 @@
                     url: "{{ route('admin.products.imageOrder') }}",
                     data: {
                         order: order,
-                        ref:  $('tr.row1').data('action'),
+                        ref: $('tr.row1').data('action'),
                         _token: token
                     },
                     success: function (response) {

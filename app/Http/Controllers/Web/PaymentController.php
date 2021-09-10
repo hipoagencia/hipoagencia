@@ -3,13 +3,10 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
-use App\Mail\Payment\Confirm;
 use App\Models\Order;
 use App\Models\OrderProducts;
 use App\Models\Product;
-use App\Payment\PagSeguro\Boleto;
-use App\Payment\PagSeguro\CreditCard;
-use App\Payment\PagSeguro\Notification;
+
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,8 +15,6 @@ class PaymentController extends Controller
 {
     public function index(Request $request)
     {
-        try {
-            //var_dump(session()->get('pagseguro_session_code'));
 
             if (!Cart::content()->count())
                 return redirect()->route('user.dashboard');
@@ -30,39 +25,35 @@ class PaymentController extends Controller
                 return redirect()->route('user.profile')->withErrors('Você precisa preencher todos seus dados para continuar. Logo após, você será direcionado para a tela de pagamento.');
             }
 
-            $product = Product::find($request->product);
-
-            $this->makePagSeguroSection();
-
-            $total = Cart::subtotal();
-
-            return view('user.checkoutLiveWire', [
-                'product' => $product,
-                'total' => $total
+            return view('user.checkout', [
+                'type' => $request->type
             ]);
 
-//            return view('user.checkout', [
-//                'product' => $product,
-//                'total' => $total
-//            ]);
-
-        } catch (\Exception $e) {
-            session()->forget('pagseguro_session_code');
-            redirect()->route('user.checkout.cardDetails');
-        }
     }
 
 
-    public function cartAdd(Request $request)
-    {
-        Cart::destroy();
-        $product = Product::find($request->product);
-
-        Cart::add($product->id, $product->name, 1, floatval(str_replace('.', ',', $product->price)), 0);
-        $cart = Cart::content();
-
-        return redirect()->route('user.checkout.cardDetails');
-    }
+//    public function cartAdd(Request $request)
+//    {
+//
+//        $product = Product::find($request->product);
+//
+//        if($product->recurrent == "Assinatura"){
+//            //Limpa o carrinho caso seja assinatura
+//            Cart::destroy();
+//        }
+//
+//        Cart::add($product->id, $product->name, 1, floatval(str_replace('.', ',', $product->price)), 0);
+//        $cart = Cart::content();
+//
+//        if($product->recurrent == "Assinatura"){
+//            return redirect()->route('user.checkout', ['type' => $product->recurrent, 'id' => $product->id]);
+//        }
+//
+//        if($product->recurrent == "Produto"){
+//            //leva para a tela do carrinho de compras
+//        }
+//
+//    }
 
 
     public function proccess(Request $request)
@@ -214,15 +205,5 @@ class PaymentController extends Controller
         }
     }
 
-    private function makePagSeguroSection()
-    {
-        if (!session()->has('pagseguro_session_code')) {
-            $sessionCode = \PagSeguro\Services\Session::create(
-                \PagSeguro\Configuration\Configure::getAccountCredentials()
-            );
-
-            session()->put('pagseguro_session_code', $sessionCode->getResult());
-        }
-    }
 
 }

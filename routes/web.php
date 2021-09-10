@@ -15,6 +15,12 @@ use App\Http\Controllers\Web\SearchController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\UserRoleController;
 
+use App\Http\Livewire\User\Home;
+use App\Http\Livewire\User\Profile;
+use App\Http\Livewire\User\Cart;
+use App\Http\Livewire\User\Checkout;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -77,6 +83,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::post('products/image-set-cover', [ProductController::class, 'imageSetCover'])->name('products.imageSetCover');
         Route::delete('products/remove-cover', [ProductController::class, 'imageRemove'])->name('products.imageRemove');
         Route::resource('products', ProductController::class);
+        Route::get('plans', [ProductController::class, 'plans'])->name('products.plans');
+
 
         //Rotas de Categorias
         Route::resource('categories', CategoriesController::class);
@@ -124,33 +132,33 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 | Rotas de Usuários Logados
 |--------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'usuario', 'namespace' => 'User', 'as' => 'user.'], function () {
+Route::group(['prefix' => 'usuario', 'as' => 'user.'], function () {
     //Rotas protegidas usuário
     Route::group(['middleware' => ['is_user']], function () {
 
-        Route::get('inicio', [AuthController::class, 'dashboardUser'])->name('dashboard');
 
-        Route::get('perfil', [UserControllerWeb::class, 'edit'])->name('profile');
-        Route::put('perfil-update', [UserControllerWeb::class, 'update'])->name('profile.update');
+        Route::get('inicio', Home::class)->name('dashboard');
+        Route::get('perfil', Profile::class)->name('profile');
+
+        Route::post('cartAdd', [Cart::class, "cartAdd"] )->name('cartAdd');
+        Route::get('checkout/{id}/{type}', Checkout::class)->name('checkout');
 
         /** Pesquisa */
-        Route::get('pesquisa', [SearchController::class, 'index'])->name('pesquisa');
+        //Route::get('pesquisa', [SearchController::class, 'index'])->name('pesquisa');
 
-        /** Add to cart */
-        Route::post('cartAdd', [PaymentController::class, 'cartAdd'])->name('cartAdd');
 
-        /** Checkout */
-        Route::get('checkout', [PaymentController::class, 'index'])->name('checkout.cardDetails');
+        //Route::get('checkout/{type}/{id}', [PaymentController::class, 'index'])->name('checkout');
+        //Route::get('checkout/{type}/{id}',Recurrent::class)->name('checkout');
         Route::get('thanks', [PaymentController::class, 'thanks'])->name('checkout.thanks');
 
-        /** Checkout Rota PagSeguro */
-        Route::post('proccess', [PaymentController::class, 'proccess'])->name('checkout.proccess');
+
 
     });
 });
 
-/** Notificação Rota PagSeguro */
-Route::post('notification', [PaymentController::class, 'notification'])->name('checkout.notification');
+
+
+//Route::get('maisumteste', \App\Http\Livewire\Test::class);
 
 /*
 |--------------------------------------------------------------------------

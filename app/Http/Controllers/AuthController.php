@@ -96,7 +96,7 @@ class AuthController extends Controller
 
     public function dashboardUser()
     {
-        $products = Product::orderBy('price')->get();
+        $products = Product::where('recurrent','Assinatura')->orderBy('price')->get();
         $user = User::where('id', Auth::id())->first();
 
         $userPlans = $user->orders();
@@ -179,7 +179,7 @@ class AuthController extends Controller
         $user->password = bcrypt($request->password);
 
         if($user->save()){
-            return redirect()->route('recoverPassword')->with(['type' => 'success', 'message' => 'Sua senha foi trocada com sucesso!']);
+            return redirect()->route('login')->with(['type' => 'success', 'message' => 'Sua senha foi trocada com sucesso!']);
         }
         else
         {
