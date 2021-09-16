@@ -11,6 +11,16 @@ use DataTables;
 
 class OrderController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('permission:order-list|order-create|order-edit|order-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:order-create', ['only' => ['create','store']]);
+        $this->middleware('permission:order-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:order-delete', ['only' => ['destroy']]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -105,7 +115,7 @@ class OrderController extends Controller
      */
     public function update(OrderRequest $request, $id)
     {
-        $order = Order::where('id', $id)->first();
+        $order = Order::where('id', $id)->firstOrFail();
         $order->fill($request->all());
         $order->total =  str_replace(',', '.', str_replace('.', '', $request['total']));
 

@@ -15,6 +15,15 @@ class CategoriesController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
+
+    function __construct()
+    {
+        $this->middleware('permission:category-list|category-create|category-edit|category-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:category-create', ['only' => ['create','store']]);
+        $this->middleware('permission:category-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:category-delete', ['only' => ['destroy']]);
+    }
+
     public function index()
     {
         $categories = Categories::orderBy('id', 'DESC')->paginate(20);
@@ -67,7 +76,7 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        $category = Categories::where('id', $id)->first();
+        $category = Categories::where('id', $id)->firstOrFail();
         return view('admin.categories.edit', [
             'category' => $category
         ]);
@@ -82,7 +91,7 @@ class CategoriesController extends Controller
      */
     public function update(CategoryRequest $request, $id)
     {
-        $category = Categories::where('id', $id)->first();
+        $category = Categories::where('id', $id)->firstOrFail();
         $category->fill($request->all());
         $category->save();
 

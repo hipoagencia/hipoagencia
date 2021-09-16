@@ -21,6 +21,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::resource('users', UserController::class);
         Route::get('user/get', [UserController::class, 'show'])->name('users.get');
         Route::get('user/logs', [UserController::class, 'log'])->name('users.log');
+        Route::get('users/logs/get', [UserController::class, 'logShow'])->name('users.log.get');
+        Route::get('users/log/{id}', [UserController::class, 'logOpen'])->name('users.log.open');
         Route::post('user/login-as-user/{user}', [UserController::class, 'loginAsUser'])->name('users.loginAsUser');
 
         //Rotas de Produtos

@@ -16,7 +16,8 @@
           type="text/css"/>
 
     <!-- Sweet Alert-->
-    <link href="{{ url(asset('backend/assets/libs/sweetalert2/sweetalert2.min.css')) }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url(asset('backend/assets/libs/sweetalert2/sweetalert2.min.css')) }}" rel="stylesheet"
+          type="text/css"/>
 
     <!-- Select2 -->
     <link href="{{ url(asset('backend/assets/libs/select2/css/select2.min.css')) }}" rel="stylesheet" type="text/css"/>
@@ -47,7 +48,10 @@
     <!-- App Css-->
     <link href="{{ url(asset('backend/assets/css/app.min.css')) }}" id="app-style" rel="stylesheet" type="text/css"/>
 
-    <style>div.dataTables_wrapper div.dataTables_processing{background-color: #343a40 !important;color: #FFFFFF !important;}</style>
+    <style>div.dataTables_wrapper div.dataTables_processing {
+            background-color: #343a40 !important;
+            color: #FFFFFF !important;
+        }</style>
 
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
 
@@ -119,108 +123,12 @@
                 </div>
 
 
-
                 <div class="dropdown d-none d-lg-inline-block ms-1">
                     <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
                         <i class="bx bx-fullscreen"></i>
                     </button>
                 </div>
 
-{{--                <div class="dropdown d-inline-block">--}}
-{{--                    <button type="button" class="btn header-item noti-icon waves-effect"--}}
-{{--                            id="page-header-notifications-dropdown"--}}
-{{--                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                        <i class="bx bx-bell bx-tada"></i>--}}
-{{--                        <span class="badge bg-danger rounded-pill">3</span>--}}
-{{--                    </button>--}}
-{{--                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"--}}
-{{--                         aria-labelledby="page-header-notifications-dropdown">--}}
-{{--                        <div class="p-3">--}}
-{{--                            <div class="row align-items-center">--}}
-{{--                                <div class="col">--}}
-{{--                                    <h6 class="m-0" key="t-notifications"> Notifications </h6>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-auto">--}}
-{{--                                    <a href="#!" class="small" key="t-view-all"> View All</a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div data-simplebar style="max-height: 230px;">--}}
-{{--                            <a href="" class="text-reset notification-item">--}}
-{{--                                <div class="media">--}}
-{{--                                    <div class="avatar-xs me-3">--}}
-{{--                                                <span class="avatar-title bg-primary rounded-circle font-size-16">--}}
-{{--                                                    <i class="bx bx-cart"></i>--}}
-{{--                                                </span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="media-body">--}}
-{{--                                        <h6 class="mt-0 mb-1" key="t-your-order">Your order is placed</h6>--}}
-{{--                                        <div class="font-size-12 text-muted">--}}
-{{--                                            <p class="mb-1" key="t-grammer">If several languages coalesce the--}}
-{{--                                                grammar</p>--}}
-{{--                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span>--}}
-{{--                                            </p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <a href="" class="text-reset notification-item">--}}
-{{--                                <div class="media">--}}
-{{--                                    <img src="{{ url('backend/assets/images/users/avatar-3.jpg') }}"--}}
-{{--                                         class="me-3 rounded-circle avatar-xs" alt="user-pic">--}}
-{{--                                    <div class="media-body">--}}
-{{--                                        <h6 class="mt-0 mb-1">James Lemire</h6>--}}
-{{--                                        <div class="font-size-12 text-muted">--}}
-{{--                                            <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>--}}
-{{--                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span--}}
-{{--                                                    key="t-hours-ago">1 hours ago</span></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <a href="" class="text-reset notification-item">--}}
-{{--                                <div class="media">--}}
-{{--                                    <div class="avatar-xs me-3">--}}
-{{--                                                <span class="avatar-title bg-success rounded-circle font-size-16">--}}
-{{--                                                    <i class="bx bx-badge-check"></i>--}}
-{{--                                                </span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="media-body">--}}
-{{--                                        <h6 class="mt-0 mb-1" key="t-shipped">Your item is shipped</h6>--}}
-{{--                                        <div class="font-size-12 text-muted">--}}
-{{--                                            <p class="mb-1" key="t-grammer">If several languages coalesce the--}}
-{{--                                                grammar</p>--}}
-{{--                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span>--}}
-{{--                                            </p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-
-{{--                            <a href="" class="text-reset notification-item">--}}
-{{--                                <div class="media">--}}
-{{--                                    <img src="{{ url('backend/assets/images/users/avatar-4.jpg') }}"--}}
-{{--                                         class="me-3 rounded-circle avatar-xs" alt="user-pic">--}}
-{{--                                    <div class="media-body">--}}
-{{--                                        <h6 class="mt-0 mb-1">Salena Layfield</h6>--}}
-{{--                                        <div class="font-size-12 text-muted">--}}
-{{--                                            <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine--}}
-{{--                                                occidental.</p>--}}
-{{--                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span--}}
-{{--                                                    key="t-hours-ago">1 hours ago</span></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                        <div class="p-2 border-top d-grid">--}}
-{{--                            <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">--}}
-{{--                                <i class="mdi mdi-arrow-right-circle me-1"></i> <span--}}
-{{--                                    key="t-view-more">View More..</span>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
 
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
@@ -264,54 +172,64 @@
                     </li>
 
 
+                    @can('user-list')
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
+                                <i class="bx bx-envelope"></i>
+                                <span key="t-starter-page">Usuários</span>
+                            </a>
+                            <ul class="sub-menu mm-collapse">
+                                <li><a href="{{ route('admin.users.index') }}" key="admin.users.index">Usuário</a></li>
 
-
-                    @role('superAdmin|admin')
-                    <li>
-                        <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
-                            <i class="bx bx-envelope"></i>
-                            <span key="t-starter-page">Usuários</span>
-                        </a>
-                        <ul class="sub-menu mm-collapse">
-                            <li><a href="{{ route('admin.users.index') }}" key="admin.users.index">Usuário</a></li>
-
-                            @role('superAdmin')
-                                 <li><a href="{{ route('admin.roles.index')}}" key="admin.roles.index">Perfil</a></li>
-                            @endrole
-                        </ul>
-                    </li>
-                    @endrole
-
-
-
-                    <li>
-                        <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
-                            <i class="bx bx-envelope"></i>
-                            <span key="t-email">Institucional</span>
-                        </a>
-                        <ul class="sub-menu mm-collapse">
-                            <li><a href="{{ route('admin.posts.index') }}" key="t-blog">Blog</a></li>
-                            <li><a href="{{ route('admin.content.index') }}" key="t-read-email" key="t-pages">Páginas</a></li>
-                            <li><a href="{{ route('admin.gallery.index') }}" key="t-read-email" key="t-pages">Galeria</a></li>
-                        </ul>
-                    </li>
+                                @role('superAdmin')
+                                <li><a href="{{ route('admin.roles.index')}}" key="admin.roles.index">Perfil</a></li>
+                                @endrole
+                            </ul>
+                        </li>
+                    @endcan
 
 
 
+                    @canany(['blog-list','content-list','gallery-list'])
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
+                                <i class="bx bx-envelope"></i>
+                                <span key="t-email">Institucional</span>
+                            </a>
+                            <ul class="sub-menu mm-collapse">
+                                @can('blog-list')
+                                    <li><a href="{{ route('admin.posts.index') }}" key="t-blog">Blog</a></li>
+                                @endcan
+                                @can('content-list')
+                                    <li><a href="{{ route('admin.content.index') }}" key="t-read-email" key="t-pages">Páginas</a>
+                                    </li>
+                                @endcan
+                                @can('gallery-list')
+                                    <li><a href="{{ route('admin.gallery.index') }}" key="t-read-email" key="t-pages">Galeria</a>
+                                    </li>
+                                @endcan
+                            </ul>
+                        </li>
+                    @endcan
 
-                    <li>
-                        <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
-                            <i class="bx bx-envelope"></i>
-                            <span key="t-email">Vendas</span>
-                        </a>
-                        <ul class="sub-menu mm-collapse">
-                            <li><a href="{{ route('admin.orders.index') }}" key="t-read-email" key="t-pages">Pedidos</a></li>
-                            <li><a href="{{ route('admin.products.plans') }}" key="t-blog">Assinaturas</a></li>
-                            <li><a href="{{ route('admin.products.index') }}" key="t-blog">Produtos</a></li>
-                        </ul>
-                    </li>
-
-
+                    @canany(['order-list','product-list'])
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
+                                <i class="bx bx-envelope"></i>
+                                <span key="t-email">Vendas</span>
+                            </a>
+                            <ul class="sub-menu mm-collapse">
+                                @can('order-list')
+                                    <li><a href="{{ route('admin.orders.index') }}" key="t-read-email" key="t-pages">Pedidos</a>
+                                    </li>
+                                @endcan
+                                @can('product-list')
+                                    <li><a href="{{ route('admin.products.plans') }}" key="t-blog">Assinaturas</a></li>
+                                    <li><a href="{{ route('admin.products.index') }}" key="t-blog">Produtos</a></li>
+                                @endcan
+                            </ul>
+                        </li>
+                    @endcan
 
 
                     <li class="menu-title" key="t-pages">Sessões</li>

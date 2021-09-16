@@ -13,6 +13,15 @@ use DataTables;
 
 class PostController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('permission:blog-list|blog-create|blog-edit|blog-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:blog-create', ['only' => ['create','store']]);
+        $this->middleware('permission:blog-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:blog-delete', ['only' => ['destroy']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -119,7 +128,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::where('id', $id)->first();
+        $post = Post::where('id', $id)->firstOrFail();
         $categories = Categories::orderBy('name');
         $users = User::orderBy('name')->get();
 
@@ -144,7 +153,7 @@ class PostController extends Controller
 //        var_dump($post->getAttributes());
 //        die;
 
-        $post = Post::where('id', $id)->first();
+        $post = Post::where('id', $id)->firstOrFail();
         $post->fill($request->all());
 
         if (!empty($request->file('cover'))) {

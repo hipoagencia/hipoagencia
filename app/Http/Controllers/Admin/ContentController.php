@@ -9,6 +9,17 @@ use App\Http\Requests\Admin\Content as ContentRequest;
 
 class ContentController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('permission:content-list|content-create|content-edit|content-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:content-create', ['only' => ['create','store']]);
+        $this->middleware('permission:content-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:content-delete', ['only' => ['destroy']]);
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -66,7 +77,7 @@ class ContentController extends Controller
      */
     public function edit($id)
     {
-        $content = Content::where('id', $id)->first();
+        $content = Content::where('id', $id)->firstOrFail();
         return view('admin.content.edit', [
             'content' => $content
         ]);
@@ -81,7 +92,7 @@ class ContentController extends Controller
      */
     public function update(ContentRequest $request, $id)
     {
-        $content = Content::where('id', $id)->first();
+        $content = Content::where('id', $id)->firstOrFail();
         $content->fill($request->all());
 
         if (!$content->save()) {

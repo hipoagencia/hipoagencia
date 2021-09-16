@@ -182,6 +182,7 @@
                                 <h3 class="mb-3">Perfil</h3>
                                 <div class="row">
 
+{{--                                    @dd($user->roles->pluck('name')[0])--}}
 
                                     <div class="col-md-3">
                                         <label for="role" class="form-label">Tipo de Acesso</label>
@@ -189,7 +190,7 @@
                                             <option selected>Escolha...</option>
                                             @foreach($roles as $role)
                                                 <option
-                                                    value="{{ $role->id }}" {{ (old('role') == 'masculino' ? 'selected' : ($user->genre == 'masculino' ? 'selected' : '')) }}>
+                                                    value="{{ $role->name }}" {{ (old('role') == $role->name ? 'selected' : ($user->roles->pluck('name')[0] == $role->name ? 'selected' : '')) }}>
                                                     {{ $role->name }}
                                                 </option>
                                             @endforeach
@@ -198,7 +199,6 @@
                                     </div>
 
                                 </div>
-
                             </div>
 
                             <div class="tab-pane" id="profile1" role="tabpanel">

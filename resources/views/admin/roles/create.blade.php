@@ -112,7 +112,7 @@
 
 
                         <div>
-                            <button type="submit" class="btn btn-primary w-md">Alterar</button>
+                            <button type="submit" class="btn btn-primary w-md">Inserir</button>
                         </div>
                     </form>
                 </div>

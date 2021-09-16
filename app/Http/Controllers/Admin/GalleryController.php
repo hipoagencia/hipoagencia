@@ -14,6 +14,16 @@ use App\Http\Requests\Admin\Gallery as GalleryRequest;
 
 class GalleryController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('permission:gallery-list|gallery-create|gallery-edit|gallery-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:gallery-create', ['only' => ['create','store']]);
+        $this->middleware('permission:gallery-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:gallery-delete', ['only' => ['destroy']]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -86,7 +96,7 @@ class GalleryController extends Controller
      */
     public function edit($id)
     {
-        $gallery = Gallery::where('id', $id)->first();
+        $gallery = Gallery::where('id', $id)->firstOrFail();
         return view('admin.gallery.edit', [
            'gallery' => $gallery
         ]);
@@ -101,7 +111,7 @@ class GalleryController extends Controller
      */
     public function update(GalleryRequest $request, $id)
     {
-        $gallery = Gallery::where('id', $id)->first();
+        $gallery = Gallery::where('id', $id)->firstOrFail();
         $gallery->fill($request->all());
         $gallery->save();
 

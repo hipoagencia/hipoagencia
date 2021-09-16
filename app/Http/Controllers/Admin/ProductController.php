@@ -16,6 +16,15 @@ use App\Http\Requests\Admin\Product as ProductRequest;
 
 class ProductController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:product-create', ['only' => ['create','store']]);
+        $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:product-delete', ['only' => ['destroy']]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -120,7 +129,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $product = Product::where('id', $id)->first();
+        $product = Product::where('id', $id)->firstOrFail();
         $categories = Categories::orderBy('name');
 
         return view('admin.product.edit', [
@@ -139,7 +148,7 @@ class ProductController extends Controller
     public function update(ProductRequest $request, $id)
     {
 
-        $product = Product::where('id', $id)->first();
+        $product = Product::where('id', $id)->firstOrFail();
         if ($product->recurrent == "Assinatura" && $product->typePayment = "Mensal") {
             $planPagSeguro = (new Subscription())->planCreate();
             $product->pagseguroPlanCode = $planPagSeguro;

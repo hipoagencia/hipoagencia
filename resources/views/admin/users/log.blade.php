@@ -39,40 +39,76 @@
                         @endcomponent
                     @endif
 
-                    @if(!empty($logs))
+{{--                    @if(!empty($logs))--}}
 
-                        <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+{{--                        <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">--}}
+{{--                            <thead>--}}
+{{--                            <tr>--}}
+{{--                                <th width="3%">#</th>--}}
+{{--                                <th>Data</th>--}}
+{{--                                <th>Tipo</th>--}}
+{{--                                <th>Descrição</th>--}}
+{{--                                <th>Informações</th>--}}
+{{--                            </tr>--}}
+{{--                            </thead>--}}
+
+{{--                            <tbody>--}}
+{{--                            @foreach($logs as $log)--}}
+{{--                                <tr>--}}
+{{--                                    <td>{{ $log->id }}</td>--}}
+{{--                                    <td>{{ date('d/m/Y', strtotime($log->created_at)) }}</td>--}}
+{{--                                    <td>{{ $log->log_name }}</td>--}}
+{{--                                    <td>{{ $log->description }}</td>--}}
+{{--                                    <td><input value="{{ $log->properties }}"></td>--}}
+{{--                                </tr>--}}
+{{--                            @endforeach--}}
+
+{{--                            </tbody>--}}
+{{--                        </table>--}}
+
+{{--                    @else--}}
+{{--                        <h3>Nenhum registro encontrado</h3>--}}
+{{--                    @endif--}}
+
+                        <table class="table table-bordered dt-responsive nowrap w-100 yajra-datatable">
                             <thead>
                             <tr>
-                                <th width="3%">#</th>
+                                <th width="1%">ID</th>
                                 <th>Data</th>
                                 <th>Tipo</th>
                                 <th>Descrição</th>
                                 <th>Informações</th>
                             </tr>
                             </thead>
-
                             <tbody>
-                            @foreach($logs as $log)
-                                <tr>
-                                    <td>{{ $log->id }}</td>
-                                    <td>{{ date('d/m/Y', strtotime($log->created_at)) }}</td>
-                                    <td>{{ $log->log_name }}</td>
-                                    <td>{{ $log->description }}</td>
-                                    <td><input value="{{ $log->properties }}"></td>
-                                </tr>
-                            @endforeach
-
                             </tbody>
                         </table>
-
-                    @else
-                        <h3>Nenhum registro encontrado</h3>
-                    @endif
 
                 </div>
             </div>
         </div>
     </div>
+
+@endsection
+
+@section('js')
+
+    <script type="text/javascript">
+        $(function () {
+            var table = $('.yajra-datatable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('admin.users.log.get', ['id' => app('request')->input('id')]) }}",
+                order: [ [0, 'desc'] ],
+                columns: [
+                    {data: 'id', name: 'id'},
+                    {data: 'created_at', name: 'created_at'},
+                    {data: 'log_name', name: 'log_name'},
+                    {data: 'description', name: 'description'},
+                    {data: 'properties', name: 'properties'}
+                ]
+            });
+        });
+    </script>
 
 @endsection

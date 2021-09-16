@@ -9,7 +9,7 @@ use App\Http\Requests\Admin\User as UserRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Permission\Models\Role;
-use function PHPUnit\Framework\isNull;
+use Spatie\Activitylog\Models\Activity;
 use DataTables;
 
 class UserController extends Controller
@@ -21,9 +21,9 @@ class UserController extends Controller
      */
     function __construct()
     {
-        $this->middleware('permission:user-list|user-create|user-edit|user-delete', ['only' => ['index','store']]);
-        $this->middleware('permission:user-create', ['only' => ['create','store']]);
-        $this->middleware('permission:user-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:user-list|user-create|user-edit|user-delete', ['only' => ['index', 'store']]);
+        $this->middleware('permission:user-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:user-edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:user-delete', ['only' => ['destroy']]);
     }
 
@@ -36,11 +36,34 @@ class UserController extends Controller
 
     public function log(Request $request)
     {
-        $logs = \Spatie\Activitylog\Models\Activity::where('causer_id', $request->id)->orderBy('id', 'DESC')->get();
 
-        return view('admin.users.log',[
-            'logs' => $logs
-        ]);
+        return view('admin.users.log');
+
+    }
+
+    public function logShow(Request $request)
+    {
+        if ($request->ajax()) {
+            $data = Activity::where('causer_id', $request->id)->orderBy('id', 'DESC');
+
+            return Datatables::of($data)
+                ->editColumn('created_at', function ($row) {
+                    return date('d/m/Y', strtotime($row->created_at));
+                })
+                ->editColumn('properties', function ($row) {
+                    $x = '<a href="'. route('admin.users.log.open', $row->id) .'">Abrir</a>';
+                    return $x;
+                })
+                ->rawColumns(['properties'])
+                ->make(true);
+        }
+    }
+
+    public function logOpen(Request $request)
+    {
+        $log = Activity::where('id', $request->id)->firstOrFail();
+
+        return view('admin.users.logCheck', ['log' => json_decode($log, true)]);
     }
 
     public function loginAsUser(Request $request)
@@ -63,7 +86,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(UserRequest $request)
@@ -73,6 +96,7 @@ class UserController extends Controller
 //        var_dump($users->getAttributes());
 
         $userCreate = User::create($request->all());
+        $userCreate->assignRole($request->role);
 
         if (!empty($request->file('cover'))) {
             $userCreate->cover = $request->file('cover')->store('public/user');
@@ -87,7 +111,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request)
@@ -98,7 +122,7 @@ class UserController extends Controller
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('login', function ($row) {
-                    $x = '<form action="'. route('admin.users.loginAsUser', ['user' => $row->id]) .'" method="POST">' .
+                    $x = '<form action="' . route('admin.users.loginAsUser', ['user' => $row->id]) . '" method="POST">' .
                         csrf_field() .
                         '<button type="submit" class="delete btn btn-primary btn-sm" onclick="return confirm(\'Você tem deseja entrar na conta deste usuário?\')">Login</button></form>';
                     return $x;
@@ -119,9 +143,9 @@ class UserController extends Controller
                     return $row->name . ' ' . $row->last_name;
                 })
                 ->editColumn('log', function ($row) {
-                    return '<a href="' . route('admin.users.log', ['id' => $row->id])  . '">Registros</a>';
+                    return '<a href="' . route('admin.users.log', ['id' => $row->id]) . '">Registros</a>';
                 })
-                ->rawColumns(['action','log','login'])
+                ->rawColumns(['action', 'log', 'login'])
                 ->make(true);
         }
     }
@@ -129,46 +153,50 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $user = User::where('id', $id)->first();
+        $user = User::where('id', $id)->firstOrFail();
         $roles = Role::orderBy('name', 'desc')->get();
 
         return view('admin.users.edit', [
-           'user' => $user,
-           'roles' => $roles
+            'user' => $user,
+            'roles' => $roles
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(UserRequest $request, $id)
     {
-        $user = User::where('id', $id)->first();
+        $user = User::where('id', $id)->firstOrFail();
 
         if (!empty($request->file('cover'))) {
             Storage::delete($user->cover);
-            $user->cover= '';
+            $user->cover = '';
         }
 
         //Verifica se houve troca de senha
-        if($request->password != null){
+        if ($request->password != null) {
             $user->fill($request->all());
             $user->password = bcrypt($request->password);
-        }else
+        } else
             $user->fill($request->except(['password']));
 
         if (!empty($request->file('cover'))) {
             $user->cover = $request->file('cover')->store('public/user');
         }
+
+        //Aplica a regra
+        $user->roles()->detach();
+        $user->assignRole($request->role);
 
         if (!$user->save()) {
             return redirect()->back()->withInput()->withErrors();
@@ -182,7 +210,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
