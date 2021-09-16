@@ -43,7 +43,7 @@
 
                     @if($roles)
 
-                        <table class="table table-bordered dt-responsive nowrap w-100">
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap w-100">
                             <thead>
                             <tr>
                                 <th width="3%">#</th>
@@ -65,11 +65,11 @@
                                             <ul class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
 
                                                 <li><a href="{{ route('admin.roles.edit', ['role' => $role->id]) }}" class="dropdown-item"><i class="mdi mdi-pen font-size-16 text-success me-1"></i> Editar</a></li>
-                                                <form action="{{ route('admin.roles.destroy', ['role' => $role->id]) }}" method="post" onsubmit="if(!confirm('Deseja remover esse registro? Essa ação não pode ser desfeita.')){return false;}">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <li><button type="submit" class="dropdown-item"><i class="mdi mdi-trash-can font-size-16 text-danger me-1"></i> Deletar</button></li>
-                                                </form>
+{{--                                                <form action="{{ route('admin.roles.destroy', ['role' => $role->id]) }}" method="post" onsubmit="if(!confirm('Deseja remover esse registro? Essa ação não pode ser desfeita.')){return false;}">--}}
+{{--                                                    @csrf--}}
+{{--                                                    @method('DELETE')--}}
+{{--                                                    <li><button type="submit" class="dropdown-item"><i class="mdi mdi-trash-can font-size-16 text-danger me-1"></i> Deletar</button></li>--}}
+{{--                                                </form>--}}
                                             </ul>
                                         </div>
                                     </td>

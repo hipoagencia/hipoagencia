@@ -56,7 +56,7 @@
                             @foreach($logs as $log)
                                 <tr>
                                     <td>{{ $log->id }}</td>
-                                    <td>{{ $log->created_at }}</td>
+                                    <td>{{ date('d/m/Y', strtotime($log->created_at)) }}</td>
                                     <td>{{ $log->log_name }}</td>
                                     <td>{{ $log->description }}</td>
                                     <td><input value="{{ $log->properties }}"></td>

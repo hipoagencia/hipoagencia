@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Admin\User as UserRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Spatie\Permission\Models\Role;
 use function PHPUnit\Framework\isNull;
+use DataTables;
 
 class UserController extends Controller
 {
@@ -27,11 +29,9 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::users()->orderBy('id', 'DESC')->paginate(20);
+        //$users = User::users()->orderBy('id', 'DESC')->paginate(20);
 
-        return view('admin.users.index',[
-            'users' => $users
-        ]);
+        return view('admin.users.index');
     }
 
     public function log(Request $request)
@@ -90,9 +90,40 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            $data = User::latest()->get();
+
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('login', function ($row) {
+                    $x = '<form action="'. route('admin.users.loginAsUser', ['user' => $row->id]) .'" method="POST">' .
+                        csrf_field() .
+                        '<button type="submit" class="delete btn btn-primary btn-sm" onclick="return confirm(\'Você tem deseja entrar na conta deste usuário?\')">Login</button></form>';
+                    return $x;
+                })
+                ->addColumn('action', function ($row) {
+                    $x =
+                        '<form action="' . route('admin.users.destroy', ['user' => $row->id]) . '" method="POST">' .
+                        csrf_field() . method_field("DELETE") .
+                        '<a href="' . route('admin.users.edit', ['user' => $row->id]) . '" class="edit btn btn-success btn-sm">Editar</a>
+
+                        <button type="submit" class="delete btn btn-danger btn-sm"
+                            onclick="return confirm(\'Você tem certeza de que deseja deletar esse registro?\')">Deletar</button>
+                        </form>
+                    ';
+                    return $x;
+                })
+                ->editColumn('name', function ($row) {
+                    return $row->name . ' ' . $row->last_name;
+                })
+                ->editColumn('log', function ($row) {
+                    return '<a href="' . route('admin.users.log', ['id' => $row->id])  . '">Registros</a>';
+                })
+                ->rawColumns(['action','log','login'])
+                ->make(true);
+        }
     }
 
     /**
@@ -104,9 +135,11 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::where('id', $id)->first();
+        $roles = Role::orderBy('name', 'desc')->get();
 
         return view('admin.users.edit', [
-           'user' => $user
+           'user' => $user,
+           'roles' => $roles
         ]);
     }
 

@@ -189,6 +189,7 @@ return [
         'date_of_birth' => 'data de aniversário',
         'genre' => 'sexo',
         'document' => 'cpf',
+        'categories' => 'categoria',
     ],
 
 ];

@@ -25,7 +25,9 @@
             </div>
             <div class="col-sm-8">
                 <div class="text-sm-end">
-                    <a href="{{ route('admin.posts.create') }}" class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i class="mdi mdi-plus me-1"></i> Novo</a>
+                    <a href="{{ route('admin.posts.create') }}"
+                       class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i
+                            class="mdi mdi-plus me-1"></i> Novo</a>
                 </div>
             </div>
         </div>
@@ -41,69 +43,54 @@
                     @endif
 
 
-                    @if($posts)
-
-                        <table class="table table-bordered dt-responsive nowrap w-100">
-                            <thead>
-                            <tr>
-                                <th width="3%">#</th>
-                                <th>Nome</th>
-                                <th>Autor</th>
-                                <th>Categoria</th>
-                                <th width="8%">Ações</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            @foreach($posts as $post)
-                                <tr>
-                                    <td>{{ $post->id }}</td>
-                                    <td>
-                                        <a href="{{ route('admin.posts.edit', ['post' => $post->id]) }}">{{ $post->name }}</a>
-                                    </td>
-                                    <td><a href="{{ route('admin.users.edit', ['user' => $post->user]) }}" class="href">{{ $post->user->name }} {{ $post->user->last_name }}</a></td>
-                                    <td>
-                                        @if($post->categories)
-                                            @foreach($post->categories as $category)
-                                                @if($loop->iteration === $loop->count)
-                                                    {{ $category->name }}
-                                                @else
-                                                    {{ $category->name }},
-                                                @endif
-                                            @endforeach
-                                        @endif
-                                    </td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <a href="#" class="dropdown-toggle card-drop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal font-size-18"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
-                                                <li><a href="{{ route('admin.posts.edit', ['post' => $post->id]) }}" class="dropdown-item"><i class="mdi mdi-pen font-size-16 text-success me-1"></i> Editar</a></li>
-                                                <form action="{{ route('admin.posts.destroy', ['post' => $post->id]) }}" method="post" onsubmit="if(!confirm('Deseja remover esse registro? Essa ação não pode ser desfeita.')){return false;}">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <li><button type="submit" class="dropdown-item"><i class="mdi mdi-trash-can font-size-16 text-danger me-1"></i> Deletar</button></li>
-                                                </form>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            @endforeach
-
-                            </tbody>
-                        </table>
-
-                            {!! $posts->links() !!}
-
-                    @else
-                        <h3>Nenhum registro encontrado</h3>
-                    @endif
+                    <table class="table table-bordered dt-responsive nowrap w-100 yajra-datatable">
+                        <thead>
+                        <tr>
+                            <th width="1%">ID</th>
+                            <th>Título</th>
+                            <th>Cover</th>
+                            <th>Criado em</th>
+                            <th width="1%">Ação</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
 
 
                 </div>
             </div>
         </div>
     </div>
+
+
+@endsection
+
+
+
+@section('js')
+
+    <script type="text/javascript">
+        $(function () {
+            var table = $('.yajra-datatable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('admin.posts.get') }}",
+                order: [ [0, 'desc'] ],
+                columns: [
+                    {data: 'id', name: 'id'},
+                    {data: 'name', name: 'name'},
+                    {data: 'cover', name: 'cover'},
+                    {data: 'created_at', name: 'created_at'},
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false
+                    },
+                ]
+            });
+        });
+    </script>
 
 @endsection

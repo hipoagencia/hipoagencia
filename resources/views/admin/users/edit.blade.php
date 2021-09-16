@@ -35,12 +35,14 @@
 
                 @if(session()->exists('message'))
                     @component('admin.components.message',['type' => session()->get('type')])
-                       {{ session()->get('message') }}
+                        {{ session()->get('message') }}
                     @endcomponent
                 @endif
 
+
                 <div class="card-body">
-                    <form action="{{ route('admin.users.update', ['user' => $user->id]) }}" method="POST" autocomplete="false"
+                    <form action="{{ route('admin.users.update', ['user' => $user->id]) }}" method="POST"
+                          autocomplete="false"
                           enctype="multipart/form-data">
 
 
@@ -80,13 +82,15 @@
                                     <div class="col-md-5">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nome</label>
-                                            <input name="name" class="form-control" value="{{ old('name') ?? $user->name }}">
+                                            <input name="name" class="form-control"
+                                                   value="{{ old('name') ?? $user->name }}">
                                         </div>
                                     </div>
                                     <div class="col-md-5">
                                         <div class="mb-3">
                                             <label for="last_name" class="form-label">Sobrenome</label>
-                                            <input name="last_name" class="form-control" value="{{ old('last_name') ?? $user->last_name }}">
+                                            <input name="last_name" class="form-control"
+                                                   value="{{ old('last_name') ?? $user->last_name }}">
                                         </div>
                                     </div>
                                     <div class="col-lg-2">
@@ -175,6 +179,26 @@
 
                                 </div>
 
+                                <h3 class="mb-3">Perfil</h3>
+                                <div class="row">
+
+
+                                    <div class="col-md-3">
+                                        <label for="role" class="form-label">Tipo de Acesso</label>
+                                        <select name="role" class="form-select">
+                                            <option selected>Escolha...</option>
+                                            @foreach($roles as $role)
+                                                <option
+                                                    value="{{ $role->id }}" {{ (old('role') == 'masculino' ? 'selected' : ($user->genre == 'masculino' ? 'selected' : '')) }}>
+                                                    {{ $role->name }}
+                                                </option>
+                                            @endforeach
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
                             </div>
 
                             <div class="tab-pane" id="profile1" role="tabpanel">
@@ -254,7 +278,8 @@
                                         <div class="col-md-4">
                                             <div class="mb-3">
                                                 <label for="city" class="form-label">Cidade</label>
-                                                <input name="city" class="form-control city" value="{{ old('city') ?? $user->city }}">
+                                                <input name="city" class="form-control city"
+                                                       value="{{ old('city') ?? $user->city }}">
                                             </div>
                                         </div>
 

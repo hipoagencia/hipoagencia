@@ -217,7 +217,9 @@ class AuthController extends Controller
         $user['password'] = bcrypt($request->password);
         $user['email_verified_token'] = $token;
         //$user['telephone'] = $request->cell;
-        User::create($user);
+        $user2 = User::create($user);
+
+        $user2->assignRole('user');
 
         $data = [
             'reply_name' => env('APP_NAME'),
@@ -231,7 +233,7 @@ class AuthController extends Controller
         //Envio com Jobs
         \App\Jobs\Auth\ConfirmAccount::dispatch($data)->delay(now()->addSeconds(5));
 
-        return redirect()->route('login')->with(['type' => 'success', 'message' => 'Acesse o seu e-mail e clique no link para verificar a conta e seja bem vindo!']);
+        return redirect()->route('login')->with(['type' => 'success', 'message' => 'Acesse o seu e-mail e clique no link para verificar sua conta.']);
     }
 
     public function logout()

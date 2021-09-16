@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\Post as PostRequest;
 use Illuminate\Support\Facades\Storage;
+use DataTables;
 
 class PostController extends Controller
 {
@@ -21,9 +22,11 @@ class PostController extends Controller
     {
         $posts = Post::orderBy('id', 'DESC')->paginate(20);
 
-        return view('admin.posts.index',[
+        return view('admin.posts.index', [
             'posts' => $posts
         ]);
+
+
     }
 
     /**
@@ -45,7 +48,7 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(PostRequest $request)
@@ -74,18 +77,44 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+
+    public function show(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            $data = Post::latest()->get();
+
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function ($row) {
+                    $x = '<form action="' . route('admin.posts.destroy', ['post' => $row->id]) . '" method="POST">' .
+                        csrf_field() . method_field("DELETE") .
+                        '<a href="' . route('admin.posts.edit', ['post' => $row->id]) . '" class="edit btn btn-success btn-sm">Editar</a>
+
+                        <button type="submit" class="delete btn btn-danger btn-sm"
+                            onclick="return confirm(\'Você tem certeza de que deseja deletar esse registro?\')">Deletar</button>
+                        </form>
+                    ';
+                    return $x;
+                })
+                ->editColumn('created_at', function ($row) {
+                    return date('d/m/Y', strtotime($row->created_at));
+                })
+                ->editColumn('cover', function ($row) {
+                    $cover = asset($row->cover);
+                    return "<img src='/{{ $cover }}' width='100'/>";
+                })
+                ->rawColumns(['action', 'cover'])
+                ->make(true);
+        }
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function edit($id)
@@ -104,8 +133,8 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(PostRequest $request, $id)
@@ -137,7 +166,7 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

@@ -124,7 +124,7 @@ class User extends Authenticatable
 
     public function setCreatedAtAttribute($value)
     {
-        $this->attributes['created_at'] = $this->converStringToDate($value);
+        $this->attributes['created_at'] = date('Y-m-d', strtotime($value));
     }
 
 
@@ -168,8 +168,7 @@ class User extends Authenticatable
             return null;
         }
 
-        list($day, $month, $year) = explode('/', $param);
-        return (new \DateTime($year . '-' . $month . '-' . $day))->format('Y-m-d');
+        return date("Y-m-d", strtotime($param));
 
     }
 

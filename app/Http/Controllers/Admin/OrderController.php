@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\Order as OrderRequest;
+use DataTables;
 
 class OrderController extends Controller
 {
@@ -17,10 +18,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::withOnly('user')->orderBy('id', 'DESC')->paginate(20);
-        return view('admin.orders.index',[
-            'orders' => $orders
-        ]);
+
+        return view('admin.orders.index');
     }
 
     /**
@@ -50,9 +49,34 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            $data = Order::latest()->get();
+
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function ($row) {
+                    $x =
+                        '<form action="' . route('admin.orders.destroy', ['order' => $row->id]) . '" method="POST">' .
+                        csrf_field() . method_field("DELETE") .
+                        '<a href="' . route('admin.orders.edit', ['order' => $row->id]) . '" class="edit btn btn-success btn-sm">Editar</a>
+
+                        <button type="submit" class="delete btn btn-danger btn-sm"
+                            onclick="return confirm(\'Você tem certeza de que deseja deletar esse registro?\')">Deletar</button>
+                        </form>
+                    ';
+                    return $x;
+                })
+                ->editColumn('name', function ($row) {
+                    return $row->name . ' ' . $row->last_name;
+                })
+                ->editColumn('user_id', function ($row) {
+                    return '<a href="' . route('admin.users.edit', ['user' => $row->user_id])  . '">' . $row->user->name . '</a>';
+                })
+                ->rawColumns(['action','user_id'])
+                ->make(true);
+        }
     }
 
     /**

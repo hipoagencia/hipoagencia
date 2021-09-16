@@ -47,6 +47,8 @@
     <!-- App Css-->
     <link href="{{ url(asset('backend/assets/css/app.min.css')) }}" id="app-style" rel="stylesheet" type="text/css"/>
 
+    <style>div.dataTables_wrapper div.dataTables_processing{background-color: #343a40 !important;color: #FFFFFF !important;}</style>
+
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
 
 </head>

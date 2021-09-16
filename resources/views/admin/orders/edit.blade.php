@@ -92,7 +92,7 @@
 
                                                 @foreach($users as $user)
                                                     <option
-                                                        value="{{ $user->id }}" {{ ($user->id == $order->user ? 'selected' : '') }}>{{ $user->name }} {{ $user->last_name }}</option>
+                                                        value="{{ $user->id }}" {{ ($user->id == $order->user_id ? 'selected' : '') }}>{{ $user->name }} {{ $user->last_name }}</option>
                                                 @endforeach
 
                                             </select>

@@ -39,6 +39,7 @@
                     @endcomponent
                 @endif
 
+
                 <div class="card-body">
                     <form action="{{ route('admin.roles.update', ['role' => $role->id]) }}" method="POST"
                           autocomplete="false"
@@ -70,7 +71,7 @@
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nome</label>
                                             <input name="name" class="form-control"
-                                                   value="{{ old('name') ?? $role->name }}" {{ ($role->name == 'superAdmin' ? 'disabled' : '') }}>
+                                                   value="{{ old('name') ?? $role->name }}" >
                                         </div>
                                     </div>
 
