@@ -179,9 +179,12 @@
                                 <span key="t-starter-page">Usuários</span>
                             </a>
                             <ul class="sub-menu mm-collapse">
-                                <li><a href="{{ route('admin.users.index') }}" key="admin.users.index">Usuário</a></li>
+                                <li><a href="{{ route('admin.users.index',['adm'=>'0']) }}" key="admin.users.index">Usuário</a>
+                                </li>
 
                                 @role('superAdmin')
+                                <li><a href="{{ route('admin.users.index',['adm'=>'1']) }}" key="admin.users.index">Administrador</a>
+                                </li>
                                 <li><a href="{{ route('admin.roles.index')}}" key="admin.roles.index">Perfil</a></li>
                                 @endrole
                             </ul>
@@ -220,7 +223,7 @@
                             </a>
                             <ul class="sub-menu mm-collapse">
                                 @can('order-list')
-                                    <li><a href="{{ route('admin.orders.index') }}" key="t-read-email" key="t-pages">Pedidos</a>
+                                    <li><a href="{{ route('admin.orders.index') }}" key="orders">Pedidos</a>
                                     </li>
                                 @endcan
                                 @can('product-list')
@@ -232,16 +235,37 @@
                     @endcan
 
 
-                    <li class="menu-title" key="t-pages">Sessões</li>
+                    @canany(['order-list','product-list'])
+                        <li class="menu-title" key="t-pages">Sessões</li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
+                                <i class="dripicons-gear"></i>
+                                <span key="t-email">Sistema</span>
+                            </a>
+                            <ul class="sub-menu mm-collapse">
+                                @can('category-list')
+                                    <li><a href="{{ route('admin.categories.index') }}" key="t-inbox">Categorias</a>
+                                    </li>
+                                @endcan
+                            </ul>
+                        </li>
+                    @endcan
+
+                    <li class="menu-title" key="t-pages">Visão Usuário</li>
 
                     <li>
-                        <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
-                            <i class="dripicons-gear"></i>
-                            <span key="t-email">Sistema</span>
+                        <a href="{{ route('web.home') }}" class="waves-effect">
+                            <i class="bx bx-home-circle"></i>
+                            <span>Website</span>
                         </a>
-                        <ul class="sub-menu mm-collapse">
-                            <li><a href="{{ route('admin.categories.index') }}" key="t-inbox">Categorias</a></li>
-                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('user.dashboard') }}" class="waves-effect">
+                            <i class="bx bx-home-circle"></i>
+                            <span>Painel do Usuário</span>
+                        </a>
                     </li>
 
 

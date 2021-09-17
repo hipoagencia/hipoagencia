@@ -6,13 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Categories;
 use App\Models\Product;
 use App\Models\ProductImages;
-use App\Payment\PagSeguroV3\Subscription;
 use App\Support\Cropper;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\Admin\Product as ProductRequest;
+use DataTables;
 
 class ProductController extends Controller
 {
@@ -32,20 +31,46 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::withOnly('categories')->where('recurrent', 'Produto')->orderBy('id', 'DESC')->paginate(20);
-        return view('admin.product.index', [
-            'products' => $products
-        ]);
+
+        return view('admin.product.index');
 
     }
 
     public function plans()
     {
-        $products = Product::withOnly('categories')->where('recurrent', 'Assinatura')->orderBy('id', 'DESC')->paginate(20);
 
-        return view('admin.product.index', [
-            'products' => $products
-        ]);
+        return view('admin.product.index');
+
+    }
+
+    public function plansGet(Request $request)
+    {
+        if ($request->ajax()) {
+            $data = Product::withOnly('categories')->where('recurrent', 'Assinatura')->orderBy('id', 'DESC');
+
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function ($row) {
+                    $x =
+                        '<form action="' . route('admin.products.destroy', ['product' => $row->id]) . '" method="POST">' .
+                        csrf_field() . method_field("DELETE") .
+                        '<a href="' . route('admin.products.edit', ['product' => $row->id]) . '" class="edit btn btn-success btn-sm">Editar</a>
+
+                        <button type="submit" class="delete btn btn-danger btn-sm"
+                            onclick="return confirm(\'Você tem certeza de que deseja deletar esse registro?\')">Deletar</button>
+                        </form>
+                    ';
+                    return $x;
+                })
+                ->editColumn('name', function ($row) {
+                    return $row->name . ' ' . $row->last_name;
+                })
+                ->editColumn('status', function ($row) {
+                    return '<span class="badge bg-'. ( $row->status == 1 ? 'success' : 'danger' ) .'">'. ( $row->status == 1 ? 'Ativo' : 'Inativo' ) .'</span>';
+                })
+                ->rawColumns(['action','status'])
+                ->make(true);
+        }
     }
 
     /**
@@ -116,9 +141,34 @@ class ProductController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            $data = Product::withOnly('categories')->where('recurrent', 'Produto')->orderBy('id', 'DESC');
+
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function ($row) {
+                    $x =
+                        '<form action="' . route('admin.products.destroy', ['product' => $row->id]) . '" method="POST">' .
+                        csrf_field() . method_field("DELETE") .
+                        '<a href="' . route('admin.products.edit', ['product' => $row->id]) . '" class="edit btn btn-success btn-sm">Editar</a>
+
+                        <button type="submit" class="delete btn btn-danger btn-sm"
+                            onclick="return confirm(\'Você tem certeza de que deseja deletar esse registro?\')">Deletar</button>
+                        </form>
+                    ';
+                    return $x;
+                })
+                ->editColumn('name', function ($row) {
+                    return $row->name . ' ' . $row->last_name;
+                })
+                ->editColumn('status', function ($row) {
+                    return '<span class="badge bg-'. ( $row->status == 1 ? 'success' : 'danger' ) .'">'. ( $row->status == 1 ? 'Ativo' : 'Inativo' ) .'</span>';
+                })
+                ->rawColumns(['action','status'])
+                ->make(true);
+        }
     }
 
     /**

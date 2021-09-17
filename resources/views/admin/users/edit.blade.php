@@ -179,10 +179,26 @@
 
                                 </div>
 
+
+                                @role('superAdmin')
                                 <h3 class="mb-3">Perfil</h3>
                                 <div class="row">
-
-{{--                                    @dd($user->roles->pluck('name')[0])--}}
+                                    <div class="col-lg-3">
+                                        <div class="mb-3">
+                                            <label for="genre" class="form-label">Administrador?</label>
+                                            <select name="is_admin" class="form-select">
+                                                <option selected>Escolha...</option>
+                                                <option
+                                                    value="0" {{ (old('is_admin') == '0' ? 'selected' : ($user->is_admin == '0' ? 'selected' : '')) }}>
+                                                    Não
+                                                </option>
+                                                <option
+                                                    value="1" {{ (old('is_admin') == '1' ? 'selected' : ($user->is_admin == '1' ? 'selected' : '')) }}>
+                                                    Sim
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
 
                                     <div class="col-md-3">
                                         <label for="role" class="form-label">Tipo de Acesso</label>
@@ -199,6 +215,7 @@
                                     </div>
 
                                 </div>
+                                @endrole
                             </div>
 
                             <div class="tab-pane" id="profile1" role="tabpanel">

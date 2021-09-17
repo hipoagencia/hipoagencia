@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('web.home');
-});
+})->name('web.home');
 
 Route::get('/teste', function () {
     return view('web.teste');

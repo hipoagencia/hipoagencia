@@ -1,4 +1,4 @@
-<h3>Ïnício</h3>
+<h3>Ínício</h3>
 
 <a href="{{ route('web.teste') }}">Teste</a>
 

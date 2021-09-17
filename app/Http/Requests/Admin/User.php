@@ -39,10 +39,10 @@ class User extends FormRequest
         return [
             'name' => 'required|min:3|max:191',
             'last_name' => 'required|min:3|max:191',
-            'genre' => 'in:masculino,feminino,binario',
+            'genre' => 'in:masculino,feminino,nbinario',
             'document' => (!empty($this->request->all()['id']) ? 'required|min:11|max:14|unique:users,document,'. $this->request->all()['id'] : 'required|min:11|max:14|unique:users,document'),
             'date_of_birth' => 'required',
-            'cover' => (empty($this->request->all()['id']) ? 'required|image' : 'image'),
+            'cover' => (empty($this->request->all()['id']) ? 'image' : 'image'),
 
             //Address - Endereço
             'zipcode' => 'required|min:8|max:9',

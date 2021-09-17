@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 use Spatie\Permission\Models\Role;
 use Spatie\Activitylog\Models\Activity;
 use DataTables;
+use function PHPUnit\Framework\isNull;
 
 class UserController extends Controller
 {
@@ -80,7 +81,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        $roles = Role::orderBy('name', 'desc')->get();
+        return view('admin.users.create',[
+            'roles' => $roles
+        ]);
     }
 
     /**
@@ -117,7 +121,11 @@ class UserController extends Controller
     public function show(Request $request)
     {
         if ($request->ajax()) {
-            $data = User::latest()->get();
+
+            if($request->adm == '0')
+                $data = User::with('roles')->where('is_admin', '0')->latest();
+            else
+                $data = User::with('roles')->where('is_admin', '1')->latest();
 
             return Datatables::of($data)
                 ->addIndexColumn()
@@ -126,6 +134,9 @@ class UserController extends Controller
                         csrf_field() .
                         '<button type="submit" class="delete btn btn-primary btn-sm" onclick="return confirm(\'Você tem deseja entrar na conta deste usuário?\')">Login</button></form>';
                     return $x;
+                })
+                ->addColumn('role', function ($row) {
+                    return ($row->roles->pluck('name') != '[]' ? $row->roles->pluck('name')[0] : '-');
                 })
                 ->addColumn('action', function ($row) {
                     $x =

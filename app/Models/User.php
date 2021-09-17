@@ -40,7 +40,8 @@ class User extends Authenticatable
         'city',
         'telephone',
         'cell',
-        'email_verified_token'
+        'email_verified_token',
+        'is_admin'
     ];
 
     /**

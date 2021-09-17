@@ -25,14 +25,18 @@ class AuthController extends Controller
         //dd(bcrypt('teste'));
 
         //Confirma o usuário
-        if($request->confirm != null) {
+        if ($request->confirm != null) {
             $this->userConfirm($request->confirm);
         }
 
         //Verifica se já está logado
-        if (Auth::check() === true && Auth::user()->is_admin == 1) {
-            return redirect()->route('admin.dashboard');
-        } else if (Auth::check() === true && Auth::user()->is_admin == 0) {
+//        if (Auth::check() === true && Auth::user()->is_admin == 1) {
+//            return redirect()->route('admin.dashboard');
+//        } else if (Auth::check() === true && Auth::user()->is_admin == 0) {
+//            return redirect()->route('user.dashboard');
+//        }
+
+        if (Auth::check() === true) {
             return redirect()->route('user.dashboard');
         }
 
@@ -65,8 +69,7 @@ class AuthController extends Controller
             } else {
                 return redirect()->route('user.dashboard');
             }
-        }
-        else {
+        } else {
             return redirect()->route('login')
                 ->withErrors('Login ou senha incorretos');
         }
@@ -96,7 +99,7 @@ class AuthController extends Controller
 
     public function dashboardUser()
     {
-        $products = Product::where('recurrent','Assinatura')->orderBy('price')->get();
+        $products = Product::where('recurrent', 'Assinatura')->orderBy('price')->get();
         $user = User::where('id', Auth::id())->first();
 
         $userPlans = $user->orders();
@@ -155,7 +158,7 @@ class AuthController extends Controller
         $token = DB::table('password_resets')->where('token', $request->token)->first();
 
         if (!empty($token)) {
-            if(strtotime($token->created_at) < strtotime("-30 minutes")){
+            if (strtotime($token->created_at) < strtotime("-30 minutes")) {
                 echo "EXPIROU";
                 return redirect()->route('recoverPassword')->with(['type' => 'danger', 'message' => 'O seu token expirou, solicite novamente.']);
             }
@@ -178,11 +181,9 @@ class AuthController extends Controller
         $user = User::where('email', $token->email)->first();
         $user->password = bcrypt($request->password);
 
-        if($user->save()){
+        if ($user->save()) {
             return redirect()->route('login')->with(['type' => 'success', 'message' => 'Sua senha foi trocada com sucesso!']);
-        }
-        else
-        {
+        } else {
             return redirect()->route('recoverPassword')->with(['type' => 'danger', 'message' => 'Ocorreu um erro. Tente novamente mais tarde.']);
         }
     }
@@ -203,8 +204,8 @@ class AuthController extends Controller
             'last_name' => 'required|min:3|max:191',
             'email' => 'required|email|unique:users,email',
             'cell' => 'required',
-            'genre' => 'in:masculino,feminino,binario',
-            'document' => 'required|cpf|max:11|unique:users,document',
+            'genre' => 'in:masculino,feminino,nbinario',
+            'document' => 'required|cpf_cnpj|max:20|unique:users,document',
             'date_of_birth' => 'required|before:2010-01-01',
             'password' => 'required|min:5',
             'password_confirm' => 'required|same:password',
@@ -244,7 +245,7 @@ class AuthController extends Controller
 
     public function validateFields(array $inputs)
     {
-        $inputs['document'] = str_replace(['.','-'], '', $this->request->all()['document']);
+        $inputs['document'] = str_replace(['.', '-'], '', $this->request->all()['document']);
         return $inputs;
     }
 }

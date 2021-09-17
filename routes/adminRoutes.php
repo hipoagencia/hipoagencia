@@ -30,7 +30,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::post('products/image-set-cover', [ProductController::class, 'imageSetCover'])->name('products.imageSetCover');
         Route::delete('products/remove-cover', [ProductController::class, 'imageRemove'])->name('products.imageRemove');
         Route::resource('products', ProductController::class);
+        Route::get('products/get', [ProductController::class, 'show'])->name('products.get');
         Route::get('plans', [ProductController::class, 'plans'])->name('products.plans');
+        Route::get('plans/get', [ProductController::class, 'plansGet'])->name('products.plans.get');
+
 
         //Rotas de Categorias
         Route::resource('categories', CategoriesController::class);
