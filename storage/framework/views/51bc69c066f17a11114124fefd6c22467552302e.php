@@ -1,32 +1,42 @@
 <div>
 
-    @if($errors->all())
-        @foreach($errors->all() as $error)
-            @component('admin.components.message',['type' => 'danger'])
-                {{ $error }}
-            @endcomponent
-        @endforeach
-    @endif
+    <?php if($errors->all()): ?>
+        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php $__env->startComponent('admin.components.message',['type' => 'danger']); ?>
+                <?php echo e($error); ?>
 
-    @if(session()->exists('message'))
-        @component('admin.components.message',['type' => session()->get('type')])
-            {{ session()->get('message') }}
-        @endcomponent
-    @endif
+            <?php if (isset($__componentOriginalb2158729212260eca6d0367e479a03d4ff4c20f5)): ?>
+<?php $component = $__componentOriginalb2158729212260eca6d0367e479a03d4ff4c20f5; ?>
+<?php unset($__componentOriginalb2158729212260eca6d0367e479a03d4ff4c20f5); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    <?php endif; ?>
+
+    <?php if(session()->exists('message')): ?>
+        <?php $__env->startComponent('admin.components.message',['type' => session()->get('type')]); ?>
+            <?php echo e(session()->get('message')); ?>
+
+        <?php if (isset($__componentOriginalb2158729212260eca6d0367e479a03d4ff4c20f5)): ?>
+<?php $component = $__componentOriginalb2158729212260eca6d0367e479a03d4ff4c20f5; ?>
+<?php unset($__componentOriginalb2158729212260eca6d0367e479a03d4ff4c20f5); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+    <?php endif; ?>
 
 
 
-    {{--    <form action="{{ route('user.profile.update') }}" method="POST" enctype="multipart/form-data">--}}
+    
     <form enctype="multipart/form-data">
-        {{--        @csrf--}}
-        {{--        @method('PUT')--}}
+        
+        
         <div class="offset-2 col-8">
 
-            <div style="{{ (session()->has('goCheckout') ? 'display:none' : '') }}">
+            <div style="<?php echo e((session()->has('goCheckout') ? 'display:none' : '')); ?>">
 
-                @if($user->cover)
-                    <img src="{{ $user->cover }}" width="120" class="mt-3 mb-3">
-                @endif
+                <?php if($user->cover): ?>
+                    <img src="<?php echo e($user->cover); ?>" width="120" class="mt-3 mb-3">
+                <?php endif; ?>
 
                 <h4 class="mb-4">Informações</h4>
 
@@ -86,9 +96,9 @@
                        wire:model="user.zipcode" wire:keydown="zipcode2">
             </div>
 
-            @if ($errorMsg)
-                <span class="row mb-3 alert-warning">{{ $errorMsg }}</span>
-            @endif
+            <?php if($errorMsg): ?>
+                <span class="row mb-3 alert-warning"><?php echo e($errorMsg); ?></span>
+            <?php endif; ?>
 
             <div class="row mb-3">
                 <input type="text" class="form-control street" placeholder="Rua" name="street"
@@ -125,7 +135,7 @@
                 </div>
             </div>
 
-            <div style="{{ (session()->has('goCheckout') ? 'display:none' : '') }}">
+            <div style="<?php echo e((session()->has('goCheckout') ? 'display:none' : '')); ?>">
 
                 <h4 class="mb-4">Foto</h4>
 
@@ -134,18 +144,18 @@
                         <label for="cover" class="form-label">Imagem Principal</label>
                         <input name="cover" class="form-control" type="file" id="formFile" wire:model="photo">
 
-                        @if($photo)
-                            <img src="{{ $photo->temporaryUrl() }}" width="120" class="mt-3">
-                        @endif
+                        <?php if($photo): ?>
+                            <img src="<?php echo e($photo->temporaryUrl()); ?>" width="120" class="mt-3">
+                        <?php endif; ?>
                     </div>
                 </div>
 
             </div>
 
-{{--            <div wire:loading wire:target="editProfile">--}}
+
             <div wire:loading>
                 <div class="row">
-                    @include('user.components.loader')
+                    <?php echo $__env->make('user.components.loader', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 </div>
             </div>
 
@@ -160,3 +170,4 @@
     </form>
 
 </div>
+<?php /**PATH C:\xampp\htdocs\HipoPainel\resources\views/livewire/user/profile.blade.php ENDPATH**/ ?>

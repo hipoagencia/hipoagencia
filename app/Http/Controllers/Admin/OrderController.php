@@ -62,7 +62,7 @@ class OrderController extends Controller
     public function show(Request $request)
     {
         if ($request->ajax()) {
-            $data = Order::latest()->get();
+            $data = Order::withOnly('user')->latest()->get();
 
             return Datatables::of($data)
                 ->addIndexColumn()

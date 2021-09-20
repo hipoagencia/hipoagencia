@@ -106,6 +106,7 @@
                             <tr>
                                 <th width="1%">ID</th>
                                 <th>Título</th>
+                                <th>Categorias</th>
                                 <th width="15%">Preço</th>
                                 <th width="15%">Status</th>
                                 <th width="5%">Ação</th>
@@ -136,6 +137,7 @@
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'name', name: 'name'},
+                    {data: 'categories', name: 'categories'},
                     {data: 'price', name: 'price'},
                     {data: 'status', name: 'status'},
                     {

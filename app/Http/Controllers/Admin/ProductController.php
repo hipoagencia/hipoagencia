@@ -68,6 +68,13 @@ class ProductController extends Controller
                 ->editColumn('status', function ($row) {
                     return '<span class="badge bg-'. ( $row->status == 1 ? 'success' : 'danger' ) .'">'. ( $row->status == 1 ? 'Ativo' : 'Inativo' ) .'</span>';
                 })
+                ->editColumn('categories', function ($row) {
+                    $categories = "";
+                    foreach ($row->categories as $category)
+                        $categories = $categories  . $category->name. ', ';
+
+                    return $categories;
+                })
                 ->rawColumns(['action','status'])
                 ->make(true);
         }
@@ -165,6 +172,13 @@ class ProductController extends Controller
                 })
                 ->editColumn('status', function ($row) {
                     return '<span class="badge bg-'. ( $row->status == 1 ? 'success' : 'danger' ) .'">'. ( $row->status == 1 ? 'Ativo' : 'Inativo' ) .'</span>';
+                })
+                ->editColumn('categories', function ($row) {
+                    $categories = "";
+                    foreach ($row->categories as $category)
+                        $categories = $categories  . $category->name. ', ';
+
+                    return $categories;
                 })
                 ->rawColumns(['action','status'])
                 ->make(true);

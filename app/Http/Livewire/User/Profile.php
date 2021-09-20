@@ -31,13 +31,14 @@ class Profile extends Component
         'user.state' => 'required',
         'user.city' => 'required',
         'user.cell' => 'required',
-        'user.telephone' => 'required',
+        'user.telephone' => '',
+        'user.complement' => '',
         //'data.cover' => 'nullable|sometimes|image|mimes:jpeg,bmp,png,jpg|max:2000'
     ];
 
     public function mount()
     {
-        $this->user = User::users()->find(auth()->user()->id);
+        $this->user = User::find(auth()->user()->id);
     }
 
     public function editProfile()
@@ -51,10 +52,10 @@ class Profile extends Component
                 Storage::disk('public')->delete($this->user->cover);
 
             $photo = $this->photo->store('user', 'public');
-            $this->data['cover'] = $photo;
+            $this->user['cover'] = $photo;
         }
 
-        $this->user->update($this->data);
+        $this->user->update();
 
         //Volta para o checkout após completar o cadastro
         if (session('goCheckout'))
@@ -67,17 +68,17 @@ class Profile extends Component
     {
         $this->errorMsg = null;
 
-        if (strlen($this->zipcode) == 8) {
+        if (strlen($this->user['zipcode']) == 8) {
             try {
-                $cep = $this->zipcode;
+                $cep = $this->user['zipcode'];
                 $response = Http::get("https://viacep.com.br/ws/{$cep}/json/");
 
                 $collection = json_decode($response);
 
-                $this->street = $collection->logradouro;
-                $this->neighborhood = $collection->bairro;
-                $this->city = $collection->localidade;
-                $this->state = $collection->uf;
+                $this->user['street'] = $collection->logradouro;
+                $this->user['neighborhood'] = $collection->bairro;
+                $this->user['city'] = $collection->localidade;
+                $this->user['state'] = $collection->uf;
             } catch (\Exception $e) {
                 $this->errorMsg = "Digite o CEP corretamente.";
             }

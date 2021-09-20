@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\UserRoleController;
+use App\Http\Controllers\Admin\EadModuleController;
+use App\Http\Controllers\Admin\EadContentController;
 
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
@@ -51,6 +53,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         //Rotas de Pedidos
         Route::resource('orders', OrderController::class);
         Route::get('orders/get', [OrderController::class, 'show'])->name('orders.get');
+
+        //Rotas de EAD Modulos
+        Route::resource('ead-module', EadModuleController::class);
+        Route::get('ead-module/get', [EadModuleController::class, 'show'])->name('ead-module.get');
+
+        //Rotas de EAD Conteúdo
+        Route::resource('ead-content', EadContentController::class);
+        Route::get('ead-content/get', [EadContentController::class, 'show'])->name('ead-content.get');
 
         //SiteMap
         Route::get('site-map', function () {

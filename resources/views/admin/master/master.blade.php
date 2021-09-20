@@ -176,16 +176,16 @@
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
                                 <i class="bx bx-envelope"></i>
-                                <span key="t-starter-page">Usuários</span>
+                                <span key="user">Usuários</span>
                             </a>
                             <ul class="sub-menu mm-collapse">
-                                <li><a href="{{ route('admin.users.index',['adm'=>'0']) }}" key="admin.users.index">Usuário</a>
+                                <li><a href="{{ route('admin.users.index',['adm'=>'0']) }}" key="user">Usuário</a>
                                 </li>
 
                                 @role('superAdmin')
-                                <li><a href="{{ route('admin.users.index',['adm'=>'1']) }}" key="admin.users.index">Administrador</a>
+                                <li><a href="{{ route('admin.users.index',['adm'=>'1']) }}" key="admin">Administrador</a>
                                 </li>
-                                <li><a href="{{ route('admin.roles.index')}}" key="admin.roles.index">Perfil</a></li>
+                                <li><a href="{{ route('admin.roles.index')}}" key="roles">Perfil</a></li>
                                 @endrole
                             </ul>
                         </li>
@@ -204,11 +204,11 @@
                                     <li><a href="{{ route('admin.posts.index') }}" key="t-blog">Blog</a></li>
                                 @endcan
                                 @can('content-list')
-                                    <li><a href="{{ route('admin.content.index') }}" key="t-read-email" key="t-pages">Páginas</a>
+                                    <li><a href="{{ route('admin.content.index') }}" key="t-read-email" >Páginas</a>
                                     </li>
                                 @endcan
                                 @can('gallery-list')
-                                    <li><a href="{{ route('admin.gallery.index') }}" key="t-read-email" key="t-pages">Galeria</a>
+                                    <li><a href="{{ route('admin.gallery.index') }}" key="t-read-email">Galeria</a>
                                     </li>
                                 @endcan
                             </ul>
@@ -229,6 +229,25 @@
                                 @can('product-list')
                                     <li><a href="{{ route('admin.products.plans') }}" key="t-blog">Assinaturas</a></li>
                                     <li><a href="{{ route('admin.products.index') }}" key="t-blog">Produtos</a></li>
+                                @endcan
+                            </ul>
+                        </li>
+                    @endcan
+
+
+                    @canany(['eadModule-list','eadContent-list'])
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
+                                <i class="bx bx-envelope"></i>
+                                <span key="t-email">EAD</span>
+                            </a>
+                            <ul class="sub-menu mm-collapse">
+                                @can('eadModule-list')
+                                    <li><a href="{{ route('admin.ead-module.index') }}" key="orders">Módulos</a>
+                                    </li>
+                                @endcan
+                                @can('eadContent-list')
+                                    <li><a href="{{ route('admin.ead-content.index') }}" key="t-blog">Conteúdos</a></li>
                                 @endcan
                             </ul>
                         </li>
