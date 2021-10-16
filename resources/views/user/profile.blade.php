@@ -18,7 +18,6 @@
 @endsection
 
 
-
 @section('js')
     <script>
         $('.zip_code_search').blur(function () {
