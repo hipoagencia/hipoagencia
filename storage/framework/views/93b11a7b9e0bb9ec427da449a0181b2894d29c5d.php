@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
 
 
@@ -123,7 +121,7 @@
 
 
                                     <div class="mb-3 mt-3">
-                                        <textarea id="elm1" name="description" ><?php echo e(old('description') ?? $post->description); ?></textarea>
+                                        <textarea id="elm1" name="description" class="my-editor" ><?php echo e(old('description') ?? $post->description); ?></textarea>
                                     </div>
 
 

@@ -48,7 +48,7 @@
                         <tr>
                             <th width="1%">ID</th>
                             <th>Título</th>
-                            <th>Cover</th>
+                            <th>Slug</th>
                             <th>Criado em</th>
                             <th width="1%">Ação</th>
                         </tr>
@@ -80,7 +80,7 @@
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'name', name: 'name'},
-                    {data: 'cover', name: 'cover'},
+                    {data: 'slug', name: 'slug'},
                     {data: 'created_at', name: 'created_at'},
                     {
                         data: 'action',

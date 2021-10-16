@@ -39,10 +39,10 @@ $('.zip_code_search').blur(function () {
 //NÃO ESQUECER DE ATUALIZAR O PATH_ABSOLUTE ABAIXO
 
 var editor_config = {
-    path_absolute : '/home/saberdasaude/laravel',
+    path_absolute : '/',
     selector: 'textarea.my-editor',
     relative_urls: false,
-    min_height: 700,
+    min_height: 500,
     autoresize_on_init: false,
     plugins: [
         "advlist autolink autoresize lists link image charmap print preview hr anchor pagebreak",

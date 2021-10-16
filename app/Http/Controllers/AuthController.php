@@ -29,13 +29,12 @@ class AuthController extends Controller
             $this->userConfirm($request->confirm);
         }
 
-
         //Verifica se já está logado
-//        if (Auth::check() === true && Auth::user()->is_admin == 1) {
-//            return redirect()->route('admin.dashboard');
-//        } else if (Auth::check() === true && Auth::user()->is_admin == 0) {
-//            return redirect()->route('user.dashboard');
-//        }
+        if (Auth::check() === true && Auth::user()->is_admin == 1) {
+            return redirect()->route('admin.dashboard');
+        } else if (Auth::check() === true && Auth::user()->is_admin == 0) {
+            return redirect()->route('user.dashboard');
+        }
 
         if (Auth::check() === true) {
             return redirect()->route('user.dashboard');

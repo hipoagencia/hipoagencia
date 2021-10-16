@@ -112,8 +112,8 @@ class PostController extends Controller
                     return date('d/m/Y', strtotime($row->created_at));
                 })
                 ->editColumn('cover', function ($row) {
-                    $cover = $row->cover;
-                    return "<img src='{{$cover}}' width='100'/>";
+//                    return "<img src='{{$cover}}' width='100'/>";
+                    return $row->slug;
                 })
                 ->rawColumns(['action', 'cover'])
                 ->make(true);
