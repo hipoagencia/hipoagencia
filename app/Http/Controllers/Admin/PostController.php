@@ -113,7 +113,7 @@ class PostController extends Controller
                 })
                 ->editColumn('cover', function ($row) {
                     $cover = url($row->cover);
-                    return "<img src='{{ $cover }}' width='100'/>";
+                    return "<img src='{{$cover}}' width='100'/>";
                 })
                 ->rawColumns(['action', 'cover'])
                 ->make(true);
