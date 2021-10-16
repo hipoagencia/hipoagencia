@@ -1,7 +1,4 @@
-
-
 <?php $__env->startSection('content'); ?>
-
 
 
     <form class="form-horizontal" action="<?php echo e(route('login.do')); ?>" method="POST" autocomplete="false">

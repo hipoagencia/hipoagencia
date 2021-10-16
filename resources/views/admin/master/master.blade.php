@@ -72,19 +72,19 @@
                 <div class="navbar-brand-box">
                     <a href="{{ route('admin.dashboard') }}" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{ url(asset(env('INFO_FAVICON'))) }}" alt="" height="22">
+                                    <img src="{{ url(asset(env('INFO_FAVICON'))) }}" alt="" width="22">
                                 </span>
                         <span class="logo-lg">
-                                    <img src="{{ url(asset(env('INFO_LOGO'))) }}" alt="" height="55">
+                                    <img src="{{ url(asset(env('INFO_LOGO'))) }}" alt="" width="100">
                                 </span>
                     </a>
 
                     <a href="{{ route('admin.dashboard') }}" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{ url(asset(env('INFO_FAVICON'))) }}" alt="" height="22">
+                                    <img src="{{ url(asset(env('INFO_FAVICON'))) }}" alt="" width="22">
                                 </span>
                         <span class="logo-lg">
-                                    <img src="{{ url(asset(env('INFO_LOGO_WHITE'))) }}" alt="" height="55" class="mt-4">
+                                    <img src="{{ url(asset(env('INFO_LOGO_WHITE'))) }}" alt="" width="200" class="mt-4">
                                 </span>
                     </a>
                 </div>
@@ -207,51 +207,15 @@
                                     <li><a href="{{ route('admin.content.index') }}" key="t-read-email" >Páginas</a>
                                     </li>
                                 @endcan
-                                @can('gallery-list')
-                                    <li><a href="{{ route('admin.gallery.index') }}" key="t-read-email">Galeria</a>
-                                    </li>
-                                @endcan
-                            </ul>
-                        </li>
-                    @endcan
-
-                    @canany(['order-list','product-list'])
-                        <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
-                                <i class="bx bx-envelope"></i>
-                                <span key="t-email">Vendas</span>
-                            </a>
-                            <ul class="sub-menu mm-collapse">
-                                @can('order-list')
-                                    <li><a href="{{ route('admin.orders.index') }}" key="orders">Pedidos</a>
-                                    </li>
-                                @endcan
-                                @can('product-list')
-                                    <li><a href="{{ route('admin.products.plans') }}" key="t-blog">Assinaturas</a></li>
-                                    <li><a href="{{ route('admin.products.index') }}" key="t-blog">Produtos</a></li>
-                                @endcan
+{{--                                @can('gallery-list')--}}
+{{--                                    <li><a href="{{ route('admin.gallery.index') }}" key="t-read-email">Galeria</a>--}}
+{{--                                    </li>--}}
+{{--                                @endcan--}}
                             </ul>
                         </li>
                     @endcan
 
 
-                    @canany(['eadModule-list','eadContent-list'])
-                        <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
-                                <i class="bx bx-envelope"></i>
-                                <span key="t-email">EAD</span>
-                            </a>
-                            <ul class="sub-menu mm-collapse">
-                                @can('eadModule-list')
-                                    <li><a href="{{ route('admin.ead-module.index') }}" key="orders">Módulos</a>
-                                    </li>
-                                @endcan
-                                @can('eadContent-list')
-                                    <li><a href="{{ route('admin.ead-content.index') }}" key="t-blog">Conteúdos</a></li>
-                                @endcan
-                            </ul>
-                        </li>
-                    @endcan
 
 
                     @canany(['order-list','product-list'])
@@ -280,12 +244,12 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="{{ route('user.dashboard') }}" class="waves-effect">
-                            <i class="bx bx-home-circle"></i>
-                            <span>Painel do Usuário</span>
-                        </a>
-                    </li>
+{{--                    <li>--}}
+{{--                        <a href="{{ route('user.dashboard') }}" class="waves-effect">--}}
+{{--                            <i class="bx bx-home-circle"></i>--}}
+{{--                            <span>Painel do Usuário</span>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
 
 
                 </ul>

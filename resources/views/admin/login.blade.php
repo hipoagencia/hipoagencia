@@ -2,7 +2,6 @@
 
 @section('content')
 
-{{--    {!! RecaptchaV3::initJs() !!}--}}
 
     <form class="form-horizontal" action="{{ route('login.do') }}" method="POST" autocomplete="false">
         @csrf

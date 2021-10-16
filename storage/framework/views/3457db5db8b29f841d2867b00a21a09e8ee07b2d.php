@@ -30,7 +30,7 @@
                     <div class="card-body pt-4">
                         <div class="p-2">
 
-                            <div class="text-center"><img src="<?php echo e(url(asset(env('INFO_LOGO')))); ?>" alt="<?php echo e(env('APP_NAME')); ?>" class="src"></div>
+                            <div class="text-center mb-4"><img src="<?php echo e(url(asset(env('INFO_LOGO')))); ?>" alt="<?php echo e(env('APP_NAME')); ?>" class="src"></div>
 
                             <?php echo $__env->yieldContent('content'); ?>
 

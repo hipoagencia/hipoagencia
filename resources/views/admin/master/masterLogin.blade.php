@@ -30,7 +30,7 @@
                     <div class="card-body pt-4">
                         <div class="p-2">
 
-                            <div class="text-center"><img src="{{ url(asset(env('INFO_LOGO'))) }}" alt="{{ env('APP_NAME') }}" class="src"></div>
+                            <div class="text-center mb-4"><img src="{{ url(asset(env('INFO_LOGO'))) }}" alt="{{ env('APP_NAME') }}" class="src"></div>
 
                             @yield('content')
 
