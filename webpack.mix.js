@@ -21,6 +21,10 @@ mix
     //Asset User
     .copyDirectory('resources/views/user/assets','public/user/assets')
 
+
+    //Asset Web
+    .copyDirectory('resources/views/web/assets','public/web/assets')
+
     .options({
         processCssUrls:false
     })

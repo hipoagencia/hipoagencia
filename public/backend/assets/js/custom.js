@@ -42,7 +42,7 @@ var editor_config = {
     path_absolute : '/',
     selector: 'textarea.my-editor',
     relative_urls: false,
-    min_height: 500,
+    min_height: 700,
     autoresize_on_init: false,
     plugins: [
         "advlist autolink autoresize lists link image charmap print preview hr anchor pagebreak",

@@ -84,7 +84,7 @@
                                             <select id="formrow-inputState" class="form-select" name="user_id">
                                                 <option>Selecione o Autor..</option>
                                                 @foreach($users as $user)
-                                                    <option value="{{ $user->id }}" {{ (old('user') == $user->id ? 'selected' : '' ) }}>{{ $user->name }} {{ $user->last_name }}</option>
+                                                    <option value="{{ $user->id }}" {{ (old('user_id') == $user->id ? 'selected' : '' ) }}>{{ $user->name }} {{ $user->last_name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -107,7 +107,7 @@
 
 
                                     <div class="mb-3 mt-3">
-                                        <textarea id="elm1" name="description" >{{ old('description') }}</textarea>
+                                        <textarea id="elm1" name="description">{{ old('description') }}</textarea>
                                     </div>
 
 
