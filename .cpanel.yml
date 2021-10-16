@@ -1,5 +1,5 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/carrorepassecom/laravel
-    - /bin/cp -R * $DEPLOYPATH
+#---
+#deployment:
+#  tasks:
+#    - export DEPLOYPATH=/home/boston/laravel
+#    - /bin/cp -R * $DEPLOYPATH

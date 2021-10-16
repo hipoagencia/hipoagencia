@@ -59,7 +59,7 @@ Route::group([], __DIR__.'/adminRoutes.php');
 | Rota de Sistema (não modificar)
 |--------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'is_admin']], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
-});
+//Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'is_admin']], function () {
+//    \UniSharp\LaravelFilemanager\Lfm::routes();
+//});
 

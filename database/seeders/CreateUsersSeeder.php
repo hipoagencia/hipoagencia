@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
 class CreateUsersSeeder extends Seeder
 {
@@ -36,6 +37,10 @@ class CreateUsersSeeder extends Seeder
                 'document'=> '84804178031',
             ],
         ];
+
+        Role::create(['name' => 'user']);
+        Role::create(['name' => 'admin']);
+        Role::create(['name' => 'superAdmin']);
 
         foreach ($user as $key => $value) {
             $user = User::create($value);
