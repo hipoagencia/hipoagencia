@@ -110,7 +110,7 @@
 
 
                                     <div class="mb-3 mt-3">
-                                        <textarea id="elm1" name="description"><?php echo e(old('description')); ?></textarea>
+                                        <textarea id="elm1" name="description" class="my-editor"><?php echo e(old('description')); ?></textarea>
                                     </div>
 
 

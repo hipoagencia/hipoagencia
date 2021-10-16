@@ -107,7 +107,7 @@
 
 
                                     <div class="mb-3 mt-3">
-                                        <textarea id="elm1" name="description">{{ old('description') }}</textarea>
+                                        <textarea id="elm1" name="description" class="my-editor">{{ old('description') }}</textarea>
                                     </div>
 
 
