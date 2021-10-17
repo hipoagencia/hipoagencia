@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\ContentController;
 
 
 /*
@@ -9,22 +10,21 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', function () {
-    return view('web.home');
-})->name('web.home');
-
-Route::get('/teste', function () {
-    return view('web.teste');
-})->name('web.teste');
-
-//Rota Newsletter
-Route::post('newsletter-store', [\App\Http\Controllers\Web\NewsletterController::class, 'store'])->name('newsletter.store');
 
 
+Route::group(['as' => 'web.'], function () {
 
+    Route::get('/', function () {
+        return view('web.home');
+    })->name('home');
 
+    Route::get('/blog', function () {
+        return view('web.blog');
+    })->name('blog');
 
+    Route::get('article/{slug}', [ContentController::class, 'article'])->name('article');
 
+});
 
 
 /*
