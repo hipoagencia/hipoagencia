@@ -14,9 +14,9 @@ class AlterTablePostsAddPrincCategory extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->unsignedBigInteger('principalCategory')->nullable();
+            $table->unsignedBigInteger('principalcategory')->nullable();
 
-            $table->foreign('principalCategory')->references('id')->on('blogcategories')->onDelete('cascade');
+            $table->foreign('principalcategory')->references('id')->on('blogcategories')->onDelete('cascade');
         });
     }
 
@@ -28,7 +28,7 @@ class AlterTablePostsAddPrincCategory extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('principalCategory');
+            $table->dropColumn('principalcategory');
         });
     }
 }
