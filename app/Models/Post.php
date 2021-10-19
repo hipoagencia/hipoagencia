@@ -45,7 +45,7 @@ class Post extends Model implements Searchable
 
     public function princ()
     {
-        return $this->belongsTo(blogCategory::class, 'principalCategory', 'id');
+        return $this->belongsTo(blogCategory::class, 'principalcategory', 'id');
     }
 
     public function user()
