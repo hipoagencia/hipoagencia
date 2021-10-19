@@ -76,7 +76,7 @@
                                 <h3 class="mb-3">Informações</h3>
                                 <div class="row">
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nome</label>
                                             <input name="name" class="form-control"
@@ -84,7 +84,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-4">
                                         <div class="mb-3">
                                             <label for="formrow-inputState" class="form-label">Autor</label>
                                             <select id="formrow-inputState" class="form-select" name="user_id">
@@ -96,12 +96,24 @@
                                         </div>
                                     </div>
 
-                                    <div class="mb-3">
-                                        <label class="form-label">Categorias</label>
+                                    <div class="col-lg-4">
+                                        <div class="mb-3">
+                                            <label for="formrow-inputState" class="form-label">Categoria Principal</label>
+                                            <select id="formrow-inputState" class="form-select" name="principalCategory">
+                                                <option>Selecione a categoria..</option>
+
+                                                <option value="1" {{ ( $post->principalCategory == '1' ? 'selected' : ( old('principalCategory') == '1' ? 'selected' : '' ) ) }}>Sistema Nervoso</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 mb-4">
+                                        <label class="form-label">Enfermidades</label>
 
                                         <select class="select2 form-control select2-multiple"
                                                 multiple="multiple" name="categories[]"
-                                                data-placeholder="Selecione a Categoria..">
+                                                data-placeholder="Selecione a Enfermidade..">
 
                                             @foreach($categories->get() as $category)
                                                 <option

@@ -693,7 +693,7 @@ img {
                 -webkit-transition: .6s;
                 transition: .6s;
                 position: relative;
-                
+
             }
 
                 .main-navbar .navbar .navbar-nav .nav-item a::before {
@@ -1343,6 +1343,11 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.specialities-banner-heart {
+    background-image: url('../images/boston/specialities/bannerheart.jpg') !important;
+
 }
 
 .specialities-inside-content h1 {
@@ -2090,6 +2095,10 @@ img {
 }
 
 .bg-spec-gray2 img {
+    filter: brightness(0) invert(1);
+}
+
+.ico-img {
     filter: brightness(0) invert(1);
 }
 

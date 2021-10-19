@@ -15,14 +15,22 @@ use App\Http\Controllers\Web\ContentController;
 Route::group(['as' => 'web.'], function () {
 
     Route::get('/', function () {
-        return view('web.home');
-    })->name('home');
+        return view('web.construction');
+    })->name('construction');
 
-    Route::get('/blog', function () {
-        return view('web.blog');
-    })->name('blog');
+    Route::get('/inicio', [ContentController::class, 'home'])->name('home');
 
-    Route::get('article/{slug}', [ContentController::class, 'article'])->name('article');
+    Route::get('/sobre', function () {
+        return view('web.about');
+    })->name('about');
+
+    Route::get('especialidade/coracao', [ContentController::class, 'specialtyHeart'])->name('specialtyHeart');
+
+    Route::get('blog', [ContentController::class, 'blog'])->name('blog');
+    Route::get('blog/article/{slug}', [ContentController::class, 'article'])->name('article');
+    Route::get('blog/category/{id}/{slug}', [ContentController::class, 'category'])->name('category');
+
+
 
 });
 

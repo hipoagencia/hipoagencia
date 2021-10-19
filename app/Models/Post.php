@@ -25,7 +25,8 @@ class Post extends Model implements Searchable
         'description',
         'title',
         'slug',
-        'headline'
+        'headline',
+        'principalCategory'
     ];
 
     //NECESSÁRIO PARA OS LOGS
@@ -38,8 +39,14 @@ class Post extends Model implements Searchable
         'description',
         'title',
         'slug',
-        'headline'
+        'headline',
+        'principalCategory',
     ];
+
+    public function princ()
+    {
+        return $this->belongsTo(blogCategory::class, 'principalCategory', 'id');
+    }
 
     public function user()
     {
@@ -47,6 +54,20 @@ class Post extends Model implements Searchable
 
         return $this->belongsTo(User::class);
     }
+
+    public function preview()
+    {
+        return Str::words(strip_tags($this->description), 15, '...');
+    }
+
+//    function limitString($string, $limit = 100) {
+//        // Return early if the string is already shorter than the limit
+//        if(strlen($string) < $limit) {return $string;}
+//
+//        $regex = "/(.{1,$limit})\b/";
+//        preg_match($regex, $string, $matches );
+//        return $matches[1];
+//    }
 
     public function categories()
     {
@@ -56,6 +77,12 @@ class Post extends Model implements Searchable
     public function getCoverAttribute($value)
     {
         return Storage::url($value);
+    }
+
+
+    public function getdataAttribute()
+    {
+        return date('d/m/Y', strtotime($this->created_at));
     }
 
     public function setSlugAttribute($value)

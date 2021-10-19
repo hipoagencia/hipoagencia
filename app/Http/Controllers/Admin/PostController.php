@@ -72,7 +72,7 @@ class PostController extends Controller
         $postCreate = Post::create($request->all());
 
         if (!empty($request->file('cover'))) {
-            $postCreate->cover = $request->file('cover')->store('public/post');
+            $postCreate->cover = $request->file('cover')->store('post');
             $postCreate->save();
         }
 
@@ -157,7 +157,7 @@ class PostController extends Controller
         $post->fill($request->all());
 
         if (!empty($request->file('cover'))) {
-            $post->cover = $request->file('cover')->store('public/post');
+            $post->cover = $request->file('cover')->store('post');
         }
 
         if (!$post->save()) {
@@ -176,7 +176,7 @@ class PostController extends Controller
      * Remove the specified resource from storage.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {

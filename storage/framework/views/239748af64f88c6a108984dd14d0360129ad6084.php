@@ -48,29 +48,57 @@
             </div>
             <div class="row justify-content-center specialities2-links">
 
-                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2 pointer"
-                     onclick="openBrain()">
-                    <img src="<?php echo e(url(asset('web/assets/images/boston/ico/1.png'))); ?>"/>
+                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2 pointer">
+                    <a href="<?php echo e(route('web.category', ['slug' => 'sistema-nervoso','id' => '1'])); ?>"><img src="<?php echo e(url(asset('web/assets/images/boston/ico/1.png'))); ?>"/></a>
                     <h5>Sistema Nervoso</h5>
                 </div>
-                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2 pointer" onclick="openHeart()">
-                    <img src="<?php echo e(url(asset('web/assets/images/boston/ico/3.png'))); ?>"/>
+                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2 pointer">
+                    <a href="<?php echo e(route('web.category', ['slug' => 'coracao','id' => '2'])); ?>"><img src="<?php echo e(url(asset('web/assets/images/boston/ico/3.png'))); ?>"/></a>
                     <h5>Coração<br class="d-lg-none"/><br class="d-lg-none"/></h5>
                 </div>
-                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2 pointer" onclick="openUrine()">
-                    <img src="<?php echo e(url(asset('web/assets/images/boston/ico/2.png'))); ?>"/>
+                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2">
+                    <a href="<?php echo e(route('web.category', ['slug' => 'sistema-urinario','id' => '3'])); ?>"><img src="<?php echo e(url(asset('web/assets/images/boston/ico/2.png'))); ?>"/></a>
                     <h5>Sistema Urinário</h5>
                 </div>
-                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2 pointer" onclick="openCancer()">
-                    <img src="<?php echo e(url(asset('web/assets/images/boston/ico/4.png'))); ?>"/>
+                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2">
+                    <a href="<?php echo e(route('web.category', ['slug' => 'canceres-e-tumores','id' => '4'])); ?>"><img src="<?php echo e(url(asset('web/assets/images/boston/ico/4.png'))); ?>"/></a>
                     <h5>Cânceres e Tumores</h5>
                 </div>
-                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2 pointer" onclick="openSexual()">
-                    <img src="<?php echo e(url(asset('web/assets/images/boston/ico/5.png'))); ?>"/>
+                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2">
+                    <a href="<?php echo e(route('web.category', ['slug' => 'saude-sexual','id' => '5'])); ?>"><img src="<?php echo e(url(asset('web/assets/images/boston/ico/5.png'))); ?>"/></a>
                     <h5>Saúde Sexual</h5>
                 </div>
 
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
 
@@ -93,140 +121,22 @@
             </div>
             <div class="row justify-content-center">
 
-
-                <div class="col-lg-4">
-                    <article class="blog-post">
-                        <div class="blog-post-title" style="background-color: #ac1d2e;">
-                            <h5 class="font-light"><img
-                                    src="<?php echo e(url(asset('web/assets/images/boston/ico/ico-coracao.png'))); ?>"/> Coração
-                            </h5>
-                        </div>
-
-                        <img src="<?php echo e(url(asset('web/assets/images/boston/img-blog.jpg'))); ?>"/>
-                        <h3 class="mt-3" style="color: #ac1d2e;">Título da Matéria</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore.</p>
-
-                        <div class="row read-more">
-                            <a href="<?php echo e(route('web.article', ['slug' => 'aqui-vai-o-titulo-da-materia'])); ?>"
-                               class="text-right">Continue lendo</a>
-                        </div>
-
-                    </article>
-                </div>
-
-                <div class="col-lg-4">
-                    <article class="blog-post">
-                        <div class="blog-post-title" style="background-color: #ac1d2e;">
-                            <h5 class="font-light"><img
-                                    src="<?php echo e(url(asset('web/assets/images/boston/ico/ico-coracao.png'))); ?>"/> Coração
-                            </h5>
-                        </div>
-
-                        <img src="<?php echo e(url(asset('web/assets/images/boston/img-blog.jpg'))); ?>"/>
-                        <h3 class="mt-3" style="color: #ac1d2e;">Título da Matéria</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore.</p>
-
-                        <div class="row read-more">
-                            <a href="#" class="text-right">Continue lendo</a>
-                        </div>
-
-                    </article>
-                </div>
-
-                <div class="col-lg-4">
-                    <article class="blog-post">
-                        <div class="blog-post-title" style="background-color: #ac1d2e;">
-                            <h5 class="font-light"><img
-                                    src="<?php echo e(url(asset('web/assets/images/boston/ico/ico-coracao.png'))); ?>"/> Coração
-                            </h5>
-                        </div>
-
-                        <img src="<?php echo e(url(asset('web/assets/images/boston/img-blog.jpg'))); ?>"/>
-                        <h3 class="mt-3" style="color: #ac1d2e;">Título da Matéria</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore.</p>
-
-                        <div class="row read-more">
-                            <a href="#" class="text-right">Continue lendo</a>
-                        </div>
-
-                    </article>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <article class="blog-post">
-                        <div class="blog-post-title" style="background-color: #ac1d2e;">
-                            <h5 class="font-light"><img
-                                    src="<?php echo e(url(asset('web/assets/images/boston/ico/ico-coracao.png'))); ?>"/> Coração
-                            </h5>
-                        </div>
-
-                        <img src="<?php echo e(url(asset('web/assets/images/boston/img-blog.jpg'))); ?>"/>
-                        <h3 class="mt-3" style="color: #ac1d2e;">Título da Matéria</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore.</p>
-
-                        <div class="row read-more">
-                            <a href="#" class="text-right">Continue lendo</a>
-                        </div>
-
-                    </article>
-                </div>
-
-                <div class="col-lg-4">
-                    <article class="blog-post">
-                        <div class="blog-post-title" style="background-color: #ac1d2e;">
-                            <h5 class="font-light"><img
-                                    src="<?php echo e(url(asset('web/assets/images/boston/ico/ico-coracao.png'))); ?>"/> Coração
-                            </h5>
-                        </div>
-
-                        <img src="<?php echo e(url(asset('web/assets/images/boston/img-blog.jpg'))); ?>"/>
-                        <h3 class="mt-3" style="color: #ac1d2e;">Título da Matéria</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore.</p>
-
-                        <div class="row read-more">
-                            <a href="#" class="text-right">Continue lendo</a>
-                        </div>
-
-                    </article>
-                </div>
-
-                <div class="col-lg-4">
-                    <article class="blog-post">
-                        <div class="blog-post-title" style="background-color: #ac1d2e;">
-                            <h5 class="font-light"><img
-                                    src="<?php echo e(url(asset('web/assets/images/boston/ico/ico-coracao.png'))); ?>"/> Coração
-                            </h5>
-                        </div>
-
-                        <img src="<?php echo e(url(asset('web/assets/images/boston/img-blog.jpg'))); ?>"/>
-                        <h3 class="mt-3" style="color: #ac1d2e;">Título da Matéria</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore.</p>
-
-                        <div class="row read-more">
-                            <a href="#" class="text-right">Continue lendo</a>
-                        </div>
-
-                    </article>
-                </div>
-
+                <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="col-lg-4">
+                        <?php echo $__env->make('web.components.post', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                    </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
             </div>
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <?php echo e($posts->render("pagination::bootstrap-4")); ?>
+
+        </div>
+    </div>
 
 <?php $__env->stopSection(); ?>
 
