@@ -35,7 +35,7 @@
 
                         <div class="form-group mb-3">
                             <select name="" id=""  class="form-control">
-                                <option value="" class="">Selecione a opção desejada</option>
+                                <option value="" class="">Perfil (Selecione)</option>
                                 <option value="" class="">Paciente</option>
                                 <option value="" class="">Médico e Profissional de Saúde</option>
                                 <option value="" class="">Hospitais, clínicas, convênios e distribuidores</option>
@@ -45,7 +45,7 @@
 
                         <div class="form-group mb-3">
                             <select name="" id=""  class="form-control">
-                                <option value="" class="">Selecione a opção desejada</option>
+                                <option value="" class="">Informações de Produto (Selecione)</option>
                                 <option value="" class="">Segunda via de carteirinha</option>
                                 <option value="" class="">Instruções de uso</option>
                                 <option value="" class="">Pedidos</option>
