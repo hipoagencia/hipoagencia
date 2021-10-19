@@ -32,7 +32,7 @@ class ContentController extends Controller
     public function specialtyHeart()
     {
         //Veja Mais (lateral)
-        $posts = Post::with('princ')->where('principalCategory', '2')->orderBy('id', 'DESC')->limit(3)->get();
+        $posts = Post::with('princ')->where('principalcategory', '2')->orderBy('id', 'DESC')->limit(3)->get();
 
         return view('web.specialtyHeart',[
             'posts' => $posts
@@ -48,7 +48,7 @@ class ContentController extends Controller
         $posts = Post::with('princ')->orderBy('id', 'DESC')->limit(3)->get();
 
         //Veja Mais (lateral)
-        $postsRelated = Post::with('princ')->where('principalCategory', $post->principalCategory)->orderBy('id', 'DESC')->limit(3)->get();
+        $postsRelated = Post::with('princ')->where('principalcategory', $post->principalCategory)->orderBy('id', 'DESC')->limit(3)->get();
 
         return view('web.article',[
             'post' => $post,
@@ -59,7 +59,7 @@ class ContentController extends Controller
 
     public function category(Request $request)
     {
-        $posts = Post::with('princ')->where('principalCategory', $request->id)->orderBy('id', 'DESC')->paginate(9);
+        $posts = Post::with('princ')->where('principalcategory', $request->id)->orderBy('id', 'DESC')->paginate(9);
 
         return view('web.blog',[
             'posts' => $posts
