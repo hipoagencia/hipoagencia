@@ -8,7 +8,7 @@
     <img src="{{ url($post->cover) }}"/>
     <h3 class="mt-3" style="color: {{ $post->princ->color }};">{{ $post->title }}</h3>
 
-    <p>{{ $post->preview() }}</p>
+    <p>{!! $post->preview() !!}</p>
 
     <div class="row read-more">
         <a href="{{ route('web.article', ['slug' =>  $post->slug ]) }}"

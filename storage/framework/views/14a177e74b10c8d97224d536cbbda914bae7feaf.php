@@ -9,7 +9,7 @@
     <img src="<?php echo e(url($post->cover)); ?>"/>
     <h3 class="mt-3" style="color: <?php echo e($post->princ->color); ?>;"><?php echo e($post->title); ?></h3>
 
-    <p><?php echo e($post->preview()); ?></p>
+    <p><?php echo $post->preview(); ?></p>
 
     <div class="row read-more">
         <a href="<?php echo e(route('web.article', ['slug' =>  $post->slug ])); ?>"
