@@ -96,11 +96,9 @@
                                             <select id="formrow-inputState" class="form-select" name="principalcategory">
                                                 <option>Selecione a categoria..</option>
 
-                                                <option value="Sistema Nervoso" {{ ( old('principalcategory') == 'Sistema Nervoso' ? 'selected' : '' ) }}>Sistema Nervoso</option>
-                                                <option value="Coração" {{ ( old('principalcategory') == 'Coração' ? 'selected' : '' ) }}>Coração</option>
-                                                <option value="Sistema Urinário" {{ ( old('principalcategory') == 'Sistema Urinário' ? 'selected' : '' ) }}>Sistema Urinário</option>
-                                                <option value="Cânceres e Tumores" {{ ( old('principalcategory') == 'Cânceres e Tumores' ? 'selected' : '' ) }}>Cânceres e Tumores</option>
-                                                <option value="Saúde Sexual" {{ ( old('principalcategory') == 'Saúde Sexual' ? 'selected' : '' ) }}>Saúde Sexual</option>
+                                                @foreach($specs as $spec)
+                                                    <option value="{{ $spec->id }}" {{ (old('principalcategory') == $spec->id ? 'selected' : '' ) }}>{{ $spec->name }}</option>
+                                                @endforeach
 
                                             </select>
                                         </div>

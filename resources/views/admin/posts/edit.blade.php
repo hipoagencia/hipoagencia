@@ -102,8 +102,9 @@
                                             <select id="formrow-inputState" class="form-select" name="principalcategory">
                                                 <option>Selecione a categoria..</option>
 
-                                                <option value="1" {{ ( $post->principalcategory == '1' ? 'selected' : ( old('principalcategory') == '1' ? 'selected' : '' ) ) }}>Sistema Nervoso</option>
-
+                                                @foreach($specs as $spec)
+                                                    <option value="{{ $spec->id }}" {{ ($post->principalcategory == $spec->id ? 'selected' : (old('principalcategory') == $spec->id ? 'selected' : '' )) }}>{{ $spec->name }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>

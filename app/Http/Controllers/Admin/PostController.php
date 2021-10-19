@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\blogCategory;
 use App\Models\Categories;
 use App\Models\Post;
 use App\Models\User;
@@ -46,10 +47,12 @@ class PostController extends Controller
     public function create()
     {
         $categories = Categories::orderBy('name');
+        $specs = blogCategory::orderBy('name')->get();
         $users = User::orderBy('name')->get();
 
         return view('admin.posts.create', [
             'categories' => $categories,
+            'specs' => $specs,
             'users' => $users
         ]);
     }
@@ -131,11 +134,13 @@ class PostController extends Controller
         $post = Post::where('id', $id)->firstOrFail();
         $categories = Categories::orderBy('name');
         $users = User::orderBy('name')->get();
+        $specs = blogCategory::orderBy('name')->get();
 
         return view('admin.posts.edit', [
             'post' => $post,
             'categories' => $categories,
-            'users' => $users
+            'users' => $users,
+            'specs' => $specs,
         ]);
     }
 

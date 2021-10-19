@@ -110,8 +110,9 @@
                                             <select id="formrow-inputState" class="form-select" name="principalcategory">
                                                 <option>Selecione a categoria..</option>
 
-                                                <option value="1" <?php echo e(( $post->principalcategory == '1' ? 'selected' : ( old('principalcategory') == '1' ? 'selected' : '' ) )); ?>>Sistema Nervoso</option>
-
+                                                <?php $__currentLoopData = $specs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $spec): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                    <option value="<?php echo e($spec->id); ?>" <?php echo e(($post->principalcategory == $spec->id ? 'selected' : (old('principalcategory') == $spec->id ? 'selected' : '' ))); ?>><?php echo e($spec->name); ?></option>
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </select>
                                         </div>
                                     </div>
