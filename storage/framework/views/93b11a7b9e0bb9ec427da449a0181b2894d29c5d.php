@@ -107,10 +107,10 @@
                                     <div class="col-lg-4">
                                         <div class="mb-3">
                                             <label for="formrow-inputState" class="form-label">Categoria Principal</label>
-                                            <select id="formrow-inputState" class="form-select" name="principalCategory">
+                                            <select id="formrow-inputState" class="form-select" name="principalcategory">
                                                 <option>Selecione a categoria..</option>
 
-                                                <option value="1" <?php echo e(( $post->principalCategory == '1' ? 'selected' : ( old('principalCategory') == '1' ? 'selected' : '' ) )); ?>>Sistema Nervoso</option>
+                                                <option value="1" <?php echo e(( $post->principalcategory == '1' ? 'selected' : ( old('principalcategory') == '1' ? 'selected' : '' ) )); ?>>Sistema Nervoso</option>
 
                                             </select>
                                         </div>

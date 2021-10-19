@@ -96,7 +96,7 @@
                                     <div class="col-lg-4">
                                         <div class="mb-3">
                                             <label for="formrow-inputState" class="form-label">Categoria Principal</label>
-                                            <select id="formrow-inputState" class="form-select" name="principalCategory">
+                                            <select id="formrow-inputState" class="form-select" name="principalcategory">
                                                 <option>Selecione a categoria..</option>
 
                                                 <option value="Sistema Nervoso">Sistema Nervoso</option>

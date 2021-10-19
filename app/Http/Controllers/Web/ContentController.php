@@ -48,7 +48,7 @@ class ContentController extends Controller
         $posts = Post::with('princ')->orderBy('id', 'DESC')->limit(3)->get();
 
         //Veja Mais (lateral)
-        $postsRelated = Post::with('princ')->where('principalcategory', $post->principalCategory)->orderBy('id', 'DESC')->limit(3)->get();
+        $postsRelated = Post::with('princ')->where('principalcategory', $post->principalcategory)->orderBy('id', 'DESC')->limit(3)->get();
 
         return view('web.article',[
             'post' => $post,

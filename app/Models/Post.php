@@ -26,7 +26,7 @@ class Post extends Model implements Searchable
         'title',
         'slug',
         'headline',
-        'principalCategory'
+        'principalcategory'
     ];
 
     //NECESSÁRIO PARA OS LOGS
@@ -40,7 +40,7 @@ class Post extends Model implements Searchable
         'title',
         'slug',
         'headline',
-        'principalCategory',
+        'principalcategory',
     ];
 
     public function princ()

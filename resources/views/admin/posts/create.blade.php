@@ -93,14 +93,14 @@
                                     <div class="col-lg-4">
                                         <div class="mb-3">
                                             <label for="formrow-inputState" class="form-label">Categoria Principal</label>
-                                            <select id="formrow-inputState" class="form-select" name="principalCategory">
+                                            <select id="formrow-inputState" class="form-select" name="principalcategory">
                                                 <option>Selecione a categoria..</option>
 
-                                                <option value="Sistema Nervoso" {{ ( old('principalCategory') == 'Sistema Nervoso' ? 'selected' : '' ) }}>Sistema Nervoso</option>
-                                                <option value="Coração" {{ ( old('principalCategory') == 'Coração' ? 'selected' : '' ) }}>Coração</option>
-                                                <option value="Sistema Urinário" {{ ( old('principalCategory') == 'Sistema Urinário' ? 'selected' : '' ) }}>Sistema Urinário</option>
-                                                <option value="Cânceres e Tumores" {{ ( old('principalCategory') == 'Cânceres e Tumores' ? 'selected' : '' ) }}>Cânceres e Tumores</option>
-                                                <option value="Saúde Sexual" {{ ( old('principalCategory') == 'Saúde Sexual' ? 'selected' : '' ) }}>Saúde Sexual</option>
+                                                <option value="Sistema Nervoso" {{ ( old('principalcategory') == 'Sistema Nervoso' ? 'selected' : '' ) }}>Sistema Nervoso</option>
+                                                <option value="Coração" {{ ( old('principalcategory') == 'Coração' ? 'selected' : '' ) }}>Coração</option>
+                                                <option value="Sistema Urinário" {{ ( old('principalcategory') == 'Sistema Urinário' ? 'selected' : '' ) }}>Sistema Urinário</option>
+                                                <option value="Cânceres e Tumores" {{ ( old('principalcategory') == 'Cânceres e Tumores' ? 'selected' : '' ) }}>Cânceres e Tumores</option>
+                                                <option value="Saúde Sexual" {{ ( old('principalcategory') == 'Saúde Sexual' ? 'selected' : '' ) }}>Saúde Sexual</option>
 
                                             </select>
                                         </div>
