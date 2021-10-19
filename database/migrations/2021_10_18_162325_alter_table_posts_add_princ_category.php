@@ -16,7 +16,7 @@ class AlterTablePostsAddPrincCategory extends Migration
         Schema::table('posts', function (Blueprint $table) {
             $table->unsignedBigInteger('principalCategory')->nullable();
 
-            $table->foreign('principalCategory')->references('id')->on('blogCategories')->onDelete('cascade');
+            $table->foreign('principalCategory')->references('id')->on('blogcategories')->onDelete('cascade');
         });
     }
 
