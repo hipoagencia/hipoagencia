@@ -27,7 +27,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link {{ (request()->routeIs(['web.specialtyNervous','web.specialtyHeart','web.specialtyUrinary','web.specialtyCancer','web.specialtySexual']) ? 'active' : '') }}">
                                 Especialidades
                                 <i class="bx bx-chevron-down"></i>
                             </a>
@@ -35,7 +35,7 @@
 
 
                                 <li class="nav-item">
-                                    <a href="{{ route('web.specialtyHeart') }}" class="nav-link">Sistema Nervoso</a>
+                                    <a href="{{ route('web.specialtyNervous') }}" class="nav-link">Sistema Nervoso</a>
                                 </li>
 
                                 <li class="nav-item">
@@ -43,15 +43,15 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{ route('web.specialtyHeart') }}" class="nav-link">Sistema Urinário</a>
+                                    <a href="{{ route('web.specialtyUrinary') }}" class="nav-link">Sistema Urinário</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{ route('web.specialtyHeart') }}" class="nav-link">Cânceres e Tumores</a>
+                                    <a href="{{ route('web.specialtyCancer') }}" class="nav-link">Cânceres e Tumores</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{ route('web.specialtyHeart') }}" class="nav-link">Saúde Sexual</a>
+                                    <a href="{{ route('web.specialtySexual') }}" class="nav-link">Saúde Sexual</a>
                                 </li>
 
 
@@ -63,10 +63,10 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('web.blog') }}"
-                               class="nav-link {{ (request()->route()->getName() == 'web.blog' ? 'active' : '') }}">Blog</a>
+                               class="nav-link {{ (request()->routeIs(['web.blog','web.article']) ? 'active' : '') }}">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Contato</a>
+                            <a href="{{ route('web.contact') }}" class="nav-link {{ (request()->route()->getName() == 'web.contact' ? 'active' : '') }}">Contato</a>
                         </li>
 
 

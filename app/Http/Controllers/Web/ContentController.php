@@ -39,6 +39,46 @@ class ContentController extends Controller
         ]);
     }
 
+    public function specialtyNervous()
+    {
+        //Veja Mais (lateral)
+        $posts = Post::with('princ')->where('principalcategory', '1')->orderBy('id', 'DESC')->limit(3)->get();
+
+        return view('web.specialtyNervous',[
+            'posts' => $posts
+        ]);
+    }
+
+    public function specialtyUrinary()
+    {
+        //Veja Mais (lateral)
+        $posts = Post::with('princ')->where('principalcategory', '3')->orderBy('id', 'DESC')->limit(3)->get();
+
+        return view('web.specialtyUrinary',[
+            'posts' => $posts
+        ]);
+    }
+
+    public function specialtyCancer()
+    {
+        //Veja Mais (lateral)
+        $posts = Post::with('princ')->where('principalcategory', '4')->orderBy('id', 'DESC')->limit(3)->get();
+
+        return view('web.specialtyCancer',[
+            'posts' => $posts
+        ]);
+    }
+
+    public function specialtySexual()
+    {
+        //Veja Mais (lateral)
+        $posts = Post::with('princ')->where('principalcategory', '5')->orderBy('id', 'DESC')->limit(3)->get();
+
+        return view('web.specialtySexual',[
+            'posts' => $posts
+        ]);
+    }
+
     public function article(Request $request)
     {
         //Post

@@ -1350,6 +1350,21 @@ img {
 
 }
 
+.specialities-banner-nervous {
+    background-image: url('../images/boston/specialities/bannernervous.jpg') !important;
+}
+
+.specialities-banner-urinary {
+    background-image: url('../images/boston/specialities/bannerurinary.jpg') !important;
+}
+
+.specialities-banner-cancer {
+    background-image: url('../images/boston/specialities/bannercancer.jpg') !important;
+}
+
+.specialities-banner-sexual {
+    background-image: url('../images/boston/specialities/bannersexual.jpg') !important;
+}
 .specialities-inside-content h1 {
     color: #fff !important;
 }

@@ -25,12 +25,18 @@ Route::group(['as' => 'web.'], function () {
     })->name('about');
 
     Route::get('especialidade/coracao', [ContentController::class, 'specialtyHeart'])->name('specialtyHeart');
+    Route::get('especialidade/sistema-nervoso', [ContentController::class, 'specialtyNervous'])->name('specialtyNervous');
+    Route::get('especialidade/sistema-urinario', [ContentController::class, 'specialtyUrinary'])->name('specialtyUrinary');
+    Route::get('especialidade/cancer-e-tumores', [ContentController::class, 'specialtyCancer'])->name('specialtyCancer');
+    Route::get('especialidade/saude-sexual', [ContentController::class, 'specialtySexual'])->name('specialtySexual');
 
     Route::get('blog', [ContentController::class, 'blog'])->name('blog');
     Route::get('blog/article/{slug}', [ContentController::class, 'article'])->name('article');
     Route::get('blog/category/{id}/{slug}', [ContentController::class, 'category'])->name('category');
 
-
+    Route::get('/contato', function () {
+        return view('web.contact');
+    })->name('contact');
 
 });
 
