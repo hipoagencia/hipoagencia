@@ -7,7 +7,7 @@
             </div>
 
             <div class="col-lg-6 pt-4">
-                <h4>Siga o Saber da Saúde nas redes sociais</h4>
+                <h4>Siga o Saber da Saúde nas redes sociais <i class="bx bxl-facebook" style=" display:inline-block;vertical-align: bottom"></i> <i class="bx bxl-instagram"  style=" display:inline-block;vertical-align: bottom"></i></h4>
             </div>
 
             <div class="col-lg-3">
