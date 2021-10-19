@@ -11,7 +11,6 @@ use App\Http\Controllers\Web\ContentController;
 */
 
 
-
 Route::group(['as' => 'web.'], function () {
 
     Route::get('/', function () {
@@ -38,6 +37,11 @@ Route::group(['as' => 'web.'], function () {
         return view('web.contact');
     })->name('contact');
 
+
+    Route::get('/especialidade/coracao/fibrilacao-arterial', function () {
+        return view('web.page.fibrilacaoArterial');
+    })->name('page.fibrilacaoArterial');
+
 });
 
 
@@ -47,7 +51,7 @@ Route::group(['as' => 'web.'], function () {
 |--------------------------------------------------------------------------
 */
 
-Route::group([], __DIR__.'/loginRoutes.php');
+Route::group([], __DIR__ . '/loginRoutes.php');
 
 
 /*
@@ -56,7 +60,7 @@ Route::group([], __DIR__.'/loginRoutes.php');
 |--------------------------------------------------------------------------
 */
 
-Route::group([], __DIR__.'/userLoggedRoutes.php');
+Route::group([], __DIR__ . '/userLoggedRoutes.php');
 
 
 /*
@@ -65,7 +69,7 @@ Route::group([], __DIR__.'/userLoggedRoutes.php');
 |--------------------------------------------------------------------------
 */
 
-Route::group([], __DIR__.'/adminRoutes.php');
+Route::group([], __DIR__ . '/adminRoutes.php');
 
 
 /*

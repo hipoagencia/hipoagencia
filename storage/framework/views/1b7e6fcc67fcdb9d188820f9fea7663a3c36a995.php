@@ -81,7 +81,7 @@
             </div>
             <div class="row justify-content-center text-center">
 
-                <a href="#" style="background-color: #ac1d2e;" class="btn-conditions">Fibrilação Atrial</a>
+                <a href="<?php echo e(route('web.page.fibrilacaoArterial')); ?>" style="background-color: #ac1d2e;" class="btn-conditions">Fibrilação Atrial</a>
                 <a href="#" style="background-color: #ac1d2e;" class="btn-conditions">AVC</a>
                 <a href="#" style="background-color: #ac1d2e;" class="btn-conditions">Morte Súbita</a>
 

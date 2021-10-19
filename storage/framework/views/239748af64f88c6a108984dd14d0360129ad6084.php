@@ -48,26 +48,47 @@
             </div>
             <div class="row justify-content-center specialities2-links">
 
-                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2 pointer">
+                <div class="col text-center bg-spec-gray2 pointer">
                     <a href="<?php echo e(route('web.category', ['slug' => 'sistema-nervoso','id' => '1'])); ?>"><img src="<?php echo e(url(asset('web/assets/images/boston/ico/1.png'))); ?>"/></a>
                     <h5>Sistema Nervoso</h5>
                 </div>
-                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2 pointer">
+                <div class="col text-center bg-spec-gray2 pointer">
                     <a href="<?php echo e(route('web.category', ['slug' => 'coracao','id' => '2'])); ?>"><img src="<?php echo e(url(asset('web/assets/images/boston/ico/3.png'))); ?>"/></a>
                     <h5>Coração<br class="d-lg-none"/><br class="d-lg-none"/></h5>
                 </div>
-                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2">
+                <div class="col text-center bg-spec-gray2">
                     <a href="<?php echo e(route('web.category', ['slug' => 'sistema-urinario','id' => '3'])); ?>"><img src="<?php echo e(url(asset('web/assets/images/boston/ico/2.png'))); ?>"/></a>
                     <h5>Sistema Urinário</h5>
                 </div>
-                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2">
+                <div class="col text-center bg-spec-gray2">
                     <a href="<?php echo e(route('web.category', ['slug' => 'canceres-e-tumores','id' => '4'])); ?>"><img src="<?php echo e(url(asset('web/assets/images/boston/ico/4.png'))); ?>"/></a>
                     <h5>Cânceres e Tumores</h5>
                 </div>
-                <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center bg-spec-gray2">
+                <div class="col text-center bg-spec-gray2">
                     <a href="<?php echo e(route('web.category', ['slug' => 'saude-sexual','id' => '5'])); ?>"><img src="<?php echo e(url(asset('web/assets/images/boston/ico/5.png'))); ?>"/></a>
                     <h5>Saúde Sexual</h5>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             </div>
 
