@@ -38,8 +38,25 @@ Route::group(['as' => 'web.'], function () {
     })->name('contact');
 
 
+
+     /****************************
+     ********   CORAÇÃO   ********
+      ****************************/
+
+    Route::get('/especialidade/coracao/arritmia-ventricular', function () {
+        return view('web.page.coracao.arritmiaVentricular');
+    })->name('page.arritmiaVentricular');
+
+    Route::get('/especialidade/coracao/arritmia-artrial', function () {
+        return view('web.page.coracao.arritmiaArtrial');
+    })->name('page.arritmiaArtrial');
+
+    Route::get('/especialidade/coracao/avc', function () {
+        return view('web.page.coracao.avc');
+    })->name('page.avc');
+
     Route::get('/especialidade/coracao/fibrilacao-arterial', function () {
-        return view('web.page.fibrilacaoArterial');
+        return view('web.page.coracao.fibrilacaoArterial');
     })->name('page.fibrilacaoArterial');
 
 });

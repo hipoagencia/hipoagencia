@@ -37,26 +37,26 @@
             </div>
             <div class="row justify-content-center specialities-links">
                 <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center mb-5">
-                    <a href="#"><img src="{{ url(asset('web/assets/images/boston/ico/1.png')) }}"/></a>
+                    <img src="{{ url(asset('web/assets/images/boston/ico/1.png')) }}"/>
                     <h5>Sistema Nervoso</h5>
                 </div>
                 <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center  mb-5">
-                    <a href="#"><img src="{{ url(asset('web/assets/images/boston/ico/3.png')) }}"/></a>
+                    <img src="{{ url(asset('web/assets/images/boston/ico/3.png')) }}"/>
                     <h5>Coração</h5>
 
                 </div>
                 <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center  mb-5">
-                    <a href="#"><img src="{{ url(asset('web/assets/images/boston/ico/2.png')) }}"/></a>
+                    <img src="{{ url(asset('web/assets/images/boston/ico/2.png')) }}"/>
                     <h5>Sistema Urinário</h5>
                 </div>
 
                 <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center  mb-5">
-                    <a href="#"><img src="{{ url(asset('web/assets/images/boston/ico/4.png')) }}"/></a>
+                    <img src="{{ url(asset('web/assets/images/boston/ico/4.png')) }}"/>
                     <h5>Cânceres e Tumores</h5>
 
                 </div>
                 <div class="col col-6 col-lg-2 col-md-6 col-sm-6 text-center  mb-5">
-                    <a href="#"><img src="{{ url(asset('web/assets/images/boston/ico/5.png')) }}"/></a>
+                    <img src="{{ url(asset('web/assets/images/boston/ico/5.png')) }}"/>
                     <h5>Saúde Sexual</h5>
 
                 </div>

@@ -20,11 +20,6 @@
 
                         <div class="form-group mb-3">
                             <input type="text" name="name" id="name" class="form-control" required=""
-                                   placeholder="Empresa">
-                        </div>
-
-                        <div class="form-group mb-3">
-                            <input type="text" name="name" id="name" class="form-control" required=""
                                    placeholder="E-mail">
                         </div>
 
@@ -33,34 +28,10 @@
                                    placeholder="Telefone">
                         </div>
 
-                        <div class="form-group mb-3">
-                            <select name="" id=""  class="form-control">
-                                <option value="" class="">Perfil (Selecione)</option>
-                                <option value="" class="">Paciente</option>
-                                <option value="" class="">Médico e Profissional de Saúde</option>
-                                <option value="" class="">Hospitais, clínicas, convênios e distribuidores</option>
-                                <option value="" class="">Outros</option>
-                            </select>
-                        </div>
 
                         <div class="form-group mb-3">
-                            <select name="" id=""  class="form-control">
-                                <option value="" class="">Informações de Produto (Selecione)</option>
-                                <option value="" class="">Segunda via de carteirinha</option>
-                                <option value="" class="">Instruções de uso</option>
-                                <option value="" class="">Pedidos</option>
-                                <option value="" class="">Dúvidas</option>
-                                <option value="" class="">Sugestões</option>
-                                <option value="" class="">Reclamações</option>
-                                <option value="" class="">Fornecedores</option>
-                                <option value="" class="">Carreiras</option>
-                                <option value="" class="">Outros</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group mb-3">
-                            <input type="text" name="name" id="name" class="form-control" required=""
-                                   placeholder="Digite sua mensagem">
+                            <textarea  type="text" name="name" id="name" class="form-control" cols="40" rows="5" required=""
+                                       placeholder="Digite sua mensagem"></textarea>
                         </div>
 
                         <div class="col-lg-12 col-md-12">

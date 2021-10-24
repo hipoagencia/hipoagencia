@@ -18,11 +18,6 @@
 
                         <div class="form-group mb-3">
                             <input type="text" name="name" id="name" class="form-control" required=""
-                                   placeholder="Empresa">
-                        </div>
-
-                        <div class="form-group mb-3">
-                            <input type="text" name="name" id="name" class="form-control" required=""
                                    placeholder="E-mail">
                         </div>
 
@@ -31,23 +26,10 @@
                                    placeholder="Telefone">
                         </div>
 
-                        <div class="form-group mb-3">
-                            <input type="text" name="name" id="name" class="form-control" required=""
-                                   placeholder="Perfil">
-                        </div>
 
                         <div class="form-group mb-3">
-                            <select name="" id=""  class="form-control">
-                                <option value="" class="">Selecione a opção desejada</option>
-                                <option value="" class="">Opção 1</option>
-                                <option value="" class="">Opção 2</option>
-                                <option value="" class="">Opção 3</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group mb-3">
-                            <input type="text" name="name" id="name" class="form-control" required=""
-                                   placeholder="Digite sua mensagem">
+                            <textarea  type="text" name="name" id="name" class="form-control" cols="40" rows="5" required=""
+                                       placeholder="Digite sua mensagem"></textarea>
                         </div>
 
                         <div class="col-lg-12 col-md-12">
