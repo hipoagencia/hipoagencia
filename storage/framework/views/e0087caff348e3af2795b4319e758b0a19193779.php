@@ -1,6 +1,4 @@
-@extends('web.master.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
     <div class="main-banner-area">
@@ -11,7 +9,7 @@
                     <div class="col-lg-12 text-center">
 
                         <div class="main-banner-content specialities-inside-content">
-                            <img src="{{url(asset('web/assets/images/boston/ico/3.png'))}}" class="ico-img"><br><br>
+                            <img src="<?php echo e(url(asset('web/assets/images/boston/ico/3.png'))); ?>" class="ico-img"><br><br>
                             <h1>AVC - Acidente Vascular Cerebral</h1>
                         </div>
 
@@ -118,40 +116,40 @@
     </div>
 
 
-{{--    <div class="about-what-find-blue" style="background-color:#f5364a !important;">--}}
-{{--        <div class="container  pb-70">--}}
-{{--            <div class="row justify-content-center0">--}}
-
-{{--                <div class="col text-center about-box-top">--}}
-{{--                    <img src="{{ url(asset('web/assets/images/boston/specialities/ico1.png')) }}"/>--}}
-{{--                    <p class="co-white">Pressão ou desconforto no peito.</p>--}}
-{{--                </div>--}}
-
-{{--                <div class="col text-center about-box-top">--}}
-{{--                    <img src="{{ url(asset('web/assets/images/boston/specialities/ico1.png')) }}"/>--}}
-{{--                    <p class="co-white">Palpitações cardíacas (sensação de ritmocardíaco acelerado).</p>--}}
-{{--                </div>--}}
-
-{{--                <div class="col text-center about-box-top">--}}
-{{--                    <img src="{{ url(asset('web/assets/images/boston/specialities/ico1.png')) }}"/>--}}
-{{--                    <p class="co-white">Pressão ou desconforto no peito.</p>--}}
-{{--                </div>--}}
-
-{{--                <div class="col text-center about-box-top">--}}
-{{--                    <img src="{{ url(asset('web/assets/images/boston/specialities/ico1.png')) }}"/>--}}
-{{--                    <p class="co-white">Pressão ou desconforto no peito.</p>--}}
-{{--                </div>--}}
 
 
-{{--                <div class="col text-center about-box-top">--}}
-{{--                    <img src="{{ url(asset('web/assets/images/boston/specialities/ico1.png')) }}"/>--}}
-{{--                    <p class="co-white">Pressão ou desconforto no peito.</p>--}}
-{{--                </div>--}}
 
 
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <div class="about-what-find-blue">
@@ -299,6 +297,8 @@
     </div>
 
 
-    @include('web.components.newsletter')
+    <?php echo $__env->make('web.components.newsletter', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('web.master.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\boston\resources\views/web/page/coracao/avc.blade.php ENDPATH**/ ?>
