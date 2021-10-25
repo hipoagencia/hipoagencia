@@ -123,7 +123,7 @@
 
     <div class="about-what-find-blue co-bg-red" id="2">
         <div class="container  pb-30">
-            <div class="row justify-content-center text-center">
+            <div class="row justify-content-center text-center section-title">
 
                 <h3 class="co-white">Sintomas</h3>
                 <p class="co-white">O primeiro e frequentemente único sintoma da Morte súbita cardíaca é a perda de
@@ -143,8 +143,6 @@
                         <li class="text-white">Tonturas ou vertigens</li>
                         <li class="text-white">Palpitações cardíacas</li>
                         <li class="text-white">Dor no peito</li>
-                        <li class="text-white"></li>
-                        <li class="text-white"></li>
                     </ul>
                 </div>
 
@@ -240,45 +238,47 @@
         <div class="container">
             <div class="section-title">
                 <h3 class="co-red mb-3">Fatores de risco</h3>
-            </div>
-            <div class="container text-center">
+
+                <div class="container text-center ">
 
 
-                <p>A maioria das doenças cardíacas e dos vasos sanguíneos pode levar à morte súbita cardíaca.1 Da mesma
-                    forma, muitos fatores de risco para doenças cardíacas também são fatores de risco para a Morte
-                    súbita cardíaca. Os fatores de risco comuns incluem:</p>
+                    <p>A maioria das doenças cardíacas e dos vasos sanguíneos pode levar à morte súbita cardíaca.1 Da
+                        mesma
+                        forma, muitos fatores de risco para doenças cardíacas também são fatores de risco para a Morte
+                        súbita cardíaca. Os fatores de risco comuns incluem:</p>
 
-                <div class="row">
-                    <div class="col"><br></div>
-                    <div class="col">
-                        <ul class="list-style text-left">
-                            <li>Um histórico familiar de doença coronariana</li>
-                            <li>Hipertensão</li>
-                            <li>Colesterol alto</li>
-                            <li>Obesidade</li>
-                            <li>Diabetes</li>
-                            <li>Estilo de vida sedentário</li>
-                            <li>Tabagismo</li>
-                            <li>Consumo excessivo de álcool</li>
-                            <li>Idade</li>
-                        </ul>
+                    <div class="row">
+                        <div class="col"><br></div>
+                        <div class="col">
+                            <ul class="list-style text-left">
+                                <li>Um histórico familiar de doença coronariana</li>
+                                <li>Hipertensão</li>
+                                <li>Colesterol alto</li>
+                                <li>Obesidade</li>
+                                <li>Diabetes</li>
+                                <li>Estilo de vida sedentário</li>
+                                <li>Tabagismo</li>
+                                <li>Consumo excessivo de álcool</li>
+                                <li>Idade</li>
+                            </ul>
+                        </div>
+                        <div class="col"><br></div>
                     </div>
-                    <div class="col"><br></div>
+
+                    <p>Um parente de primeiro grau de alguém que sofreu Morte súbita cardíaca tem mais do que o dobro do
+                        risco de morte primária2</p>
+                    <p>Não há como saber o risco de Morte súbita cardíaca; portanto, reduzir o risco geral é a melhor
+                        estratégia. Converse com seu médico sobre sua situação de saúde específica.</p>
+
+
                 </div>
-
-                <p>Um parente de primeiro grau de alguém que sofreu Morte súbita cardíaca tem mais do que o dobro do
-                    risco de morte primária2</p>
-                <p>Não há como saber o risco de Morte súbita cardíaca; portanto, reduzir o risco geral é a melhor
-                    estratégia. Converse com seu médico sobre sua situação de saúde específica.</p>
-
-
             </div>
         </div>
     </div>
 
     <div class="about-what-find-blue" id="5">
         <div class="container pt-70  pb-70">
-            <div class="row justify-content-center text-center">
+            <div class="row justify-content-center text-center section-title">
 
                 <h3 class="co-white">Tratamentos</h3>
 
@@ -288,7 +288,7 @@
                     o coração) pode salvar vidas.</p>
                 <p class="co-white">Existem dois tipos de desfibriladores:</p>
 
-                <div class="col-5">
+                <div class="col-12">
                     <ul class="list-style text-left">
                         <li class="text-white">Um desfibrilador externo (AED) é um pequeno dispositivo portátil que usa
                             placas de eletrodo para diagnosticar um ritmo cardíaco anormal e administrar um choque
@@ -317,44 +317,60 @@
         <div class="container text-center">
             <div class="section-title">
                 <h3 class="mb-3 color-blue">Chances de sobrevivência</h3>
+
+
+                <div class="row">
+                    <p>Mesmo nas melhores condições de resposta a emergências, a Morte súbita cardíaca é uma condição
+                        difícil de tratar. Considere estes fatos:</p>
+
+
+                    <ul class="col list-style text-left">
+                        <li>Cerca de metade de todas as paradas cardíacas não são testemunhadas; a vítima estava
+                            sozinha1
+                        </li>
+                        <li>Mais de 80% das paradas cardíacas ocorrem em casa ou em locais não públicos, como no
+                            escritório1
+                        </li>
+                        <li>A sobrevida relatada de Morte súbita cardíaca fora do hospital varia de 0% a 51%, com uma
+                            média
+                            nacional de apenas 8%2
+                        </li>
+                    </ul>
+
+
+                    <p>As chances de sobreviver a uma Morte súbita cardíaca diminuem em 7-10% a cada minuto que passa
+                        sem um
+                        choque salva-vidas.1 A boa notícia é que o tratamento imediato com reanimação cardiopulmonar
+                        (RCP) e
+                        um desfibrilador (um dispositivo que envia um choque elétrico ao coração) pode salvar vidas. Na
+                        verdade, demonstrou-se que a desfibrilação interrompe efetivamente 95% ou mais dos ritmos
+                        cardíacos
+                        perigosamente rápidos.</p>
+                    <p><b>Demonstrou-se que a desfibrilação interrompe efetivamente<br>
+                            95% ou mais<br>
+                            dos ritmos cardíacos perigosamente rápidos</b>
+                    </p>
+
+                    <h3 class=" color-blue mt-3">Você corre risco de ter outro episódio?</h3>
+                    <p>É importante saber que, se você já vivenciou uma Morte súbita cardíaca, corre alto risco de ter
+                        outro
+                        episódio. Mas mesmo se você não teve uma Morte súbita cardíaca, se você tem fatores de risco
+                        para
+                        Morte súbita cardíaca, seu médico pode recomendar o mesmo tipo de tratamento.</p>
+
+                    <h3 class=" color-blue mt-3">Quer saber mais?</h3>
+                    <p>Para entender a extensão da situação, assista a gravação da LIVE: “Morte súbita: O que é? Quais
+                        são
+                        os sintomas? Como prevenir?” e tire todas as suas dúvidas.</p>
+
+                    <div class="col mt-3">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/UmQpwXUEuAw"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
-
-            <div class="row">
-                <p>Mesmo nas melhores condições de resposta a emergências, a Morte súbita cardíaca é uma condição
-                    difícil de tratar. Considere estes fatos:</p>
-
-                <div class="col"><br></div>
-                <ul class="col list-style text-left">
-                    <li>Cerca de metade de todas as paradas cardíacas não são testemunhadas; a vítima estava sozinha1
-                    </li>
-                    <li>Mais de 80% das paradas cardíacas ocorrem em casa ou em locais não públicos, como no
-                        escritório1
-                    </li>
-                    <li>A sobrevida relatada de Morte súbita cardíaca fora do hospital varia de 0% a 51%, com uma média
-                        nacional de apenas 8%2
-                    </li>
-                </ul>
-                <div class="col"><br></div>
-
-                <p>As chances de sobreviver a uma Morte súbita cardíaca diminuem em 7-10% a cada minuto que passa sem um
-                    choque salva-vidas.1 A boa notícia é que o tratamento imediato com reanimação cardiopulmonar (RCP) e
-                    um desfibrilador (um dispositivo que envia um choque elétrico ao coração) pode salvar vidas. Na
-                    verdade, demonstrou-se que a desfibrilação interrompe efetivamente 95% ou mais dos ritmos cardíacos
-                    perigosamente rápidos.</p>
-                <p><b>Demonstrou-se que a desfibrilação interrompe efetivamente<br>
-                        95% ou mais<br>
-                        dos ritmos cardíacos perigosamente rápidos</b>
-                </p>
-
-                <h3 class=" color-blue mt-3">Você corre risco de ter outro episódio?</h3>
-                <p>É importante saber que, se você já vivenciou uma Morte súbita cardíaca, corre alto risco de ter outro episódio. Mas mesmo se você não teve uma Morte súbita cardíaca, se você tem fatores de risco para Morte súbita cardíaca, seu médico pode recomendar o mesmo tipo de tratamento.</p>
-
-                <h3 class=" color-blue mt-3">Quer saber mais?</h3>
-                <p>Para entender a extensão da situação, assista a gravação da LIVE: “Morte súbita: O que é? Quais são os sintomas? Como prevenir?” e tire todas as suas dúvidas.</p>
-
-                <div class="col mt-3"><iframe width="560" height="315" src="https://www.youtube.com/embed/UmQpwXUEuAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-
         </div>
     </div>
 

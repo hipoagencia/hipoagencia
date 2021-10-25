@@ -50,7 +50,7 @@
                     <div class="progress-bar"></div>
                 </div>
                 <a href="#3" class="bs-wizard-dot"></a>
-                <div class="bs-wizard-info text-center"><h5 style="color:#ff7200;">Causas</h5></div>
+                <div class="bs-wizard-info text-center"><h5 style="color:#ff7200;">Prevenção</h5></div>
             </div>
 
             <div class="col bs-wizard-step"><!-- active -->
@@ -209,9 +209,13 @@
     <div class="pt-70 about-what-find" id="3">
         <div class="container">
             <div class="section-title pb-40">
-                <h3 class="co-orange mb-3">Causas</h3>
+                <h3 class="co-orange mb-3">Prevenção</h3>
 
 
+                <h5 class="co-orange mb-3">DIETA RICA EM FRUTAS E VERDURAS</h5>
+                <h5 class="co-orange mb-3">LIMITAR A CAFEÍNA E O ÁLCOOL</h5>
+                <h5 class="co-orange mb-3">FAZER EXERCÍCIOS REGULARMENTE</h5>
+                <h5 class="co-orange mb-3">EVITAR OS DESCONGESTIONANTES E ANTI-HISTAMÍNICOS</h5>
 
 
             </div>
