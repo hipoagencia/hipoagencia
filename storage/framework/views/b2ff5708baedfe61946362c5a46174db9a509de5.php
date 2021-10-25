@@ -122,7 +122,7 @@
 
                 <div class="col text-center about-box-top">
                     <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico1.png'))); ?>"/>
-                    <p class="co-white">Palpitações cardíacas(sensação de ritmocardíaco acelerado).</p>
+                    <p class="co-white">Palpitações cardíacas (sensação de ritmo cardíaco acelerado).</p>
                 </div>
 
                 <div class="col text-center about-box-top">
@@ -134,7 +134,6 @@
                     <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico1.png'))); ?>"/>
                     <p class="co-white">Pressão ou desconforto no peito.</p>
                 </div>
-
 
                 <div class="col text-center about-box-top">
                     <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico1.png'))); ?>"/>
@@ -332,7 +331,7 @@
                 <ul  class="co-white">
                     <li>Tem o tamanho de uma moeda</li>
                     <li>Está feito de materiais muito leves e compactos comumente usados em muitos outros implantes médicos</li>
-                    <li>Ideal para pessoas que não podem tomar    anticoagulantes, sofreram hemorragias devido ao uso de anticoagulantes, têm dificuldade em manter o uso da Varfarina ou não são adequados ao tratamento com qualquer tipo de anticoagulante.</li>
+                    <li>Ideal para pessoas que não podem tomar     anticoagulantes, sofreram hemorragias devido ao uso de anticoagulantes, têm dificuldade em manter o uso da Varfarina ou não são adequados ao tratamento com qualquer tipo de anticoagulante.</li>
                     <li>É um procedimento de aproximadamente 1 hora, onde os pacientes geralmente saem do hospital no dia seguinte.</li>
                 </ul>
             </div>

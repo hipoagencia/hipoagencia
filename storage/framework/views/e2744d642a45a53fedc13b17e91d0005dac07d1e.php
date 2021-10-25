@@ -78,22 +78,35 @@
     <div class="pt-70 about-what-find" id="1">
         <div class="container">
             <div class="section-title pb-70">
-                <h3 class="co-red mb-3">Qual é a diferença entre as arritmias supraventriculares (TSV) como o flutter atrial e a fibrilação atrial?</h3>
+                <h3 class="co-red mb-3">O que é arritmia ventricular?</h3>
 
 
-                <p>É normal que sua frequência cardí­aca varie durante o dia, dependendo do seu ní­vel de atividade. Por exemplo, você pode esperar que sua frequência cardí­aca aumente quando está se exercitando, mas não quando está sentado.</p>
-                <p>Qualquer tipo de ritmo ou frequência cardí­aca anormal é chamado de arritmia. Ritmos cardíacos anormais rápidos, com frequências acima de 100 bpm, são denominados taquiarritmias. Taquicardia supraventricular (TSV) é um termo geral para qualquer ritmo cardí­aco rápido vindo de um local acima dos ventrí­culos.</p>
-                <p>Qualquer pessoa pode desenvolver uma arritmia, mesmo um jovem, sem uma condição cardí­aca prévia. Entretanto, as arritmias são mais comuns em pessoas com mais de 65 anos que sofreram algum dano cardí­aco em face de um ataque cardí­aco, cirurgia cardíaca ou outras condições. As taquicardias supraventriculares incluem:</p>
+                <p>Quando um ritmo cardíaco anormal vem das câmaras inferiores do coração (os ventrículos), ele é chamado de arritmia ventricular. Os ritmos desse tipo incluem a taquicardia ventricular (TV) e a fibrilação ventricular (FV). Ambas são arritmias que colocam a vida em risco e estão normalmente associadas a ataques cardíacos ou a cicatrizes do músculo cardíaco advindas de um ataque cardíaco prévio.</p>
 
-                <ul class="list-style text-left">
-                    <li>Fibrilação atrial;</li>
-                    <li>Flutter atrial;</li>
-                    <li>Taquicardia atrioventricular por reentrada nodal (TRN);</li>
-                    <li>Síndrome de Wolff-Parkinson-White (WPW).</li>
-                </ul>
+                <div class="row mt-5">
+                    <div class="col">
+                        <img src="<?php echo e(url(asset('web/assets/images/boston/heart/ventricular_1.jpg'))); ?>" alt="">
+                    </div>
+                    <div class="col text-left">
+                        <h5 class="co-red mb-3">Taquicardia Ventricular</h5>
 
-                <iframe class="mt-4" width="560" height="315" src="https://www.youtube.com/embed/WpUQTcTS5DQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>https://www.youtube.com/watch?v=WpUQTcTS5DQ</p>
+                        <p>A taquicardia ventricular (TV) é um ritmo cardíaco rápido que ocorre em um dos ventrículos de seu coração. Ela parece um circuito elétrico pequeno que corre em círculo. Em uma taquicardia ventricular, o coração bate a cada volta no circuito em frequências de 150 a 250 bpm.Um tipo especial de taquicardia ventricular é denominado â taquicardia da via de saída do ventrículo direito ou taquicardia VSVD. Esse ritmo ocorre na parte do coração onde o sangue vai do ventrículo direito para os pulmões.À medida que o coração bate mais rápido, ele bombeia menos sangue, não havendo tempo suficiente para ele se encher com sangue entre os batimentos. Se esse batimento cardíaco rápido continuar, o cérebro e o corpo podem não receber sangue e oxigênio suficientes.</p>
+                    </div>
+                </div>
+
+
+                <div class="row mt-5">
+                    <div class="col text-left">
+                        <h5 class="co-red mb-3">Fibrilação Ventricular</h5>
+
+                        <p>Outro tipo de arritmia ventricular é a fibrilação ventricular (FV). A fibrilação ventricular se origina de muitos locais diferentes nos ventrículos, cada um tentando sinalizar o coração para bater. Nesse caso, o coração bate muito mais rápido que o normal, às vezes acima de 300 batimentos por minuto. As câmaras inferiores tremem ao invés de se contraírem e pouquíssimo, ou nenhum sangue é bombeado do coração para o restante do corpo. Se seu coração estiver em fibrilação ventricular, você pode ficar inconsciente muito rapidamente. Você provavelmente não se lembrará de nada que aconteceu antes ou durante o episódio.</p>
+                        <p>Se esses ritmos cardíacos rápidos e irregulares continuarem por algum tempo, o corpo não receberá suficiente sangue rico em oxigênio. Sem oxigênio, o cérebro e os tecidos do corpo não conseguem funcionar normalmente e morrem.</p>
+
+                    </div>
+                    <div class="col">
+                        <img src="<?php echo e(url(asset('web/assets/images/boston/heart/ventricular_2.jpg'))); ?>" alt="">
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -105,24 +118,7 @@
             <div class="row justify-content-center text-center">
 
                 <h3 class="co-white">Sintomas</h3>
-                <p class="co-white">Algumas pessoas com FA não sentirão nenhum sintoma. Aqueles que têm sintomas podem
-                    experimentar:
-                </p>
-
-
-                <div class="col-5">
-                    <ul class="list-style text-left">
-                        <li class="text-white">Desmaios</li>
-                        <li class="text-white">Tontura, sensação de desmaio</li>
-                        <li class="text-white">Coração desenfreado (palpitações)</li>
-                        <li class="text-white">Batimentos cardíacos faltantes ou extras</li>
-                        <li class="text-white">Fraqueza</li>
-                        <li class="text-white">Falta de ar</li>
-                        <li class="text-white">Dor no peito</li>
-                    </ul>
-                </div>
-
-                <p class="co-white">Você conhece o seu corpo bem o suficiente para saber quando algo está errado. Por isso você deve se consultar com seu médico se estiver tendo qualquer um desses sintomas. O médico talvez queira examinar seu sistema de condução a fim de determinar as melhores opções de tratamento.
+                <p class="co-white col-7">Se esses ritmos cardíacos rápidos e irregulares continuarem por algum tempo, o corpo não receberá suficiente sangue rico em oxigênio. Sem oxigênio, o cérebro e os tecidos do corpo não conseguem funcionar normalmente e morrem.
                 </p>
 
             </div>
@@ -181,38 +177,19 @@
     <div class="pt-70 about-what-find"  id="3">
         <div class="container">
             <div class="section-title pb-70">
-                <h3 class="co-red mb-3">Causas</h3>
-                <p>Pressão arterial alta, doença arterial coronariana e outras condições cardíacas e pulmonares estão associadas com as arritmias atriais.</p>
-                <p>Conforme vamos envelhecendo, o risco de arritmias atriais parece aumentar, especialmente depois dos 60 anos. Pressão arterial alta e doença arterial coronariana estão associadas com arritmias atriais, assim como outras condições cardíacas e pulmonares, tais como doença pulmonar crônica, doença das válvulas cardíacas e insuficiência cardíaca.</p>
-                <p>Pessoas sem doença cardíaca podem desenvolver uma arritmia por causas desconhecidas, mas os fatores de risco podem incluir:</p>
+                <h3 class="co-red mb-3">Causas e Fatores de Risco</h3>
 
-                <ul class="list-style text-left">
-                    <li>Estresse emocional</li>
-                    <li>Consumo de álcool, cafeína, remédios para regime e tabaco</li>
-                    <li>Alguns medicamentos de prescrição, tais como certos medicamentos para gripe, tosse e alergia, e antidepressivos</li>
-                </ul>
+                <p>As arritmias ventriculares surgem quando impulsos elétricos gerados nos ventrículos assumem o lugar do padrão normal gerado pelo nó sinoatrial (S-A) e pelo sistema de condução elétrico do coração. Estudos mostram que taquicardias ventriculares (TV) ocorrem com frequência em pacientes que sofreram algum dano no coração por ataque cardíaco, cirurgia cardíaca ou outras condições. Algumas pessoas com defeitos cardíacos congênitos também sofrem taquicardia ventricular. Algumas vezes, a taquicardia ventricular afeta pessoas sem nenhum histórico de condição cardíaca.</p>
 
-                <p>Além disso, alguns ritmos estão presentes no nascimento, como a síndrome de Wolff Parkinson White, na qual um grupo de batimentos cardíacos rápidos e irregulares é causado por vias de condução elétrica extras entre os átrios e os ventrículos.</p>
+                <p>Nos casos de fibrilação ventricular (FV), os pacientes normalmente perdem a consciência muito rapidamente.</p>
 
+                <p>Se um ritmo ventricular rápido não for tratado, ele pode mudar para fibrilação ventricular, podendo levar a uma parada cardíaca súbita e, por fim, a morte cardíaca súbita. A parada cardíaca súbita afeta 350.000 pessoas a cada ano nos Estados Unidos (o que significa que a cada 1,5 minutos alguém morre de parada cardíaca súbita).1</p>
 
             </div>
         </div>
     </div>
 
 
-
-    <div class="pt-70 pb-70 bg-gray"  id="4">
-        <div class="container">
-            <div class="section-title">
-                <h3 class="co-red mb-3">Fatores de risco</h3>
-            </div>
-            <div class="container text-center">
-
-
-
-            </div>
-        </div>
-    </div>
 
     <div class="about-what-find-blue"  id="5">
         <div class="container pt-70  pb-70">
@@ -220,61 +197,33 @@
 
                 <h3 class="co-white">Tratamentos</h3>
 
-                <p class="co-white">O tratamento para arritmias atriais depende muito de você e de seus sintomas. Geralmente, o médico se concentra em tratamentos que ajudam a controlar a frequência cardíaca e a reduzir o risco de coágulos.</p>
-                <p class="co-white">Vários fatores são considerados na determinação do método de tratamento apropriado:</p>
+                <p class="co-white">Para o tratamento de arritmias ventriculares, os médicos podem prescrever medicamentos, um cardioversor desfibrilador implantável ou ambos.</p>
+                <p class="co-white">A taquicardia ventricular e a fibrilação ventricular são ritmos cardíacos que põem a vida em risco. Nas emergências, os paramédicos ou as equipes médicas conseguem tratar essas arritmias com desfibriladores externos, como um DEA. As opções de tratamento a longo prazo variam de acordo com o tipo de arritmia e as circunstâncias individuais de cada paciente.</p>
+                <p class="co-white">Algumas vezes, as taquiarritmias podem ser paradas ou tratadas com remédios, ou cirurgia ou ablação cardíaca. Esses tratamentos são utilizados em um esforço para controlar ou destruir a porção de tecido cardíaco que causa os ritmos anormais.</p>
+                <p class="co-white">Em outros casos, um dispositivo eletrônico implantado pode ser usado para tratar a arritmia. Um cardioversor desfibrilador implantável (CDI) administra energia elétrica ao coração a fim de baixar seu ritmo para um ritmo mais normal, possibilitando ao nó sinoatrial retomar o controle.Um CDI pode usar um ou mais tipos de energia para ajudar seu coração a bater novamente de uma maneira normal. Essas energias incluem:</p>
+                <p class="co-white">Estimulação antitaquicardia (ATP) - Se seu ritmo for regular, mas rápido, o sistema CDI pode administrar uma série de pulsos pequenos e rápidos de estimulação elétrica. Tais pulsos são utilizados para interromper a arritmia e retornar o coração a seu ritmo normal.</p>
+                <p class="co-white">Cardioversão - Se sua arritmia for regular, mas muito rápida, o CDI pode administrar um choque de baixa energia. Tal choque consegue parar a arritmia e retornar o coração a seu ritmo normal.</p>
+                <p class="co-white">Desfibrilação - Para arritmias muito rápidas e irregulares, como a fibrilação ventricular, choques de alta energia podem ser utilizados para parar a arritmia. Dessa maneira, o coração consegue retornar a seu ritmo normal. </p>
+                <p class="co-white">Muitas pessoas têm arritmias perigosas e que podem ocorrer a qualquer momento. Você já pode ter tido um episódio de taquicardia ventricular ou fibrilação ventricular. Ele pode ocorrer mesmo se você estiver tomando remédios para tratar seu ritmo cardíaco anormal. Após analisar os resultados de seus exames, o médico pode chegar à conclusão que você poderá novamente ter ritmos cardíacos anormais e, talvez, uma parada cardíaca. Talvez ele recomende um CDI por uma ou mais das seguintes razões:</p>
 
-                <div class="col-5">
+                <div class="col-6">
                     <ul class="list-style text-left">
-                        <li class="text-white">Idade;</li>
-                        <li class="text-white">Saúde geral;</li>
-                        <li class="text-white">Histórico médico pessoal e familiar;</li>
-                        <li class="text-white">Medicamentos utilizados para outras condições;</li>
-                        <li class="text-white">Doenças ou condições adjacentes que possam contribuir com a arritmia;</li>
-                        <li class="text-white">A natureza e a severidade da arritmia e seus sintomas.</li>
+                        <li class="text-white">No mínimo, um evento de taquicardia ventricular ou fibrilação ventricular</li>
+                        <li class="text-white">Parada cardíaca ou ritmo cardíaco anormal, prévios, que fizeram você desmaiar</li>
+                        <li class="text-white">Um ritmo cardíaco rápido que se repete, podendo levar à morte</li>
+                        <li class="text-white">Um ritmo cardíaco rápido que não pode ser controlado com medicamentos</li>
+                        <li class="text-white">Efeitos colaterais severos da terapia medicamentosa</li>
+                        <li class="text-white">Um ritmo cardíaco rápido que não pode ser curado cirurgicamente</li>
+                        <li class="text-white">Ataque cardíaco prévio e uma fração de ejeção baixa </li>
                     </ul>
                 </div>
 
-                <p class="co-white">As opções possíveis de tratamento incluem um tratamento ou uma combinação de tratamentos.</p>
-
-                <b class="co-white">Mudanças no Estilo de Vida</b>
-                <p class="co-white">Os tratamentos podem ajudar a melhorar ou a reduzir a ocorrência de uma arritmia. Eles podem incluir uma dieta alimentar mais saudável, limitar ou eliminar a quantidade de cafeína ingerida, exercícios regulares e parar de fumar.</p>
-
-                <b class="co-white">Medicamentos</b>
-                <p class="co-white">Afinadores do sangue (anticoagulantes), tais como a varfarina, são uma prescrição comum para evitar que o sangue se junte e forme um coágulo.</p>
-                <p class="co-white">Dois outros tipos de medicamento são usados para tratar arritmias: antiarrítmicos, que controlam o ritmo do coração, e beta-bloqueadores, que controlam a frequência na qual o coração bate. Eles podem ser utilizados sozinhos ou juntamente com outros tratamentos.</p>
-
-                <b class="co-white">Cardioversão</b>
-                <p class="co-white">A cardioversão utiliza energia elétrica para levar uma arritmia de volta a um ritmo normal. Ao administrar um choque elétrico controlado através do peito para o coração, os cardioversores levam o coração de volta a seu ritmo normal. Isso é feito em um hospital com o paciente sob forte sedação. Durante emergências, o choque pode ser administrado através de um desfibrilador externo automático, ou DEA.</p>
-
-                <b class="co-white">Ablação Cardíaca</b>
-                <p class="co-white">Para muitos pacientes com arritmias atriais, os medicamentos não conseguem controlar a arritmia com eficiência ou podem levar a efeitos colaterais sérios. Para esses indivíduos, um procedimento denominado ablação cardíaca pode ser considerado. Na ablação cardíaca, um cateter é posicionado dentro do coração para administrar terapia no tecido responsável pela arritmia.</p>
-                <p class="co-white">Depois de um procedimento de ablação, alguns pacientes podem precisar de um marcapasso.</p>
 
             </div>
         </div>
     </div>
 
-    <div class="pt-70 about-what-find  pb-70">
-        <div class="container text-center">
-            <div class="section-title">
-                <h3 class="mb-3 color-blue">Objetivos dos Tratamentos</h3>
-            </div>
 
-            <div class="row">
-                <p>Existem três objetivos terapêuticos a serem considerados em pacientes com fibrilação atrial (FA):  controle da frequência, manutenção do ritmo sinusal e prevenção de tromboembolia. Os riscos e os benefícios de cada tratamento devem ser analisados e considerados para cada paciente..</p>
-
-                <b>Controle da Frequência Ventricular</b>
-                <p>Em pacientes sem pré-excitação ventricular, o controle agudo da frequência é eficaz com bloqueadores do canal de cálcio (BCCs) ou bloqueadores. A ablação por cateter pode ser efetiva e é recomendada em pacientes que não responderam às drogas utilizadas para controlar a frequência ou que são intolerantes a elas.</p>
-
-                <b>Restauração e Manutenção do Ritmo Sinusal</b>
-                <p>Vários medicamentos podem restaurar e manter com eficácia o ritmo sinusal em pacientes com FA. Existem também abordagens não-farmacológicas para a prevenção da FA, que incluem cirurgia, estimulação atrial e ablação por cateter.</p>
-
-                <b>Redução do Risco Tromboembólico</b>
-                <p>As diretrizes de tratamento para pacientes com FA incluem a recomendação para o tratamento com anticoagulantes orais para os pacientes com um ou mais fatores de risco de derrame. Estudos de pacientes submetidos a oclusão do apêndice atrial esquerdo mostram uma tendência para a redução de eventos embólicos, oferecendo, assim, aos médicos e pacientes, uma outra opção de tratamento.</p>
-            </div>
-
-        </div>
-    </div>
 
 
     <?php echo $__env->make('web.components.newsletter', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

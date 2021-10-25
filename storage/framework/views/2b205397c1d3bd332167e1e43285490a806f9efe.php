@@ -32,40 +32,41 @@
 <div id="brain" class="overlay overlay-brain">
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
-        <a href="javascript:void(0);">Parkinson</a>
-        <a href="javascript:void(0);">Dor Crônica</a>
-        <a href="javascript:void(0);">AVC</a>
+        <a href="<?php echo e(route('web.page.parkinson')); ?>">Parkinson</a>
+        <a href="<?php echo e(route('web.page.dorCronica')); ?>">Dor Crônica</a>
+        <a href="<?php echo e(route('web.page.avc')); ?>">AVC</a>
     </div>
 </div>
 
 <div id="heart" class="overlay overlay-heart">
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
-        <a href="javascript:void(0);">Arritmia</a>
-        <a href="javascript:void(0);">Fibrilação Arterial</a>
+        <a href="<?php echo e(route('web.page.arritmiaArtrial')); ?>">Arritmia Artrial</a>
+        <a href="<?php echo e(route('web.page.arritmiaVentricular')); ?>">Arritmia Ventricular</a>
+        <a href="<?php echo e(route('web.page.fibrilacaoArterial')); ?>">Fibrilação Arterial</a>
         <a href="javascript:void(0);">AVC</a>
-        <a href="javascript:void(0);">Morte Súbita</a>
+        <a href="<?php echo e(route('web.page.morteSubita')); ?>">Morte Súbita</a>
     </div>
 </div>
 
 <div id="urine" class="overlay overlay-urine">
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
-        <a href="javascript:void(0);">Incontinencia Urinária Masculina</a>
+        <a href="<?php echo e(route('web.page.incontinenciaUrinaria')); ?>">Incontinencia Urinária Masculina</a>
     </div>
 </div>
 
 <div id="cancer" class="overlay overlay-cancer">
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
-        <a href="javascript:void(0);">Hiperplasia Prostática Benigna</a>
+        <a href="<?php echo e(route('web.page.hiperplasia')); ?>">Hiperplasia Prostática Benigna</a>
     </div>
 </div>
 
 <div id="sexual" class="overlay overlay-sexual">
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
-        <a href="javascript:void(0);">Disfunção Erétil</a>
+        <a href="<?php echo e(route('web.page.disfuncaoEretil')); ?>">Disfunção Erétil</a>
     </div>
 </div>
 <?php /**PATH C:\xampp\htdocs\boston\resources\views/web/components/categoriesSlide.blade.php ENDPATH**/ ?>

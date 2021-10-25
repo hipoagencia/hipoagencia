@@ -6094,6 +6094,18 @@ img {
 .co-red{color:#cb2229 !important;}
 .co-bg-red{background-color:#cb2229 !important;}
 
+.co-blue{color:#0e778a !important;}
+.co-bg-blue{background-color:#0e778a !important;}
+
+.co-purple{color:#8f6cb3 !important;}
+.co-bg-purple{background-color:#8f6cb3 !important;}
+
+.co-green{color:#1bb166 !important;}
+.co-bg-green{background-color:#1bb166 !important;}
+
+.co-orange{color:#ff7200 !important;}
+.co-bg-orange{background-color:#ff7200 !important;}
+
 .list-style li{
     color: #6b6b84;
     font-weight: 400;

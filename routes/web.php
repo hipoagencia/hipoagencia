@@ -38,10 +38,22 @@ Route::group(['as' => 'web.'], function () {
     })->name('contact');
 
 
+    /*****************************
+    **********   CÉREBRO   *******
+    *****************************/
 
-     /****************************
-     ********   CORAÇÃO   ********
-      ****************************/
+    Route::get('/especialidade/sistema-nervoso/dor-cronica', function () {
+        return view('web.page.nervoso.dorCronica');
+    })->name('page.dorCronica');
+
+    Route::get('/especialidade/sistema-nervoso/doenca-de-parkinson', function () {
+        return view('web.page.nervoso.parkinson');
+    })->name('page.parkinson');
+
+
+     /*****************************
+     ********   CORAÇÃO   *********
+     *****************************/
 
     Route::get('/especialidade/coracao/arritmia-ventricular', function () {
         return view('web.page.coracao.arritmiaVentricular');
@@ -55,9 +67,43 @@ Route::group(['as' => 'web.'], function () {
         return view('web.page.coracao.avc');
     })->name('page.avc');
 
+    Route::get('/especialidade/coracao/morte-subita', function () {
+        return view('web.page.coracao.morteSubita');
+    })->name('page.morteSubita');
+
     Route::get('/especialidade/coracao/fibrilacao-arterial', function () {
         return view('web.page.coracao.fibrilacaoArterial');
     })->name('page.fibrilacaoArterial');
+
+
+    /*****************************
+     ********   URINÀRIO   *******
+     *****************************/
+
+    Route::get('/especialidade/sistema-urinario/incontinencia-urinaria-masculina', function () {
+        return view('web.page.urinario.incontinenciaUrinaria');
+    })->name('page.incontinenciaUrinaria');
+
+
+    /*****************************
+     *********   CÂNCER   ********
+     *****************************/
+
+    Route::get('/especialidade/canceres-e-tumores/hiperplasia-prostatica', function () {
+        return view('web.page.cancer.hiperplasia');
+    })->name('page.hiperplasia');
+
+
+    /*****************************
+     **********   SEXUAL   *******
+     *****************************/
+
+    Route::get('/especialidade/saude-sexual/disfuncao-eretil', function () {
+        return view('web.page.sexual.disfuncaoEretil');
+    })->name('page.disfuncaoEretil');
+
+
+
 
 });
 
