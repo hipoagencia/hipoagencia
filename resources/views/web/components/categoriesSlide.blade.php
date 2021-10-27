@@ -32,6 +32,7 @@
 <div id="brain" class="overlay overlay-brain">
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">Sistema Nervoso</h2>
         <a href="{{ route('web.page.parkinson') }}">Parkinson</a>
         <a href="{{ route('web.page.dorCronica') }}">Dor Crônica</a>
         <a href="{{ route('web.page.avc') }}">AVC</a>
@@ -41,6 +42,7 @@
 <div id="heart" class="overlay overlay-heart">
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">Coração</h2>
         <a href="{{ route('web.page.arritmiaArtrial') }}">Arritmia Artrial</a>
         <a href="{{ route('web.page.arritmiaVentricular') }}">Arritmia Ventricular</a>
         <a href="{{ route('web.page.fibrilacaoArterial') }}">Fibrilação Arterial</a>
@@ -53,6 +55,7 @@
 <div id="urine" class="overlay overlay-urine">
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">Sistema Urinário</h2>
         <a href="{{ route('web.page.incontinenciaUrinaria') }}">Incontinencia Urinária Masculina</a>
     </div>
 </div>
@@ -60,6 +63,7 @@
 <div id="cancer" class="overlay overlay-cancer">
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">Cânceres e Tumores</h2>
         <a href="{{ route('web.page.hiperplasia') }}">Hiperplasia Prostática Benigna</a>
     </div>
 </div>
@@ -67,6 +71,7 @@
 <div id="sexual" class="overlay overlay-sexual">
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">Saúde Sexual</h2>
         <a href="{{ route('web.page.disfuncaoEretil') }}">Disfunção Erétil</a>
     </div>
 </div>

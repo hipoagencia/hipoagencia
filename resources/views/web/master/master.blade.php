@@ -42,6 +42,7 @@
 
 <script src="{{ url(asset('web/assets/js/jquery.min.js')) }}"></script>
 <script src="{{ url(asset('web/assets/js/bootstrap.bundle.min.js')) }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 
 <script src="{{ url(asset('web/assets/js/jquery.meanmenu.js')) }}"></script>
 <script src="{{ url(asset('web/assets/js/owl.carousel.min.js')) }}"></script>
@@ -54,6 +55,12 @@
 {{--<link rel="stylesheet" href="{{ url(asset('web/assets/js/contact-form-script.js')) }}"></script>--}}
 <script src="{{ url(asset('web/assets/js/wow.min.js')) }}"></script>
 <script src="{{ url(asset('web/assets/js/main.js')) }}"></script>
+
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+
+<script type="text/javascript">
+    $("#phone").mask("(00) 00000-0000");
+</script>
 
 @hasSection('js')
     @yield('js')

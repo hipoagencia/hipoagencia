@@ -37,6 +37,9 @@ Route::group(['as' => 'web.'], function () {
         return view('web.contact');
     })->name('contact');
 
+    Route::get('politica-de-privacidade', [ContentController::class, 'privacy'])->name('privacy');
+    Route::get('termos-de-uso', [ContentController::class, 'terms'])->name('terms');
+
 
     /*****************************
     **********   CÉREBRO   *******

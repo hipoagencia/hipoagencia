@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Content;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -103,6 +104,25 @@ class ContentController extends Controller
 
         return view('web.blog',[
             'posts' => $posts
+        ]);
+    }
+
+    public function privacy()
+    {
+        $content = Content::where('id', '1')->first();
+
+        return view('web.privacy',[
+            'content' => $content
+        ]);
+    }
+
+
+    public function terms()
+    {
+        $content = Content::where('id', '2')->first();
+
+        return view('web.terms',[
+            'content' => $content
         ]);
     }
 

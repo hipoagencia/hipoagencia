@@ -26,35 +26,207 @@
                                 Home
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-none d-sm-block">
                             <a href="#" class="nav-link <?php echo e((request()->routeIs(['web.specialtyNervous','web.specialtyHeart','web.specialtyUrinary','web.specialtyCancer','web.specialtySexual']) ? 'active' : '')); ?>">
                                 Especialidades
                                 <i class="bx bx-chevron-down"></i>
                             </a>
+                            <ul class="dropdown-menu" style="width:1100px;left:-500px;padding:30px;">
+
+
+                               <div class="container">
+                                   <div class="row">
+
+
+                                       <div class="col">
+                                           <ul>
+                                               <li class="nav-item">
+                                                   <h5 style="font-size:14px;margin-bottom:20px;">Sistema Nervoso</h5>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.parkinson')); ?>" class="nav-link">Parkinson</a>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.dorCronica')); ?>" class="nav-link">Dor Crônica</a>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.avc')); ?>" class="nav-link">AVC</a>
+                                               </li>
+                                           </ul>
+                                       </div>
+
+                                       <div class="col">
+                                           <ul>
+                                               <li class="nav-item">
+                                                   <h5 style="font-size:14px;margin-bottom:20px;">Coração</h5>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.arritmiaArtrial')); ?>" class="nav-link">Arritmia Artrial</a>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.arritmiaVentricular')); ?>" class="nav-link">Arritmia Ventricular</a>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.fibrilacaoArterial')); ?>" class="nav-link">Fibrilação Arterial</a>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="#" class="nav-link">AVC</a>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.morteSubita')); ?>" class="nav-link">Morte Súbita</a>
+                                               </li>
+                                           </ul>
+                                       </div>
+
+                                       <div class="col">
+                                           <ul>
+                                               <li class="nav-item">
+                                                   <h5 style="font-size:14px;margin-bottom:20px;">Sistema Urinário</h5>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.incontinenciaUrinaria')); ?>" class="nav-link">Incontinência Urinária</a>
+                                               </li>
+
+                                           </ul>
+                                       </div>
+
+                                       <div class="col">
+                                           <ul>
+                                               <li class="nav-item">
+                                                   <h5 style="font-size:14px;margin-bottom:20px;">Cânceres e Tumores</h5>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.hiperplasia')); ?>" class="nav-link">Hiperplasia Prostática Benigna</a>
+                                               </li>
+
+                                           </ul>
+                                       </div>
+
+                                       <div class="col">
+                                           <ul>
+                                               <li class="nav-item">
+                                                   <h5 style="font-size:14px;margin-bottom:20px;">Saúde Sexual</h5>
+                                               </li>
+
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.disfuncaoEretil')); ?>" class="nav-link">Disfunção Erétil</a>
+                                               </li>
+
+                                           </ul>
+                                       </div>
+
+
+
+                                   </div>
+                               </div>
+
+
+
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item d-block d-sm-none">
+                            <a href="#" class="nav-link">
+                                Especialidades
+                                <i class="bx bx-chevron-down"></i>
+                            </a>
                             <ul class="dropdown-menu">
-
-
                                 <li class="nav-item">
-                                    <a href="<?php echo e(route('web.specialtyNervous')); ?>" class="nav-link">Sistema Nervoso</a>
+                                    <a href="#" class="nav-link">
+                                        Sistema Nervoso
+                                        <i class="bx bx-chevron-right"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+
+                                        <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.parkinson')); ?>" class="nav-link">Parkinson</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.dorCronica')); ?>" class="nav-link">Dor Crônica</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.avc')); ?>" class="nav-link">AVC</a>
+                                        </li>
+
+                                    </ul>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="<?php echo e(route('web.specialtyHeart')); ?>" class="nav-link">Coração</a>
+                                    <a href="#" class="nav-link">
+                                        Coração
+                                        <i class="bx bx-chevron-right"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.arritmiaArtrial')); ?>" class="nav-link">Arritmia Artrial</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.arritmiaVentricular')); ?>" class="nav-link">Arritmia Ventricular</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.fibrilacaoArterial')); ?>" class="nav-link">Fibrilação Arterial</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">AVC</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.morteSubita')); ?>" class="nav-link">Morte Súbita</a>
+                                        </li>
+                                    </ul>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="<?php echo e(route('web.specialtyUrinary')); ?>" class="nav-link">Sistema Urinário</a>
+                                    <a href="#" class="nav-link">
+                                        Sistema Urinário
+                                        <i class="bx bx-chevron-right"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.incontinenciaUrinaria')); ?>" class="nav-link">Incontinência Urinária</a>
+                                        </li>
+                                    </ul>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="<?php echo e(route('web.specialtyCancer')); ?>" class="nav-link">Cânceres e Tumores</a>
+                                    <a href="#" class="nav-link">
+                                        Cãnceres e Tumores
+                                        <i class="bx bx-chevron-right"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.hiperplasia')); ?>" class="nav-link">Hiperplasia Prostática Benigna</a>
+                                        </li>
+                                    </ul>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="<?php echo e(route('web.specialtySexual')); ?>" class="nav-link">Saúde Sexual</a>
+                                    <a href="#" class="nav-link">
+                                        Saúde Sexual
+                                        <i class="bx bx-chevron-right"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.disfuncaoEretil')); ?>" class="nav-link">Disfunção Erétil</a>
+                                        </li>
+                                    </ul>
                                 </li>
-
-
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -70,10 +242,12 @@
                         </li>
 
 
+
                     </ul>
                     <div class="others-options d-flex align-items-center">
                         <div class="option-item">
-                            <a href="#"> <i class='bx bx-search-alt' style="font-size:50px;"></i></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#search" > <i class='bx bx-search-alt' style="font-size:50px;"></i></a>
+
                         </div>
                     </div>
                 </div>
@@ -81,4 +255,5 @@
         </div>
     </div>
 </div>
+
 <?php /**PATH C:\xampp\htdocs\boston\resources\views/web/master/header.blade.php ENDPATH**/ ?>
