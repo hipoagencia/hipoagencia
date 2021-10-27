@@ -62,6 +62,8 @@
     $("#phone").mask("(00) 00000-0000");
 </script>
 
+<script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "sRRfkNnJRA");s.setAttribute("src", "https://accessibilityserver.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://accessibilityserver.org">website accessibility</a></noscript>
+
 <?php if (! empty(trim($__env->yieldContent('js')))): ?>
     <?php echo $__env->yieldContent('js'); ?>
 <?php endif; ?>

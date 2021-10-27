@@ -29,6 +29,21 @@ class ContentController extends Controller
         ]);
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+
+        $posts = Post::with('princ')
+            ->where('title', 'LIKE', "%$search%")
+            ->orWhere('description', 'LIKE', "%$search%")
+            ->limit(50)
+            ->orderBy('id', 'DESC')->paginate(50);
+
+        return view('web.blog',[
+            'posts' => $posts
+        ]);
+    }
+
 
     public function specialtyHeart()
     {

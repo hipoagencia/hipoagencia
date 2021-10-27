@@ -23,13 +23,15 @@ Route::group(['as' => 'web.'], function () {
         return view('web.about');
     })->name('about');
 
-    Route::get('especialidade/coracao', [ContentController::class, 'specialtyHeart'])->name('specialtyHeart');
+
     Route::get('especialidade/sistema-nervoso', [ContentController::class, 'specialtyNervous'])->name('specialtyNervous');
+    Route::get('especialidade/coracao', [ContentController::class, 'specialtyHeart'])->name('specialtyHeart');
     Route::get('especialidade/sistema-urinario', [ContentController::class, 'specialtyUrinary'])->name('specialtyUrinary');
     Route::get('especialidade/cancer-e-tumores', [ContentController::class, 'specialtyCancer'])->name('specialtyCancer');
     Route::get('especialidade/saude-sexual', [ContentController::class, 'specialtySexual'])->name('specialtySexual');
 
     Route::get('blog', [ContentController::class, 'blog'])->name('blog');
+    Route::get('blog/pesquisa', [ContentController::class, 'search'])->name('search');
     Route::get('blog/article/{slug}', [ContentController::class, 'article'])->name('article');
     Route::get('blog/category/{id}/{slug}', [ContentController::class, 'category'])->name('category');
 
@@ -44,6 +46,10 @@ Route::group(['as' => 'web.'], function () {
     /*****************************
     **********   CÉREBRO   *******
     *****************************/
+
+    Route::get('/especialidade/sistema-nervoso/avc', function () {
+        return view('web.page.nervoso.avc');
+    })->name('page.avcNervoso');
 
     Route::get('/especialidade/sistema-nervoso/dor-cronica', function () {
         return view('web.page.nervoso.dorCronica');

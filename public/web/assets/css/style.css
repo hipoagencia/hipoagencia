@@ -2108,6 +2108,7 @@ img {
     padding: 25px;
     padding-top:35px;
     margin: 0px 1px;
+    transition: 0.3s;
 }
 
 .bg-spec-gray2 img {
@@ -6089,6 +6090,60 @@ img {
 .text-right{
     text-align:right;
 }
+
+.blue-hover:hover{
+    background-color:#0e778a !important;
+    transition: 0.3s;
+}
+
+.red-hover:hover{
+    background-color:#cb2229 !important;
+    transition: 0.3s;
+}
+
+.green-hover:hover{
+    background-color:#1bb166 !important;
+    transition: 0.3s;
+}
+
+.orange-hover:hover{
+    background-color:#ff7200 !important;
+    transition: 0.3s;
+}
+
+
+.purple-hover:hover{
+    background-color:#8f6cb3 !important;
+    transition: 0.3s;
+}
+
+
+.blue-h{
+    background-color:#0e778a !important;
+    transition: 0.3s;
+}
+
+.red-h{
+    background-color:#cb2229 !important;
+    transition: 0.3s;
+}
+
+.green-h{
+    background-color:#1bb166 !important;
+    transition: 0.3s;
+}
+
+.orange-h{
+    background-color:#ff7200 !important;
+    transition: 0.3s;
+}
+
+
+.purple-h{
+    background-color:#8f6cb3 !important;
+    transition: 0.3s;
+}
+
 
 .co-white{color:#fff !important;}
 

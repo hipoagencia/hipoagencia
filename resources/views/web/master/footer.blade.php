@@ -57,11 +57,11 @@
 
             <div class="modal-body text-center" style="color:#fff;">
 
-                <form action="">
+                <form action="{{ route('web.search') }}" method="GET">
 
                     <div class="row">
 
-                                <input type="text" name="name" id="name" style="height:52px;width:80%" class="form-control" required="" placeholder="O que deseja procurar?">
+                                <input type="text" name="search" id="search" style="height:52px;width:80%" class="form-control" required="" placeholder="O que deseja procurar?">
                                 <button type="submit" class="default-btn" style="pointer-events: all; cursor: pointer;width: 120px;margin:0px auto;border-radius: 0px;">Pesquisar <i class="bx bx-send"></i><span></span></button>
 
 

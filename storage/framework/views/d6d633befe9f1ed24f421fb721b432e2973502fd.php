@@ -45,6 +45,10 @@
                                                </li>
 
                                                <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.avcNervoso')); ?>" class="nav-link">AVC</a>
+                                               </li>
+
+                                               <li class="nav-item">
                                                    <a href="<?php echo e(route('web.page.parkinson')); ?>" class="nav-link">Parkinson</a>
                                                </li>
 
@@ -52,9 +56,7 @@
                                                    <a href="<?php echo e(route('web.page.dorCronica')); ?>" class="nav-link">Dor Crônica</a>
                                                </li>
 
-                                               <li class="nav-item">
-                                                   <a href="<?php echo e(route('web.page.avc')); ?>" class="nav-link">AVC</a>
-                                               </li>
+
                                            </ul>
                                        </div>
 
@@ -63,6 +65,8 @@
                                                <li class="nav-item">
                                                    <h5 style="font-size:14px;margin-bottom:20px;">Coração</h5>
                                                </li>
+
+
 
                                                <li class="nav-item">
                                                    <a href="<?php echo e(route('web.page.arritmiaArtrial')); ?>" class="nav-link">Arritmia Artrial</a>
@@ -73,12 +77,14 @@
                                                </li>
 
                                                <li class="nav-item">
-                                                   <a href="<?php echo e(route('web.page.fibrilacaoArterial')); ?>" class="nav-link">Fibrilação Arterial</a>
+                                                   <a href="<?php echo e(route('web.page.avc')); ?>" class="nav-link">AVC</a>
                                                </li>
 
                                                <li class="nav-item">
-                                                   <a href="#" class="nav-link">AVC</a>
+                                                   <a href="<?php echo e(route('web.page.fibrilacaoArterial')); ?>" class="nav-link">Fibrilação Arterial</a>
                                                </li>
+
+
 
                                                <li class="nav-item">
                                                    <a href="<?php echo e(route('web.page.morteSubita')); ?>" class="nav-link">Morte Súbita</a>
@@ -150,6 +156,10 @@
                                     <ul class="dropdown-menu">
 
                                         <li class="nav-item">
+                                            <a href="<?php echo e(route('web.page.avcNervoso')); ?>" class="nav-link">AVC</a>
+                                        </li>
+
+                                        <li class="nav-item">
                                             <a href="<?php echo e(route('web.page.parkinson')); ?>" class="nav-link">Parkinson</a>
                                         </li>
 
@@ -157,9 +167,6 @@
                                             <a href="<?php echo e(route('web.page.dorCronica')); ?>" class="nav-link">Dor Crônica</a>
                                         </li>
 
-                                        <li class="nav-item">
-                                            <a href="<?php echo e(route('web.page.avc')); ?>" class="nav-link">AVC</a>
-                                        </li>
 
                                     </ul>
                                 </li>
@@ -179,12 +186,13 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="<?php echo e(route('web.page.fibrilacaoArterial')); ?>" class="nav-link">Fibrilação Arterial</a>
+                                            <a href="<?php echo e(route('web.page.avc')); ?>" class="nav-link">AVC</a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="#" class="nav-link">AVC</a>
+                                            <a href="<?php echo e(route('web.page.fibrilacaoArterial')); ?>" class="nav-link">Fibrilação Arterial</a>
                                         </li>
+
 
                                         <li class="nav-item">
                                             <a href="<?php echo e(route('web.page.morteSubita')); ?>" class="nav-link">Morte Súbita</a>

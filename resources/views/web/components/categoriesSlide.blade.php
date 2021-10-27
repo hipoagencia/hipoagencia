@@ -33,9 +33,9 @@
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
         <h2 class="text-white">Sistema Nervoso</h2>
+        <a href="{{ route('web.page.avcNervoso') }}">AVC</a>
         <a href="{{ route('web.page.parkinson') }}">Parkinson</a>
         <a href="{{ route('web.page.dorCronica') }}">Dor Crônica</a>
-        <a href="{{ route('web.page.avc') }}">AVC</a>
     </div>
 </div>
 
@@ -45,8 +45,8 @@
         <h2 class="text-white">Coração</h2>
         <a href="{{ route('web.page.arritmiaArtrial') }}">Arritmia Artrial</a>
         <a href="{{ route('web.page.arritmiaVentricular') }}">Arritmia Ventricular</a>
+        <a href="{{ route('web.page.avc') }}">AVC</a>
         <a href="{{ route('web.page.fibrilacaoArterial') }}">Fibrilação Arterial</a>
-        <a href="javascript:void(0);">AVC</a>
         <a href="{{ route('web.page.morteSubita') }}">Morte Súbita</a>
     </div>
 </div>
