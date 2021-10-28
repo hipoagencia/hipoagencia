@@ -48,6 +48,10 @@ Route::group(['as' => 'web.'], function () {
     Route::get('politica-de-privacidade', [ContentController::class, 'privacy'])->name('privacy');
     Route::get('termos-de-uso', [ContentController::class, 'terms'])->name('terms');
 
+    Route::get('/test', function () {
+        var_dump(env('NOCAPTCHA_SECRET'), env('NOCAPTCHA_SITEKEY'));
+    })->name('test');
+
 
     /*****************************
     **********   CÉREBRO   *******
