@@ -56,13 +56,13 @@
 <script src="{{ url(asset('web/assets/js/wow.min.js')) }}"></script>
 <script src="{{ url(asset('web/assets/js/main.js')) }}"></script>
 
-<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer ></script>
-
 <script type="text/javascript">
     $("#phone").mask("(00) 00000-0000");
 </script>
 
 <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "sRRfkNnJRA");s.setAttribute("src", "https://accessibilityserver.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://accessibilityserver.org">website accessibility</a></noscript>
+
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
 
 @hasSection('js')
     @yield('js')
