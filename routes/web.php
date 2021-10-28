@@ -39,6 +39,12 @@ Route::group(['as' => 'web.'], function () {
         return view('web.contact');
     })->name('contact');
 
+    Route::post('/sendMail', [ContentController::class, 'sendMail'])->name('sendMail');
+
+    Route::get('/obrigado', function () {
+        return view('web.thanks');
+    })->name('thanks');
+
     Route::get('politica-de-privacidade', [ContentController::class, 'privacy'])->name('privacy');
     Route::get('termos-de-uso', [ContentController::class, 'terms'])->name('terms');
 

@@ -56,7 +56,7 @@
 <script src="<?php echo e(url(asset('web/assets/js/wow.min.js'))); ?>"></script>
 <script src="<?php echo e(url(asset('web/assets/js/main.js'))); ?>"></script>
 
-<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer ></script>
 
 <script type="text/javascript">
     $("#phone").mask("(00) 00000-0000");

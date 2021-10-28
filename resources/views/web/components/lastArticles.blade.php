@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                <a href={{ route('web.blog') }}" class="default-btn float-lg-end letter-3">VEJA MAIS ARTIGOS <i
+                <a href="{{ route('web.blog') }}" class="default-btn float-lg-end letter-3">VEJA MAIS ARTIGOS <i
                         class="bx bxs-chevron-right"></i><span></span></a>
             </div>
         </div>

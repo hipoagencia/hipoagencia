@@ -9,7 +9,9 @@
             <div class="row justify-content-center">
 
 
-                <form>
+                <form action="<?php echo e(route('web.sendMail')); ?>" method="POST">
+                    <?php echo csrf_field(); ?>
+
                     <div class="row col-lg-6 offset-lg-3 text-center">
 
                         <p class="pb-4">O Saber da Saúde é uma iniciativa da Boston ScientificTM com o objetivo de disseminar conhecimento científico sobre saúde para o maior número de brasileiros possível.
@@ -22,18 +24,18 @@
                         </div>
 
                         <div class="form-group mb-3">
-                            <input type="email" name="name" id="name" class="form-control" required
+                            <input type="email" name="email" id="email" class="form-control" required
                                    placeholder="E-mail">
                         </div>
 
                         <div class="form-group mb-3">
-                            <input type="tel" name="phone" id="phone" class="form-control" pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}" required
+                            <input type="tel" name="phone" id="phone" class="form-control"  required
                                    placeholder="Telefone ex.: (xx) xxxxx-xxxx">
                         </div>
 
 
                         <div class="form-group mb-3">
-                            <textarea  type="text" name="name" id="name" class="form-control" cols="40" rows="5" required=""
+                            <textarea  type="text" name="message" id="message" class="form-control" cols="40" rows="5" required=""
                                        placeholder="Digite sua mensagem"></textarea>
                         </div>
 

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Mail\Contact\SendMail;
 use App\Models\Content;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContentController extends Controller
 {
@@ -27,6 +29,24 @@ class ContentController extends Controller
         return view('web.blog',[
             'posts' => $posts
         ]);
+    }
+
+    public function sendMail(Request $request)
+    {
+        $data = [
+            'reply_name' => $request->name,
+            'reply_email' => $request->email,
+            'message' => $request->message,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'subject' => '',
+        ];
+
+        //dd($request->all());
+        //return new SendMail($data);
+
+        Mail::send(new SendMail($data));
+        return redirect()->route('web.thanks');
     }
 
     public function search(Request $request)
