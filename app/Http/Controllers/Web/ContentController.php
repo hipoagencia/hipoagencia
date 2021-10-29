@@ -65,7 +65,6 @@ class ContentController extends Controller
             'subject' => '',
         ];
 
-        dd($request->all());
         //return new SendMail($data);
 
         Mail::send(new SendMail($data));
