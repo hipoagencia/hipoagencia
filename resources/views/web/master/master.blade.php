@@ -62,11 +62,11 @@
 
 <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "sRRfkNnJRA");s.setAttribute("src", "https://accessibilityserver.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://accessibilityserver.org">website accessibility</a></noscript>
 
-<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render={{env('NOCAPTCHA_SITEKEY') }}" async defer>
-
 @hasSection('js')
     @yield('js')
 @endif
+
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
 
 </body>
 </html>

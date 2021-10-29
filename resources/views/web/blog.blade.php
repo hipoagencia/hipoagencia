@@ -11,19 +11,35 @@
                     aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
+
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ url(asset('web/assets/images/boston/article/slider1.jpg')) }}" class="d-block w-100"
-                     alt="">
+                <a href="{{ route('web.category', ['slug' => 'sistema-nervoso','id' => '1']) }}"><img src="{{ url(asset('web/assets/images/banner/nervoso.jpg')) }}" class="d-block w-100"
+                     alt=""></a>
             </div>
             <div class="carousel-item">
-                <img src="{{ url(asset('web/assets/images/boston/article/slider1.jpg')) }}" class="d-block w-100"
-                     alt="">
+                <a href="{{ route('web.category', ['slug' => 'coracao','id' => '2']) }}"><img src="{{ url(asset('web/assets/images/banner/coracao.jpg')) }}" class="d-block w-100"
+                     alt=""></a>
             </div>
             <div class="carousel-item">
-                <img src="{{ url(asset('web/assets/images/boston/article/slider1.jpg')) }}" class="d-block w-100"
-                     alt="">
+                <a href="{{ route('web.category', ['slug' => 'sistema-urinario','id' => '3']) }}"><img src="{{ url(asset('web/assets/images/banner/urinario.jpg')) }}" class="d-block w-100"
+                     alt=""></a>
+            </div>
+
+            <div class="carousel-item">
+                <a href="{{ route('web.category', ['slug' => 'canceres-e-tumores','id' => '4']) }}"><img src="{{ url(asset('web/assets/images/banner/tumor.jpg')) }}" class="d-block w-100"
+                     alt=""></a>
+            </div>
+
+            <div class="carousel-item">
+                <a href="{{ route('web.category', ['slug' => 'saude-sexual','id' => '5']) }}"><img src="{{ url(asset('web/assets/images/banner/sexual.jpg')) }}" class="d-block w-100"
+                     alt=""></a>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
