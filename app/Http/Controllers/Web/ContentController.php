@@ -68,7 +68,7 @@ class ContentController extends Controller
         //return new SendMail($data);
 
         Mail::send(new SendMail($data));
-        return redirect()->route('web.thanks');
+        return redirect()->route('web.thanksNews');
     }
 
     public function search(Request $request)

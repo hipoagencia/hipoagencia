@@ -47,6 +47,10 @@ Route::group(['as' => 'web.'], function () {
         return view('web.thanks');
     })->name('thanks');
 
+    Route::get('/obrigado-newsletter', function () {
+        return view('web.thanksNews');
+    })->name('thanksNews');
+
     Route::get('politica-de-privacidade', [ContentController::class, 'privacy'])->name('privacy');
     Route::get('termos-de-uso', [ContentController::class, 'terms'])->name('terms');
 

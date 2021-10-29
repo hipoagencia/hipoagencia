@@ -22,7 +22,7 @@
             <form action="{{route('web.sendNewsletter')}}" method="POST">
                 @csrf
 
-                <input type="email" name="email" placeholder="E-mail" class="form-control" style="height:54px;" required >
+                <input type="email" name="email" placeholder="E-mail" class="form-control" value="{{old('email')}}" style="height:54px;" required >
 
                 {!! NoCaptcha::renderJs() !!} {!! NoCaptcha::display() !!}
 
