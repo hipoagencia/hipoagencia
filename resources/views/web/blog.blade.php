@@ -3,7 +3,8 @@
 @section('content')
 
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="{{ (request()->route()->getName() == 'web.search' ? 'display:none' : '') }}">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+         style="{{ (request()->route()->getName() == 'web.search' ? 'display:none' : '') }}">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -17,29 +18,41 @@
 
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
                     aria-label="Slide 5"></button>
+
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href="{{ route('web.category', ['slug' => 'sistema-nervoso','id' => '1']) }}"><img src="{{ url(asset('web/assets/images/banner/nervoso.jpg')) }}" class="d-block w-100"
-                     alt=""></a>
+                <a href="https://saberdasaude.com.br/blog/article/festival-miolo-mole-doutores-da-alegria"><img src="{{ url(asset('web/assets/images/banner/miolo.jpg')) }}" class="d-block w-100"
+                                 alt=""></a>
             </div>
             <div class="carousel-item">
-                <a href="{{ route('web.category', ['slug' => 'coracao','id' => '2']) }}"><img src="{{ url(asset('web/assets/images/banner/coracao.jpg')) }}" class="d-block w-100"
-                     alt=""></a>
+                <a href="{{ route('web.category', ['slug' => 'sistema-nervoso','id' => '1']) }}"><img
+                        src="{{ url(asset('web/assets/images/banner/nervoso.jpg')) }}" class="d-block w-100"
+                        alt=""></a>
             </div>
             <div class="carousel-item">
-                <a href="{{ route('web.category', ['slug' => 'sistema-urinario','id' => '3']) }}"><img src="{{ url(asset('web/assets/images/banner/urinario.jpg')) }}" class="d-block w-100"
-                     alt=""></a>
+                <a href="{{ route('web.category', ['slug' => 'coracao','id' => '2']) }}"><img
+                        src="{{ url(asset('web/assets/images/banner/coracao.jpg')) }}" class="d-block w-100"
+                        alt=""></a>
+            </div>
+            <div class="carousel-item">
+                <a href="{{ route('web.category', ['slug' => 'sistema-urinario','id' => '3']) }}"><img
+                        src="{{ url(asset('web/assets/images/banner/urinario.jpg')) }}" class="d-block w-100"
+                        alt=""></a>
             </div>
 
             <div class="carousel-item">
-                <a href="{{ route('web.category', ['slug' => 'canceres-e-tumores','id' => '4']) }}"><img src="{{ url(asset('web/assets/images/banner/tumor.jpg')) }}" class="d-block w-100"
-                     alt=""></a>
+                <a href="{{ route('web.category', ['slug' => 'canceres-e-tumores','id' => '4']) }}"><img
+                        src="{{ url(asset('web/assets/images/banner/tumor.jpg')) }}" class="d-block w-100"
+                        alt=""></a>
             </div>
 
             <div class="carousel-item">
-                <a href="{{ route('web.category', ['slug' => 'saude-sexual','id' => '5']) }}"><img src="{{ url(asset('web/assets/images/banner/sexual.jpg')) }}" class="d-block w-100"
-                     alt=""></a>
+                <a href="{{ route('web.category', ['slug' => 'saude-sexual','id' => '5']) }}"><img
+                        src="{{ url(asset('web/assets/images/banner/sexual.jpg')) }}" class="d-block w-100"
+                        alt=""></a>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -67,24 +80,34 @@
             <div class="row justify-content-center specialities2-links">
 
 
-                <div class="col text-center bg-spec-gray2 blue-hover pointer {{ (request()->route()->slug == 'sistema-nervoso' ? 'blue-h' : '') }}">
-                    <a href="{{ route('web.category', ['slug' => 'sistema-nervoso','id' => '1']) }}"><img src="{{ url(asset('web/assets/images/boston/ico/1.png')) }}"/></a>
+                <div
+                    class="col text-center bg-spec-gray2 blue-hover pointer {{ (request()->route()->slug == 'sistema-nervoso' ? 'blue-h' : '') }}">
+                    <a href="{{ route('web.category', ['slug' => 'sistema-nervoso','id' => '1']) }}"><img
+                            src="{{ url(asset('web/assets/images/boston/ico/1.png')) }}"/></a>
                     <h5>Sistema Nervoso</h5>
                 </div>
-                <div class="col text-center bg-spec-gray2 red-hover pointer {{ (request()->route()->slug == 'coracao' ? 'red-h' : '') }}">
-                    <a href="{{ route('web.category', ['slug' => 'coracao','id' => '2']) }}"><img src="{{ url(asset('web/assets/images/boston/ico/3.png')) }}"/></a>
+                <div
+                    class="col text-center bg-spec-gray2 red-hover pointer {{ (request()->route()->slug == 'coracao' ? 'red-h' : '') }}">
+                    <a href="{{ route('web.category', ['slug' => 'coracao','id' => '2']) }}"><img
+                            src="{{ url(asset('web/assets/images/boston/ico/3.png')) }}"/></a>
                     <h5>Coração<br class="d-lg-none"/><br class="d-lg-none"/></h5>
                 </div>
-                <div class="col text-center bg-spec-gray2 green-hover {{ (request()->route()->slug == 'sistema-urinario' ? 'green-h' : '') }}">
-                    <a href="{{ route('web.category', ['slug' => 'sistema-urinario','id' => '3']) }}"><img src="{{ url(asset('web/assets/images/boston/ico/2.png')) }}"/></a>
+                <div
+                    class="col text-center bg-spec-gray2 green-hover {{ (request()->route()->slug == 'sistema-urinario' ? 'green-h' : '') }}">
+                    <a href="{{ route('web.category', ['slug' => 'sistema-urinario','id' => '3']) }}"><img
+                            src="{{ url(asset('web/assets/images/boston/ico/2.png')) }}"/></a>
                     <h5>Sistema Urinário</h5>
                 </div>
-                <div class="col text-center bg-spec-gray2 orange-hover {{ (request()->route()->slug == 'canceres-e-tumores' ? 'orange-h' : '') }}">
-                    <a href="{{ route('web.category', ['slug' => 'canceres-e-tumores','id' => '4']) }}"><img src="{{ url(asset('web/assets/images/boston/ico/4.png')) }}"/></a>
+                <div
+                    class="col text-center bg-spec-gray2 orange-hover {{ (request()->route()->slug == 'canceres-e-tumores' ? 'orange-h' : '') }}">
+                    <a href="{{ route('web.category', ['slug' => 'canceres-e-tumores','id' => '4']) }}"><img
+                            src="{{ url(asset('web/assets/images/boston/ico/4.png')) }}"/></a>
                     <h5>Cânceres e Tumores</h5>
                 </div>
-                <div class="col text-center bg-spec-gray2 purple-hover {{ (request()->route()->slug == 'saude-sexual' ? 'purple-h' : '') }}">
-                    <a href="{{ route('web.category', ['slug' => 'saude-sexual','id' => '5']) }}"><img src="{{ url(asset('web/assets/images/boston/ico/5.png')) }}"/></a>
+                <div
+                    class="col text-center bg-spec-gray2 purple-hover {{ (request()->route()->slug == 'saude-sexual' ? 'purple-h' : '') }}">
+                    <a href="{{ route('web.category', ['slug' => 'saude-sexual','id' => '5']) }}"><img
+                            src="{{ url(asset('web/assets/images/boston/ico/5.png')) }}"/></a>
                     <h5>Saúde Sexual</h5>
                 </div>
 

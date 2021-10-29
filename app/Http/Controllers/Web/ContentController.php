@@ -49,6 +49,29 @@ class ContentController extends Controller
         return redirect()->route('web.thanks');
     }
 
+    public function sendNewsletter(Request $request)
+    {
+        $request->validate([
+            'g-recaptcha-response' => 'required|captcha',
+//            'g-recaptcha-response' => (env('NOCAPTCHA_SECRET') != '' ? 'required|captcha' : '')
+        ]);
+
+        $data = [
+            'reply_name' => '',
+            'reply_email' => $request->email,
+            'message' => '',
+            'phone' => '',
+            'email' => '',
+            'subject' => '',
+        ];
+
+        dd($request->all());
+        //return new SendMail($data);
+
+        Mail::send(new SendMail($data));
+        return redirect()->route('web.thanks');
+    }
+
     public function search(Request $request)
     {
         $search = $request->input('search');

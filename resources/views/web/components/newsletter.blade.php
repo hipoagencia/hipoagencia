@@ -5,10 +5,24 @@
         </div>
         <div class="row col-lg-4 offset-lg-4 justify-content-center text-center">
 
-            <form action="" method="POST">
+            @if($errors->all())
+                @foreach($errors->all() as $error)
+                    @component('admin.components.message',['type' => 'danger'])
+                        {{ $error }}
+                    @endcomponent
+                @endforeach
+            @endif
+
+            @if(session()->exists('message'))
+                @component('admin.components.message',['type' => session()->get('type')])
+                    {{ session()->get('message') }}
+                @endcomponent
+            @endif
+
+            <form action="{{route('web.sendNewsletter')}}" method="POST">
                 @csrf
 
-                <input type="email" name="email" placeholder="E-mail" class="form-control" style="height:54px;" required>
+                <input type="email" name="email" placeholder="E-mail" class="form-control" style="height:54px;" required >
 
                 {!! NoCaptcha::renderJs() !!} {!! NoCaptcha::display() !!}
 

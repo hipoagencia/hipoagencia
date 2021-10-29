@@ -41,6 +41,8 @@ Route::group(['as' => 'web.'], function () {
 
     Route::post('/sendMail', [ContentController::class, 'sendMail'])->name('sendMail');
 
+    Route::post('/sendNewsletter', [ContentController::class, 'sendNewsletter'])->name('sendNewsletter');
+
     Route::get('/obrigado', function () {
         return view('web.thanks');
     })->name('thanks');
