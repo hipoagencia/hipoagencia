@@ -5,7 +5,7 @@
         </h5>
     </div>
 
-    <img src="{{ url($post->cover) }}" style="height:350px;" alt="{{ $post->title }}"/>
+    <img src="{{ url($post->cover) }}" style="height:280px;" alt="{{ $post->title }}"/>
     <h3 class="mt-3" style="color: {{ $post->princ->color }};">{{ $post->title }}</h3>
 
     <p>{!! $post->preview() !!}</p>
