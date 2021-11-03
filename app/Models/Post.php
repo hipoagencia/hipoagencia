@@ -57,7 +57,7 @@ class Post extends Model implements Searchable
 
     public function preview()
     {
-        return Str::words(strip_tags($this->description), 15, '...');
+        return Str::words(strip_tags($this->description), 12, '...');
     }
 
 //    function limitString($string, $limit = 100) {
