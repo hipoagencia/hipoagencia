@@ -6,7 +6,7 @@
     <div class="pt-70 pb-70 blog-line-top">
         <div class="container">
             <div class="section-title">
-                <h2>Obrigado pelo contato!<br>Em breve iremos contatá-lo.</h2>
+                <h2>Mensagem enviada com sucesso!<br>Obrigado pelo contato.</h2>
             </div>
         </div>
     </div>

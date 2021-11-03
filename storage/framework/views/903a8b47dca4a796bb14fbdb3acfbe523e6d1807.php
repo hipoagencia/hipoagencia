@@ -363,7 +363,34 @@
     </div>
 
 
+    <div class="pt-70 pb-70 about-what-find" id="3">
+        <div class="container pt-40">
+            <div class="row">
 
+                <div class="col col-lg-6 text-center pb-40">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="80%" height="300" src="https://www.youtube.com/embed/bt-AjcQ6qZY?rel=0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col col-lg-6 text-center pb-40">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="80%" height="300"  src="https://www.youtube.com/embed/fTLnBYBO3E0?rel=0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col col-lg-6 text-center pb-40">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="80%" height="300"  src="https://www.youtube.com/embed/Kuj05XmmS0E?rel=0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col col-lg-6 text-center pb-40">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="80%" height="300"  src="https://www.youtube.com/embed/szignqehP6A?rel=0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
     <?php echo $__env->make('web.components.newsletter', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

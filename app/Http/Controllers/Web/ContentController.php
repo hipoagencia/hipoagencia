@@ -52,8 +52,8 @@ class ContentController extends Controller
     public function sendNewsletter(Request $request)
     {
         $request->validate([
-            'g-recaptcha-response' => 'required|captcha',
-//            'g-recaptcha-response' => (env('NOCAPTCHA_SECRET') != '' ? 'required|captcha' : '')
+            //'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => (env('NOCAPTCHA_SECRET') != '' ? 'required|captcha' : '')
         ]);
 
         $data = [

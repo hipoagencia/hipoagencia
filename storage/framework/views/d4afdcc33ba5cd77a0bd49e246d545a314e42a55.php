@@ -7,7 +7,7 @@
             </div>
 
             <div class="col-lg-6 pt-4">
-                <h4>Siga o Saber da Saúde nas redes sociais <i class="bx bxl-facebook" style=" display:inline-block;vertical-align: bottom"></i> <i class="bx bxl-instagram"  style=" display:inline-block;vertical-align: bottom"></i></h4>
+                <h4>Siga o Saber da Saúde nas redes sociais <a href="https://www.facebook.com/saberdasaude" target="_blank" style="color:#023970;"><i class="bx bxl-facebook" style=" display:inline-block;vertical-align: bottom"></i></a> <a href="https://www.instagram.com/saberdasaude/" target="_blank" style="color:#023970;"><i class="bx bxl-instagram"  style=" display:inline-block;vertical-align: bottom"></i></a></h4>
             </div>
 
             <div class="col-lg-3">
@@ -27,15 +27,15 @@
                         <div class="col-lg-8 offset-lg-2 text-center footer-map">
 
                             <a href="<?php echo e(route('web.home')); ?>">Home</a>
-                            <a href="#">Especialidades</a>
+
                             <a href="<?php echo e(route('web.about')); ?>">Sobre</a>
                             <a href="<?php echo e(route('web.blog')); ?>">Blog</a>
                             <a href="<?php echo e(route('web.contact')); ?>">Contato</a>
-                            <a href="#">Coração</a>
-                            <a href="#">Sistema Nervoso</a><br />
-                            <a href="#">Sistema Urinário</a>
-                            <a href="#">Saúde Sexual</a>
-                            <a href="#">Câncer e Tumores</a>
+
+
+
+
+
                             <a href="<?php echo e(route('web.privacy')); ?>">Política de Privacidade</a>
                             <a href="<?php echo e(route('web.terms')); ?>">Termos de Uso</a>
 

@@ -6,7 +6,7 @@
         </h5>
     </div>
 
-    <img src="<?php echo e(url($post->cover)); ?>" style="height:350px;" alt="<?php echo e($post->title); ?>"/>
+    <img src="<?php echo e(url($post->cover)); ?>" style="height:280px;" alt="<?php echo e($post->title); ?>"/>
     <h3 class="mt-3" style="color: <?php echo e($post->princ->color); ?>;"><?php echo e($post->title); ?></h3>
 
     <p><?php echo $post->preview(); ?></p>
