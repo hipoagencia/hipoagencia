@@ -43,7 +43,7 @@
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
         <h2 class="text-white">Coração</h2>
-        <a href="{{ route('web.page.arritmiaArtrial') }}">Arritmia Artrial</a>
+        <a href="{{ route('web.page.arritmiaArtrial') }}">Arritmia Atrial</a>
         <a href="{{ route('web.page.arritmiaVentricular') }}">Arritmia Ventricular</a>
         <a href="{{ route('web.page.avc') }}">AVC</a>
         <a href="{{ route('web.page.fibrilacaoArterial') }}">Fibrilação Arterial</a>

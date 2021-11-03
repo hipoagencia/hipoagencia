@@ -41,7 +41,7 @@
                                        <div class="col">
                                            <ul>
                                                <li class="nav-item">
-                                                   <h5 style="font-size:14px;margin-bottom:20px;">Sistema Nervoso</h5>
+                                                   <h5 style="font-size:14px;margin-bottom:20px;" class="co-blue">Sistema Nervoso</h5>
                                                </li>
 
                                                <li class="nav-item">
@@ -63,13 +63,13 @@
                                        <div class="col">
                                            <ul>
                                                <li class="nav-item">
-                                                   <h5 style="font-size:14px;margin-bottom:20px;">Coração</h5>
+                                                   <h5 style="font-size:14px;margin-bottom:20px;" class="co-red">Coração</h5>
                                                </li>
 
 
 
                                                <li class="nav-item">
-                                                   <a href="<?php echo e(route('web.page.arritmiaArtrial')); ?>" class="nav-link">Arritmia Artrial</a>
+                                                   <a href="<?php echo e(route('web.page.arritmiaArtrial')); ?>" class="nav-link">Arritmia Atrial</a>
                                                </li>
 
                                                <li class="nav-item">
@@ -95,7 +95,7 @@
                                        <div class="col">
                                            <ul>
                                                <li class="nav-item">
-                                                   <h5 style="font-size:14px;margin-bottom:20px;">Sistema Urinário</h5>
+                                                   <h5 style="font-size:14px;margin-bottom:20px;" class="co-green">Sistema Urinário</h5>
                                                </li>
 
                                                <li class="nav-item">
@@ -108,7 +108,7 @@
                                        <div class="col">
                                            <ul>
                                                <li class="nav-item">
-                                                   <h5 style="font-size:14px;margin-bottom:20px;">Cânceres e Tumores</h5>
+                                                   <h5 style="font-size:14px;margin-bottom:20px;" class="co-orange">Cânceres e Tumores</h5>
                                                </li>
 
                                                <li class="nav-item">
@@ -121,7 +121,7 @@
                                        <div class="col">
                                            <ul>
                                                <li class="nav-item">
-                                                   <h5 style="font-size:14px;margin-bottom:20px;">Saúde Sexual</h5>
+                                                   <h5 style="font-size:14px;margin-bottom:20px;" class="co-purple">Saúde Sexual</h5>
                                                </li>
 
                                                <li class="nav-item">

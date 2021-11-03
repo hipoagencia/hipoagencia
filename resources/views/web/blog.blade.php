@@ -110,6 +110,12 @@
                             src="{{ url(asset('web/assets/images/boston/ico/5.png')) }}"/></a>
                     <h5>Saúde Sexual</h5>
                 </div>
+                <div
+                    class="col text-center bg-spec-gray2 gray-hover2 {{ (request()->route()->slug == 'novidades' ? 'gray-h' : '') }}">
+                    <a href="{{ route('web.category', ['slug' => 'novidades','id' => '6']) }}"><img
+                            src="{{ url(asset('web/assets/images/boston/ico/6.png')) }}"/></a>
+                    <h5>Saúde Sexual</h5>
+                </div>
 
 
             </div>
