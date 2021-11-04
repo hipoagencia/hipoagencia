@@ -13,11 +13,11 @@ use App\Http\Controllers\Web\ContentController;
 
 Route::group(['as' => 'web.'], function () {
 
-    Route::get('/', function () {
-        return view('web.construction');
-    })->name('construction');
+//    Route::get('/', function () {
+//        return view('web.construction');
+//    })->name('construction');
 
-    Route::get('/inicio', [ContentController::class, 'home'])->name('home');
+    Route::get('/', [ContentController::class, 'home'])->name('home');
 
     Route::get('/sobre', function () {
         return view('web.about');
