@@ -4,7 +4,7 @@
 
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
-         style="{{ (request()->route()->getName() == 'web.search' ? 'display:none' : '') }}">
+         style="{{ (request()->route()->getName() == 'web.search' ? 'display:none' : '') }} {{ (request()->route()->getName() == 'web.category' ? 'display:none' : '') }}">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -67,7 +67,7 @@
         </button>
     </div>
 
-    <div class="pt-70 pb-70" style="{{ (request()->route()->getName() == 'web.search' ? 'display:none' : '') }}">
+    <div class="pt-70 pb-70 {{ (request()->route()->getName() == 'web.category' ? 'blog-line-top' : '') }}" style="{{ (request()->route()->getName() == 'web.search' ? 'display:none' : '') }}">
         <div class="container">
             <div class="row pb-70">
                 <div class="text-left">
@@ -136,8 +136,9 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <a href="{{ route('web.home') }}" class="default-btn float-lg-end letter-3">VEJA MAIS ARTIGOS <i
-                            class="bx bxs-chevron-right"></i><span></span></a>
+                    <br>
+{{--                    <a href="{{ route('web.home') }}" class="default-btn float-lg-end letter-3">VEJA MAIS ARTIGOS <i--}}
+{{--                            class="bx bxs-chevron-right"></i><span></span></a>--}}
                 </div>
             </div>
             <div class="row justify-content-center">
