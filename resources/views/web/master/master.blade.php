@@ -24,6 +24,8 @@
 
     <link rel="icon" type="image/png" href="{{ url(asset(env('INFO_FAVICON'))) }}" />
 
+    <meta name="facebook-domain-verification" content="6agjk75k4x8gwuftyfsutznsyp897h" />
+
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -41,6 +43,16 @@
                    src="https://www.facebook.com/tr?id=259580705912598&ev=PageView&noscript=1"
         /></noscript>
     <!-- End Facebook Pixel Code -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Y95V4PG3M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5Y95V4PG3M');
+    </script>
 
     @hasSection('css')
         @yield('css')
