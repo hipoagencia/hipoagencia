@@ -8,10 +8,13 @@
                     <div class="col col-12 col-md-6 order-lg-last">
 
                         <div class="main-banner-content">
-                            <h1>Novembro<br/>Azul</h1>
-                            <p class="text-white">Dicas para cuidar da saúde masculina</p><br>
-                            <a href="https://saberdasaude.com.br/blog/article/novembro-azul" class="default-btn letter-3 text-uppercase" style="background-color:#023970;" data-uw-styling-context="true">Clique e informe-se<span></span></a>
-                        </div>
+                            <h1>Quem<br>se informa,<br/><span class="text-white">se cuida.</span></h1>
+                            <p class="text-white w-75">Tudo o que você precisa saber
+                                sobre as principais condições
+                                clínicas, direto de médicos
+                                e especialistas. Isso sim é saúde.</p><br>
+
+</div>
 
                     </div>
                     <div class="col col-12 col-md-6 order-lg-first">
