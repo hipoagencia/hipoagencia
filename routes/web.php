@@ -19,6 +19,8 @@ Route::group(['as' => 'web.'], function () {
 
     Route::get('/', [ContentController::class, 'home'])->name('home');
 
+    Route::get('/inicio', [ContentController::class, 'home'])->name('home');
+
     Route::get('/sobre', function () {
         return view('web.about');
     })->name('about');
