@@ -6159,18 +6159,26 @@ img {
 
 .co-red{color:#cb2229 !important;}
 .co-bg-red{background-color:#cb2229 !important;}
+.co-bg-red-bullet{list-style: none;}
+.co-bg-red-bullet li::before {color:#cb2229;content: "\2022";margin-right:10px; }
 
 .co-blue{color:#0e778a !important;}
 .co-bg-blue{background-color:#0e778a !important;}
+.co-bg-co-bg-blue-bullet{list-style: none;margin-left: -1em;}
+.co-bg-blue-bullet li::before {color:#0e778a;content: "\2022";margin-right:10px;  }
 
 .co-purple{color:#8f6cb3 !important;}
 .co-bg-purple{background-color:#8f6cb3 !important;}
+.co-bg-purple-bullet li::before {color:#8f6cb3;content: "\2022";margin-right:10px;  }
 
 .co-green{color:#1bb166 !important;}
 .co-bg-green{background-color:#1bb166 !important;}
+.co-bg-green-bullet li::before {color:#1bb166;content: "\2022";margin-right:10px;  }
 
 .co-orange{color:#ff7200 !important;}
 .co-bg-orange{background-color:#ff7200 !important;}
+
+.co-bg-orange-bullet li::before {color:#ff7200;content: "\2022";margin-right:10px;  }
 
 .list-style li{
     color: #6b6b84;

@@ -98,7 +98,7 @@ Route::group(['as' => 'web.'], function () {
         return view('web.page.coracao.morteSubita');
     })->name('page.morteSubita');
 
-    Route::get('/especialidade/coracao/fibrilacao-arterial', function () {
+    Route::get('/especialidade/coracao/fibrilacao-atrial', function () {
         return view('web.page.coracao.fibrilacaoArterial');
     })->name('page.fibrilacaoArterial');
 

@@ -81,7 +81,7 @@
                                                </li>
 
                                                <li class="nav-item">
-                                                   <a href="{{ route('web.page.fibrilacaoArterial') }}" class="nav-link">Fibrilação Arterial</a>
+                                                   <a href="{{ route('web.page.fibrilacaoArterial') }}" class="nav-link">Fibrilação Atrial</a>
                                                </li>
 
 

@@ -94,13 +94,21 @@
                     cardíaco em face de um ataque cardíaco, cirurgia cardíaca ou outras condições. As taquicardias
                     supraventriculares incluem:</p>
 
-                <ul class="list-style text-left">
-                    <li>Fibrilação atrial;</li>
-                    <li>Flutter atrial;</li>
-                    <li>Taquicardia atrioventricular por reentrada nodal (TRN);</li>
-                    <li>Síndrome de Wolff-Parkinson-White (WPW).</li>
-                </ul>
+                <div class="row w-75 m-auto">
+                    <div class="col-6">
+                        <ul class="list-style text-left">
+                            <li>Fibrilação atrial;</li>
+                            <li>Flutter atrial;</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-style text-left">
+                            <li>Taquicardia atrioventricular por reentrada nodal (TRN);</li>
+                            <li>Síndrome de Wolff-Parkinson-White (WPW).</li>
+                        </ul>
+                    </div>
 
+                </div>
                 <iframe class="mt-4" width="560" height="315" src="https://www.youtube.com/embed/WpUQTcTS5DQ"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -221,7 +229,7 @@
                     <p>Pessoas sem doença cardíaca podem desenvolver uma arritmia por causas desconhecidas, mas os
                         fatores de risco podem incluir:</p>
 
-                    <ul class="list-style text-left">
+                    <ul class="list-style text-left co-bg-red-bullet">
                         <li>Estresse emocional</li>
                         <li>Consumo de álcool, cafeína, remédios para regime e tabaco</li>
                         <li>Alguns medicamentos de prescrição, tais como certos medicamentos para gripe, tosse e
@@ -243,7 +251,7 @@
         <div class="container pt-70  pb-70">
             <div class="row justify-content-center text-center section-title">
 
-                <h3 class="co-white">Tratamentos</h3>
+                <h3>Tratamentos</h3>
 
                 <p class="co-white">O tratamento para arritmias atriais depende muito de você e de seus sintomas.
                     Geralmente, o médico se concentra em tratamentos que ajudam a controlar a frequência cardíaca e a
@@ -251,41 +259,53 @@
                 <p class="co-white">Vários fatores são considerados na determinação do método de tratamento
                     apropriado:</p>
 
-                <div class="col-5">
-                    <ul class="list-style text-left">
-                        <li class="text-white">Idade;</li>
-                        <li class="text-white">Saúde geral;</li>
-                        <li class="text-white">Histórico médico pessoal e familiar;</li>
-                        <li class="text-white">Medicamentos utilizados para outras condições;</li>
-                        <li class="text-white">Doenças ou condições adjacentes que possam contribuir com a arritmia;
-                        </li>
-                        <li class="text-white">A natureza e a severidade da arritmia e seus sintomas.</li>
-                    </ul>
+                <div class="col-5 text-center text-uppercase text-white mb-3 mt-2">
+                    <b>
+                        Idade;<br>
+                        Saúde geral;<br>
+                        Histórico médico pessoal e familiar;<br>
+                        Medicamentos utilizados para outras condições;<br>
+                        Doenças ou condições adjacentes que possam contribuir com a arritmia;<br>
+                        A natureza e a severidade da arritmia e seus sintomas.<br>
+                    </b>
+
                 </div>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
 
                 <p class="co-white">As opções possíveis de tratamento incluem um tratamento ou uma combinação de
                     tratamentos.</p>
 
-                <b class="co-white">Mudanças no Estilo de Vida</b>
+                <h3>Mudanças no Estilo de Vida</h3>
                 <p class="co-white">Os tratamentos podem ajudar a melhorar ou a reduzir a ocorrência de uma arritmia.
                     Eles podem incluir uma dieta alimentar mais saudável, limitar ou eliminar a quantidade de cafeína
                     ingerida, exercícios regulares e parar de fumar.</p>
 
-                <b class="co-white">Medicamentos</b>
+                <h3>Medicamentos</h3>
                 <p class="co-white">Afinadores do sangue (anticoagulantes), tais como a varfarina, são uma prescrição
                     comum para evitar que o sangue se junte e forme um coágulo.</p>
                 <p class="co-white">Dois outros tipos de medicamento são usados para tratar arritmias: antiarrítmicos,
                     que controlam o ritmo do coração, e beta-bloqueadores, que controlam a frequência na qual o coração
                     bate. Eles podem ser utilizados sozinhos ou juntamente com outros tratamentos.</p>
 
-                <b class="co-white">Cardioversão</b>
+                <h3>Cardioversão</h3>
                 <p class="co-white">A cardioversão utiliza energia elétrica para levar uma arritmia de volta a um ritmo
                     normal. Ao administrar um choque elétrico controlado através do peito para o coração, os
                     cardioversores levam o coração de volta a seu ritmo normal. Isso é feito em um hospital com o
                     paciente sob forte sedação. Durante emergências, o choque pode ser administrado através de um
                     desfibrilador externo automático, ou DEA.</p>
 
-                <b class="co-white">Ablação Cardíaca</b>
+                <h3>Ablação Cardíaca</h3>
                 <p class="co-white">Para muitos pacientes com arritmias atriais, os medicamentos não conseguem controlar
                     a arritmia com eficiência ou podem levar a efeitos colaterais sérios. Para esses indivíduos, um
                     procedimento denominado ablação cardíaca pode ser considerado. Na ablação cardíaca, um cateter é
