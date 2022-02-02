@@ -183,18 +183,25 @@
 
                 <p>Vários fatores de risco podem contribuir para a disfunção erétil; por exemplo:</p>
                <div class="row">
-                   <div class="col"><br></div>
-                   <ul class="col list-style text-left mt-3">
-                       <li>Doenças, especialmente diabetes ou doenças cardíacas</li>
-                       <li>O consumo de tabaco, que limita o fluxo sanguíneo para as veias e artérias, pode levar a doenças crônicas que levam à disfunção erétil.</li>
-                       <li>Estar acima do peso</li>
-                       <li>Certos tratamentos médicos, como cirurgia de próstata ou radioterapia para câncer</li>
-                       <li>Lesões, especialmente se danificarem os nervos ou artérias que controlam as ereções</li>
-                       <li>Medicamentos, como antidepressivos, anti-histamínicos e medicamentos para tratar pressão alta, dor ou doenças da próstata</li>
-                       <li>Transtornos psicológicos, como estresse, ansiedade ou depressão</li>
-                       <li>Uso de álcool e drogas</li>
-                   </ul>
-                   <div class="col"><br></div>
+
+                   <div class="col-6">
+                       <ul class="col list-style text-left mt-3">
+                           <li>Doenças, especialmente diabetes ou doenças cardíacas</li>
+                           <li>O consumo de tabaco, que limita o fluxo sanguíneo para as veias e artérias, pode levar a doenças crônicas que levam à disfunção erétil.</li>
+                           <li>Estar acima do peso</li>
+                           <li>Certos tratamentos médicos, como cirurgia de próstata ou radioterapia para câncer</li>
+
+                       </ul>
+                   </div>
+                   <div class="col-6">
+                       <ul class="col list-style text-left mt-3">
+                           <li>Lesões, especialmente se danificarem os nervos ou artérias que controlam as ereções</li>
+                           <li>Medicamentos, como antidepressivos, anti-histamínicos e medicamentos para tratar pressão alta, dor ou doenças da próstata</li>
+                           <li>Transtornos psicológicos, como estresse, ansiedade ou depressão</li>
+                           <li>Uso de álcool e drogas</li>
+                       </ul>
+                   </div>
+
                </div>
 
             </div>
@@ -206,28 +213,25 @@
             <div class="row justify-content-center text-center">
 
                 <div class="col-8">
-                    <h3 class="co-white">Tratamentos</h3>
+                    <h3>Tratamentos</h3>
                     <p class="co-white">
                         Dependendo da causa e da gravidade da disfunção erétil e das condições de saúde pré-existentes, você pode ter várias opções de tratamento. O seu médico pode explicar os riscos e benefícios de cada tratamento e levará em consideração as suas preferências. As preferências de sua/seu parceira(o) também podem influenciar seu tratamento.
                     </p>
 
 
-                    <h5 class="text-white">Medicamentos orais</h5>
+                    <h5 class="text-white mt-4">Medicamentos orais</h5>
 
-                    <ul class="col list-style mt-3">
-                        <li class="text-white">Sildenafila</li>
-                        <li class="text-white">Tadalafila</li>
-                        <li class="text-white">Vardenafila</li>
-                        <li class="text-white">Avanafila</li>
-                    </ul>
+
+                    <p class="text-white mb-4">Sildenafila • Tadalafila • Vardenafila • Avanafila</p>
+
 
 
                     <p class="co-white">
-                        <b>Dispositivo de ereção a vácuo:</b> este é um tubo oco com uma bomba manual ou operada por bateria. O tubo é colocado sobre o pênis e, em seguida, a bomba é utilizada para aspirar o ar de dentro para fora do tubo. Isso cria um vácuo que leva o sangue ao pênis. Depois de ter uma ereção, um anel de tensão é colocado ao redor da base do pênis para reter o sangue e mantê-lo firme. O dispositivo a vácuo é então removido. A ereção geralmente dura o suficiente para que um casal tenha relações sexuais.
+                        <b style="color:#023970;">Dispositivo de ereção a vácuo:</b> este é um tubo oco com uma bomba manual ou operada por bateria. O tubo é colocado sobre o pênis e, em seguida, a bomba é utilizada para aspirar o ar de dentro para fora do tubo. Isso cria um vácuo que leva o sangue ao pênis. Depois de ter uma ereção, um anel de tensão é colocado ao redor da base do pênis para reter o sangue e mantê-lo firme. O dispositivo a vácuo é então removido. A ereção geralmente dura o suficiente para que um casal tenha relações sexuais.
                     </p>
 
                     <p class="co-white">
-                        <b>Implantes penianos:</b> este tratamento consiste na colocação cirúrgica de dispositivos em ambos os lados do pênis. Esses implantes consistem em dois cilindros infláveis ou maleáveis. Os dispositivos infláveis permitem controlar o tempo e a duração de uma ereção. As barras maleáveis mantêm o pênis firme, mas flexível. Os implantes apresentam um alto grau de satisfação entre os homens que tentaram terapias mais moderadas e falharam. Como qualquer cirurgia, apresenta risco de complicações, como infecções.
+                        <b style="color:#023970;">Implantes penianos:</b> este tratamento consiste na colocação cirúrgica de dispositivos em ambos os lados do pênis. Esses implantes consistem em dois cilindros infláveis ou maleáveis. Os dispositivos infláveis permitem controlar o tempo e a duração de uma ereção. As barras maleáveis mantêm o pênis firme, mas flexível. Os implantes apresentam um alto grau de satisfação entre os homens que tentaram terapias mais moderadas e falharam. Como qualquer cirurgia, apresenta risco de complicações, como infecções.
                     </p>
 
                     <p class="co-white">

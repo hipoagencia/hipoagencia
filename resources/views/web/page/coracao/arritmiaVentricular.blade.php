@@ -185,7 +185,7 @@
 
                 <p>Nos casos de fibrilação ventricular (FV), os pacientes normalmente perdem a consciência muito rapidamente.</p>
 
-                <p>Se um ritmo ventricular rápido não for tratado, ele pode mudar para fibrilação ventricular, podendo levar a uma parada cardíaca súbita e, por fim, a morte cardíaca súbita. A parada cardíaca súbita afeta 350.000 pessoas a cada ano nos Estados Unidos (o que significa que a cada 1,5 minutos alguém morre de parada cardíaca súbita).1</p>
+                <p>Se um ritmo ventricular rápido não for tratado, ele pode mudar para fibrilação ventricular, podendo levar a uma parada cardíaca súbita e, por fim, a morte cardíaca súbita. A parada cardíaca súbita afeta 350.000 pessoas a cada ano nos Estados Unidos (o que significa que a cada 1,5 minutos alguém morre de parada cardíaca súbita).<sup>1</sup></p>
 
             </div>
         </div>
@@ -197,7 +197,7 @@
         <div class="container pt-70  pb-70">
             <div class="row justify-content-center text-center">
 
-                <h3 class="co-white">Tratamentos</h3>
+                <h3>Tratamentos</h3>
 
                 <p class="co-white">Para o tratamento de arritmias ventriculares, os médicos podem prescrever medicamentos, um cardioversor desfibrilador implantável ou ambos.</p>
                 <p class="co-white">A taquicardia ventricular e a fibrilação ventricular são ritmos cardíacos que põem a vida em risco. Nas emergências, os paramédicos ou as equipes médicas conseguem tratar essas arritmias com desfibriladores externos, como um DEA. As opções de tratamento a longo prazo variam de acordo com o tipo de arritmia e as circunstâncias individuais de cada paciente.</p>
@@ -206,18 +206,35 @@
                 <p class="co-white">Estimulação antitaquicardia (ATP) - Se seu ritmo for regular, mas rápido, o sistema CDI pode administrar uma série de pulsos pequenos e rápidos de estimulação elétrica. Tais pulsos são utilizados para interromper a arritmia e retornar o coração a seu ritmo normal.</p>
                 <p class="co-white">Cardioversão - Se sua arritmia for regular, mas muito rápida, o CDI pode administrar um choque de baixa energia. Tal choque consegue parar a arritmia e retornar o coração a seu ritmo normal.</p>
                 <p class="co-white">Desfibrilação - Para arritmias muito rápidas e irregulares, como a fibrilação ventricular, choques de alta energia podem ser utilizados para parar a arritmia. Dessa maneira, o coração consegue retornar a seu ritmo normal. </p>
-                <p class="co-white">Muitas pessoas têm arritmias perigosas e que podem ocorrer a qualquer momento. Você já pode ter tido um episódio de taquicardia ventricular ou fibrilação ventricular. Ele pode ocorrer mesmo se você estiver tomando remédios para tratar seu ritmo cardíaco anormal. Após analisar os resultados de seus exames, o médico pode chegar à conclusão que você poderá novamente ter ritmos cardíacos anormais e, talvez, uma parada cardíaca. Talvez ele recomende um CDI por uma ou mais das seguintes razões:</p>
 
-                <div class="col-6">
-                    <ul class="list-style text-left">
-                        <li class="text-white">No mínimo, um evento de taquicardia ventricular ou fibrilação ventricular</li>
-                        <li class="text-white">Parada cardíaca ou ritmo cardíaco anormal, prévios, que fizeram você desmaiar</li>
-                        <li class="text-white">Um ritmo cardíaco rápido que se repete, podendo levar à morte</li>
-                        <li class="text-white">Um ritmo cardíaco rápido que não pode ser controlado com medicamentos</li>
-                        <li class="text-white">Efeitos colaterais severos da terapia medicamentosa</li>
-                        <li class="text-white">Um ritmo cardíaco rápido que não pode ser curado cirurgicamente</li>
-                        <li class="text-white">Ataque cardíaco prévio e uma fração de ejeção baixa </li>
-                    </ul>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="about-what-find-blue " style="background-color:#023970 !important;" id="5">
+        <div class="container pt-70  pb-70">
+            <div class="row justify-content-center text-center">
+
+                 <p class="co-white">Muitas pessoas têm arritmias perigosas e que podem ocorrer a qualquer momento. Você já pode ter tido um episódio de taquicardia ventricular ou fibrilação ventricular. Ele pode ocorrer mesmo se você estiver tomando remédios para tratar seu ritmo cardíaco anormal. Após analisar os resultados de seus exames, o médico pode chegar à conclusão que você poderá novamente ter ritmos cardíacos anormais e, talvez, uma parada cardíaca. Talvez ele recomende um CDI por uma ou mais das seguintes razões:</p>
+
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <ul class="list-style text-left">
+                            <li class="text-white">No mínimo, um evento de taquicardia ventricular ou fibrilação ventricular</li>
+                            <li class="text-white">Parada cardíaca ou ritmo cardíaco anormal, prévios, que fizeram você desmaiar</li>
+                            <li class="text-white">Um ritmo cardíaco rápido que se repete, podendo levar à morte</li>
+                            <li class="text-white">Um ritmo cardíaco rápido que não pode ser controlado com medicamentos</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-style text-left">
+                            <li class="text-white">Efeitos colaterais severos da terapia medicamentosa</li>
+                            <li class="text-white">Um ritmo cardíaco rápido que não pode ser curado cirurgicamente</li>
+                            <li class="text-white">Ataque cardíaco prévio e uma fração de ejeção baixa </li>
+                        </ul>
+                    </div>
                 </div>
 
 

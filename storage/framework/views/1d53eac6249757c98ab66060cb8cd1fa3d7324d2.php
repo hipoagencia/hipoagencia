@@ -135,15 +135,21 @@
                     cardíaca, alguns desses sintomas podem surgir antes da Morte súbita cardíaca:</p>
 
 
-                <div class="col-5">
-                    <ul class="list-style text-left">
-                        <li class="text-white">Fadiga ou fraqueza</li>
-                        <li class="text-white">Falta de ar</li>
-                        <li class="text-white">Desmaio</li>
-                        <li class="text-white">Tonturas ou vertigens</li>
-                        <li class="text-white">Palpitações cardíacas</li>
-                        <li class="text-white">Dor no peito</li>
-                    </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-style text-left">
+                            <li class="text-white">Fadiga ou fraqueza</li>
+                            <li class="text-white">Falta de ar</li>
+                            <li class="text-white">Desmaio</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-style text-left">
+                            <li class="text-white">Tonturas ou vertigens</li>
+                            <li class="text-white">Palpitações cardíacas</li>
+                            <li class="text-white">Dor no peito</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <p class="co-white">Algumas pessoas que supostamente morreram de "ataque cardíaco fulminante" podem, em
@@ -215,13 +221,23 @@
                 <p>Pessoas sem doença cardíaca podem desenvolver uma arritmia por causas desconhecidas, mas os fatores
                     de risco podem incluir:</p>
 
-                <ul class="list-style text-left">
-                    <li>Estresse emocional</li>
-                    <li>Consumo de álcool, cafeína, remédios para regime e tabaco</li>
-                    <li>Alguns medicamentos de prescrição, tais como certos medicamentos para gripe, tosse e alergia, e
-                        antidepressivos
-                    </li>
-                </ul>
+               <div class="row">
+
+                   <div class="col-6">
+                       <ul class="list-style text-left co-bg-red-bullet">
+                           <li>Estresse emocional</li>
+                           <li>Consumo de álcool, cafeína, remédios para regime e tabaco</li>
+                       </ul>
+                   </div>
+                   <div class="col-6">
+                       <ul class="list-style text-left co-bg-red-bullet">
+                           <li>Alguns medicamentos de prescrição, tais como certos medicamentos para gripe, tosse e alergia, e
+                               antidepressivos
+                           </li>
+                       </ul>
+                   </div>
+
+               </div>
 
                 <p>Além disso, alguns ritmos estão presentes no nascimento, como a síndrome de Wolff Parkinson White, na
                     qual um grupo de batimentos cardíacos rápidos e irregulares é causado por vias de condução elétrica
@@ -248,21 +264,23 @@
                         súbita cardíaca. Os fatores de risco comuns incluem:</p>
 
                     <div class="row">
-                        <div class="col"><br></div>
-                        <div class="col">
-                            <ul class="list-style text-left">
+                        <div class="col-6">
+                            <ul class="list-style text-left co-bg-red-bullet">
                                 <li>Um histórico familiar de doença coronariana</li>
                                 <li>Hipertensão</li>
                                 <li>Colesterol alto</li>
                                 <li>Obesidade</li>
                                 <li>Diabetes</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-style text-left co-bg-red-bullet">
                                 <li>Estilo de vida sedentário</li>
                                 <li>Tabagismo</li>
                                 <li>Consumo excessivo de álcool</li>
                                 <li>Idade</li>
                             </ul>
                         </div>
-                        <div class="col"><br></div>
                     </div>
 
                     <p>Um parente de primeiro grau de alguém que sofreu Morte súbita cardíaca tem mais do que o dobro do
@@ -326,14 +344,14 @@
 
                     <ul class="col list-style text-left">
                         <li>Cerca de metade de todas as paradas cardíacas não são testemunhadas; a vítima estava
-                            sozinha1
+                            sozinha<sup>1</sup>
                         </li>
                         <li>Mais de 80% das paradas cardíacas ocorrem em casa ou em locais não públicos, como no
-                            escritório1
+                            escritório<sup>1</sup>
                         </li>
                         <li>A sobrevida relatada de Morte súbita cardíaca fora do hospital varia de 0% a 51%, com uma
                             média
-                            nacional de apenas 8%2
+                            nacional de apenas 8%<sup>2</sup>
                         </li>
                     </ul>
 
@@ -346,7 +364,9 @@
                         verdade, demonstrou-se que a desfibrilação interrompe efetivamente 95% ou mais dos ritmos
                         cardíacos
                         perigosamente rápidos.</p>
-                    <p><b>Demonstrou-se que a desfibrilação interrompe efetivamente<br>
+
+                    <p style="text-transform: uppercase;font-size:18px;font-weight: 700;">
+                        <b>Demonstrou-se que a desfibrilação interrompe efetivamente<br>
                             95% ou mais<br>
                             dos ritmos cardíacos perigosamente rápidos</b>
                     </p>

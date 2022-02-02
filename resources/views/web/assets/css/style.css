@@ -131,7 +131,7 @@ button {
 
 p {
     margin-bottom: 15px;
-    line-height: 1.8;
+    line-height: 1.4;
     color: #6b6b84;
     font-weight: 400;
     font-family: mulish,sans-serif;
@@ -216,7 +216,7 @@ img {
     -webkit-transition: .6s;
     transition: .6s;
     border-radius: 30px;
-    padding: 15px 50px 15px 25px;
+    padding: 15px 25px 15px 25px;
     font-weight: 900;
     font-size: 15px;
     margin-bottom: -5px;
@@ -6164,7 +6164,7 @@ img {
 
 .co-blue{color:#0e778a !important;}
 .co-bg-blue{background-color:#0e778a !important;}
-.co-bg-co-bg-blue-bullet{list-style: none;margin-left: -1em;}
+.co-bg-blue-bullet{list-style: none;margin-left: -1em;}
 .co-bg-blue-bullet li::before {color:#0e778a;content: "\2022";margin-right:10px;  }
 
 .co-purple{color:#8f6cb3 !important;}
@@ -6173,6 +6173,7 @@ img {
 
 .co-green{color:#1bb166 !important;}
 .co-bg-green{background-color:#1bb166 !important;}
+.co-bg-green-bullet{list-style: none;margin-left: -1em;}
 .co-bg-green-bullet li::before {color:#1bb166;content: "\2022";margin-right:10px;  }
 
 .co-orange{color:#ff7200 !important;}

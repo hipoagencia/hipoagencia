@@ -197,24 +197,32 @@
                 <p>Certos alimentos, bebidas e medicamentos podem atuar como diuréticos (estimulam a bexiga e aumentam o
                     volume da urina). Alguns deles são:</p>
 
-                <ul class="col list-style mt-3 text-left">
-                    <li class="">Álcool</li>
-                    <li class="">Cafeína</li>
-                    <li class="">Refrigerantes e água mineral com gás</li>
-                    <li class="">Adoçantes artificiais</li>
-                    <li class="">Chocolate</li>
-                    <li class="">Pimentas</li>
-                    <li class="">Alimentos ricos em especiarias, açúcar ou ácido, especialmente frutas cítricas</li>
-                    <li class="">Medicamentos para pressão arterial e para o coração, sedativos e relaxantes
-                        musculares
-                    </li>
-                    <li class="">Grandes doses de vitamina C</li>
-                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="col list-style mt-3 text-left co-bg-green-bullet ">
+                            <li class="">Álcool</li>
+                            <li class="">Cafeína</li>
+                            <li class="">Refrigerantes e água mineral com gás</li>
+                            <li class="">Adoçantes artificiais</li>
+                            <li class="">Chocolate</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="col list-style mt-3 text-left co-bg-green-bullet ">
+                            <li class="">Pimentas</li>
+                            <li class="">Alimentos ricos em especiarias, açúcar ou ácido, especialmente frutas cítricas</li>
+                            <li class="">Medicamentos para pressão arterial e para o coração, sedativos e relaxantes
+                                musculares
+                            </li>
+                            <li class="">Grandes doses de vitamina C</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <h5 class="co-green mt-4 mb-4">A incontinência urinária também pode ser causada por<br>uma condição
                     facilmente tratável, por exemplo:</h5>
 
-                <ul class="col list-style mt-3 text-left">
+                <ul class="col list-style mt-3 text-left co-bg-green-bullet">
                     <li class="">Infecção urinária: As infecções podem irritar a bexiga, causar uma forte vontade de
                         urinar e, às vezes, incontinência.
                     </li>
@@ -227,23 +235,23 @@
 
                 <h5 class="co-green mt-4 mb-4">Mais causas</h5>
 
-                <ul class="col list-style mt-3 text-left">
-                    <li class=""><b>Mudanças devido à idade:</b> O envelhecimento do músculo da bexiga pode diminuir a
+                <ul class="col list-style mt-3 text-left co-bg-green-bullet">
+                    <li class=""><b class="co-green">Mudanças devido à idade:</b> O envelhecimento do músculo da bexiga pode diminuir a
                         capacidade de armazenar urina.
                     </li>
-                    <li class=""><b>Aumento da próstata:</b> Especialmente em homens mais velhos, a incontinência
+                    <li class=""><b class="co-green">Aumento da próstata:</b> Especialmente em homens mais velhos, a incontinência
                         geralmente decorre de uma glândula prostática aumentada, uma condição conhecida como
                         "hiperplasia prostática benigna".
                     </li>
-                    <li class=""><b>Câncer de próstata:</b> Nos homens, a incontinência de esforço ou de urgência pode
+                    <li class=""><b class="co-green">Câncer de próstata:</b> Nos homens, a incontinência de esforço ou de urgência pode
                         estar associada ao câncer de próstata não tratado. Porém, com mais frequência, a incontinência é
                         um efeito colateral dos tratamentos do câncer de próstata.
                     </li>
-                    <li class=""><b>Obstrução:</b> Um tumor em qualquer parte do trato urinário pode obstruir o fluxo
+                    <li class=""><b class="co-green">Obstrução:</b> Um tumor em qualquer parte do trato urinário pode obstruir o fluxo
                         normal de urina e levar à incontinência por transbordamento. Cálculos urinários (nódulos duros
                         semelhantes a pedras que se formam na bexiga) às vezes podem causar escape de urina.
                     </li>
-                    <li class=""><b>Problemas neurológicos:</b> Esclerose múltipla, doença de Parkinson, acidentes
+                    <li class=""><b class="co-green">Problemas neurológicos:</b> Esclerose múltipla, doença de Parkinson, acidentes
                         vasculares cerebrais, tumores cerebrais ou lesão da medula espinhal podem interferir nos sinais
                         nervosos envolvidos no controle da bexiga e causar incontinência urinária.
                     </li>
@@ -264,29 +272,33 @@
             <div class="section-title">
                 <h3 class="co-green mb-3">Fatores de risco</h3>
             </div>
-            <div class="container text-center">
+            <div class="container text-left">
 
                 <p>Os fatores que aumentam o risco de incontinência urinária incluem:</p>
                 <div class="row">
-                    <div class="col"><br></div>
-                    <ul class="col list-style text-left mt-3">
-                        <li><b>Sexo:</b> As mulheres têm maior probabilidade de sofrer incontinência de esforço.
-                            Entretanto, os homens com problemas de próstata apresentam alto risco de incontinência de
-                            urgência e transbordamento.
-                        </li>
-                        <li><b>Idade:</b> Conforme você envelhece, os músculos da bexiga e da uretra perdem força.</li>
-                        <li><b>Estar acima do peso:</b> O excesso de peso aumenta a pressão sobre a bexiga e os músculos
-                            ao redor, enfraquecendo-os e causando escape de urina ao tossir ou espirrar.
-                        </li>
-                        <li><b>Fumar:</b> O consumo de tabaco pode aumentar o risco de incontinência urinária.</li>
-                        <li><b>Histórico familiar:</b> Se um parente próximo tem incontinência urinária, especialmente
-                            incontinência de urgência, você corre um risco maior de contrair a doença.
-                        </li>
-                        <li><b>Outras doenças:</b> Doenças neurológicas ou diabetes podem aumentar o risco de
-                            incontinência.
-                        </li>
-                    </ul>
-                    <div class="col"><br></div>
+
+                    <div class="col-6">
+                        <b class="co-green">Sexo:</b> As mulheres têm maior probabilidade de sofrer incontinência de esforço.
+                        Entretanto, os homens com problemas de próstata apresentam alto risco de incontinência de
+                        urgência e transbordamento.
+                        <br><br>
+                        <b class="co-green">Idade:</b> Conforme você envelhece, os músculos da bexiga e da uretra perdem força.
+                        <br><br>
+                        <b class="co-green">Estar acima do peso:</b> O excesso de peso aumenta a pressão sobre a bexiga e os músculos
+                        ao redor, enfraquecendo-os e causando escape de urina ao tossir ou espirrar.
+
+                    </div>
+                    <div class="col-6">
+
+                        <b class="co-green">Fumar:</b> O consumo de tabaco pode aumentar o risco de incontinência urinária.
+                        <br><br>
+                        <b class="co-green">Histórico familiar:</b> Se um parente próximo tem incontinência urinária, especialmente
+                        incontinência de urgência, você corre um risco maior de contrair a doença.
+                        <br><br>
+                        <b class="co-green">Outras doenças:</b> Doenças neurológicas ou diabetes podem aumentar o risco de
+                        incontinência.>
+                    </div>
+
                 </div>
 
             </div>
@@ -324,7 +336,7 @@
             <div class="row justify-content-center text-center">
 
                 <div class="col-8">
-                    <h3 class="co-white">Tratamentos</h3>
+                    <h3>Tratamentos</h3>
 
                     <p class="co-white">
                         O tratamento da incontinência urinária depende do tipo, da gravidade e da causa subjacente. Provavelmente, será necessária uma combinação de tratamentos. Se a doença pré-existente estiver causando os sintomas, o médico tratará essa doença primeiro.
@@ -333,28 +345,25 @@
                     <p class="co-white">
                         Seu médico provavelmente irá sugerir tratamentos menos invasivos no início e passar para outras opções apenas se essas técnicas falharem.
                     </p>
-
+                    <br>
                     <h5 class="co-white">Exercícios para fortalecer os músculos do assoalho pélvico</h5>
 
                     <p class="co-white">
                         Seu médico pode recomendar que você faça esses exercícios com frequência para fortalecer os músculos que ajudam a controlar a micção. Esses exercícios, também conhecidos como "exercícios de Kegel", são especialmente eficazes no tratamento da incontinência de esforço, mas também podem ser úteis no tratamento da incontinência.
                     </p>
-
+<br>
                     <h5 class="co-white">Medicamentos</h5>
 
                     <p class="co-white">Os medicamentos comumente utilizadospara tratar a incontinência são: </p>
 
-                    <ul class="col list-style mt-3">
-                        <li class="text-white">Anticolinérgicos</li>
-                        <li class="text-white">Mirabegrona (Myrbetric)</li>
-                        <li class="text-white">Bloqueadores alfa</li>
-                    </ul>
 
+                    <p class="text-white">Anticolinérgicos • Mirabegrona (Myrbetric) • Bloqueadores alfa</p>
+                    <br>
                     <h5 class="co-white">Cirurgia</h5>
 
                     <p class="co-white">Se outros tratamentos não funcionarem, existem vários procedimentos cirúrgicos que podem tratar os problemas causadospela incontinência urinária.</p>
 
-
+                    <br>
                     <h5 class="co-white">Esfíncter urinário artificial</h5>
 
                     <p class="co-white">Nos homens, um pequeno anel cheio de líquido é implantado ao redor do colo da bexiga para manter o esfíncter urinário fechado até que você esteja pronto para urinar. Para urinar, você pressiona uma válvula implantada sob a pele do escroto, o que faz com que o anel esvazie e permita que a urina flua para fora da bexiga. </p>
@@ -367,6 +376,11 @@
 
     <div class="pt-70 pb-70 about-what-find" id="3">
         <div class="container pt-40">
+            <div class="row text-center mb-5">
+                <h3 class="co-green mb-3">Homem sem incontinência</h3>
+
+                <p>Conscientização - assim que enfrentamos essa condição clínica.Assista, se informe e compartilhe.</p>
+            </div>
             <div class="row">
 
                 <div class="col col-lg-6 text-center pb-40">

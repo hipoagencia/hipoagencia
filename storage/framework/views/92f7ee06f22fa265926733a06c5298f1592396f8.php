@@ -24,7 +24,7 @@
         <div class="container">
             <div class="section-title">
                 <span>
-                    O Saber da Saúde é uma iniciativa da Boston ScientificTM com o objetivo de disseminar conhecimento científico sobre saúde para o maior número de brasileiros possível.
+                    O Saber da Saúde é uma iniciativa da Boston Scientific<sup>TM</sup> com o objetivo de disseminar conhecimento científico sobre saúde para o maior número de brasileiros possível.
                     <br /><br />
                     A desinformação não pode ser um obstáculo para o acesso à saúde. Acreditamos que com informação confiável, pacientes e redes de apoio podem tomar decisões com mais agilidade, obtendo diagnósticos mais cedo e buscando tratamentos cada vez mais eficazes, oferecendo suporte mais adequado para as condições de cada paciente.
                 </span>
@@ -88,9 +88,9 @@
             </div>
             <div class="row justify-content-center">
 
-                <p class="w-75 text-white text-center f-18">O Saber da Saúde tem o objetivo de combater a desinformação e ajudar na prevenção das condições clínicas que você encontra no portal. Todos os conteúdos são desenvolvidos por médicos e especialistas, mas é importante deixar uma coisa bem clara: esse site <b>NÃO SUBSTITUI SEU MÉDICO</b>.</p>
+                <p class=" text-white text-center">O Saber da Saúde tem o objetivo de combater a desinformação e ajudar na prevenção das condições clínicas que você encontra no portal. Todos os conteúdos são desenvolvidos por médicos e especialistas, mas é importante deixar uma coisa bem clara: esse site <b>NÃO SUBSTITUI SEU MÉDICO</b>.</p>
 
-                <p class="f-22 text-center color-blue w-50">Se você ou alguém que você conhece apresenta quaisquer sintomas, procure imediatamente um especialista.</p>
+                <p class="text-center color-blue">Se você ou alguém que você conhece apresenta quaisquer sintomas, procure imediatamente um especialista.</p>
 
             </div>
         </div>

@@ -197,7 +197,7 @@
         <div class="container pt-70  pb-70">
             <div class="row justify-content-center text-center">
 
-                <h3 class="co-white">Tratamentos</h3>
+                <h3 >Tratamentos</h3>
 
                 <h5 class="co-white mt-3">Medicamentos</h5>
 
@@ -231,11 +231,12 @@
                             Previne a degradação da Levodopa antes que ela atinja o cérebro. Quase sempre administrado em conjunto com L-DOPA
                         </p>
 
+
                         <h5 class="co-white mt-3">Nomes de Marcas Comuns</h5>
                         <p class="co-white">
-                            Parcopa®<br>
-                            Sinimet®<br>
-                            Rytary™<br>
+                            Parcopa® •
+                            Sinimet® •
+                            Rytary™ •
                             Duopa™ (carbidopa/levodopa)
                         </p>
                     </div>
@@ -315,14 +316,22 @@
                 <p>No momento em que as pessoas com doença de Parkinson geralmente começam a sentir os sintomas, a maioria de seus neurônios motores já foi perdida ou prejudicada. Lentamente, com o tempo, os sintomas pioram e se tornam mais difíceis de controlar com medicamentos. Além disso, os medicamentos para a doença Parkinson também podem começar a produzir efeitos colaterais indesejados, tais como movimentos descontrolados conhecidos como discinesia, bem como alucinações. A progressão da doença varia consideravelmente de pessoa para pessoa.</p>
                 <p>Os sinais de que seu medicamento está se tornando cada vez menos eficaz incluem:</p>
 
-                <div class="col-7">
-                    <ul class="list-style text-left">
-                        <li>Você tem menos horas por dia com bom controle de seus movimentos (menos "tempo ON").</li>
-                        <li>Leva mais tempo para o seu medicamento fazer efeito após a administração de uma dose.</li>
-                        <li>A sua medicação parece passar mais cedo do que antes.</li>
-                        <li>Você tem que tomar seus medicamentos com mais frequência.</li>
-                        <li>Você começa a sentir efeitos colaterais como movimentos indesejados (discinesia).</li>
-                    </ul>
+                <div class="row">
+
+                    <div class="col-6">
+                        <ul class="list-style text-left co-bg-blue-bullet">
+                            <li>Você tem menos horas por dia com bom controle de seus movimentos (menos "tempo ON").</li>
+                            <li>Leva mais tempo para o seu medicamento fazer efeito após a administração de uma dose.</li>
+                            <li>A sua medicação parece passar mais cedo do que antes.</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-style text-left co-bg-blue-bullet">
+                            <li>Você tem que tomar seus medicamentos com mais frequência.</li>
+                            <li>Você começa a sentir efeitos colaterais como movimentos indesejados (discinesia).</li>
+                        </ul>
+                    </div>
+
                 </div>
 
                 <h3 class="co-blue mb-3">Doses de L-DOPA</h3>
@@ -352,14 +361,14 @@
                 <p>Ao obter a ESTIMULAÇÃO CEREBRAL PROFUNDA , você trabalhará com uma equipe de especialistas que o ajudará a entender o que esperar de cada etapa e como se preparar. Ao contrário de muitos procedimentos, a ESTIMULAÇÃO CEREBRAL PROFUNDA  ocorre em diferentes etapas ou "fases"; aqui está uma visão geral das principais partes da jornada da ESTIMULAÇÃO CEREBRAL PROFUNDA  para ajudá-lo a se preparar.</p>
 
 
-                <h3 class="co-blue mb-3">1. Explore suas opções</h3>
+                <h5 class="color-gray2 mb-3">1. Explore suas opções</h5>
                 <p>O melhor momento para fazer isso é quando os sintomas ainda estão respondendo aos medicamentos. Comece encontrando um especialista em distúrbios do movimento — um neurologista com treinamento especial no tratamento de distúrbios do movimento, como a doença de Parkinson.
                 </p>
 
-                <h3 class="co-blue mb-3">2. Faça uma avaliação para cirurgia de ESTIMULAÇÃO CEREBRAL PROFUNDA </h3>
+                <h5 class="color-gray2 mb-3">2. Faça uma avaliação para cirurgia de ESTIMULAÇÃO CEREBRAL PROFUNDA </h5>
                 <p>Neste estágio, você passará por uma série completa de triagens para garantir que é um bom candidato para ESTIMULAÇÃO CEREBRAL PROFUNDA . Isso pode incluir uma consulta neurológica, testes ON/OFF, uma avaliação neuropsicológica, uma triagem geral de saúde, geração de imagens do cérebro e trabalho laboratorial de rotina.</p>
 
-                <h3 class="co-blue mb-3">3. Cirurgia de implante de eletrodos</h3>
+                <h5 class="color-gray2 mb-3">3. Cirurgia de implante de eletrodos</h5>
                 <p>A primeira etapa do processo cirúrgico é colocar os eletrodos no cérebro. Durante a cirurgia, o médico pode realizar testes para garantir que os eletrodos estejam posicionados corretamente, solicitando que você mova os braços e as pernas ou faça outros movimentos simples. Depois disso, espera-se que fique no hospital pelo menos uma noite para monitoramento.</p>
 
                 <h3 class="co-blue mb-3">Implante do estimulador</h3>
@@ -378,43 +387,45 @@
         <div class="container">
             <div class="text-center section-title">
 
-                <h3 class="co-blue mb-3">1: A ESTIMULAÇÃO CEREBRAL PROFUNDA é segura?</h3>
+                <h3  class="co-blue mb-3">Estimulação Cerebral</h3>
+
+                <h5 class="co-blue mb-3">É seguro?</h5>
                 <p>Duas décadas de tratamento com ESTIMULAÇÃO CEREBRAL PROFUNDA  para mais de 100.001 pacientes mostraram a segurança em curto e longo prazo da ESTIMULAÇÃO CEREBRAL PROFUNDA . A cirurgia de ESTIMULAÇÃO CEREBRAL PROFUNDA  deve ser realizada por um neurocirurgião experiente que trabalha como parte de uma equipe interdisciplinar. Como em qualquer procedimento cirúrgico, existem riscos e potenciais efeitos colaterais, que variam de acordo com o paciente. Embora a maioria seja temporária e possa ser revertida ou reduzida por meio de estimulação, você deve discutir esses riscos com seus médicos.</p>
                 <hr>
 
-                <h3 class="co-blue mb-3">2: Eu poderia ser um candidato à ESTIMULAÇÃO CEREBRAL PROFUNDA?</h3>
+                <h5 class="co-blue mb-3">Eu poderia ser um candidato?</h5>
                 <p>O candidato ideal continua a responder positivamente ao tratamento com levodopa, mas é incapaz de controlar os sintomas motores de sua doença apenas com a medicação. A cirurgia de ESTIMULAÇÃO CEREBRAL PROFUNDA  seria realizada por um neurocirurgião trabalhando em uma equipe interdisciplinar. Seu neurologista e outros médicos com quem você trabalha podem determinar se a ESTIMULAÇÃO CEREBRAL PROFUNDA  é uma terapia adequada para você e seus sintomas.</p>
                 <hr>
 
-                <h3 class="co-blue mb-3">3: Posso interromper minha medicação após a cirurgia de ESTIMULAÇÃO CEREBRAL PROFUNDA?</h3>
+                <h5 class="co-blue mb-3">Posso interromper minha medicação após a cirurgia?</h5>
                 <p>Às vezes, a cirurgia bem-sucedida de ESTIMULAÇÃO CEREBRAL PROFUNDA  pode levar a uma redução na medicação e potencialmente reduzir seus efeitos colaterais, embora o tratamento não tenha como objetivo substituir a medicação.</p>
                 <hr>
 
-                <h3 class="co-blue mb-3">4: Quanto tempo meu sistema de ESTIMULAÇÃO CEREBRAL PROFUNDA  vai durar?</h3>
+                <h5 class="co-blue mb-3">Quanto tempo meu sistema vai durar?</h5>
                 <p>Os sistemas recarregáveis são concebidos para durar pelo menos 15 anos. O sistema não recarregável deve durar de 3 a 5 anos.</p>
                 <hr>
 
-                <h3 class="co-blue mb-3">6: É possível fazer uma ressonância magnética com implante de ESTIMULAÇÃO CEREBRAL PROFUNDA ?</h3>
+                <h5 class="co-blue mb-3">É possível fazer uma ressonância magnética com implante?</h5>
                 <p>Sempre consulte seu médico para saber qual modalidade de geração de imagens será sua melhor opção e compatível com o seu implante.</p>
                 <hr>
 
-                <h3 class="co-blue mb-3">7: Posso ter um implante de ESTIMULAÇÃO CEREBRAL PROFUNDA  se já tiver um marcapasso?</h3>
+                <h5 class="co-blue mb-3">Posso ter um implante se já tiver um marcapasso?</h5>
                 <p>Normalmente, os implantes de ESTIMULAÇÃO CEREBRAL PROFUNDA  são colocados no mesmo local que os marcapassos. Entretanto, um implante de ESTIMULAÇÃO CEREBRAL PROFUNDA  conectado a cabos de extensão pode ser inserido no lado direito do tórax ou sob a pele do abdômen.</p>
                 <hr>
 
-                <h3 class="co-blue mb-3">8: Posso viajar com meu implante de ESTIMULAÇÃO CEREBRAL PROFUNDA?</h3>
+                <h5 class="co-blue mb-3">Posso viajar com meu implante?</h5>
                 <p>Sim, você pode viajar com seu sistema de ESTIMULAÇÃO CEREBRAL PROFUNDA . Detectores de metal, máquinas de raio-X, scanners de segurança e outros dispositivos de segurança não danificarão o implante, mas podem causar estimulação não intencional. O implante também pode ativar alarmes de detectores de metal; portanto, é recomendável levar sempre consigo o cartão de identificação do paciente.</p>
                 <hr>
 
-                <h3 class="co-blue mb-3">9: O que sentirei quando meu dispositivo de ESTIMULAÇÃO CEREBRAL PROFUNDA  for ligado?</h3>
+                <h5 class="co-blue mb-3">O que sentirei quando meu dispositivo for ligado?</h5>
                 <p>Durante a programação inicial, você pode sentir uma sensação de formigamento. Isso ajuda a identificar suas configurações ideais. Depois disso, a maioria dos pacientes quase não percebe o dispositivo. Embora alguns sintam um leve formigamento no braço ou na perna, ou uma leve tensão nos músculos faciais que geralmente diminui.</p>
                 <hr>
 
-                <h3 class="co-blue mb-3">10: O dispositivo de ESTIMULAÇÃO CEREBRAL PROFUNDA  faz barulho?</h3>
+                <h5 class="co-blue mb-3">O dispositivo faz barulho?</h5>
                 <p>Não, o dispositivo de ESTIMULAÇÃO CEREBRAL PROFUNDA  é totalmente silencioso.</p>
                 <hr>
 
-                <h3 class="co-blue mb-3">11: Outras pessoas poderão notar meu dispositivo de ESTIMULAÇÃO CEREBRAL PROFUNDA ?</h3>
+                <h5 class="co-blue mb-3">Outras pessoas poderão notar meu dispositivo?</h5>
                 <p>Como o estimulador de ESTIMULAÇÃO CEREBRAL PROFUNDA  e os fios são colocados sob a pele, dificilmente são perceptíveis do lado de fora. Para pacientes magros, o local do estimulador estará ligeiramente elevado e o fio pode parecer uma veia ligeiramente maior, mas isso não deve ser perceptível através da roupa. A incisão geralmente deixa uma pequena cicatriz.</p>
                 <hr>
 

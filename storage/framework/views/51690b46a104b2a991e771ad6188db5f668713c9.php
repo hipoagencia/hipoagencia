@@ -102,56 +102,29 @@
 
                 <h3 class="co-white">Sintomas</h3>
 
-                <p class="co-white">
-                    Levantar-se várias vezes para urinar durante a noite
-                </p>
 
-                <p class="co-white">
-                    Jato de urina fraco e interrompido
-                </p>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="col list-style mt-3 text-left">
+                            <li class="text-white">Levantar-se várias vezes para urinar durante a noite</li>
+                            <li class="text-white">Jato de urina fraco e interrompido</li>
+                            <li  class="text-white">Dificuldade em iniciar ou parar de urinar</li>
+                            <li  class="text-white">Necessidade repentina e urgente de urinar</li>
+                            <li  class="text-white">Não ter certeza de que a bexiga está vazia</li>
 
-                <p class="co-white">
-                    Dificuldade em iniciar ou parar de urinar
-                </p>
-
-                <p class="co-white">
-                    Necessidade repentina e urgente de urinar
-                </p>
-
-                <p class="co-white">
-                    Não ter certeza de que a bexiga está vazia
-                </p>
-
-                <p class="co-white">
-                    Gotejamento pós-micção
-                </p>
-
-                <p class="co-white">
-                    Dor ou ardência ao urinar
-                </p>
-
-                <p class="co-white">
-                    Incapacidade de ir ao banheiro quando sente necessidade.
-                </p>
-
-                <p class="co-white">
-                    Falta de controle da micção
-                </p>
-
-                <h3 class="co-white">Diagnóstico</h3>
-
-                <p  class="co-white">Estes são os métodos de diagnóstico pelo urologista:</p>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="col list-style mt-3 text-left">
+                            <li  class="text-white">Gotejamento pós-micção</li>
+                            <li  class="text-white">Dor ou ardência ao urinar</li>
+                            <li  class="text-white">Incapacidade de ir ao banheiro quando sente necessidade.</li>
+                            <li  class="text-white">Falta de controle da micção</li>
+                        </ul>
+                    </div>
+                </div>
 
 
-                <p  class="co-white"><b>Um gráfico de frequência e volume urinário:</b> Isso fornecerá um registro de quanta água você bebe normalmente, quanta urina produz, com que frequência você esvazia a bexiga diariamente e se há vazamentos.</p>
-                <p  class="co-white"><b>Exame de toque retal:</b> O urologista insere um dedo no reto para ver se a próstata está aumentada.</p>
-                <p  class="co-white"><b>Análise de urina:</b> Testar uma amostra de urina pode ajudar a descartar infecções ou outras condições que podem causar sintomas similares.</p>
-                <p  class="co-white"><b>Análise de sangue:</b> Os resultados podem indicar problemas renais.</p>
-                <p  class="co-white"><b>Exame de sangue para antígeno específico da próstata (PSA):</b> O PSA é uma substância produzida pela próstata. Os níveis de PSA aumentam quando a próstata aumenta de tamanho. Entretanto, os níveis elevados de PSA também podem ser devido a intervenções recentes, infecção, cirurgia ou câncer de próstata.</p>
-
-
-                <p  class="co-white"><i>A hiperplasia prostática benigna é o tumor benigno mais comum em homens.</i></p>
-                <p  class="co-white"><i>Ela tem uma prevalência que varia entre 8% em homens de 40 anos, 50% em homens entre 51 e 60 anos, e 90% a partir dos 80 anos.</i></p>
 
             </div>
         </div>
@@ -207,13 +180,23 @@
     <div class="pt-70 about-what-find" id="3">
         <div class="container">
             <div class="section-title pb-40">
-                <h3 class="co-orange mb-3">Prevenção</h3>
+
+                <h3 class="co-orange">Diagnóstico</h3>
+
+                <p>Estes são os métodos de diagnóstico pelo urologista:</p>
 
 
-                <h5 class="co-orange mb-3">DIETA RICA EM FRUTAS E VERDURAS</h5>
-                <h5 class="co-orange mb-3">LIMITAR A CAFEÍNA E O ÁLCOOL</h5>
-                <h5 class="co-orange mb-3">FAZER EXERCÍCIOS REGULARMENTE</h5>
-                <h5 class="co-orange mb-3">EVITAR OS DESCONGESTIONANTES E ANTI-HISTAMÍNICOS</h5>
+                <p><b>Um gráfico de frequência e volume urinário:</b> Isso fornecerá um registro de quanta água você bebe normalmente, quanta urina produz, com que frequência você esvazia a bexiga diariamente e se há vazamentos.</p>
+                <p><b>Exame de toque retal:</b> O urologista insere um dedo no reto para ver se a próstata está aumentada.</p>
+                <p><b>Análise de urina:</b> Testar uma amostra de urina pode ajudar a descartar infecções ou outras condições que podem causar sintomas similares.</p>
+                <p><b>Análise de sangue:</b> Os resultados podem indicar problemas renais.</p>
+                <p><b>Exame de sangue para antígeno específico da próstata (PSA):</b> O PSA é uma substância produzida pela próstata. Os níveis de PSA aumentam quando a próstata aumenta de tamanho. Entretanto, os níveis elevados de PSA também podem ser devido a intervenções recentes, infecção, cirurgia ou câncer de próstata.</p>
+
+
+                <p><i>A hiperplasia prostática benigna é o tumor benigno mais comum em homens.</i></p>
+                <p><i>Ela tem uma prevalência que varia entre 8% em homens de 40 anos, 50% em homens entre 51 e 60 anos, e 90% a partir dos 80 anos.</i></p>
+
+<br><br>
 
 
             </div>
@@ -231,7 +214,17 @@
             <div class="row justify-content-center text-center">
 
                 <div class="col-8">
-                    <h3 class="co-white">Tratamentos</h3>
+
+                    <h3 class="mb-3">Prevenção</h3>
+
+
+                    <p class="mb-3 text-white">DIETA RICA EM FRUTAS E VERDURAS</p>
+                    <p class="mb-3 text-white">LIMITAR A CAFEÍNA E O ÁLCOOL</p>
+                    <p class=" mb-3 text-white">FAZER EXERCÍCIOS REGULARMENTE</p>
+                    <p class="mb-3 text-white">EVITAR OS DESCONGESTIONANTES E ANTI-HISTAMÍNICOS</p>
+
+
+                    <h3 class="mt-5 mb-3">Tratamentos</h3>
 
                     <h5 class="co-white">Medicamentos</h5>
 
@@ -239,13 +232,21 @@
                         Os medicamentos são o tratamento mais comum para os sintomas leves a moderados de hiperplasia prostática. Algumas das opções são:
                     </p>
 
-                    <ul class="col list-style mt-3">
-                        <li class="text-white">Bloqueadores alfa</li>
-                        <li class="text-white">Inibidores de 5-alfa redutase</li>
-                        <li class="text-white">Incisão transuretral da próstata</li>
-                        <li class="text-white">Terapia transuretral por micro-ondas</li>
-                        <li class="text-white">Ablação por agulha transuretral</li>
-                    </ul>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="col list-style mt-3">
+                                <li class="text-white">Bloqueadores alfa</li>
+                                <li class="text-white">Inibidores de 5-alfa redutase</li>
+                                <li class="text-white">Incisão transuretral da próstata</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="col list-style mt-3">
+                                <li class="text-white">Terapia transuretral por micro-ondas</li>
+                                <li class="text-white">Ablação por agulha transuretral</li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <h5 class="co-white">Terapia a laser verde</h5>
                     <p class="co-white">

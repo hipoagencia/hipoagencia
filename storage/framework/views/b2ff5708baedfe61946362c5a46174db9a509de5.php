@@ -170,7 +170,7 @@
 
                 <div class="row">
                     <div class="col text-left">
-                        <ul class="list-style">
+                        <ul class="list-style co-bg-red-bullet">
                             <li>Pressão alta: É uma doença comum na qual o sangue flui através dos vasos sanguíneos ou
                                 artérias a pressões acima do normal. A pressão alta, às vezes chamada de hipertensão,
                                 ocorre quando essa pressão nas paredes das
@@ -192,7 +192,7 @@
                         </ul>
                     </div>
                     <div class="col text-left">
-                        <ul class="list-style">
+                        <ul class="list-style co-bg-red-bullet" >
                             <li>Doença pulmonar crônica: É uma doença comum que causa dificuldade para respirar e a
                                 principal causa é o tabagismo. Quanto mais uma pessoa fuma, maior a probabilidade de
                                 desenvolver esta doença. 6
@@ -264,7 +264,7 @@
         <div class="container pt-70  pb-70">
             <div class="row justify-content-center text-center">
 
-                <h3 class="co-white">Tratamentos para a Fibrilação Atrial</h3>
+                <h3>Tratamentos para a Fibrilação Atrial</h3>
                 <p class="co-white">Existem vários tratamentos para a Fibrilação Atrial (F.A.) que ajudam a controlar
                     sua frequência cardíaca, restaurar o ritmo cardíaco normal e/ou controlar a atividade elétrica do
                     coração, que incluem:</p>
@@ -322,7 +322,7 @@
     <div class="container-fluid pt-70  pb-70">
         <div class="row justify-content-center text-center ">
 
-            <div class="col-lg-4 bg-color-blue text-right" style="padding:100px 80px 80px 0px;">
+            <div class="col-lg-4 bg-color-blue text-right" style="padding:100px 80px 80px 50px;">
                 <h4 class="co-white">O Implante Oclusor do Apêndice Auricular Esquerdo (OAAE) foi projetado para fechar permanentemente sua AAE e evitar a fuga desses coágulos de sangue.</h4>
             </div>
 

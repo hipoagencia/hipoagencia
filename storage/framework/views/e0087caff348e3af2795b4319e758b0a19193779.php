@@ -99,16 +99,21 @@
 
                 <h3 class="co-white">Sintomas</h3>
 
-                <div class="col-5">
-                    <ul class="list-style text-left">
-                        <li class="text-white">Confusão</li>
-                        <li class="text-white">Problema falando ou entendendo a fala</li>
-                        <li class="text-white">Problema de visão em um ou ambos olhos</li>
-                        <li class="text-white">Dor de cabeça severa sem causa conhecida</li>
-                        <li class="text-white">Dormência, fraqueza ou paralisia do rosto, braço ou perna</li>
-                        <li class="text-white">Dificuldade em andar, tontura, perda de equilíbrio ou falta de coordenação</li>
-
-                    </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-style text-left ">
+                            <li class="text-white">Confusão</li>
+                            <li class="text-white">Problema falando ou entendendo a fala</li>
+                            <li class="text-white">Problema de visão em um ou ambos olhos</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-style text-left">
+                            <li class="text-white">Dor de cabeça severa sem causa conhecida</li>
+                            <li class="text-white">Dormência, fraqueza ou paralisia do rosto, braço ou perna</li>
+                            <li class="text-white">Dificuldade em andar, tontura, perda de equilíbrio ou falta de coordenação</li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -178,7 +183,7 @@
                     prestar atenção para cuidar da sua saúde. Algumas delas são:
                 </p>
 
-                <ul class="list-style text-left">
+                <ul class="list-style text-left co-bg-red-bullet">
                     <li>Dormência ou fraqueza repentina no rosto, braço ou perna. </li>
                     <li>Confusão súbita, dificuldade em falar ou entender quando falam com você. </li>
                     <li>Dificuldade súbita de ver com um ou ambos os olhos. </li>
@@ -208,30 +213,30 @@
                     vida, esses fatores são:
                 </p>
 
-                <div class="col-5">
-                    <ul class="list-style text-left">
-                        <li><b>Idade:</b> O risco de um acidente vascular cerebral (AVC) aumenta com a idade.</li>
-                        <li><b>Sexo:</b> Os homens correm maior risco de sofrer um derrame cerebral.</li>
-                        <li><b>Antecedentes familiares:</b> O AVC parece ocorrer em algumas famílias de
-                            forma congênita.
-                        </li>
-                    </ul>
+                <div class="text-center mt-3 mb-4">
+                    <h5 class="co-red">Idade</h5>
+                    O risco de um acidente vascular cerebral (AVC) aumenta com a idade.
+                    <h5 class="co-red">Sexo</h5> Os homens correm maior risco de sofrer um derrame cerebral.
+                    <h5 class="co-red">Antecedentes familiares</h5>
+                    O AVC parece ocorrer em algumas famílias de
+                        forma congênita.
+
                 </div>
 
                 <h5 class="co-red">Alguns dos fatores de risco mais importantes para o AVC que podem ser tratados são:</h5>
 
                 <p>A hipertensão é o fator de risco mais poderoso para um AVC. O controle da pressão arterial ajudará a prevenir doenças cardíacas, diabetes ou insuficiência renal.</p>
-                <p>Fumar cigarros: Fumar cigarros causa o dobro do aumento do risco de AVC isquêmico e até 4 vezes o aumento do risco de AVC hemorrágico. 12</p>
-                <p>Doença cardíaca: Os problemas cardíacos como a doença coronariana, defeitos valvulares, fibrilação atrial, entre outros, podem gerar um AVC. Um médico pode avaliar fatores de risco e ajudar a decidir o melhor tratamento. 13
+                <p>Fumar cigarros: Fumar cigarros causa o dobro do aumento do risco de AVC isquêmico e até 4 vezes o aumento do risco de AVC hemorrágico. <sup>12</sup></p>
+                <p>Doença cardíaca: Os problemas cardíacos como a doença coronariana, defeitos valvulares, fibrilação atrial, entre outros, podem gerar um AVC. Um médico pode avaliar fatores de risco e ajudar a decidir o melhor tratamento. <sup>13</sup>
                 </p>
 
                 <h5 class="co-red">Consequências de um AVC</h5>
 
                 <p>Um ACV pode causar incapacidades temporárias ou permanentes , dependendo da quantidade de tempo que o cérebro não recebeu fluxo sanguíneo e de que parte foi afetada. As  complicações podem ser as seguintes: </p>
-                <p>Paralisia ou perda de movimento muscular: Pode ocorrer paralisia de um lado do corpo ou que se perca o controle de certos músculos, como os de um lado do rosto ou de um braço. 15</p>
-                <p>Dificuldade em falar ou comer: Um AVC pode afetar o controle dos músculos da boca e da garganta, o que pode dificultar a pessoa comer ou falar claramente. 16</p>
-                <p>Perda de memória ou dificuldades de raciocínio: A pessoa pode ter perda de memória ou dificuldade de pensar, raciocinar e entender. 17</p>
-                <p>Problemas emocionais: Pode ter alguma dificuldade em controlar suas emoções, ou manifestar depressão. 18</p>
+                <p>Paralisia ou perda de movimento muscular: Pode ocorrer paralisia de um lado do corpo ou que se perca o controle de certos músculos, como os de um lado do rosto ou de um braço. <sup>15</sup></p>
+                <p>Dificuldade em falar ou comer: Um AVC pode afetar o controle dos músculos da boca e da garganta, o que pode dificultar a pessoa comer ou falar claramente. <sup>16</sup></p>
+                <p>Perda de memória ou dificuldades de raciocínio: A pessoa pode ter perda de memória ou dificuldade de pensar, raciocinar e entender. <sup>17</sup></p>
+                <p>Problemas emocionais: Pode ter alguma dificuldade em controlar suas emoções, ou manifestar depressão. <sup>18</sup></p>
                 <p>Atualmente, o tratamento mais utilizado para a prevenção de um AVC é com anticoagulantes orais, apesar dos efeitos colaterais que esses medicamentos produzem no seu corpo. Conheça um tratamento alternativo a esses medicamentos e livre de seus efeitos colaterais e tome as melhores decisões para sua saúde.</p>
 
             </div>
@@ -246,9 +251,9 @@
 
                 <p class="co-white">A anticoagulação oral ajuda a prevenir acidentes vasculares cerebrais (AVC)
                     em pacientes com Fibrilação Atrial (F.A.), mas para alguns pacientes o risco
-                    de tomá-la é maior do que o benefício destes medicamentos. 1
+                    de tomá-la é maior do que o benefício destes medicamentos. <sup>1</sup>
                     Existem alternativas que podem ajudar a melhorar sua qualidade de vida,
-                    uma delas é a oclusão do apêndice atrial esquerdo. 2
+                    uma delas é a oclusão do apêndice atrial esquerdo. <sup>2</sup>
                 </p>
                 <p class="co-white">
 
