@@ -27,7 +27,7 @@
                 {!! NoCaptcha::renderJs() !!} {!! NoCaptcha::display() !!}
 
                 <div class="row pt-4">
-                    <button type="submit" class="default-btn" style="pointer-events: all; cursor: pointer;width: 120px;margin:0px auto;border-radius: 0px;">Enviar <i class="bx bx-send"></i><span></span></button>
+                    <button type="submit" class="default-btn" style="pointer-events: all; cursor: pointer;width: 120px;margin:0px auto;border-radius: 0px;">Enviar<span></span></button>
 
                 </div>
             </form>

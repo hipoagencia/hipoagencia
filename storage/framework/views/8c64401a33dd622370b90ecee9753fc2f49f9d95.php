@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="col-lg-12 col-md-12">
-                            <button type="submit" class="default-btn disabled" style="pointer-events: all; cursor: pointer;">Enviar <i class="bx bx-send"></i><span></span></button>
+                            <button type="submit" class="default-btn disabled" style="pointer-events: all; cursor: pointer;">Enviar<span></span></button>
                             <div id="msgSubmit" class="h3 text-center hidden"></div>
                             <div class="clearfix"></div>
                         </div>
