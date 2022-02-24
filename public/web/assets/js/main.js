@@ -1,13 +1,13 @@
 jQuery(
     (function ($) {
         "use strict";
-        $(window).on("scroll", function () {
-            if ($(this).scrollTop() > 350) {
-                $(".navbar-area").addClass("is-sticky");
-            } else {
-                $(".navbar-area").removeClass("is-sticky");
-            }
-        });
+        // $(window).on("scroll", function () {
+        //     if ($(this).scrollTop() > 350) {
+        //         $(".navbar-area").addClass("is-sticky");
+        //     } else {
+        //         $(".navbar-area").removeClass("is-sticky");
+        //     }
+        // });
         jQuery(".mean-menu").meanmenu({ meanScreenWidth: "1199" });
         $(".others-option-for-responsive .dot-menu").on("click", function () {
             $(".others-option-for-responsive .container .container").toggleClass("active");
