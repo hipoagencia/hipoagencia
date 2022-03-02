@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\User as UserRequest;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Permission\Models\Role;
@@ -99,7 +100,12 @@ class UserController extends Controller
 //        $users->fill($request->all());
 //        var_dump($users->getAttributes());
 
-        $userCreate = User::create($request->all());
+
+        $data = $request->all();
+        $data['password'] = bcrypt($request->password);
+        $data['email_verified_at'] = Carbon::now();
+
+        $userCreate = User::create($data);
         $userCreate->assignRole($request->role);
 
         if (!empty($request->file('cover'))) {
