@@ -86,7 +86,7 @@ Route::group(['as' => 'web.'], function () {
         return view('web.page.coracao.arritmiaVentricular');
     })->name('page.arritmiaVentricular');
 
-    Route::get('/especialidade/coracao/arritmia-artrial', function () {
+    Route::get('/especialidade/coracao/arritmia-atrial', function () {
         return view('web.page.coracao.arritmiaArtrial');
     })->name('page.arritmiaArtrial');
 

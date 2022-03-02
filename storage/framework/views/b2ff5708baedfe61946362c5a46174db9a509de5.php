@@ -29,7 +29,7 @@
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-                <a href="#" class="bs-wizard-dot" style="background-color:#ac1d2e;"></a>
+                <a href="#1" class="bs-wizard-dot" style="background-color:#ac1d2e;"></a>
                 <div class="bs-wizard-info text-center"><h5 style="color:#ac1d2e;">O que é</h5></div>
             </div>
 
@@ -38,7 +38,7 @@
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-                <a href="#" class="bs-wizard-dot"></a>
+                <a href="#1" class="bs-wizard-dot"></a>
                 <div class="bs-wizard-info text-center"><h5 style="color:#808080;">Sintomas</h5></div>
             </div>
 
@@ -47,7 +47,7 @@
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-                <a href="#" class="bs-wizard-dot"></a>
+                <a href="#2" class="bs-wizard-dot"></a>
                 <div class="bs-wizard-info text-center"><h5 style="color:#808080;">Causas</h5></div>
             </div>
 
@@ -56,16 +56,16 @@
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-                <a href="#" class="bs-wizard-dot"></a>
+                <a href="#3" class="bs-wizard-dot"></a>
                 <div class="bs-wizard-info text-center"><h5 style="color:#808080;">Fatores de Risco</h5></div>
             </div>
 
-            <div class="col bs-wizard-step disabled"><!-- active -->
+            <div class="col bs-wizard-step"><!-- active -->
                 <div class="text-center bs-wizard-stepnum">5</div>
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-                <a href="#" class="bs-wizard-dot"></a>
+                <a href="#4" class="bs-wizard-dot"></a>
                 <div class="bs-wizard-info text-center"><h5 style="color:#808080;">Tratamento</h5></div>
             </div>
         </div>
@@ -98,7 +98,7 @@
     </div>
 
 
-    <div class="about-what-find-blue co-bg-red">
+    <div class="about-what-find-blue co-bg-red" id="1">
         <div class="container  pb-70">
             <div class="row justify-content-center text-center">
 
@@ -158,7 +158,7 @@
     </div>
 
 
-    <div class="pt-70 about-what-find">
+    <div class="pt-70 about-what-find" id="2">
         <div class="container">
             <div class="section-title pb-70">
                 <h3 class="co-red mb-3">Causas</h3>
@@ -224,7 +224,7 @@
 
 
 
-    <div class="pt-70 pb-70 bg-gray">
+    <div class="pt-70 pb-70 bg-gray" id="3">
         <div class="container">
             <div class="section-title">
                 <h3 class="co-red mb-3">Fatores de risco</h3>
@@ -260,7 +260,7 @@
         </div>
     </div>
 
-    <div class="about-what-find-blue">
+    <div class="about-what-find-blue" id="4">
         <div class="container pt-70  pb-70">
             <div class="row justify-content-center text-center">
 

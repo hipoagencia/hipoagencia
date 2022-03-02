@@ -62,7 +62,7 @@
                 <div class="bs-wizard-info text-center"><h5 style="color:#1bb166;">Fatores de Risco</h5></div>
             </div>
 
-            <div class="col bs-wizard-step disabled"><!-- active -->
+            <div class="col bs-wizard-step"><!-- active -->
                 <div class="text-center bs-wizard-stepnum">5</div>
                 <div class="progress">
                     <div class="progress-bar"></div>

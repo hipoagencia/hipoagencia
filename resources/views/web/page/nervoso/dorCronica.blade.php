@@ -57,7 +57,7 @@
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-                <a href="#4" class="bs-wizard-dot"></a>
+                <a href="#3" class="bs-wizard-dot"></a>
                 <div class="bs-wizard-info text-center"><h5 style="color:#808080;">Fatores de Risco</h5></div>
             </div>
 

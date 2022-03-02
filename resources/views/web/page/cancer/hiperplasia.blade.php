@@ -62,7 +62,7 @@
                 <div class="bs-wizard-info text-center"><h5 style="color:#ff7200;">Fatores de Risco</h5></div>
             </div>
 
-            <div class="col bs-wizard-step disabled"><!-- active -->
+            <div class="col bs-wizard-step"><!-- active -->
                 <div class="text-center bs-wizard-stepnum">5</div>
                 <div class="progress">
                     <div class="progress-bar"></div>
@@ -89,7 +89,7 @@
                 <p>A hiperplasia prostática benigna (HPB) é uma consequência natural do envelhecimento. A próstata dobra de tamanho durante a adolescência e continua a crescer ao longo da vida.</p>
                 <p>Com o tempo, uma próstata aumentada pode comprimir o pequeno tubo que leva a urina da bexiga ao pênis e restringir o fluxo de urina.</p>
                 <p>Uma próstata aumentada pode interferir nos processos urinários normais, como enchimento e esvaziamento. Se não for tratada, pode causar problemas na bexiga ou nos rins.</p>
-                <p>Embora as causas da HPB ainda não sejam claras, é uma doença muito comum, pois 90% dos homens entre 50 e 80 anos de idade possivelmente a sofrerão.</p>
+                <p id="4">Embora as causas da HPB ainda não sejam claras, é uma doença muito comum, pois 90% dos homens entre 50 e 80 anos de idade possivelmente a sofrerão.</p>
                 <p>A HPB afeta 90% dos homens aos 85 anos de idade.</p>
                 <p>Idade, histórico familiar de problemas de próstata, obesidade e doenças crônicas, como diabetes e doenças cardíacas, podem aumentar o risco de aumento da próstata. Ignorar esses fatores e sintomas relacionados pode levar a complicações graves.</p>
 
@@ -211,7 +211,7 @@
 
 
 
-    <div class="about-what-find-blue" id="5">
+    <div class="about-what-find-blue">
         <div class="container pt-70  pb-70">
             <div class="row justify-content-center text-center">
 
@@ -226,7 +226,7 @@
                     <p class="mb-3 text-white">EVITAR OS DESCONGESTIONANTES E ANTI-HISTAMÍNICOS</p>
 
 
-                    <h3 class="mt-5 mb-3">Tratamentos</h3>
+                    <h3 class="mt-5 mb-3" id="5">Tratamentos</h3>
 
                     <h5 class="co-white">Medicamentos</h5>
 
