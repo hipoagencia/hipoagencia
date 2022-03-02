@@ -41,8 +41,7 @@
                 <div class="mt-5 text-center">
 
                     <div>
-                        <p>© <script>document.write(new Date().getFullYear())</script> {{ env('APP_NAME') }}. Desenvolvido com <i class="mdi mdi-heart text-danger"></i> por
-                            <a href="https://hipoagencia.com.br" target="_blank">Hipo Agência</a></p>
+                        <p>© <script>document.write(new Date().getFullYear())</script> {{ env('APP_NAME') }}.
                     </div>
                 </div>
 
