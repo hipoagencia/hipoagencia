@@ -125,7 +125,7 @@
 
     <div class="about-what-find-blue" id="3">
         <div class="container pt-70  pb-60">
-            <div class="section-title justify-content-center text-center pb-3">
+            <div class="section-title justify-content-center text-center pb-4">
 
                 <h3>Rastreamentos</h3>
 
@@ -184,11 +184,11 @@
 
 
                     <div class="row">
-                        <div class="col-12">
-                            <ul class="col list-style mt-3 text-left">
-                                <li class="text-white"><b>Colorectal Cancer Alliance (Aliança contra o Câncer Colorretal)</b></li>
-                                <li class="text-white"><b>Colon Cancer Coalition (Coalizão Contra o Câncer de Colon)</b></li>
-                            </ul>
+                        <div class="col-12 mt-3">
+
+                            <p class="text-white"><b>Colorectal Cancer Alliance (Aliança contra o Câncer Colorretal)</b></p>
+                            <p  class="text-white"><b>Colon Cancer Coalition (Coalizão Contra o Câncer de Colon)</b></p>
+
                         </div>
                     </div>
 
