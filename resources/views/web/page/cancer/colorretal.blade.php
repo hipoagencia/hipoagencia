@@ -85,7 +85,7 @@
                     informações sobre prevenção, aqui está uma visão geral dos fatores de risco e rastreamento disponíveis</p>
 
 
-                <h5 class="co-orange mb-3">O que o Câncer Colorretal?</h5>
+                <h5 class="co-orange mb-3">O que é Câncer Colorretal?</h5>
 
                 <p>O câncer colorretal ocorre no cólon, reto ou em ambos. O câncer de cólon e o câncer retal têm muitas
                     características em comum, incluindo começar como um crescimento ou pólipo no revestimento interno
