@@ -161,7 +161,7 @@
                 </div>
 
                 <p class="mt-3">Visite o site <a href="https://www.ccalliance.org/" target="_blank">Colorectal Cancer Alliance’s Patient and Family Support</a>
-                    Suporte ao Paciente e à Família da Aliança Contra o Câncer Colorretal para fazer perguntas a seu médico
+                    [Suporte ao Paciente e à Família da Aliança Contra o Câncer Colorretal] para fazer perguntas a seu médico
                     sobre o tratamento.</p>
 
 
