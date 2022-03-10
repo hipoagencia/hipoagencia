@@ -247,7 +247,7 @@
         <div class="container pt-70  pb-70">
             <div class="row justify-content-center text-center">
 
-                <h3 class="co-white">Tratamentos</h3>
+                <h3>Tratamentos</h3>
 
                 <p class="co-white">A anticoagulação oral ajuda a prevenir acidentes vasculares cerebrais (AVC)
                     em pacientes com Fibrilação Atrial (F.A.), mas para alguns pacientes o risco

@@ -120,6 +120,10 @@ Route::group(['as' => 'web.'], function () {
         return view('web.page.cancer.hiperplasia');
     })->name('page.hiperplasia');
 
+    Route::get('/especialidade/canceres-e-tumores/colorretal', function () {
+        return view('web.page.cancer.colorretal');
+    })->name('page.colorretal');
+
 
     /*****************************
      **********   SEXUAL   *******

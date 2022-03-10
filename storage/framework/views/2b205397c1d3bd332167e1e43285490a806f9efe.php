@@ -64,6 +64,7 @@
     <div class="overlay-content">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
         <h2 class="text-white">Cânceres e Tumores</h2>
+        <a href="<?php echo e(route('web.page.colorretal')); ?>">Colorretal</a>
         <a href="<?php echo e(route('web.page.hiperplasia')); ?>">Hiperplasia Prostática Benigna</a>
     </div>
 </div>

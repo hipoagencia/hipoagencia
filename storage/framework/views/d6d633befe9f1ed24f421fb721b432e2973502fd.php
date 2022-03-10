@@ -112,8 +112,13 @@
                                                </li>
 
                                                <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.colorretal')); ?>" class="nav-link">Colorretal</a>
+                                               </li>
+
+                                               <li class="nav-item">
                                                    <a href="<?php echo e(route('web.page.hiperplasia')); ?>" class="nav-link">Hiperplasia Prostática Benigna</a>
                                                </li>
+
 
                                            </ul>
                                        </div>
