@@ -187,7 +187,7 @@
 
                     <div class="row">
                         <div class="col-12">
-                            <ul class="col list-style mt-3">
+                            <ul class="col list-style mt-3 text-left">
                                 <li class="text-white"><b>Colorectal Cancer Alliance (Aliança contra o Câncer Colorretal)</b></li>
                                 <li class="text-white"><b>Colon Cancer Coalition (Coalizão Contra o Câncer de Colon)</b></li>
                             </ul>
