@@ -98,7 +98,8 @@
                                             <select id="formrow-inputState" class="form-select" name="user_id">
                                                 <option>Selecione o Autor..</option>
                                                 <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                    <option value="<?php echo e($user->id); ?>" <?php echo e(( $post->user_id == $user->id ? 'selected' : ( old('user_id') == $user->id ? 'selected' : '' ) )); ?>><?php echo e($user->name); ?> <?php echo e($user->last_name); ?></option>
+                                                    <option
+                                                        value="<?php echo e($user->id); ?>" <?php echo e(( $post->user_id == $user->id ? 'selected' : ( old('user_id') == $user->id ? 'selected' : '' ) )); ?>><?php echo e($user->name); ?> <?php echo e($user->last_name); ?></option>
                                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </select>
                                         </div>
@@ -106,12 +107,15 @@
 
                                     <div class="col-lg-4">
                                         <div class="mb-3">
-                                            <label for="formrow-inputState" class="form-label">Categoria Principal</label>
-                                            <select id="formrow-inputState" class="form-select" name="principalcategory">
+                                            <label for="formrow-inputState" class="form-label">Categoria
+                                                Principal</label>
+                                            <select id="formrow-inputState" class="form-select"
+                                                    name="principalcategory">
                                                 <option>Selecione a categoria..</option>
 
                                                 <?php $__currentLoopData = $specs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $spec): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                    <option value="<?php echo e($spec->id); ?>" <?php echo e(($post->principalcategory == $spec->id ? 'selected' : (old('principalcategory') == $spec->id ? 'selected' : '' ))); ?>><?php echo e($spec->name); ?></option>
+                                                    <option
+                                                        value="<?php echo e($spec->id); ?>" <?php echo e(($post->principalcategory == $spec->id ? 'selected' : (old('principalcategory') == $spec->id ? 'selected' : '' ))); ?>><?php echo e($spec->name); ?></option>
                                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </select>
                                         </div>
@@ -126,7 +130,11 @@
 
                                             <?php $__currentLoopData = $categories->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <option
-                                                    value="<?php echo e($category->id); ?>" <?php echo e($category->id); ?>" <?php echo e(($post->categories->find($category->id) == true ? 'selected' : (in_array($category->id, old("categories") ?: []) ? "selected" : ""))); ?>><?php echo e($category->name); ?></option>
+                                                    value="<?php echo e($category->id); ?>" <?php echo e($category->id); ?>
+
+                                                " <?php echo e(($post->categories->find($category->id) == true ? 'selected' : (in_array($category->id, old("categories") ?: []) ? "selected" : ""))); ?>
+
+                                                ><?php echo e($category->name); ?></option>
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
 
@@ -134,7 +142,8 @@
 
 
                                     <div class="mb-3 mt-3">
-                                        <textarea id="elm1" name="description" class="my-editor" ><?php echo e(old('description') ?? $post->description); ?></textarea>
+                                        <textarea id="elm1" name="description"
+                                                  class="my-editor"><?php echo e(old('description') ?? $post->description); ?></textarea>
                                     </div>
 
 
@@ -189,6 +198,14 @@
                                             <label for="slug" class="form-label">Slug</label>
                                             <input name="slug" class="form-control"
                                                    value="<?php echo e(old('slug') ?? $post->slug); ?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label for="meta_descri" class="form-label">Meta Descrição</label>
+                                            <textarea name="meta_descri" class="form-control" cols="40"
+                                                      rows="5"><?php echo e(old('meta_descri') ?? $post->meta_descri); ?></textarea>
                                         </div>
                                     </div>
 

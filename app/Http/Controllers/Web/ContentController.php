@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Mail\Contact\SendMail;
 use App\Models\Content;
 use App\Models\Post;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -147,6 +149,18 @@ class ContentController extends Controller
 
         //Veja Mais (lateral)
         $postsRelated = Post::with('princ')->where('principalcategory', $post->principalcategory)->orderBy('id', 'DESC')->limit(3)->get();
+
+        $title = $post->title;
+
+        SEOTools::setTitle($title);
+        SEOTools::setDescription($post->meta_descri);
+
+        SEOTools::opengraph()->addProperty('type', 'article');
+        SEOTools::jsonLd()->addImage($post->cover);
+
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addImage($post->cover);
+
 
         return view('web.article',[
             'post' => $post,

@@ -279,9 +279,7 @@
                         © <?php echo e(env('app_name')); ?>.
                     </div>
                     <div class="col-sm-6">
-                        <div class="text-sm-end d-none d-sm-block">
-                            Desenvolvimento <a href="https://hipoagencia.com.br">Hipo Agência</a>
-                        </div>
+
                     </div>
                 </div>
             </div>

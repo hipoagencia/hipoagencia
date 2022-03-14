@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 
-    <title>{{ env('APP_NAME') }}</title>
+    {!! \Artesaos\SEOTools\Facades\SEOTools::generate() !!}
 
     <meta charset="utf-8">
 
@@ -52,6 +52,8 @@
 
         gtag('config', 'G-5Y95V4PG3M');
     </script>
+
+
 
     @hasSection('css')
         @yield('css')

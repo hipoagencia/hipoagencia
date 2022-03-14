@@ -90,7 +90,8 @@
                                             <select id="formrow-inputState" class="form-select" name="user_id">
                                                 <option>Selecione o Autor..</option>
                                                 @foreach($users as $user)
-                                                    <option value="{{ $user->id }}" {{ ( $post->user_id == $user->id ? 'selected' : ( old('user_id') == $user->id ? 'selected' : '' ) ) }}>{{ $user->name }} {{ $user->last_name }}</option>
+                                                    <option
+                                                        value="{{ $user->id }}" {{ ( $post->user_id == $user->id ? 'selected' : ( old('user_id') == $user->id ? 'selected' : '' ) ) }}>{{ $user->name }} {{ $user->last_name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -98,12 +99,15 @@
 
                                     <div class="col-lg-4">
                                         <div class="mb-3">
-                                            <label for="formrow-inputState" class="form-label">Categoria Principal</label>
-                                            <select id="formrow-inputState" class="form-select" name="principalcategory">
+                                            <label for="formrow-inputState" class="form-label">Categoria
+                                                Principal</label>
+                                            <select id="formrow-inputState" class="form-select"
+                                                    name="principalcategory">
                                                 <option>Selecione a categoria..</option>
 
                                                 @foreach($specs as $spec)
-                                                    <option value="{{ $spec->id }}" {{ ($post->principalcategory == $spec->id ? 'selected' : (old('principalcategory') == $spec->id ? 'selected' : '' )) }}>{{ $spec->name }}</option>
+                                                    <option
+                                                        value="{{ $spec->id }}" {{ ($post->principalcategory == $spec->id ? 'selected' : (old('principalcategory') == $spec->id ? 'selected' : '' )) }}>{{ $spec->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -118,7 +122,9 @@
 
                                             @foreach($categories->get() as $category)
                                                 <option
-                                                    value="{{ $category->id }}" {{ $category->id }}" {{ ($post->categories->find($category->id) == true ? 'selected' : (in_array($category->id, old("categories") ?: []) ? "selected" : "")) }}>{{ $category->name }}</option>
+                                                    value="{{ $category->id }}" {{ $category->id }}
+                                                " {{ ($post->categories->find($category->id) == true ? 'selected' : (in_array($category->id, old("categories") ?: []) ? "selected" : "")) }}
+                                                >{{ $category->name }}</option>
                                             @endforeach
                                         </select>
 
@@ -126,7 +132,8 @@
 
 
                                     <div class="mb-3 mt-3">
-                                        <textarea id="elm1" name="description" class="my-editor" >{{ old('description') ?? $post->description }}</textarea>
+                                        <textarea id="elm1" name="description"
+                                                  class="my-editor">{{ old('description') ?? $post->description }}</textarea>
                                     </div>
 
 
@@ -181,6 +188,14 @@
                                             <label for="slug" class="form-label">Slug</label>
                                             <input name="slug" class="form-control"
                                                    value="{{ old('slug') ?? $post->slug }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label for="meta_descri" class="form-label">Meta Descrição</label>
+                                            <textarea name="meta_descri" class="form-control" cols="40"
+                                                      rows="5">{{ old('meta_descri') ?? $post->meta_descri }}</textarea>
                                         </div>
                                     </div>
 

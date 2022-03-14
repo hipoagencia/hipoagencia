@@ -182,6 +182,14 @@
                                         </div>
                                     </div>
 
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label for="meta_descri" class="form-label">Meta Descrição</label>
+                                            <textarea name="meta_descri" class="form-control" cols="40"
+                                                      rows="5"><?php echo e(old('meta_descri')); ?></textarea>
+                                        </div>
+                                    </div>
+
 
                                 </div>
                             </div>

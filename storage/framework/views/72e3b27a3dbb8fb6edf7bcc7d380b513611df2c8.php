@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
 
-    <title><?php echo e(env('APP_NAME')); ?></title>
+    <?php echo \Artesaos\SEOTools\Facades\SEOTools::generate(); ?>
+
 
     <meta charset="utf-8">
 
@@ -52,6 +53,8 @@
 
         gtag('config', 'G-5Y95V4PG3M');
     </script>
+
+
 
     <?php if (! empty(trim($__env->yieldContent('css')))): ?>
         <?php echo $__env->yieldContent('css'); ?>
