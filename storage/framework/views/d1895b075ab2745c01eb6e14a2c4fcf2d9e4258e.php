@@ -1,31 +1,37 @@
 <?php $__env->startSection('content'); ?>
 
 
-    <div class="main-banner-area">
-        <div>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col col-12 col-md-6 order-lg-last">
-
-                        <div class="main-banner-content">
-                            <h1>Quem<br>se informa,<br/><span class="text-white">se cuida.</span></h1>
-                            <p class="text-white w-75">Tudo o que você precisa saber
-                                sobre as principais condições
-                                clínicas, direto de médicos
-                                e especialistas. Isso sim é saúde.</p><br>
-
-</div>
-
-                    </div>
-                    <div class="col col-12 col-md-6 order-lg-first">
-                        <img src="<?php echo e(url(asset('web/assets/images/boston/woman.png'))); ?>" alt="Boston Health"/>
-
-                    </div>
-
-                </div>
-            </div>
+    <div class="container-fluid">
+        <div class="row">
+            <img src="<?php echo e(url(asset('web/assets/images/banner/marco.jpg'))); ?>" class="img-fluid"/>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="specialities pt-70 pb-70">
         <div class="container">
