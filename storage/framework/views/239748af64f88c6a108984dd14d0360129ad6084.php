@@ -21,11 +21,11 @@
                     aria-label="Slide 6"></button>
         </div>
         <div class="carousel-inner">
-
-
-
-
             <div class="carousel-item active">
+                <a href="#"><img src="<?php echo e(url(asset('web/assets/images/banner/marco.jpg'))); ?>" class="d-block w-100"
+                                 alt=""></a>
+            </div>
+            <div class="carousel-item">
                 <a href="<?php echo e(route('web.category', ['slug' => 'sistema-nervoso','id' => '1'])); ?>"><img
                         src="<?php echo e(url(asset('web/assets/images/banner/nervoso.jpg'))); ?>" class="d-block w-100"
                         alt=""></a>

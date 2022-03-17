@@ -200,29 +200,29 @@
     </div>
 
 
-    <div class="pt-70 about-what-find" id="3">
-        <div class="container">
-            <div class="section-title pb-40">
+{{--    <div class="pt-70 about-what-find" id="3">--}}
+{{--        <div class="container">--}}
+{{--            <div class="section-title pb-40">--}}
 
-                <h3 style="color:#4cb8d2 !important">Close the Gap</h3>
+{{--                <h3 style="color:#4cb8d2 !important">Close the Gap</h3>--}}
 
-                <p>‘Close the Gap’ é o programa de ações em saúde da Boston Scientific dedicado
-                    a aumentar a conscientização sobre doenças gastrointestinais, educar pacientes, financiar pesquisas e melhorar o acesso aos cuidados médicos.
-                    A Boston Scientific não fornece aconselhamento médico, diagnóstico ou tratamento.
-                    O conteúdo deste website, incluindo gráficos, textos, imagens e outros materiais (“Conteúdo”) são apenas para fins informativos. O Conteúdo não se destina
-                    a ser um substituto do aconselhamento médico profissional, diagnóstico ou tratamento. Sempre procure o conselho de seu médico ou outro provedor de saúde qualificado com quaisquer perguntas que você possa ter a respeito de uma doença.</p>
-
-
-                <b class="mt-4">Referências:</b><br><br>
-
-                <a href="https://www.ccalliance.org/" target="_blank">Colorectal Cancer Alliance [Aliança contra o Câncer Colorretal]</a><br>
-                <a href="https://www.cancer.org/cancer/colon-rectal-cancer/about.html" target="_blank">American Cancer Society [Sociedade Americana do Câncer]</a>
+{{--                <p>‘Close the Gap’ é o programa de ações em saúde da Boston Scientific dedicado--}}
+{{--                    a aumentar a conscientização sobre doenças gastrointestinais, educar pacientes, financiar pesquisas e melhorar o acesso aos cuidados médicos.--}}
+{{--                    A Boston Scientific não fornece aconselhamento médico, diagnóstico ou tratamento.--}}
+{{--                    O conteúdo deste website, incluindo gráficos, textos, imagens e outros materiais (“Conteúdo”) são apenas para fins informativos. O Conteúdo não se destina--}}
+{{--                    a ser um substituto do aconselhamento médico profissional, diagnóstico ou tratamento. Sempre procure o conselho de seu médico ou outro provedor de saúde qualificado com quaisquer perguntas que você possa ter a respeito de uma doença.</p>--}}
 
 
+{{--                <b class="mt-4">Referências:</b><br><br>--}}
 
-            </div>
-        </div>
-    </div>
+{{--                <a href="https://www.ccalliance.org/" target="_blank">Colorectal Cancer Alliance [Aliança contra o Câncer Colorretal]</a><br>--}}
+{{--                <a href="https://www.cancer.org/cancer/colon-rectal-cancer/about.html" target="_blank">American Cancer Society [Sociedade Americana do Câncer]</a>--}}
+
+
+
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
 
 
