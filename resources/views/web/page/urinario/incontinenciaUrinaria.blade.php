@@ -12,7 +12,7 @@
 
                         <div class="main-banner-content specialities-inside-content">
                             <img src="{{url(asset('web/assets/images/boston/ico/2.png'))}}" class="ico-img"><br><br>
-                            <h1>Incontinência Urinária</h1>
+                            <h1>Incontinência Urinária Masculina</h1>
                         </div>
 
                     </div>
