@@ -99,7 +99,7 @@
                                                </li>
 
                                                <li class="nav-item">
-                                                   <a href="{{ route('web.page.incontinenciaUrinaria') }}" class="nav-link">Incontinência Urinária</a>
+                                                   <a href="{{ route('web.page.incontinenciaUrinaria') }}" class="nav-link">Incontinência Urinária Masculina</a>
                                                </li>
 
                                            </ul>
