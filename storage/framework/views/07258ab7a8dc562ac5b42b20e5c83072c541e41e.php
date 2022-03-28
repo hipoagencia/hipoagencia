@@ -80,7 +80,7 @@
             <div class="section-title pb-70">
                 <h3 class="co-blue mb-3">O que é a doença de Parkinson?</h3>
 
-                <p>A doença de Parkinson é um distúrbio do movimento que afeta ais de dez milhões de pessoas em todo o mundo.1,2 A doença é progressiva - o que significa que avança com o tempo - e degenerativa, porque é caracterizada por um declínio contínuo das células produtoras de dopamina na região motora do cérebro.</p>
+                <p>A doença de Parkinson é um distúrbio do movimento que afeta mais de dez milhões de pessoas em todo o mundo.<sup>1,2</sup> A doença é progressiva - o que significa que avança com o tempo - e degenerativa, porque é caracterizada por um declínio contínuo das células produtoras de dopamina na região motora do cérebro.</p>
                 <p>A dopamina é uma substância química importante que o cérebro usa para regular os movimentos. Seu declínio na doença de Parkinson reduz a capacidade do paciente de controlar ou iniciar o movimento, resultando em sintomas como tremor, movimento lento, rigidez e instabilidade postural.</p>
 
             </div>
@@ -201,94 +201,94 @@
 
                 <h5 class="co-white mt-3">Medicamentos</h5>
 
-                <p class="co-white">
-                    Embora o plano de tratamento de cada paciente seja diferente, quase todos começarão com medicamentos, pois estes tendem a ser mais eficazes nos estágios iniciais da doença de Parkinson.
-                </p>
+
+
+
                 <p class="co-white">
                     O plano de medicação ideal varia de pessoa para pessoa, e seu médico pode ajudá-lo a encontrar o medicamento - ou combinação de medicamentos - certo para lhe dar o máximo de alívio com o mínimo de efeitos colaterais. Com o tempo, à medida que os medicamentos se tornam menos eficazes, as doses podem ser aumentadas e novos medicamentos podem ser adicionados.
                 </p>
-                <p class="co-white">
-                    Existem vários medicamentos que são utilizados para tratar a doença de Parkinson, incluindo:
-                </p>
 
 
 
-                <div class="row">
-                    <div class="col-12 mt-5 text-center">
-                        <h3 class=" mt-3">Levodopa (L-DOPA)</h3>
-                        <h5 class="co-white mt-3">Como Funciona</h5>
-                        <p  class="co-white">"Precursor" químico que o cérebro irá converter em dopamina. Utilizado para substituir a dopamina que não está sendo produzida no cérebro de pacientes com doença de Parkinson</p>
-
-                        <h5 class="co-white mt-3">Nomes de Marcas Comuns</h5>
-                        <p class="co-white">Larodopa®</p>
-                    </div>
 
 
-                    <div class="col-12 mt-5 text-center">
-                        <h3 class=" mt-3">Carbidopa</h3>
-                        <h5 class="co-white mt-3">Como Funciona</h5>
-                        <p  class="co-white">
-                            Previne a degradação da Levodopa antes que ela atinja o cérebro. Quase sempre administrado em conjunto com L-DOPA
-                        </p>
 
 
-                        <h5 class="co-white mt-3">Nomes de Marcas Comuns</h5>
-                        <p class="co-white">
-                            Parcopa® •
-                            Sinimet® •
-                            Rytary™ •
-                            Duopa™ (carbidopa/levodopa)
-                        </p>
-                    </div>
 
-                    <div class="col-12 mt-5 text-center">
-                        <h3 class=" mt-3">Agonistas da dopamina</h3>
-                        <h5 class="co-white mt-3">Como Funciona</h5>
-                        <p  class="co-white">
-                            Pode ser utilizado no lugar ou em combinação com a levodopa
-                        </p>
 
-                        <h5 class="co-white mt-3">Nomes de Marcas Comuns</h5>
-                        <p class="co-white">
-                            Neupro® 	Mirapex®
-                            Requip® 	Parlodel®
-                            Dostinex® 	Apokyn®
-                            Permax™
-                        </p>
-                    </div>
 
-                    <div class="col-12 mt-5 text-center">
-                        <h3 class=" mt-3">Inibidores de catecol O-metiltransferase (COMT)</h3>
-                        <h5 class="co-white mt-3">Como Funciona</h5>
-                        <p  class="co-white">
-                            Aumenta a concentração de dopamina no cérebro, dando mais oportunidade para o medicamento funcionar
-                        </p>
 
-                        <h5 class="co-white mt-3">Nomes de Marcas Comuns</h5>
-                        <p class="co-white">
-                            Comtan®
-                            Stalevo®
-                            Tasmar®
 
-                        </p>
-                    </div>
 
-                    <div class="col-12 mt-5 text-center">
-                        <h3 class=" mt-3">Anticolinérgicos</h3>
-                        <h5 class="co-white mt-3">Como Funciona</h5>
-                        <p  class="co-white">
-                            Reduz o tremor ou a rigidez1
-                        </p>
 
-                        <h5 class="co-white mt-3">Nomes de Marcas Comuns</h5>
-                        <p class="co-white">
-                            Akineton®
-                            Artane®
-                            Cogentin®
-                        </p>
-                    </div>
 
-                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             </div>
         </div>
@@ -306,10 +306,10 @@
                 <h3 class="co-blue mb-3">Por que você não deve esperar</h3>
 
                 <p>
-                    A pesquisa mostra que o momento ideal para obter uma ESTIMULAÇÃO CEREBRAL PROFUNDA  é quando seus medicamentos estão começando a se tornar menos eficazes, mas antes que eles deixem de funcionar. Você notará que suas doses de medicamentos não funcionam até o final da dose; ou você tem que começar a tomar a medicação com mais frequência, ou sua medicação começa a causar discinesia aumentada.
+                    A pesquisa mostra que o momento ideal para obter uma ESTIMULAÇÃO CEREBRAL PROFUNDA é quando seus medicamentos estão começando a se tornar menos eficazes, mas antes que eles deixem de funcionar. Você notará que suas doses de medicamentos não funcionam até o final da dose; ou você tem que começar a tomar a medicação com mais frequência, ou sua medicação começa a causar discinesia aumentada.
                 </p>
                 <p>
-                    Quanto mais cedo você conversar com seu médico sobre isso, você estará pronto para ir quando for a hora certa e não perder a oportunidade de receber terapia de ESTIMULAÇÃO CEREBRAL PROFUNDA . Uma vez que seus movimentos não responderem mais à medicação, você não é mais um candidato à ESTIMULAÇÃO CEREBRAL PROFUNDA .
+                    Quanto mais cedo você conversar com seu médico sobre isso, você estará pronto para ir quando for a hora certa e não perder a oportunidade de receber terapia de ESTIMULAÇÃO CEREBRAL PROFUNDA. Uma vez que seus movimentos não responderem mais à medicação, você não é mais um candidato à ESTIMULAÇÃO CEREBRAL PROFUNDA.
                 </p>
 
                 <h3 class="co-blue mb-3">Progressão da doença de Parkinson</h3>
@@ -376,7 +376,7 @@
 
                 <h3 class="co-blue mb-3">Programação e otimização</h3>
                 <p>Após sua cirurgia e recuperação, seu sistema de ESTIMULAÇÃO CEREBRAL PROFUNDA  será ligado e as configurações de estimulação serão personalizadas para você. Nos meses seguintes ao implante do seu dispositivo, você trabalhará em conjunto com sua equipe de tratamento para realizar ajustes nas configurações de estimulação e em seus medicamentos para ajudar a controlar melhor os sintomas.</p>
-                <p>Tem dúvidas sobre a ESTIMULAÇÃO CEREBRAL PROFUNDA? Abaixo estão alguns eclarecimentos:
+                <p>Tem dúvidas sobre a ESTIMULAÇÃO CEREBRAL PROFUNDA? Abaixo estão alguns esclarecimentos:
                 </p>
 
             </div>
@@ -390,7 +390,7 @@
                 <h3  class="co-blue mb-3">Estimulação Cerebral</h3>
 
                 <h5 class="co-blue mb-3">É seguro?</h5>
-                <p>Duas décadas de tratamento com ESTIMULAÇÃO CEREBRAL PROFUNDA  para mais de 100.001 pacientes mostraram a segurança em curto e longo prazo da ESTIMULAÇÃO CEREBRAL PROFUNDA . A cirurgia de ESTIMULAÇÃO CEREBRAL PROFUNDA  deve ser realizada por um neurocirurgião experiente que trabalha como parte de uma equipe interdisciplinar. Como em qualquer procedimento cirúrgico, existem riscos e potenciais efeitos colaterais, que variam de acordo com o paciente. Embora a maioria seja temporária e possa ser revertida ou reduzida por meio de estimulação, você deve discutir esses riscos com seus médicos.</p>
+                <p>Duas décadas de tratamento com ESTIMULAÇÃO CEREBRAL PROFUNDA  para mais de 100.000 pacientes mostraram a segurança em curto e longo prazo da ESTIMULAÇÃO CEREBRAL PROFUNDA. A cirurgia de ESTIMULAÇÃO CEREBRAL PROFUNDA  deve ser realizada por um neurocirurgião experiente que trabalha como parte de uma equipe interdisciplinar. Como em qualquer procedimento cirúrgico, existem riscos e potenciais efeitos colaterais, que variam de acordo com o paciente. Embora a maioria seja temporária e possa ser revertida ou reduzida por meio de estimulação, você deve discutir esses riscos com seus médicos.</p>
                 <hr>
 
                 <h5 class="co-blue mb-3">Eu poderia ser um candidato?</h5>
@@ -454,7 +454,7 @@
                 <p>E embora você possa usar um telefone celular, sugere-se que você não coloque o telefone diretamente em cima do dispositivo, no bolso de uma camisa ou casaco, por exemplo.</p>
 
                 <h3 class="co-blue mb-3">Viajando com seu sistema de ESTIMULAÇÃO CEREBRAL PROFUNDA </h3>
-                <p>A passagem por alguns detectores de metal ou portões de segurança, como os de aeroportos e lojas de departamentos, pode aumentar a estimulação ou desligar o sistema de ESTIMULAÇÃO CEREBRAL PROFUNDA .</p>
+                <p>A passagem por alguns detectores de metal ou portões de segurança, como os de aeroportos e lojas de departamentos, pode aumentar a estimulação ou desligar o sistema de ESTIMULAÇÃO CEREBRAL PROFUNDA.</p>
                 <p>Antes de passar por um portão de segurança, mostre o cartão de identificação do seu dispositivo ao segurança e solicite uma revista manual. Se uma haste de segurança for utilizada, peça ao pessoal de segurança para evitar colocá-la sobre o seu dispositivo.</p>
 
 
@@ -465,7 +465,7 @@
                 <p>Cada vez que você for ao médico para fazer um check-up, o nível da bateria e o desempenho do dispositivo serão verificados.</p>
                 <p>Se você tiver um sistema recarregável, talvez nunca seja necessário substituir a bateria. A longevidade da bateria dependerá de quanta estimulação você está programado para receber por dia, mas a vida média da bateria é de cerca de 3 a 5 anos.</p>
 
-                <h3 class="co-blue mb-3">
+                <h3 class="co-blue">
                     Suporte pós-implante
                 </h3>
                 <p>
@@ -473,24 +473,21 @@
                 </p>
 
 
+                <div class="section-title pb-70 mt-4" id="4">
+                    <h3 class="co-blue mb-3">Quer saber mais?</h3>
+
+                    <p>Para entender a extensão da situação, assista a gravação da LIVE: Doença de Parkinson e Transtornos do Movimento e tire todas as suas dúvidas.</p>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kBlXt215Fss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
             </div>
         </div>
     </div>
 
 
 
-    <div class="pt-70 about-what-find" id="4">
-        <div class="container">
-            <div class="section-title pb-70">
-                <h3 class="co-blue mb-3">Quer saber mais?</h3>
 
-                <p>Para entender a extensão da situação, assista a gravação da LIVE: Doença de Parkinson e Transtornos do Movimento e tire todas as suas dúvidas.</p>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/kBlXt215Fss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            </div>
-        </div>
-    </div>
 
 
     <?php echo $__env->make('web.components.newsletter', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

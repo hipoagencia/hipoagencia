@@ -58,11 +58,11 @@ class AuthController extends Controller
             activity()->useLog('Login')->causedBy(auth()->id())->log('O usuário logou');
 
             //Verifica se o e-mail foi confirmado
-            if (auth()->user()->email_verified_at == null) {
-                Auth::logout();
-                return redirect()->route('login')
-                    ->withErrors('É preciso confirmar sua conta em seu e-mail para continuar.');
-            }
+//            if (auth()->user()->email_verified_at == null) {
+//                Auth::logout();
+//                return redirect()->route('login')
+//                    ->withErrors('É preciso confirmar sua conta em seu e-mail para continuar.');
+//            }
 
             if (auth()->user()->is_admin >= 1) {
                 return redirect()->route('admin.dashboard');

@@ -121,23 +121,23 @@
                 </div>
 
                 <div class="col text-center about-box-top">
-                    <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico1.png'))); ?>"/>
+                    <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico11.png'))); ?>"/>
                     <p class="co-white">Palpitações cardíacas (sensação de ritmo cardíaco acelerado).</p>
                 </div>
 
                 <div class="col text-center about-box-top">
-                    <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico1.png'))); ?>"/>
-                    <p class="co-white">Pressão ou desconforto no peito.</p>
+                    <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico111.png'))); ?>"/>
+                    <p class="co-white">Falta de energia.</p>
                 </div>
 
                 <div class="col text-center about-box-top">
-                    <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico1.png'))); ?>"/>
-                    <p class="co-white">Pressão ou desconforto no peito.</p>
+                    <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico1111.png'))); ?>"/>
+                    <p class="co-white">Dificuldade em respirar durante atividades normais ou mesmo em repouso.</p>
                 </div>
 
                 <div class="col text-center about-box-top">
-                    <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico1.png'))); ?>"/>
-                    <p class="co-white">Pressão ou desconforto no peito.</p>
+                    <img src="<?php echo e(url(asset('web/assets/images/boston/specialities/ico11111.png'))); ?>"/>
+                    <p class="co-white">Sensação de tontura ou desmaio.</p>
                 </div>
 
 
@@ -315,6 +315,15 @@
 
             <h3 class="mb-3 color-blue mt-5">Como o Implante Oclusor do Apêndice Auricular<br>Esquerdo (OAAE) ajuda a
                 reduzir o risco de AVC?</h3>
+
+            <p>Oferece uma redução efetiva do risco de acidente vascular cerebral (AVC) sem
+                os riscos de sangramento prolongado dos anticoagulantes
+                Fornece o conforto de não ter que se lembrar de tomar uma pílula todos os
+                dias.
+                Mostra uma redução de 84% dos casos de acidente vascular cerebral
+                isquêmico em comparação aos pacientes que não passaram pelo
+                procedimento.
+                É colocado em seu coração durante um procedimento sob anestesia geral.</p>
         </div>
     </div>
 

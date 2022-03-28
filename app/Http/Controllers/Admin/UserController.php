@@ -103,7 +103,7 @@ class UserController extends Controller
 
         $data = $request->all();
         $data['password'] = bcrypt($request->password);
-        $data['email_verified_at'] = Carbon::now();
+        $data['email_verified_at'] = date('2022-03-28');
 
         $userCreate = User::create($data);
         $userCreate->assignRole($request->role);

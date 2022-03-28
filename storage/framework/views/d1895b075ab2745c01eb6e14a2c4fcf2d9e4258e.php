@@ -1,11 +1,11 @@
 <?php $__env->startSection('content'); ?>
 
 
-    <div class="container-fluid">
+
         <div class="row">
             <img src="<?php echo e(url(asset('web/assets/images/banner/marco.jpg'))); ?>" class="img-fluid"/>
         </div>
-    </div>
+
 
 
 
