@@ -3,7 +3,7 @@
 
 
         <div class="row">
-            <img src="<?php echo e(url(asset('web/assets/images/banner/marco.jpg'))); ?>" class="img-fluid"/>
+            <img src="<?php echo e(url(asset('web/assets/images/banner/banner.jpg'))); ?>" class="img-fluid"/>
         </div>
 
 

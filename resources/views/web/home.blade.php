@@ -5,7 +5,7 @@
 
 
         <div class="row">
-            <img src="{{ url(asset('web/assets/images/banner/marco.jpg')) }}" class="img-fluid"/>
+            <img src="{{ url(asset('web/assets/images/banner/banner.jpg')) }}" class="img-fluid"/>
         </div>
 
 
