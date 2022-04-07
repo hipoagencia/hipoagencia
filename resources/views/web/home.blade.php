@@ -5,7 +5,7 @@
 
 
         <div class="row">
-            <img src="{{ url(asset('web/assets/images/banner/banner_parkison_km.jpg')) }}" class="img-fluid"/>
+            <a href="https://saberdasaude.com.br/jornada/" target="_blank"><img src="{{ url(asset('web/assets/images/banner/banner_parkison_km.jpg')) }}" class="img-fluid"/></a>
         </div>
 
 
