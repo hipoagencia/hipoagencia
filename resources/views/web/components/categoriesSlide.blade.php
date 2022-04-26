@@ -36,6 +36,7 @@
         <a href="{{ route('web.page.avcNervoso') }}">AVC</a>
         <a href="{{ route('web.page.parkinson') }}">Parkinson</a>
         <a href="{{ route('web.page.dorCronica') }}">Dor Crônica</a>
+        <a href="{{ route('web.page.distonia') }}">Distonia</a>
     </div>
 </div>
 

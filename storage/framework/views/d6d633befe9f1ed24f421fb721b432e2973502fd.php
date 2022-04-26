@@ -56,6 +56,10 @@
                                                    <a href="<?php echo e(route('web.page.dorCronica')); ?>" class="nav-link">Dor Crônica</a>
                                                </li>
 
+                                               <li class="nav-item">
+                                                   <a href="<?php echo e(route('web.page.distonia')); ?>" class="nav-link">Distonia</a>
+                                               </li>
+
 
                                            </ul>
                                        </div>

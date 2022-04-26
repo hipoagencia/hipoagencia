@@ -62,7 +62,7 @@ Route::group(['as' => 'web.'], function () {
 
 
     /*****************************
-    **********   CÉREBRO   *******
+    **********   NERVOSO   *******
     *****************************/
 
     Route::get('/especialidade/sistema-nervoso/avc', function () {
@@ -76,6 +76,10 @@ Route::group(['as' => 'web.'], function () {
     Route::get('/especialidade/sistema-nervoso/doenca-de-parkinson', function () {
         return view('web.page.nervoso.parkinson');
     })->name('page.parkinson');
+
+    Route::get('/especialidade/sistema-nervoso/distonia', function () {
+        return view('web.page.nervoso.distonia');
+    })->name('page.distonia');
 
 
      /*****************************
