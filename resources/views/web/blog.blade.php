@@ -114,7 +114,7 @@
                     class="col text-center bg-spec-gray2 gray-hover2 {{ (request()->route()->slug == 'novidades' ? 'gray-h' : '') }}">
                     <a href="{{ route('web.category', ['slug' => 'novidades','id' => '6']) }}"><img
                             src="{{ url(asset('web/assets/images/boston/ico/6.png')) }}"  style="width:90px !important;"/></a>
-                    <h5>Relatos</h5>
+                    <h5>Histórias</h5>
                 </div>
 
 
