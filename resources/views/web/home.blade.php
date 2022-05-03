@@ -5,7 +5,7 @@
 
 
         <div class="row">
-           <a href="https://saberdasaude.com.br/jornada/"><img src="{{ url(asset('web/assets/images/banner/bannerparkinson.jpg')) }}" class="img-fluid"/></a>
+           <a href="https://saberdasaude.com.br/especialidade/sistema-nervoso/distonia"><img src="{{ url(asset('web/assets/images/banner/banner_distonia.jpg')) }}" class="img-fluid"/></a>
         </div>
 
 
