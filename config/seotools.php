@@ -12,7 +12,7 @@ return [
             'title'        => false, // set false to total remove
             'titleBefore'  => true, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description'  => 'O Saber da Saúde é uma iniciativa da Boston Scientific com o objetivo de disseminar conhecimento científico sobre saúde para o maior número de brasileiros possível.', // set false to total remove
-            'separator'    => ' - ',
+            'separator'    => '',
             'keywords'     => [],
             'canonical'    => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'robots'       => false, // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
@@ -36,7 +36,7 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'Saber da Saúde', // set false to total remove
+            'title'       => false, // set false to total remove
             'description' => 'O Saber da Saúde é uma iniciativa da Boston Scientific com o objetivo de disseminar conhecimento científico sobre saúde para o maior número de brasileiros possível.', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => false,
@@ -58,7 +58,7 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'       => 'Saber da Saúde', // set false to total remove
+            'title'       => false, // set false to total remove
             'description' => 'O Saber da Saúde é uma iniciativa da Boston Scientific com o objetivo de disseminar conhecimento científico sobre saúde para o maior número de brasileiros possível.', // set false to total remove
             'url'         => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'type'        => 'WebPage',
