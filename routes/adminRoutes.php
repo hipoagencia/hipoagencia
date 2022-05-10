@@ -66,8 +66,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('site-map', function () {
             \Spatie\Sitemap\SitemapGenerator::create(env('app_url'))->writeToFile(public_path('sitemap.xml'));
 
-            //Retorna para a Dashboard com mensagem de confirmação
-        });
+            return redirect()->route('admin.dashboard')->with(['type' => 'success', 'message' => 'Sitemap atualizado com sucesso!']);
+        })->name('sitemap');
 
         //BackupsList
         Route::get('backup-list', function () {

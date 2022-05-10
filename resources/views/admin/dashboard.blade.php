@@ -14,6 +14,8 @@
                 </div>
 
 
+
+
 {{--                @can('user_create')--}}
 {{--                    CRIAR USUÁRIO--}}
 {{--                @endcan--}}
@@ -32,6 +34,23 @@
 
             </div>
         </div>
+    </div>
+
+    <div class="row">
+
+        @if($errors->all())
+            @foreach($errors->all() as $error)
+                @component('admin.components.message',['type' => 'danger'])
+                    {{ $error }}
+                @endcomponent
+            @endforeach
+        @endif
+
+        @if(session()->exists('message'))
+            @component('admin.components.message',['type' => session()->get('type')])
+                {{ session()->get('message') }}
+            @endcomponent
+        @endif
     </div>
 
 @endsection

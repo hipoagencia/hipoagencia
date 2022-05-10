@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col col-lg-9">
                     <div class="text-uppercase pb-40">
-                        <h2 class="color-blue">{{ $post->name }}</h2>
+                        <h1 class="color-blue">{{ $post->name }}</h1>
                     </div>
                 </div>
                 <div class="col col-lg-3 text-right">

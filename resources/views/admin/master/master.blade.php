@@ -244,6 +244,13 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{ route('admin.sitemap') }}" class="waves-effect">
+                            <i class="bx bx-home-circle"></i>
+                            <span>Gerar Site-map</span>
+                        </a>
+                    </li>
+
 {{--                    <li>--}}
 {{--                        <a href="{{ route('user.dashboard') }}" class="waves-effect">--}}
 {{--                            <i class="bx bx-home-circle"></i>--}}
