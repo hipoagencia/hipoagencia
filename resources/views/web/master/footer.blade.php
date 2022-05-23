@@ -1,86 +1,52 @@
-<div class="pt-40 pb-40 sub-footer">
+<section class="big-section bg-extra-dark-gray">
     <div class="container">
-        <div class="row justify-content-center">
-
-            <div class="col-lg-3 pt-4">
-                <img src="{{ url(asset('web/assets/images/logo.png')) }}" alt="logo">
+        <div class="row">
+            <div class="col-12 col-lg-5 md-margin-5-rem-bottom sm-margin-4-rem-bottom wow animate__fadeIn"
+                 data-wow-delay="0.2s">
+                <h6 class="alt-font text-white mb-0 line-height-40px sm-line-height-26px"><span
+                        class="font-weight-600">"Uma grande ideia</span> ideia só se torna grande se souberem que ela
+                    existe"<br>- Mr. Hipo</h6>
             </div>
-
-            <div class="col-lg-6 pt-4">
-                <h4>Siga o Saber da Saúde nas redes sociais <a href="https://www.facebook.com/saberdasaude" target="_blank" style="color:#023970;"><i class="bx bxl-facebook" style=" display:inline-block;vertical-align: bottom"></i></a> <a href="https://www.instagram.com/saberdasaude/" target="_blank" style="color:#023970;"><i class="bx bxl-instagram"  style=" display:inline-block;vertical-align: bottom"></i></a></h4>
-            </div>
-
-            <div class="col-lg-3">
-                <img src="{{ url(asset('web/assets/images/boston/boston.png')) }}" alt="logo">
-            </div>
-
         </div>
     </div>
-</div>
+</section>
 
-<footer class="footer-area">
-    <div class="copyright-area">
-        <div class="container">
-            <div class="copyright-area-content">
-                <div class="row align-items-center">
-                    <div class="container">
-                        <div class="col-lg-8 offset-lg-2 text-center footer-map">
+<section class="half-section pt-0 home-personal-portfolio md-no-padding-bottom bg-extra-dark-gray">
+    <div class="container-fluid">
+        <div class="row row-cols-1 align-items-center">
+            <div class="col col-md border border-right-0 border-left-0 border-bottom-0 border-color-white sm-margin-30px-bottom"></div>
+            <div class="col col-md-auto text-center padding-4-half-rem-lr md-padding-2-half-rem-lr xs-padding-1-half-rem-top xs-padding-2-rem-bottom wow animate__fadeIn"
+                 data-wow-delay="0.4s">
+                <span class="alt-font font-weight-300 title-large-2 color-yellow letter-spacing-minus-3px d-block md-line-height-normal">Vamos trabalhar <span
+                        class="font-weight-600">juntos?</span></span>
+            </div>
+            <div class="col col-md border border-right-0 border-left-0 border-bottom-0 border-color-white sm-margin-30px-top"></div>
+        </div>
+    </div>
+</section>
 
-                            <a href="{{ route('web.home') }}">Home</a>
-{{--                            <a href="#">Especialidades</a>--}}
-                            <a href="{{ route('web.about') }}">Sobre</a>
-                            <a href="{{ route('web.blog') }}">Blog</a>
-                            <a href="{{ route('web.contact') }}">Contato</a>
-{{--                            <a href="#">Coração</a>--}}
-{{--                            <a href="#">Sistema Nervoso</a><br />--}}
-{{--                            <a href="#">Sistema Urinário</a>--}}
-{{--                            <a href="#">Saúde Sexual</a>--}}
-{{--                            <a href="#">Câncer e Tumores</a>--}}
-                            <a href="{{ route('web.privacy') }}">Política de Privacidade</a>
-                            <a href="{{ route('web.terms') }}">Termos de Uso</a>
-
-                            <p class="mt-4">
-                                © 2021 Boston Scientific Corporation ou suas afliliadas. Todo os direitos reservados.
-                            </p>
-                        </div>
-                    </div>
+<footer class="footer-light  bg-extra-dark-gray padding-5-rem-tb">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-4 text-center text-lg-start md-margin-20px-bottom">
+                <span class="alt-font font-weight-600 text-small text-uppercase text-white">Bora continuar no <a
+                        href="https://www.themezaa.com/" target="_blank"
+                        class="text-decoration-line-bottom text-white">WhatsApp</a>?</span>
+            </div>
+            <div class="col-12 col-lg-4 text-center md-margin-20px-bottom">
+                <div class="social-icon-style-12">
+                    <ul class="medium-icon">
+                        <li><a class="facebook" href="https://www.facebook.com/hipoagencia" target="_blank"><i
+                                    class="fab fa-facebook-f text-white"></i></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/hipoagencia/" target="_blank"><i
+                                    class="fab fa-instagram text-white"></i></a></li>
+                    </ul>
                 </div>
+            </div>
+            <div class="col-12 col-lg-4 text-center text-lg-end last-paragraph-no-margin">
+                <p class="alt-font font-weight-600 text-small text-uppercase text-white">Hipo Agência © 2022 -
+                    Direitos reservados</p>
             </div>
         </div>
     </div>
 </footer>
-
-
-<div class="modal fade" id="search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding-top:150px;">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content" style="background-color:transparent;border:none;">
-
-            <div class="modal-body text-center" style="color:#fff;">
-
-                <form action="{{ route('web.search') }}" method="GET">
-
-                    <div class="row">
-
-                                <input type="text" name="search" id="search" style="height:52px;width:80%" class="form-control" required="" placeholder="O que deseja procurar?">
-                                <button type="submit" class="default-btn" style="pointer-events: all; cursor: pointer;width: 120px;margin:0px auto;border-radius: 0px;">Pesquisar<span></span></button>
-
-
-                    </div>
-
-                </form>
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<style>
-    .modal-backdrop {
-        opacity: 0.9 !important;
-    }
-</style>
-
-<div class="go-top">
-    <i class='bx bx-chevron-up'></i>
-</div>
