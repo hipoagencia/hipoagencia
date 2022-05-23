@@ -24,6 +24,11 @@ class ContentController extends Controller
         ]);
     }
 
+    public function website()
+    {
+        return view('web.website');
+    }
+
     public function blog()
     {
         $posts = Post::with('princ')->orderBy('id', 'DESC')->paginate(9);
@@ -89,55 +94,6 @@ class ContentController extends Controller
     }
 
 
-    public function specialtyHeart()
-    {
-        //Veja Mais (lateral)
-        $posts = Post::with('princ')->where('principalcategory', '2')->orderBy('id', 'DESC')->limit(3)->get();
-
-        return view('web.specialtyHeart',[
-            'posts' => $posts
-        ]);
-    }
-
-    public function specialtyNervous()
-    {
-        //Veja Mais (lateral)
-        $posts = Post::with('princ')->where('principalcategory', '1')->orderBy('id', 'DESC')->limit(3)->get();
-
-        return view('web.specialtyNervous',[
-            'posts' => $posts
-        ]);
-    }
-
-    public function specialtyUrinary()
-    {
-        //Veja Mais (lateral)
-        $posts = Post::with('princ')->where('principalcategory', '3')->orderBy('id', 'DESC')->limit(3)->get();
-
-        return view('web.specialtyUrinary',[
-            'posts' => $posts
-        ]);
-    }
-
-    public function specialtyCancer()
-    {
-        //Veja Mais (lateral)
-        $posts = Post::with('princ')->where('principalcategory', '4')->orderBy('id', 'DESC')->limit(3)->get();
-
-        return view('web.specialtyCancer',[
-            'posts' => $posts
-        ]);
-    }
-
-    public function specialtySexual()
-    {
-        //Veja Mais (lateral)
-        $posts = Post::with('princ')->where('principalcategory', '5')->orderBy('id', 'DESC')->limit(3)->get();
-
-        return view('web.specialtySexual',[
-            'posts' => $posts
-        ]);
-    }
 
     public function article(Request $request)
     {

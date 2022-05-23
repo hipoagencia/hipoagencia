@@ -26,7 +26,6 @@ class Post extends Model implements Searchable
         'title',
         'slug',
         'headline',
-        'principalcategory',
         'meta_descri',
     ];
 
@@ -41,7 +40,6 @@ class Post extends Model implements Searchable
         'title',
         'slug',
         'headline',
-        'principalcategory',
         'meta_descri',
     ];
 
@@ -81,6 +79,10 @@ class Post extends Model implements Searchable
         return Storage::url($value);
     }
 
+    public function getCreatedAtAttribute($value)
+    {
+        return date('d/m/Y', strtotime($value));
+    }
 
     public function getdataAttribute()
     {

@@ -29,7 +29,6 @@ class Post extends FormRequest
             'cover' => (empty($this->request->all()['id']) ? 'required|image' : 'image'),
             'user_id' => 'required',
             'categories' => 'required',
-            'principalcategory' => 'required',
             'description' => 'required|min:8',
             'title' => 'required|min:8',
             'headline' => 'required|min:8',

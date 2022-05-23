@@ -97,28 +97,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-4">
-                                        <div class="mb-3">
-                                            <label for="formrow-inputState" class="form-label">Categoria
-                                                Principal</label>
-                                            <select id="formrow-inputState" class="form-select"
-                                                    name="principalcategory">
-                                                <option>Selecione a categoria..</option>
-
-                                                @foreach($specs as $spec)
-                                                    <option
-                                                        value="{{ $spec->id }}" {{ ($post->principalcategory == $spec->id ? 'selected' : (old('principalcategory') == $spec->id ? 'selected' : '' )) }}>{{ $spec->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
 
                                     <div class="col-lg-4 mb-4">
-                                        <label class="form-label">Enfermidades</label>
+                                        <label class="form-label">Categorias</label>
 
                                         <select class="select2 form-control select2-multiple"
                                                 multiple="multiple" name="categories[]"
-                                                data-placeholder="Selecione a Enfermidade..">
+                                                data-placeholder="Selecione as categorias..">
 
                                             @foreach($categories->get() as $category)
                                                 <option

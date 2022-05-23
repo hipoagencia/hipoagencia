@@ -10,15 +10,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1"/>
     <meta name="description" content="">
 
-    <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="{{ url(asset('web/assets/images/favicon.png')) }}">
+    <link rel="apple-touch-icon" href="{{ url(asset('web/assets/images/apple-touch-icon-57x57.png')) }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url(asset('web/assets/images/apple-touch-icon-72x72.png')) }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url(asset('web/assets/images/apple-touch-icon-114x114.png')) }}">
 
-    <link rel="stylesheet" type="text/css" href="css/font-icons.min.css">
-    <link rel="stylesheet" type="text/css" href="css/theme-vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ url(asset('web/assets/css/font-icons.min.css')) }}">
+    <link rel="stylesheet" type="text/css" href="{{ url(asset('web/assets/css/theme-vendors.min.css')) }}">
+    <link rel="stylesheet" type="text/css" href="{{ url(asset('web/assets/css/style.css')) }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url(asset('web/assets/css/responsive.css')) }}"/>
 
     {!! \Artesaos\SEOTools\Facades\SEOTools::generate() !!}
 
@@ -45,9 +45,11 @@
 
 <a class="scroll-top-arrow" href="javascript:void(0);"><i class="feather icon-feather-arrow-up"></i></a>
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/theme-vendors.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+
+
+<script type="text/javascript" src="{{ url(asset('web/assets/js/jquery.min.js')) }}"></script>
+<script type="text/javascript" src="{{ url(asset('web/assets/js/theme-vendors.min.js')) }}"></script>
+<script type="text/javascript" src="{{ url(asset('web/assets/js/main.js')) }}"></script>
 
 @hasSection('js')
     @yield('js')

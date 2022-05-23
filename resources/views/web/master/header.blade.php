@@ -3,10 +3,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent header-light fixed-top header-reverse-scroll menu-logo-center mobile-top-space">
         <div class="container-lg nav-header-container">
             <div class="col-6 px-lg-0 menu-logo">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" class="default-logo" alt="">
-                    <img src="images/logo.png" data-at2x="images/logo.png" class="alt-logo" alt="">
-                    <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" class="mobile-logo" alt="">
+                <a class="navbar-brand" href="{{route('web.home')}}">
+                    <img src="{{ url(asset('web/assets/images/logo-black.png')) }}" data-at2x="{{ url(asset('web/assets/images/logo-black@2x.png')) }}" class="default-logo" alt="">
+                    <img src="{{ url(asset('web/assets/images/logo.png')) }}" data-at2x="{{ url(asset('web/assets/images/logo.png')) }}" class="alt-logo" alt="">
+                    <img src="{{ url(asset('web/assets/images/logo-black.png')) }}" data-at2x="{{ url(asset('web/assets/images/logo-black@2x.png')) }}" class="mobile-logo" alt="">
                 </a>
             </div>
             <div class="col-auto col-lg-12 px-lg-0 menu-order">
@@ -22,35 +22,58 @@
                     <ul class="navbar-nav alt-font navbar-left justify-content-end">
 
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="{{route('web.home')}}" class="nav-link">Home</a>
                         </li>
 
-                        <li class="nav-item dropdown megamenu">
-                            <a href="javascript:void(0);" class="nav-link">Serviços</a>
+{{--                        <li class="nav-item dropdown megamenu">--}}
+{{--                            <a href="javascript:void(0);" class="nav-link">Serviços</a>--}}
+{{--                            <i class="fa fa-angle-down dropdown-toggle" data-bs-toggle="dropdown"--}}
+{{--                               aria-hidden="true"></i>--}}
+{{--                            <div class="menu-back-div dropdown-menu megamenu-content" role="menu">--}}
+{{--                                <div class="d-lg-flex justify-content-center">--}}
+{{--                                    <ul class="d-lg-inline-block">--}}
+{{--                                        <li class="dropdown-header">Tráfego pago</li>--}}
+{{--                                        <li><a href="servicos.html"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>--}}
+{{--                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>--}}
+{{--                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                    <ul class="d-lg-inline-block">--}}
+{{--                                        <li class="dropdown-header">Redes Sociais</li>--}}
+{{--                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>--}}
+{{--                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>--}}
+{{--                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                    <ul class="d-lg-inline-block">--}}
+{{--                                        <li class="dropdown-header">Sites e Sistemas</li>--}}
+{{--                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>--}}
+{{--                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>--}}
+{{--                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+
+                        <li class="nav-item dropdown simple-dropdown">
+                            <a href="#" class="nav-link">Serviços</a>
                             <i class="fa fa-angle-down dropdown-toggle" data-bs-toggle="dropdown"
                                aria-hidden="true"></i>
-                            <div class="menu-back-div dropdown-menu megamenu-content" role="menu">
-                                <div class="d-lg-flex justify-content-center">
-                                    <ul class="d-lg-inline-block">
-                                        <li class="dropdown-header">Tráfego pago</li>
-                                        <li><a href="servicos.html"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>
-                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>
-                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>
-                                    </ul>
-                                    <ul class="d-lg-inline-block">
-                                        <li class="dropdown-header">Redes Sociais</li>
-                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>
-                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>
-                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>
-                                    </ul>
-                                    <ul class="d-lg-inline-block">
-                                        <li class="dropdown-header">Sites e Sistemas</li>
-                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>
-                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>
-                                        <li><a href="#"><i class="ti-layout-accordion-separated"></i>Serviços</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{route('web.website')}}">Sites</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sistemas</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tráfego Pago</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mídias Sociais</a>
+                                </li>
+                                <li>
+                                    <a href="#">Identidade Visual</a>
+                                </li>
+                            </ul>
                         </li>
 
                         <li class="nav-item dropdown simple-dropdown">

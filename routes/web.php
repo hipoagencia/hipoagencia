@@ -25,25 +25,19 @@ Route::group(['as' => 'web.'], function () {
         return view('web.about');
     })->name('about');
 
+    Route::get('/website', [ContentController::class, 'website'])->name('website');
 
-    Route::get('especialidade/sistema-nervoso', [ContentController::class, 'specialtyNervous'])->name('specialtyNervous');
-    Route::get('especialidade/coracao', [ContentController::class, 'specialtyHeart'])->name('specialtyHeart');
-    Route::get('especialidade/sistema-urinario', [ContentController::class, 'specialtyUrinary'])->name('specialtyUrinary');
-    Route::get('especialidade/cancer-e-tumores', [ContentController::class, 'specialtyCancer'])->name('specialtyCancer');
-    Route::get('especialidade/saude-sexual', [ContentController::class, 'specialtySexual'])->name('specialtySexual');
 
     Route::get('blog', [ContentController::class, 'blog'])->name('blog');
     Route::get('blog/pesquisa', [ContentController::class, 'search'])->name('search');
-    Route::get('blog/article/{slug}', [ContentController::class, 'article'])->name('article');
-    Route::get('blog/category/{id}/{slug}', [ContentController::class, 'category'])->name('category');
+    Route::get('blog/artigo/{slug}', [ContentController::class, 'article'])->name('article');
+    Route::get('blog/categoria/{id}/{slug}', [ContentController::class, 'category'])->name('category');
 
     Route::get('/contato', function () {
         return view('web.contact');
     })->name('contact');
 
     Route::post('/sendMail', [ContentController::class, 'sendMail'])->name('sendMail');
-
-    Route::post('/sendNewsletter', [ContentController::class, 'sendNewsletter'])->name('sendNewsletter');
 
     Route::get('/obrigado', function () {
         return view('web.thanks');
@@ -59,83 +53,6 @@ Route::group(['as' => 'web.'], function () {
     Route::get('/test', function () {
         var_dump(env('NOCAPTCHA_SECRET'), env('NOCAPTCHA_SITEKEY'));
     })->name('test');
-
-
-    /*****************************
-    **********   NERVOSO   *******
-    *****************************/
-
-    Route::get('/especialidade/sistema-nervoso/avc', function () {
-        return view('web.page.nervoso.avc');
-    })->name('page.avcNervoso');
-
-    Route::get('/especialidade/sistema-nervoso/dor-cronica', function () {
-        return view('web.page.nervoso.dorCronica');
-    })->name('page.dorCronica');
-
-    Route::get('/especialidade/sistema-nervoso/doenca-de-parkinson', function () {
-        return view('web.page.nervoso.parkinson');
-    })->name('page.parkinson');
-
-    Route::get('/especialidade/sistema-nervoso/distonia', function () {
-        return view('web.page.nervoso.distonia');
-    })->name('page.distonia');
-
-
-     /*****************************
-     ********   CORAÇÃO   *********
-     *****************************/
-
-    Route::get('/especialidade/coracao/arritmia-ventricular', function () {
-        return view('web.page.coracao.arritmiaVentricular');
-    })->name('page.arritmiaVentricular');
-
-    Route::get('/especialidade/coracao/arritmia-atrial', function () {
-        return view('web.page.coracao.arritmiaArtrial');
-    })->name('page.arritmiaArtrial');
-
-    Route::get('/especialidade/coracao/avc', function () {
-        return view('web.page.coracao.avc');
-    })->name('page.avc');
-
-    Route::get('/especialidade/coracao/morte-subita', function () {
-        return view('web.page.coracao.morteSubita');
-    })->name('page.morteSubita');
-
-    Route::get('/especialidade/coracao/fibrilacao-atrial', function () {
-        return view('web.page.coracao.fibrilacaoArterial');
-    })->name('page.fibrilacaoArterial');
-
-
-    /*****************************
-     ********   URINÀRIO   *******
-     *****************************/
-
-    Route::get('/especialidade/sistema-urinario/incontinencia-urinaria-masculina', function () {
-        return view('web.page.urinario.incontinenciaUrinaria');
-    })->name('page.incontinenciaUrinaria');
-
-
-    /*****************************
-     *********   CÂNCER   ********
-     *****************************/
-
-    Route::get('/especialidade/canceres-e-tumores/hiperplasia-prostatica', function () {
-        return view('web.page.cancer.hiperplasia');
-    })->name('page.hiperplasia');
-
-    Route::get('/especialidade/canceres-e-tumores/colorretal', function () {
-        return view('web.page.cancer.colorretal');
-    })->name('page.colorretal');
-
-
-    /*****************************
-     **********   SEXUAL   *******
-     *****************************/
-
-    Route::get('/especialidade/saude-sexual/disfuncao-eretil', function () {
-        return view('web.page.sexual.disfuncaoEretil');
-    })->name('page.disfuncaoEretil');
 
 
 

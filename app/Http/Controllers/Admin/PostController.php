@@ -47,12 +47,10 @@ class PostController extends Controller
     public function create()
     {
         $categories = Categories::orderBy('name');
-        $specs = blogCategory::orderBy('name')->get();
         $users = User::orderBy('name')->get();
 
         return view('admin.posts.create', [
             'categories' => $categories,
-            'specs' => $specs,
             'users' => $users
         ]);
     }
@@ -70,9 +68,10 @@ class PostController extends Controller
 //        var_dump($post->getAttributes());
 //        die;
 
-        //dd($request->all());
+//        dd($request->all());
 
         $postCreate = Post::create($request->all());
+
 
         if (!empty($request->file('cover'))) {
             $postCreate->cover = $request->file('cover')->store('post');
