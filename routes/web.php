@@ -21,11 +21,21 @@ Route::group(['as' => 'web.'], function () {
 
     Route::get('/inicio', [ContentController::class, 'home'])->name('home');
 
+    Route::get('/clientes', [ContentController::class, 'clients'])->name('clients');
+
     Route::get('/sobre', function () {
         return view('web.about');
     })->name('about');
 
+
     Route::get('/website', [ContentController::class, 'website'])->name('website');
+    Route::get('/trafego-pago', [ContentController::class, 'trafic'])->name('trafic');
+    Route::get('/midias-sociais', [ContentController::class, 'social'])->name('social');
+    Route::get('/identidade-visual', [ContentController::class, 'identity'])->name('identity');
+    Route::get('/sistemas-web', [ContentController::class, 'system'])->name('system');
+
+    Route::get('/projeto', [ContentController::class, 'project'])->name('project');
+    Route::get('/projetos', [ContentController::class, 'projects'])->name('projects');
 
 
     Route::get('blog', [ContentController::class, 'blog'])->name('blog');

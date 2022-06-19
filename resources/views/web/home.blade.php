@@ -35,7 +35,7 @@
                         <h1 class="alt-font font-weight-900 text-extra-dark-gray title-large letter-spacing-minus-1px mb-0 md-w-100"
                             data-wow-delay="0.3s" data-enllax-ratio="-.5" data-enllax-type="foreground"
                             data-enllax-direction="horizontal">
-                            12 anos
+                            {{now()->year - 2010 }} anos
                         </h1>
                         <span class="title-small line-height-2px wow animate__fadeIn" data-wow-delay="0.5s">sendo referência em marketing digital</span><br>
 
@@ -73,7 +73,7 @@
                     class="col-12 col-xl-9 col-lg-6 col-md-10 padding-10-rem-tb lg-padding-5-rem-tb lg-padding-2-half-rem-right md-padding-15px-right md-no-padding-tb md-margin-5-rem-bottom order-last order-xl-first">
                     <div class="row">
 
-                        <div class="col-lg-4 text-center wow animate__fadeIn" data-wow-delay="0.3s">
+                        <div class="col-lg-4 text-center wow animate__fadeIn padding-2-rem-top" data-wow-delay="0.3s">
                             <i class="solid-icon-Computer-Secure icon-medium align-middle  text-white"></i>
                             <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Sites e Sistemas</h3>
                             <p class="text-white">
@@ -81,43 +81,43 @@
                             </p>
                         </div>
 
-                        <div class="col-lg-4 text-center wow animate__fadeIn" data-wow-delay="0.3s">
-                            <i class="solid-icon-Computer-Secure icon-medium align-middle  text-white"></i>
-                            <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Sites e Sistemas</h3>
+                        <div class="col-lg-4 text-center wow animate__fadeIn padding-2-rem-top" data-wow-delay="0.3s">
+                            <i class="fas fa-paint-brush icon-medium align-middle text-white"></i>
+                            <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Logo e Identidade</h3>
                             <p class="text-white">
-                                Desenvolvemos sites únicos, que se adaptam a smartphones e convertem em vendas.
+                                Toda comunicação da sua empresa é criada para que converse com seu público-alvo.
                             </p>
                         </div>
 
-                        <div class="col-lg-4 text-center wow animate__fadeIn" data-wow-delay="0.3s">
-                            <i class="solid-icon-Computer-Secure icon-medium align-middle  text-white"></i>
-                            <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Sites e Sistemas</h3>
+                        <div class="col-lg-4 text-center wow animate__fadeIn padding-2-rem-top" data-wow-delay="0.3s">
+                            <i class="fab fa-facebook-messenger icon-medium align-middle  text-white"></i>
+                            <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Social Media</h3>
                             <p class="text-white">
-                                Desenvolvemos sites únicos, que se adaptam a smartphones e convertem em vendas.
+                                Nossa gestão de redes sociais vai além de apenas posts, trata-se de marketing digital completo.
                             </p>
                         </div>
 
-                        <div class="col-lg-4 text-center wow animate__fadeIn" data-wow-delay="0.3s">
-                            <i class="solid-icon-Computer-Secure icon-medium align-middle  text-white"></i>
-                            <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Sites e Sistemas</h3>
+                        <div class="col-lg-4 text-center wow animate__fadeIn padding-2-rem-top" data-wow-delay="0.3s">
+                            <i class="fas fa-bullhorn icon-medium align-middle text-white"></i>
+                            <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Tráfego Pago</h3>
                             <p class="text-white">
-                                Desenvolvemos sites únicos, que se adaptam a smartphones e convertem em vendas.
+                                -
                             </p>
                         </div>
 
-                        <div class="col-lg-4 text-center wow animate__fadeIn" data-wow-delay="0.3s">
-                            <i class="solid-icon-Computer-Secure icon-medium align-middle  text-white"></i>
-                            <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Sites e Sistemas</h3>
+                        <div class="col-lg-4 text-center wow animate__fadeIn padding-2-rem-top" data-wow-delay="0.3s">
+                            <i class="fas fa-shopping-cart icon-medium align-middle text-white"></i>
+                            <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Loja Virtual</h3>
                             <p class="text-white">
-                                Desenvolvemos sites únicos, que se adaptam a smartphones e convertem em vendas.
+                                Prestamos consultoria, criamos sua loja e fornecemos todo suporte necessário.
                             </p>
                         </div>
 
-                        <div class="col-lg-4 text-center wow animate__fadeIn" data-wow-delay="0.3s">
-                            <i class="solid-icon-Computer-Secure icon-medium align-middle  text-white"></i>
-                            <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Sites e Sistemas</h3>
+                        <div class="col-lg-4 text-center wow animate__fadeIn padding-2-rem-top" data-wow-delay="0.3s">
+                            <i class="fas fa-bullseye icon-medium align-middle text-white"></i>
+                            <h3 class="text-white text-large font-weight-900 mt-4 mb-1">Marketing</h3>
                             <p class="text-white">
-                                Desenvolvemos sites únicos, que se adaptam a smartphones e convertem em vendas.
+                                Você sabe onde quer chegar, nós mostramos o caminho.
                             </p>
                         </div>
 

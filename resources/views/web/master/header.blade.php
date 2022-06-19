@@ -1,6 +1,6 @@
 <header>
     <!-- start navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent header-light fixed-top header-reverse-scroll menu-logo-center mobile-top-space">
+    <nav class="navbar navbar-expand-lg bg-transparent navbar-dark header-light fixed-top header-reverse-scroll menu-logo-center mobile-top-space">
         <div class="container-lg nav-header-container">
             <div class="col-6 px-lg-0 menu-logo">
                 <a class="navbar-brand" href="{{route('web.home')}}">
@@ -62,41 +62,41 @@
                                     <a href="{{route('web.website')}}">Sites</a>
                                 </li>
                                 <li>
-                                    <a href="#">Sistemas</a>
+                                    <a href="{{route('web.system')}}">Sistemas</a>
                                 </li>
                                 <li>
-                                    <a href="#">Tráfego Pago</a>
+                                    <a href="{{route('web.trafic')}}">Tráfego Pago</a>
                                 </li>
                                 <li>
-                                    <a href="#">Mídias Sociais</a>
+                                    <a href="{{route('web.social')}}">Mídias Sociais</a>
                                 </li>
                                 <li>
-                                    <a href="#">Identidade Visual</a>
+                                    <a href="{{route('web.identity')}}">Identidade Visual</a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown simple-dropdown">
-                            <a href="#" class="nav-link">Projetos</a>
-                            <i class="fa fa-angle-down dropdown-toggle" data-bs-toggle="dropdown"
-                               aria-hidden="true"></i>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="projetos.html">Sites e Sistemas</a>
-                                </li>
-                                <li>
-                                    <a href="projetos.html">Mídias Sociais</a>
-                                </li>
-                                <li>
-                                    <a href="projetos.html">Identidade Visual</a>
-                                </li>
-                            </ul>
-                        </li>
+{{--                        <li class="nav-item dropdown simple-dropdown">--}}
+{{--                            <a href="#" class="nav-link">Projetos</a>--}}
+{{--                            <i class="fa fa-angle-down dropdown-toggle" data-bs-toggle="dropdown"--}}
+{{--                               aria-hidden="true"></i>--}}
+{{--                            <ul class="dropdown-menu" role="menu">--}}
+{{--                                <li>--}}
+{{--                                    <a href="{{route('web.project')}}">Sites e Sistemas</a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a href="{{route('web.projects')}}">Mídias Sociais</a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a href="{{route('web.project')}}">Identidade Visual</a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
                     </ul>
                     <ul class="navbar-nav alt-font navbar-right justify-content-start">
 
                         <li class="nav-item">
-                            <a href="clientes.html" class="nav-link">Clientes</a>
+                            <a href="{{route('web.clients')}}" class="nav-link">Clientes</a>
                         </li>
 
                         <li class="nav-item">
@@ -104,7 +104,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="contato.html" class="nav-link">Contato</a>
+                            <a href="{{route('web.contact')}}" class="nav-link">Contato</a>
                         </li>
 
                     </ul>

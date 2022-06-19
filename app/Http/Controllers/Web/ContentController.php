@@ -29,6 +29,41 @@ class ContentController extends Controller
         return view('web.website');
     }
 
+    public function trafic()
+    {
+        return view('web.trafic');
+    }
+
+    public function social()
+    {
+        return view('web.social');
+    }
+
+    public function identity()
+    {
+        return view('web.identity');
+    }
+
+    public function system()
+    {
+        return view('web.system');
+    }
+
+    public function project()
+    {
+        return view('web.project');
+    }
+
+    public function projects()
+    {
+        return view('web.projects');
+    }
+
+    public function clients()
+    {
+        return view('web.clients');
+    }
+
     public function blog()
     {
         $posts = Post::with('princ')->orderBy('id', 'DESC')->paginate(9);
