@@ -5,7 +5,7 @@
                     <span
                         class="d-inline-block alt-font text-medium {{ (\Illuminate\Support\Facades\Route::is('web.article') ? 'text-extra-dark-gray' : 'text-white') }} text-uppercase font-weight-500 margin-20px-bottom sm-margin-15px-bottom">
                         @if(!\Illuminate\Support\Facades\Route::is('web.article'))
-                            Algumas empresas que já trabalharam conosco
+                            Últimos artigos do blog do hipopótamo
                         @else
                             Confira alguns posts que separamos para você
                         @endif
