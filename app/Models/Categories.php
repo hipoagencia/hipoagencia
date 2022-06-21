@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Spatie\Activitylog\Traits\LogsActivity;
 
 class Categories extends Model
@@ -13,13 +14,24 @@ class Categories extends Model
     protected $table = 'categories';
 
     protected $fillable = [
-        'name'
+        'name',
+        'slug',
     ];
 
     //NECESSÁRIO PARA OS LOGS
     protected static $logName = 'Categorias';
     protected static $logAttributes = [
-        'name'
+        'name',
+        'slug',
     ];
+
+    public function setSlugAttribute($value)
+    {
+        if(empty($value)){
+            $this->attributes['slug'] = Str::slug($this->attributes['name']);
+        } else {
+            $this->attributes['slug'] = $value;
+        }
+    }
 
 }

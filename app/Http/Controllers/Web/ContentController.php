@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Mail\Contact\SendMail;
+use App\Models\Categories;
+use App\Models\Classificacao;
 use App\Models\Content;
 use App\Models\Post;
 use Artesaos\SEOTools\Facades\OpenGraph;
@@ -19,7 +21,7 @@ class ContentController extends Controller
         //Ver mais posts (rodapé)
         $posts = Post::with('princ')->orderBy('id', 'DESC')->limit(3)->get();
 
-        return view('web.home',[
+        return view('web.home', [
             'posts' => $posts,
         ]);
     }
@@ -68,8 +70,11 @@ class ContentController extends Controller
     {
         $posts = Post::with('princ')->orderBy('id', 'DESC')->paginate(9);
 
-        return view('web.blog',[
-            'posts' => $posts
+        $categories = $this->categories();
+
+        return view('web.blog', [
+            'posts' => $posts,
+            'categories' => $categories
         ]);
     }
 
@@ -117,17 +122,19 @@ class ContentController extends Controller
     {
         $search = $request->input('search');
 
+        $categories = $this->categories();
+
         $posts = Post::with('princ')
             ->where('title', 'LIKE', "%$search%")
             ->orWhere('description', 'LIKE', "%$search%")
             ->limit(50)
             ->orderBy('id', 'DESC')->paginate(50);
 
-        return view('web.blog',[
-            'posts' => $posts
+        return view('web.blog', [
+            'posts' => $posts,
+            'categories' => $categories
         ]);
     }
-
 
 
     public function article(Request $request)
@@ -138,8 +145,10 @@ class ContentController extends Controller
         //Ver mais posts (rodapé)
         $posts = Post::with('princ')->orderBy('id', 'DESC')->limit(3)->get();
 
+        $categories = $this->categories();
+
         //Veja Mais (lateral)
-        $postsRelated = Post::with('princ')->where('principalcategory', $post->principalcategory)->orderBy('id', 'DESC')->limit(3)->get();
+//        $postsRelated = Post::with('princ')->where('principalcategory', $post->principalcategory)->orderBy('id', 'DESC')->limit(3)->get();
 
         $title = $post->title;
 
@@ -153,19 +162,27 @@ class ContentController extends Controller
         OpenGraph::addImage($post->cover);
 
 
-        return view('web.article',[
+        return view('web.article', [
             'post' => $post,
             'posts' => $posts,
-            'postsRelated' => $postsRelated
+            'categories' => $categories
         ]);
     }
 
     public function category(Request $request)
     {
-        $posts = Post::with('princ')->where('principalcategory', $request->id)->orderBy('id', 'DESC')->paginate(9);
+        $id = $request->id;
 
-        return view('web.blog',[
-            'posts' => $posts
+        $posts = Post::with('princ', 'categories')->
+        whereHas('categories', function ($q) use ($id) {
+            $q->where('category', $id);
+        })->orderBy('id', 'DESC')->paginate(9);
+
+        $categories = $this->categories();
+
+        return view('web.blog', [
+            'posts' => $posts,
+            'categories' => $categories
         ]);
     }
 
@@ -173,7 +190,7 @@ class ContentController extends Controller
     {
         $content = Content::where('id', '1')->first();
 
-        return view('web.privacy',[
+        return view('web.privacy', [
             'content' => $content
         ]);
     }
@@ -183,9 +200,15 @@ class ContentController extends Controller
     {
         $content = Content::where('id', '2')->first();
 
-        return view('web.terms',[
+        return view('web.terms', [
             'content' => $content
         ]);
+    }
+
+
+    public function categories()
+    {
+        return Categories::get()->toArray();
     }
 
 

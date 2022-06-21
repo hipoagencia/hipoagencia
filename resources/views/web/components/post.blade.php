@@ -2,9 +2,9 @@
     <div class="blog-post border-radius-5px bg-white box-shadow-medium">
         <div class="blog-post-image bg-medium-slate-blue">
             <a href="{{ route('web.article', ['slug' =>  $post->slug ]) }}" title=""><img
-                    src="{{ url($post->cover) }}" alt=""
-                    data-no-retina=""></a>
-            {{--            <a href="#" class="blog-category alt-font">Creative</a>--}}
+                    src="" alt=""
+                    data-no-retina=""><img src="{{ url($post->cover) }}"></a>
+                        <a href="#" class="blog-category alt-font">Creative</a>
         </div>
         <div class="post-details padding-3-rem-lr padding-2-half-rem-tb">
             <a href="#"
@@ -26,21 +26,3 @@
     </div>
 </li>
 
-{{--<article class="blog-post">--}}
-{{--    <div class="blog-post-title" style="background-color: {{ $post->princ->color }};">--}}
-{{--        <h5 class="font-light"><img--}}
-{{--                src="{{ url($post->princ->iconWhite) }}" width="37" class="ico-img"> {{ $post->princ->name }}--}}
-{{--        </h5>--}}
-{{--    </div>--}}
-
-{{--    <img src="" style="height:280px;" alt=""/>--}}
-{{--    <h3 class="mt-3" style="color: {{ $post->princ->color }};">{{ $post->title }}</h3>--}}
-
-{{--    <p></p>--}}
-
-{{--    <div class="row read-more">--}}
-{{--        <a href=""--}}
-{{--           class="text-right">Continue lendo</a>--}}
-{{--    </div>--}}
-
-{{--</article>--}}

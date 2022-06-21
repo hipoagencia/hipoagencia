@@ -100,7 +100,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="blog.html" class="nav-link">Blog</a>
+                            <a href="{{ route('web.blog') }}" class="nav-link">Blog</a>
                         </li>
 
                         <li class="nav-item">
