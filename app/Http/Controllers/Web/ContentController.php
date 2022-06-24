@@ -21,6 +21,12 @@ class ContentController extends Controller
         //Ver mais posts (rodapé)
         $posts = Post::with('princ')->orderBy('id', 'DESC')->limit(3)->get();
 
+        SEOTools::setTitle('Hipo Agência - Publicidade, Marketing Digital e Tráfego Pago');
+        SEOTools::setDescription('Uma agência de publicidade especializada em marketing digital e que não deixa nada a desejar no off-line na cidade de Santos e na Riviera de São Lourenço');
+
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addImage('');
+
         return view('web.home', [
             'posts' => $posts,
         ]);
@@ -28,31 +34,67 @@ class ContentController extends Controller
 
     public function website()
     {
+        SEOTools::setTitle('Criação e Desenvolvimento de Sites - Hipo Agência');
+        SEOTools::setDescription('Está precisando de um site único, que se desataque dos concorrentes e que traga mais vendas? Saiba mais');
+
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addImage('');
+
         return view('web.website');
     }
 
     public function trafic()
     {
+        SEOTools::setTitle('Tráfego Pago e Gestão de Anúncios - Hipo Agência');
+        SEOTools::setDescription('Venda mais com tráfego pago utilizando as melhores práticas do marketing digital. Saiba Mais');
+
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addImage('');
+
         return view('web.trafic');
     }
 
     public function social()
     {
+        SEOTools::setTitle('Marketing digital e Gestão de Redes Sociais - Hipo Agência');
+        SEOTools::setDescription('Manter as redes sociais atualizadas e o SAC em dia é uma necessidade de toda empresa. Saiba mais como podemos te ajudar');
+
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addImage('');
+
         return view('web.social');
     }
 
     public function identity()
     {
+        SEOTools::setTitle('Identidade Visual e Criação de logotipo - Hipo Agência');
+        SEOTools::setDescription('Criamos identidades únicas e marcantes para deixar o se negócio em evidência! Saiba mais');
+
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addImage('');
+
         return view('web.identity');
     }
 
     public function system()
     {
+        SEOTools::setTitle('Criação e Manutenção de Sistemas Web - Hipo Agência');
+        SEOTools::setDescription('Está na hora de automatizar os processos da sua empresa, garantindo maior eficiência e evitando erros humanos. Saiba Mais');
+
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addImage('');
+
         return view('web.system');
     }
 
     public function project()
     {
+        SEOTools::setTitle('Projetos - Hipo Agência');
+        SEOTools::setDescription('');
+
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addImage('');
+
         return view('web.project');
     }
 
@@ -63,11 +105,23 @@ class ContentController extends Controller
 
     public function clients()
     {
+        SEOTools::setTitle('Quem já trabalhou com a empresa do hipopótamo - Hipo Agência');
+        SEOTools::setDescription('');
+
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addImage('');
+
         return view('web.clients');
     }
 
     public function blog()
     {
+        SEOTools::setTitle('Novidades do mundo digital no blog da Hipo Agência');
+        SEOTools::setDescription('');
+
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addImage('');
+
         $posts = Post::with('princ')->orderBy('id', 'DESC')->paginate(9);
 
         $categories = $this->categories();
@@ -161,7 +215,6 @@ class ContentController extends Controller
         OpenGraph::addProperty('locale', 'pt-br');
         OpenGraph::addImage($post->cover);
 
-
         return view('web.article', [
             'post' => $post,
             'posts' => $posts,
@@ -177,6 +230,13 @@ class ContentController extends Controller
         whereHas('categories', function ($q) use ($id) {
             $q->where('category', $id);
         })->orderBy('id', 'DESC')->paginate(9);
+
+        $category = Categories::where('id',$id)->first();
+
+        SEOTools::setTitle($category->name . ' - Hipo Agência');
+        SEOTools::setDescription('');
+
+        OpenGraph::addProperty('locale', 'pt-br');;
 
         $categories = $this->categories();
 

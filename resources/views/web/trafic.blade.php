@@ -52,7 +52,7 @@
                             São Lourenço</p>
 
                         <h1 class="alt-font font-weight-900 text-extra-dark-gray title-large-2 letter-spacing-minus-1px mb-4 md-w-100 wow animate__fadeIn"
-                            data-wow-delay="0.4s" data-enllax-ratio=".07" data-enllax-type="foreground"
+                            data-wow-delay="0.4s" data-enllax-ratio="-.07" data-enllax-type="foreground"
                             data-enllax-direction="horizontal">
                             O que é o tráfego pago?
                         </h1>
@@ -94,7 +94,7 @@
 
                 <div class="col-12 col-lg-4 col-md-10 wow animate__fadeInRight order-first">
 
-                    <div style="margin-top:100px;" data-wow-delay="0.4s" data-enllax-ratio="-.3" data-enllax-type="foreground"
+                    <div style="margin-top:100px;" data-wow-delay="0.4s" data-enllax-ratio="-.2" data-enllax-type="foreground"
                          data-enllax-direction="vertical">
                         <p class="text-white mb-0">Como funciona o </p>
                         <h2 class="alt-font font-weight-900 pt-0 text-white letter-spacing-minus-1px mb-0 md-w-100 wow animate__fadeIn lg-padding-5-rem-bottom lg-padding-2-rem-top"

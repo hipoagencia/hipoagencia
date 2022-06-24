@@ -10,8 +10,8 @@ return [
          */
         'defaults'       => [
             'title'        => false, // set false to total remove
-            'titleBefore'  => true, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => 'O Saber da Saúde é uma iniciativa da Boston Scientific com o objetivo de disseminar conhecimento científico sobre saúde para o maior número de brasileiros possível.', // set false to total remove
+            'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
+            'description'  => 'Uma agência de publicidade especializada em marketing digital e que não deixa nada a desejar no off-line na cidade de Santos.', // set false to total remove
             'separator'    => '',
             'keywords'     => [],
             'canonical'    => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
