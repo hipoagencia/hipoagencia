@@ -30,8 +30,8 @@
         <div class="row align-items-center">
             <div class="col-12 col-lg-4 text-center text-lg-start md-margin-20px-bottom">
                 <span class="alt-font font-weight-600 text-small text-uppercase text-white">Bora continuar no <a
-                        href="https://www.themezaa.com/" target="_blank"
-                        class="text-decoration-line-bottom text-white">WhatsApp</a>?</span>
+                        href="https://api.whatsapp.com/send?phone=551330274731" target="_blank"
+                        class="text-decoration-line-bottom text-white">WhatsApp</a></span>
             </div>
             <div class="col-12 col-lg-4 text-center md-margin-20px-bottom">
                 <div class="social-icon-style-12">
