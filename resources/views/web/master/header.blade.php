@@ -4,9 +4,9 @@
         <div class="container-lg nav-header-container">
             <div class="col-6 px-lg-0 menu-logo">
                 <a class="navbar-brand" href="{{route('web.home')}}">
-                    <img src="{{ url(asset('web/assets/images/logo-black.png')) }}" data-at2x="{{ url(asset('web/assets/images/logo-black@2x.png')) }}" class="default-logo" alt="">
-                    <img src="{{ url(asset('web/assets/images/logo.png')) }}" data-at2x="{{ url(asset('web/assets/images/logo.png')) }}" class="alt-logo" alt="">
-                    <img src="{{ url(asset('web/assets/images/logo-black.png')) }}" data-at2x="{{ url(asset('web/assets/images/logo-black@2x.png')) }}" class="mobile-logo" alt="">
+                    <img src="{{ url(asset('web/assets/images/logo-black.png')) }}" data-at2x="{{ url(asset('web/assets/images/logo-black@2x.png')) }}" class="default-logo" alt="Hipo Agência">
+                    <img src="{{ url(asset('web/assets/images/logo.png')) }}" data-at2x="{{ url(asset('web/assets/images/logo.png')) }}" class="alt-logo" alt="Logo Hipo">
+                    <img src="{{ url(asset('web/assets/images/logo-black.png')) }}" data-at2x="{{ url(asset('web/assets/images/logo-black@2x.png')) }}" class="mobile-logo" alt="Logo do Hipopótamo">
                 </a>
             </div>
             <div class="col-auto col-lg-12 px-lg-0 menu-order">

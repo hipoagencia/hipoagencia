@@ -19,15 +19,15 @@
 
             <div class="col-6 col-lg-3 col-md-6 col-sm-6 md-margin-30px-bottom wow animate__fadeIn text-center"
                  data-wow-delay="0.4s">
-                <img src="{{ url(asset('web/assets/images/hipo/2.png')) }}" alt="Clientes da Hipo Agência">
+                <img src="{{ url(asset('web/assets/images/hipo/2.png')) }}" alt="Alguns da Hipo Agência">
             </div>
 
             <div class="col-6 col-lg-3 col-md-6 col-sm-6 wow animate__fadeIn text-center" data-wow-delay="0.6s">
-                <img src="{{ url(asset('web/assets/images/hipo/3.png')) }}" alt="Clientes da Hipo Agência">
+                <img src="{{ url(asset('web/assets/images/hipo/3.png')) }}" alt="Mais da Hipo Agência">
             </div>
 
             <div class="col-6 col-lg-3 col-md-6 col-sm-6 wow animate__fadeIn text-center" data-wow-delay="0.8s">
-                <img src="{{ url(asset('web/assets/images/hipo/4.png')) }}" alt="Clientes da Hipo Agência">
+                <img src="{{ url(asset('web/assets/images/hipo/4.png')) }}" alt="Lá vai mais alguns da Hipo Agência">
             </div>
 
         </div>

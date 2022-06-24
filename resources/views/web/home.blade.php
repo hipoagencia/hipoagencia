@@ -32,11 +32,11 @@
                     <div>
                         <span class="title-small wow animate__fadeIn">Há mais de</span><br>
 
-                        <h1 class="alt-font font-weight-900 text-extra-dark-gray title-large letter-spacing-minus-1px mb-0 md-w-100"
+                        <h3 class="alt-font font-weight-900 text-extra-dark-gray title-large letter-spacing-minus-1px mb-0 md-w-100"
                             data-wow-delay="0.3s" data-enllax-ratio="-.5" data-enllax-type="foreground"
                             data-enllax-direction="horizontal">
                             {{now()->year - 2010 }} anos
-                        </h1>
+                        </h3>
                         <span class="title-small line-height-2px wow animate__fadeIn" data-wow-delay="0.5s">sendo referência em marketing digital</span><br>
 
                         <p class="mt-4 wow animate__fadeIn" data-wow-delay="0.7s">
@@ -55,7 +55,7 @@
                 <div class="col-12 col-lg-6 col-md-10 wow animate__fadeInRight about-lr">
                     <div class="outside-box-right position-relative">
                         <img src="{{ url(asset('web/assets/images/hipo/home-sobre.jpg')) }}" class="overflow-hidden"
-                             alt="">
+                             alt="Sobre o Hipopótamo">
                     </div>
                 </div>
             </div>
@@ -138,7 +138,7 @@
     <section class="py-lg-0 hipo-top">
         <div class="container">
             <div class="row">
-                <div class="col-12"><img src="{{ url(asset('web/assets/images/hipo/hipo-servicos.jpg')) }}"
+                <div class="col-12"><img src="{{ url(asset('web/assets/images/hipo/hipo-servicos.jpg')) }}" alt="O famoso hipopótamo"
                                          data-enllax-ratio="-1.5" data-enllax-type="foreground"
                                          data-enllax-direction="horizontal"/></div>
 
