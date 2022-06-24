@@ -101,16 +101,16 @@
                         </h2>
 
                         <p>
-                            É uma solução desenvolvida para rodar pelos navegadores e sem a necessidade de instalação, como no caso dos apps. Garantindo que se torne acessível em qualquer dispositivo que aceite um navegador na internet (smartphones, computadores, smart tv etc)
+                            É uma solução desenvolvida para rodar pelos navegadores e sem a necessidade de instalação, como no caso dos apps. Dessa forma, se torna acessível em qualquer dispositivo que aceite um navegador na internet (smartphones, computadores, smart tv etc).
                         </p>
 
                         <h2 class="alt-font font-weight-900 text-extra-dark-gray sys letter-spacing-minus-1px mb-4 md-w-100 wow animate__fadeIn"
                             data-wow-delay="0.4s">
-                            Por quê preciso<br>de um?
+                            Por que preciso<br>de um?
                         </h2>
 
                         <p>
-                            A maioria das empresas utiliza planilhas para gerir o seu negócio. O que pode ser bastante perigoso, levando em consideração que esses arquivos podem se perder, serem corrompidos ou até mesmo extraviado.
+                            A maioria das empresas utilizam planilhas para gerir o seu negócio, o que pode ser bastante perigoso, levando em consideração que esses arquivos podem se perder, serem corrompidos ou até mesmo extraviados.
                         </p>
                         <p>
                             Quando desenvolvemos um sistema, toda informação está armazenada na nuvem e com medidas de segurança que protegem os dados tão preciosos. Sem contar que todo projeto é desenvolvido exclusivamente para a sua necessidade e com controle rigoroso de acesso.

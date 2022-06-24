@@ -4,7 +4,7 @@
             <div class="col-12 col-lg-5 md-margin-5-rem-bottom sm-margin-4-rem-bottom wow animate__fadeIn"
                  data-wow-delay="0.2s">
                 <h6 class="alt-font text-white mb-0 line-height-40px sm-line-height-26px"><span
-                        class="font-weight-600 color-yellow">"Uma grande ideia</span> ideia só se torna grande se souberem que ela
+                        class="font-weight-600 color-yellow">"Uma grande ideia</span> só se torna grande se souberem que ela
                     existe"<br>- Mr. Hipo</h6>
             </div>
         </div>

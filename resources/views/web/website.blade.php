@@ -77,8 +77,10 @@
                             Landing Pages
                         </h1>
 
-                        <p>Há 12 anos a Hipo entende a importância da presença digital de seus clientes. Prezando sempre
+                        <p>Há {{now()->year - 2010 }} anos a Hipo entende a importância da presença digital dos seus clientes. Prezando sempre
                             em criar sites impactantes, bem vistos pelo Google e que gere vendas para seus clientes.</p>
+
+
 
                         <p>Ter um site não é importante, é obrigatório! Porém, se seu site está desatualizado, antiquado
                             ou for feito em ferramentas gratuitas, ele pode denegrir a imagem da sua empresa. Afinal, a
@@ -268,8 +270,7 @@
                                 <div class="feature-box-content last-paragraph-no-margin">
                                     <span
                                         class="color-yellow font-weight-600 d-block margin-10px-bottom alt-font text-extra-large">Possibilidades infinitas</span>
-                                    <p>Nossa agência digital conta com programadores que desenvolvem toda tecnologia sem
-                                        terceirizações. Permitindo controle total nos projetos dos clientes.</p>
+                                    <p>Nossa agência digital conta com programadores que desenvolvem toda tecnologia sem terceirizações, permitindo controle total nos projetos dos clientes.</p>
                                 </div>
                             </div>
                         </div>

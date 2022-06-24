@@ -47,10 +47,9 @@
                             própria suas postagens
                             nas redes sociais, você deixa de focar no seu próprio negócio, perde tempo e o barato acaba
                             saindo caro.</p>
-                        <p>As redes sociais são o presente e o futuro. Prova disso, é que elas não param de crescer o
-                            número de usuários e a influência sob nossas vidas. Pense na gestão das suas redes sociais
-                            como a sua reputação em seu bairro, quanto melhor, maior o boca-a-boca e consequentemente,
-                            mais clientes.</p>
+                        <p>
+                            As redes sociais são o presente e o futuro. Prova disso, é que o número de usuários não param de crescer e a influência sob nossas vidas também. Pense na gestão das suas redes sociais como a sua reputação em seu bairro, quanto melhor, maior o boca-a-boca e, consequentemente, mais clientes.
+                        </p>
                     </div>
 
                     <div class="row">

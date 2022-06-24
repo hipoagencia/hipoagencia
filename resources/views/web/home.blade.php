@@ -40,17 +40,14 @@
                         <span class="title-small line-height-2px wow animate__fadeIn" data-wow-delay="0.5s">sendo referência em marketing digital</span><br>
 
                         <p class="mt-4 wow animate__fadeIn" data-wow-delay="0.7s">
-                            O formato antiquado de ser agência mudou e a Hipo acompanhou a nova tendência do marketing e
+                            O formato antiquado de ser agência mudou e a Hipo acompanhou a nova tendência do marketing e da
                             publicidade.
                         </p>
 
                         <p class="wow animate__fadeIn" data-wow-delay="0.7s">
-                            Nós somos uma agência de publicidade completa situada em <b>Santos/SP e Riviera de São
+                            Nós somos uma agência de publicidade completa situada em <b>Santos/SP e na Riviera de São
                                 Lourenço</b>.
-                            Cada campanha trás a essência do nosso cliente utilizando as técnicas mais atuais para
-                            atingir o
-                            seu
-                            público alvo.
+                            Cada campanha traz a essência do nosso cliente, utilizando as técnicas mais atuais para atingir o seu público alvo.
                         </p>
                     </div>
 
@@ -152,16 +149,11 @@
                         data-wow-delay="0.5s"><span class="color-yellow">Agência de</span> Publicidade</h2><br>
 
                     <p class="wow animate__fadeIn" data-wow-delay="0.7s">
-                        O objetivo de uma agência de publicidade é cuidar do planejamento, criação de artes e gestão
-                        eficiente de mídia para sua empresa. Buscando sempre criar campanhas que estejam de acordo com
-                        os
-                        princípios e identidade do cliente.
+                        O objetivo de uma agência de publicidade é cuidar do planejamento, criação de artes e gestão eficiente de mídia para sua empresa, buscando sempre criar campanhas que estejam de acordo com os princípios e identidade do cliente.
                     </p>
 
                     <p class="wow animate__fadeIn" data-wow-delay="0.7s">
-                        Uma agência busca por meio do planejamento anunciar nos veículos de comunicação que estejam
-                        relacionados ao público alvo da empresa. Criando campanhas que utilizando a mesma linguagem e
-                        abordagem em todos os meios que forem divulgados.
+                        Uma agência busca, por meio do planejamento, anunciar nos veículos de comunicação que estejam relacionados ao público alvo da empresa. Para isso, utilizamos a criação de campanhas que utilizam a mesma linguagem e abordagem em todos os meios que forem divulgados.
                     </p>
 
                 </div>
@@ -180,10 +172,7 @@
                     </p>
 
                     <p class="wow animate__fadeIn" data-wow-delay="0.7s">
-                        No meio digital é possível apresentar sua empresa e engajar clientes que já estejam procurando
-                        pelos
-                        seus serviços, e também, clientes que não o estão procurando mas possuem o perfil de quem se
-                        interessa.
+                        No meio digital é possível apresentar a sua empresa e engajar clientes que já estejam procurando pelos seus serviços, e também, clientes que não estão procurando mas possuem o perfil de cliente ideal
                     </p>
 
 

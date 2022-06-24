@@ -31,31 +31,38 @@
 <body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="">
 
 
-
 @include('web.master.header')
 
-
 @yield('content')
-
 
 @include('web.master.footer')
 
 @include('cookieConsent::index')
-
-
 <a class="scroll-top-arrow" href="javascript:void(0);"><i class="feather icon-feather-arrow-up"></i></a>
-
-
+<div id="WAButton"></div>
 
 <script type="text/javascript" src="{{ url(asset('web/assets/js/jquery.min.js')) }}"></script>
 <script type="text/javascript" src="{{ url(asset('web/assets/js/theme-vendors.min.js')) }}"></script>
 <script type="text/javascript" src="{{ url(asset('web/assets/js/main.js')) }}"></script>
 
+<script type="text/javascript">
+    $(function() {
+        $('#WAButton').floatingWhatsApp({
+            phone: '+551330274731',
+            headerTitle: 'Fale conosco agora mesmo!',
+            popupMessage: 'Como podemos te ajudar?',
+            showPopup: true,
+            buttonImage: '<img src="{{url(asset('web/assets/images/hipo/whatsapp.svg'))}}" />', //Button Image
+            position: "right"
+        });
+    });
+</script>
+
 @hasSection('js')
     @yield('js')
 @endif
 
-<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer />
 
 </body>
 </html>

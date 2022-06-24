@@ -30,8 +30,7 @@
                      style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
                     <h4 class="alt-font font-weight-600 text-extra-dark-gray mb-0">Cada identidade visual criada em
                         nossa agência traz um DNA único.</h4>
-                    <p class="text-large line-height-38px mt-5">Uma boa identidade visual não se trata apenas do design.
-                        Trata-se de criar uma melhor experiência para quem vê.</p>
+                    <p class="text-large line-height-38px mt-5">Uma boa identidade visual não se trata apenas do design, trata-se de criar uma melhor experiência para quem vê.</p>
                     <a href="#" class="btn btn-link btn-extra-large text-extra-dark-gray">Últimos jobs</a>
                 </div>
 {{--                <div class="col-11 col-xl-6 col-md-6 wow animate__fadeIn" data-wow-delay="0.2s">--}}
