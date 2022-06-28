@@ -20,6 +20,7 @@
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.5",
         "ramsey/uuid": "^4.1",
+        "sendgrid/sendgrid": "^8.0",
         "spatie/array-to-xml": "^2.16",
         "spatie/laravel-activitylog": "^3.17",
         "spatie/laravel-backup": "^6.16",
