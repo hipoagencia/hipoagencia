@@ -30,7 +30,7 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        $to = ($this->data['reply_name'] == '' ? env('MAIL_NEWSLETTER') : env('MAIL_CONTACT'));
+        $to = $this->data['reply_name'] == env('MAIL_CONTACT');
 
         return $this->to($to, env('MAIL_FROM_NAME'))
             ->replyTo($this->data['reply_email'], $this->data['reply_name'])
