@@ -146,7 +146,9 @@ class ContentController extends Controller
         //dd($request->all());
         //return new SendMail($data);
 
-        Mail::send(new SendMail($data));
+//        Mail::send(new SendMail($data));
+
+        dd(Mail::send(new SendMail($data)));
         return redirect()->route('web.thanks');
     }
 
