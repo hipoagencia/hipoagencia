@@ -1,17 +1,19 @@
 <div class="d-flex justify-content-center mt-5 js-cookie-consent cookie-consent" >
     <div class="card-cookie p-3 cookie"><span> {!! trans('cookieConsent::texts.message') !!} <br></span>
-        <div style="margin-top:20px;text-align: left;"><button class="btn btn-light btn-sm js-cookie-consent-agree cookie-consent__agree" style="padding:5px 8px;" type="button">{{ trans('cookieConsent::texts.agree') }}</button>  <a href="#" style="float:right;">Ver políticas <i class="fa fa-angle-right ml-2"></i></a></div>
+        <div style="margin-top:20px;text-align: left;"><button class="btn btn-light btn-sm js-cookie-consent-agree cookie-consent__agree" style="padding:5px 8px;" type="button">{{ trans('cookieConsent::texts.agree') }}</button>
+{{--            <a href="#" style="float:right;">Ver políticas <i class="fa fa-angle-right ml-2"></i></a>--}}
+        </div>
     </div>
 </div>
 
 <style>
     .card-cookie {
-        width: 400px;
+        width: 300px;
         flex-direction: column;
         min-width: 0;
         color: #fff;
         word-wrap: break-word;
-        background-color: #000;
+        background-color: #1c1c1c;
         background-clip: border-box;
         border: 1px solid #000;
         border-radius: 6px;

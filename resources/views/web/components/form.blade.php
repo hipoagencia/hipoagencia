@@ -27,21 +27,31 @@
                  style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
                 <h5 class="alt-font font-weight-600 text-extra-dark-gray margin-5-rem-bottom letter-spacing-minus-1px">
                     Deixe sua mensagem que em breve entraremos em contato!</h5>
-                <form action="email-templates/contact-form.php" method="post">
+
+                <form action="{{route('web.sendMail')}}" method="post">
+                    @csrf
+
                     <input class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-25px-bottom border-radius-0px required"
                            type="text" name="name" placeholder="Nome">
+
                     <input class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-25px-bottom border-radius-0px required"
                            type="email" name="email" placeholder="E-mail">
+
                     <input class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-25px-bottom border-radius-0px"
                            type="tel" name="phone" placeholder="Celular">
+
                     <textarea
                         class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-35px-bottom border-radius-0px"
-                        name="comment" rows="5" placeholder="Como podemos te ajudar?"></textarea>
+                        name="message" rows="5" placeholder="Como podemos te ajudar?"></textarea>
+
                     <input type="hidden" name="redirect" value="">
-                    <button class="btn btn-medium btn-fancy btn-black mb-0 submit" type="submit">enviar mensagem
+
+                    <button class="btn btn-medium btn-fancy btn-black mb-0" type="submit">enviar mensagem
                     </button>
+
                     <div class="form-results d-none"></div>
                 </form>
+
             </div>
         </div>
     </div>

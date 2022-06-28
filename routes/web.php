@@ -27,7 +27,6 @@ Route::group(['as' => 'web.'], function () {
         return view('web.about');
     })->name('about');
 
-
     Route::get('/website', [ContentController::class, 'website'])->name('website');
     Route::get('/trafego-pago', [ContentController::class, 'trafic'])->name('trafic');
     Route::get('/midias-sociais', [ContentController::class, 'social'])->name('social');
