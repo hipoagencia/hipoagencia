@@ -86,7 +86,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/version" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/coffeecode/optimizer" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/coffeecode/cropper" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/rosell-dk/image-mime-type-guesser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/rosell-dk/webp-convert" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/intervention/image" />
@@ -108,7 +107,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-backup" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-activitylog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/drewm/mailchimp-api" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/bumbummen99/shoppingcart" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/thiagocfn/inscricaoestadual" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/array-to-xml" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-permission" />
@@ -160,6 +158,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sendgrid/sendgrid" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sendgrid/php-http-client" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/starkbank/ecdsa" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/coffeecode/cropper" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bumbummen99/shoppingcart" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

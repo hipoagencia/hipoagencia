@@ -19,7 +19,6 @@ Route::group(['as' => 'web.'], function () {
 
     Route::get('/', [ContentController::class, 'home'])->name('home');
 
-    Route::get('/inicio', [ContentController::class, 'home'])->name('home');
 
     Route::get('/clientes', [ContentController::class, 'clients'])->name('clients');
 
