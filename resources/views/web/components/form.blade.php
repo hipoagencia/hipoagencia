@@ -44,7 +44,7 @@
                         class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-35px-bottom border-radius-0px"
                         name="message" rows="5" placeholder="Como podemos te ajudar?"></textarea>
 
-                    <input type="hidden" name="redirect" value="">
+                    {!! NoCaptcha::renderJs() !!} {!! NoCaptcha::display() !!}
 
                     <button class="btn btn-medium btn-fancy btn-black mb-0" type="submit">enviar mensagem
                     </button>
