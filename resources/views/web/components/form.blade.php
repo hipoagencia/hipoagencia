@@ -28,6 +28,14 @@
                 <h5 class="alt-font font-weight-600 text-extra-dark-gray margin-5-rem-bottom letter-spacing-minus-1px">
                     Deixe sua mensagem que em breve entraremos em contato!</h5>
 
+                @if($errors->all())
+                    @foreach($errors->all() as $error)
+                        @component('admin.components.message',['type' => 'danger'])
+                            {{ $error }}
+                        @endcomponent
+                    @endforeach
+                @endif
+
                 <form action="{{route('web.sendMail')}}" method="post">
                     @csrf
 
@@ -44,7 +52,7 @@
                         class="input-border-bottom border-color-extra-light-gray large-input px-0 margin-35px-bottom border-radius-0px"
                         name="message" rows="5" placeholder="Como podemos te ajudar?"></textarea>
 
-                    {!! NoCaptcha::renderJs() !!} {!! NoCaptcha::display() !!}
+                    {!! NoCaptcha::renderJs() !!} {!! NoCaptcha::display() !!}<br>
 
                     <button class="btn btn-medium btn-fancy btn-black mb-0" type="submit">enviar mensagem
                     </button>

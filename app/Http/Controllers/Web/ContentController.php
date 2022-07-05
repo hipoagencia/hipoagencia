@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Web\Form;
 use App\Mail\Contact\SendMail;
 use App\Models\Categories;
 use App\Models\Classificacao;
@@ -132,7 +133,7 @@ class ContentController extends Controller
         ]);
     }
 
-    public function sendMail(Request $request)
+    public function sendMail(Form $request)
     {
         $data = [
             'reply_name' => $request->name,
