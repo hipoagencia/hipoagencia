@@ -22,7 +22,15 @@
 
     {!! \Artesaos\SEOTools\Facades\SEOTools::generate() !!}
 
-
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "4b291bc6-0732-4e93-82b9-83a5fb02af2d",
+            });
+        });
+    </script>
 
     @hasSection('css')
         @yield('css')
